@@ -1,0 +1,533 @@
+@charset "UTF-8";
+@import url("../fonts/VWHeabla/vwheabla.css");
+@import url("../fonts/VWHeaboo/vwheaboo.css");
+@import url("../fonts/VWUtopia/vwutobit.css");
+@import url("../fonts/VWHeadlineOT-Black/vwheadlineot-black.css");
+@import url("../fonts/VWHeadlineOT-Semibold/vwheadlineot-semibold.css");
+@import url("../fonts/VWHeadlineOT-Book/vwheadlineot-book.css");
+@import url("Sprites.css");
+html {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background: url("../Images/home/mapa_izquierda.png") no-repeat left top, url("../Images/home/mapa_derecha.png") no-repeat right top;
+	background-color: #022358;
+	color: #FFF;
+	font-family: "VWHeadlineOTBook", Verdana, Helvetica, Sans-Serif;
+	font-size: 16px;
+	margin: 0;
+	padding: 0;
+}
+footer {
+	margin: 30px auto 500px auto;
+	max-width: 1024px;
+	text-align: center;
+}
+footer .copy, footer .legals {
+	display: inline-block;
+}
+footer .copy {
+	text-align: left;
+	width: 40%;
+}
+footer .legals {
+	text-align: right;
+	width: 30%;
+}
+header, footer, hgroup, nav, section {
+	display: block;
+}
+h1 {
+	color: #00b2e5;
+	font-family: "VWHeadlineOTBlack";
+	font-size: 1.5em;
+	font-weight: normal;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	-webkit-font-smoothing: antialiased;
+}
+h2 {
+	color: #FFF;
+	font-family: "VWHeadlineOTSemibold";
+	font-size: .9em;
+	font-weight: normal;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	-webkit-font-smoothing: antialiased;
+}
+.rules h2 {
+	color: #FFF;
+	font-family: "VWHeadlineOTSemibold";
+	font-size: .9em;
+	font-weight: normal;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	-webkit-font-smoothing: antialiased;
+}
+h3 {
+	color: #00b2e5;
+	font-family: "VWHeadlineOTSemibold";
+	font-size: .8em;
+	font-weight: normal;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	-webkit-font-smoothing: antialiased;
+}
+header {
+ //border: 1px solid #000;
+	background-color: white;
+	width: 100%;
+}
+header .content-wrapper {
+	max-width: 1024px;
+	padding: 0;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	width: 100%;
+}
+header .logovw {
+	padding: 0 0 0 40%;
+}
+header .menu_btn {
+	display: none;
+	margin-right: 16px;
+}
+header .social-share {
+	text-align: center;
+}
+header #login {
+	display: none;
+}
+p, .rules li {
+	color: #fff;
+	font-family: "VWHeadlineOTBook";
+	font-size: .9em;
+	-webkit-font-smoothing: antialiased;
+}
+p .t1 {
+	color: #00b2e5;
+	font-family: "vwutopia-bkittabmedium_italic";
+	-webkit-font-smoothing: antialiased;
+}
+.buttons {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 50px;
+	max-width: 1024px;
+	text-align: center;
+}
+.buttons a {
+	text-decoration: none;
+}
+.buttons .text {
+	display: inline-block;
+}
+.button1, .button2, .button3 {
+	display: inline-block;
+	height: 123px;
+	margin-left: 20px;
+	margin-right: 20px;
+	overflow: hidden;
+	width: 123px;
+	top: 0;
+}
+.button1 .arrow, .button2 .arrow, .button3 .arrow {
+	position: relative;
+	top: 5px;
+}
+.button1 .imageA, .button2 .imageA, .button3 .imageA {
+	display:none;
+}
+.button1 .holder, .button2 .holder, .button3 .holder {
+	height: 246px;
+	position: relative;
+}
+.button1 .text, .button2 .text, .button3 .text {
+	display: block;
+	height: 122px;
+	vertical-align: top;
+}
+.button1 .text1, .button2 .text1, .button3 .text1 {
+	color: #00b2e5;
+	font-family: "VWHeadlineOTSemibold";
+	font-size: .9em;
+	font-weight: normal;
+	letter-spacing: 2px;
+	padding-top: 40px;
+	text-transform: uppercase;
+	-webkit-font-smoothing: antialiased;
+}
+.button1 .text2, .button2 .text2, .button3 .text2 {
+	color: #fff;
+	font-family: "Times Roman";
+	font-size: .9em;
+	font-style: italic;
+	padding-top: 5px;
+	-webkit-font-smoothing: antialiased;
+}
+.disable {
+	background-color: rgba(0, 0, 0, 0.5);
+	border: none;
+	display: none;
+	left: 0;
+	height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	position: absolute;
+	top: 0px;
+	right: 0;
+	width: 100%;
+	z-index: 9;
+}
+.float-center, .float-left, .float-right {
+	display: inline-block;
+	vertical-align: top;
+}
+.float-center {
+	text-align: center;
+	width: 69%;
+}
+.float-left {
+	width: 13%;
+}
+.float-right {
+	width: 16%;
+}
+.float-right ul#share {
+	margin: 0;
+	padding: 20px 40% 0 0;
+	text-align: right;
+}
+.float-right ul#share li {
+	display: inline-block;
+	margin-right: 3px;
+}
+.float-right ul#share li:last-child {
+	margin-right: 0;
+}
+.header-nav ul#menu {
+	font-family: "VWHeadlineOTBlack";
+	font-size: 0.75em;
+	letter-spacing: 2px;
+	margin: 0;
+	padding: 25px 0 0 0;
+	text-transform: uppercase;
+	-webkit-font-smoothing: antialiased;
+}
+.header-nav ul#menu li {
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+	margin-right: 25px;
+}
+.header-nav ul#menu li:last-child {
+	margin-right: 0;
+}
+.header-nav ul#menu li a {
+	color: #cfd0e4;
+	text-decoration: none;
+}
+.header-nav ul#menu li a:hover {
+	color: #222f5c;
+}
+.header-nav-mobile {
+	display: none;
+}
+.social-share ul#menu {
+	margin: 0;
+	padding: 0;
+}
+.social-share ul#menu li {
+	display: inline-block;
+	list-style: none;
+	margin-right: 15px;
+}
+.social-share ul#menu li:last-child {
+	margin-right: 0;
+}
+#body {
+	margin-left: auto;
+	margin-right: auto;
+	clear: both;
+}
+#body .home {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 1024px;
+}
+#body .home .content, #body .rules, #body .route {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 200px;
+	max-width: 520px;
+	padding-left: 20px;
+	padding-right: 20px;
+	text-align: center;
+}
+#body .home .video {
+	border: none;
+	display: none;
+	left: 0;
+	margin-left: auto;
+	margin-right: auto;
+	position: absolute;
+	top: 100px;
+	right: 0;
+	width: 640px;
+	z-index: 10;
+}
+#body .home .logo .car {
+	position: relative;
+	z-index: 1;
+}
+#body .home .logo {
+	height: 334px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 70px;
+	overflow: hidden;
+	width: 334px;
+}
+#body .home .logo .title1 {
+	margin: 0 auto;
+	opacity: 0;
+	position: relative;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+#body .home .logo .title2 {
+	margin: 0 auto;
+	opacity: 0;
+	position: relative;
+	top: -280px;
+}
+#body .home .logo .title3 {
+	background-size: 50% 50%;
+	margin: 0 auto;
+	opacity: 0;
+	position: relative;
+	top: -265px;
+}
+#body .home .logo .title4 {
+	margin: 0 auto;
+	position: relative;
+	right: -195px;
+	top: -252px;
+	visibility: hidden;
+}
+#body .home .logo .title5 {
+	margin: 0 auto;
+	opacity: 0;
+	position: relative;
+	top: -178px;
+}
+#body .home .logo .title6 {
+	margin: 0 auto;
+	opacity: 0;
+	position: relative;
+	top: -696px;
+}
+#body .home .logo .state1 {
+	margin: 0 auto;
+	opacity: 0;
+	position: relative;
+	top: -254px;
+}
+#body .home .logo .state2 {
+	margin: 0 auto;
+	opacity: 0;
+	position: relative;
+	top: -332px;
+	z-index: 1;
+}
+#body .home .logo .state3 {
+	margin: 0 auto;
+	opacity: 0;
+	position: relative;
+	left: -80px;
+	top: -410px;
+}
+#body .home .share_txt {
+	color: #00b2e5;
+	font-family: "VWHeadlineOTBlack";
+	font-size: 0.6em;
+	letter-spacing: 2px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 40px;
+	text-align: center;
+	text-transform: uppercase;
+	width: 263px;
+	-webkit-font-smoothing: antialiased;
+}
+#body .home .social-share {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5px;
+	text-align: center;
+	width: 403px;
+}
+#body .home .arrow1_btn {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	width: 24px;
+	display:inherit;
+	display:none;
+}
+#body .home .arrow2_btn {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	width: 24px;
+}
+#body .rules, #body .route {
+	margin-top: 50px;
+	text-align:inherit;
+}
+ @media only screen and (max-width: 640px) {
+footer {
+	//border: 1px solid #000;
+	font-size: 0.7em;
+	margin-bottom: 20px;
+}
+h1 {
+	font-size: 1.3em;
+}
+h2 {
+	font-size: .75em;
+}
+h3 {
+	font-size: .75em;
+}
+header .content-wrapper {
+	padding-top: 7px;
+	padding-bottom: 5px;
+}
+header .logovw {
+	padding-left: 10px;
+}
+header .menu_btn {
+	display: block;
+	padding-right: 0px;
+	text-align: right;
+}
+header .social-share {
+	display: none;
+}
+p, .rules li {
+	font-size: 0.75em;
+}
+.buttons {
+	margin-top: 25px;
+}
+.button1, .button2, .button3 {
+	height: 280px;
+	margin-left: 20px;
+	margin-right: 20px;
+	overflow: visible;
+	width: 180px;
+}
+.button1 .text, .button2 .text, .button3 .text {
+	position: relative;
+	top: 35px;
+}
+.button1 .imageB, .button2 .imageB, .button3 .imageB {
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	top: 28px;
+}
+.button1 .imageA, .button2 .imageA, .button3 .imageA {
+	display:none;
+}
+.button1 .text1, .button2 .text1, .button3 .text1 {
+	font-size: 1em;
+}
+.button1 .text2, .button2 .text2, .button3 .text2 {
+	font-size: 1em;
+}
+.float-center {
+	display: none;
+}
+.float-left {
+	text-align: left;
+	width: 48%;
+}
+.float-right {
+	padding-top: 12px;
+	width: 48%;
+}
+.header-nav-mobile ul#menu {
+	font-family: "VWHeadlineOTSemibold";
+	font-size: 1.2em;
+	letter-spacing: 5px;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+	text-transform: uppercase;
+	width: 100%;
+	-webkit-font-smoothing: antialiased;
+}
+.header-nav-mobile ul#menu li {
+	display: block;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+}
+.header-nav-mobile ul#menu li a {
+	background-color: #00b2ee;
+	border-top: 2px solid #152755;
+	color: black;
+	display: block;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	text-decoration: none;
+	width: 100%;
+}
+.header-nav-mobile ul#menu li a:focus, .header-nav-mobile ul#menu li a:hover {
+	background-color: #52CAF1;
+}
+#body .home .content {
+	margin-top: 80px;
+}
+#body .home .logo {
+	margin-top: 60px;
+	zoom:0.8;
+	-moz-transform: scale(0.8);
+}
+#body .home .share_txt {
+	margin-top: 150px;
+}
+#body .home .social-share {
+	width: 263px;
+}
+#body .home .video {
+	top: 163px;
+	width: 320px;
+}
+#body .home .video2_btn {
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	top: -105px;
+	width: 263px;
+	text-align: center;
+	display: block;
+}
+#body .home .arrow1_btn {
+	display: inherit;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	width: 24px;
+}
+#body .home .arrow2_btn {
+	display:none;
+}
+}

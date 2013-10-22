@@ -1,0 +1,512 @@
+﻿@import "colors"
+
+html
+	background-color: #e2e2e2
+	margin: 0
+	padding: 0
+
+body
+	background-color: $blue
+	// border-top: solid 10px #000
+	color: $black
+	font-size: .85em
+	font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif
+	margin: 0
+	padding: 0
+
+a
+	color: $black
+	outline: none
+	padding-left: 3px
+	padding-right: 3px
+	text-decoration: underline
+	&:link, &:visited, &:active
+		// color: $green
+	&:hover
+		color: $green
+		// background-color: #c7d1d6
+
+header, footer, hgroup, nav, section
+	display: block
+
+mark
+	background-color: #a6dbed
+	padding-left: 5px
+	padding-right: 5px
+
+.float-left
+	float: left
+
+.float-right
+	float: right
+
+.clear-fix:after
+	content: "."
+	clear: both
+	display: block
+	height: 0
+	visibility: hidden
+
+h1, h2, h3, h4, h5, h6
+	color: #000
+	margin-bottom: 0
+	padding-bottom: 0
+
+h1
+	font-size: 2em
+
+h2
+	font-size: 1.75em
+
+h3
+	font-size: 1.2em
+
+h4
+	font-size: 1.1em
+
+h5, h6
+	font-size: 1em
+
+h5 a
+	&:link, &:visited, &:active
+		padding: 0
+		text-decoration: none
+
+// main layout
+
+
+.content-wrapper
+	margin: 0 auto
+	max-width: 960px
+
+#body
+	background-color: $blue
+	clear: both
+	padding-bottom: 35px
+
+.main-content
+	// background: url("../Images/accent.png") no-repeat
+	padding-left: 10px
+	padding-top: 30px
+
+.featured + .main-content
+	// background: url("../Images/heroAccent.png") no-repeat
+
+header
+	background-color: #fff
+	color: $black
+
+	.logovento
+		position: relative
+		float: left
+		// padding-top: 10px
+		margin-left: 15px
+		// background-image: url("")
+	#login
+		display: none
+
+	.social-share
+		height: auto
+		width: auto
+		overflow: auto
+		a
+			padding: 0
+			display: block
+			float: left
+			width: 27px
+			height: 27px
+			margin-top: 15px
+			background-color: $blue
+			&:first-child
+				margin-right: 15px
+	.menu-btn
+		display: none
+
+
+
+
+.header-nav
+	width: 100%
+	position: absolute
+	top: 40px
+	left: 0
+	#menu
+		width: 272px
+		margin-left: auto
+		margin-right: auto
+		height: auto
+		overflow: auto
+header .content-wrapper
+	padding-top: 20px
+	background-color: $white
+	height: auto
+	overflow: auto
+	width: 100%
+
+footer
+	clear: both
+	background-color: #e2e2e2
+	font-size: .8em
+	height: 100px
+
+// site title
+
+
+.site-title
+	color: #c8c8c8
+	font-family: Rockwell, Consolas, "Courier New", Courier, monospace
+	font-size: 2.3em
+	margin: 0
+	a
+		background: none
+		color: #c8c8c8
+		outline: none
+		text-decoration: none
+		&:hover, &:active
+			background: none
+			color: #c8c8c8
+			outline: none
+			text-decoration: none
+
+// login
+
+
+#login
+	display: block
+	font-size: .85em
+	margin: 0 0 10px
+	text-align: right
+	a
+		background-color: #d3dce0
+		margin-left: 10px
+		margin-right: 3px
+		padding: 2px 3px
+		text-decoration: none
+		&.username
+			background: none
+			margin-left: 0px
+			text-decoration: underline
+	ul
+		margin: 0
+	li
+		display: inline
+		list-style: none
+
+// menu
+
+
+ul#menu
+	font-size: 1.3em
+	font-weight: 600
+	margin: 0 0 5px
+	padding: 0
+	text-align: right
+	li
+		display: inline
+		list-style: none
+		padding-left: 15px
+		a
+			background: none
+			color: $black
+			text-decoration: none
+			&:hover
+				color: $green
+				text-decoration: none
+
+// page elements
+
+// featured
+
+.featured
+	background-color: #fff
+	.content-wrapper
+		background-color: #7ac0da
+		background-image: -ms-linear-gradient(left, #7ac0da 0%, #a4d4e6 100%)
+		background-image: -o-linear-gradient(left, #7ac0da 0%, #a4d4e6 100%)
+		background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #7ac0da), color-stop(1, #a4d4e6))
+		background-image: -webkit-linear-gradient(left, #7ac0da 0%, #a4d4e6 100%)
+		background-image: linear-gradient(left, #7ac0da 0%, #a4d4e6 100%)
+		color: #3e5667
+		padding: 20px 40px 30px 40px
+	hgroup.title
+		h1, h2
+			color: #fff
+	p
+		font-size: 1.1em
+
+// page titles
+
+hgroup.title
+	margin-bottom: 10px
+	h1
+		display: inline
+	h2
+		display: inline
+		font-weight: normal
+		margin-left: 3px
+
+// features
+
+section.feature
+	width: 300px
+	float: left
+	padding: 10px
+
+// ordered list
+
+ol.round
+	list-style-type: none
+	padding-left: 0
+	li
+		margin: 25px 0
+		padding-left: 45px
+		&.zero
+			background: url("../Images/orderedList0.png") no-repeat
+		&.one
+			background: url("../Images/orderedList1.png") no-repeat
+		&.two
+			background: url("../Images/orderedList2.png") no-repeat
+		&.three
+			background: url("../Images/orderedList3.png") no-repeat
+		&.four
+			background: url("../Images/orderedList4.png") no-repeat
+		&.five
+			background: url("../Images/orderedList5.png") no-repeat
+		&.six
+			background: url("../Images/orderedList6.png") no-repeat
+		&.seven
+			background: url("../Images/orderedList7.png") no-repeat
+		&.eight
+			background: url("../Images/orderedList8.png") no-repeat
+		&.nine
+			background: url("../Images/orderedList9.png") no-repeat
+
+// content
+
+article
+	float: left
+	width: 70%
+
+aside
+	float: right
+	width: 25%
+	ul
+		list-style: none
+		padding: 0
+		li
+			background: url("../Images/bullet.png") no-repeat 0 50%
+			padding: 2px 0 2px 20px
+
+.label
+	font-weight: 700
+
+// login page
+
+#loginForm
+	border-right: solid 2px #c8c8c8
+	float: left
+	width: 55%
+	.validation-error
+		display: block
+		margin-left: 15px
+
+#socialLoginForm
+	margin-left: 40px
+	float: left
+	width: 40%
+	h2
+		margin-bottom: 5px
+
+fieldset.open-auth-providers
+	margin-top: 15px
+	button
+		margin-bottom: 12px
+
+// contact
+
+.contact
+	h3
+		font-size: 1.2em
+	p
+		margin: 5px 0 0 10px
+	iframe
+		border: 1px solid #333
+		margin: 5px 0 0 10px
+
+// forms
+
+fieldset
+	border: none
+	margin: 0
+	padding: 0
+	legend
+		display: none
+	ol
+		padding: 0
+		list-style: none
+		li
+			padding-bottom: 5px
+
+label
+	display: block
+	font-size: 1.2em
+	font-weight: 600
+	&.checkbox
+		display: inline
+
+input
+	border: 1px solid #e2e2e2
+	background: #fff
+	color: #333
+	font-size: 1.2em
+	margin: 5px 0 6px 0
+	padding: 5px
+	width: 300px
+
+textarea
+	border: 1px solid #e2e2e2
+	background: #fff
+	color: #333
+	font-size: 1.2em
+	margin: 5px 0 6px 0
+	padding: 5px
+	width: 300px
+	font-family: inherit
+	width: 500px
+
+input:focus, textarea:focus
+	border: 1px solid #7ac0da
+
+input
+	&[type="checkbox"]
+		background: transparent
+		border: inherit
+		width: auto
+	&[type="submit"], &[type="button"]
+		background-color: #d3dce0
+		border: 1px solid #787878
+		cursor: pointer
+		font-size: 1.2em
+		font-weight: 600
+		padding: 7px
+		margin-right: 8px
+		width: auto
+
+button
+	background-color: #d3dce0
+	border: 1px solid #787878
+	cursor: pointer
+	font-size: 1.2em
+	font-weight: 600
+	padding: 7px
+	margin-right: 8px
+	width: auto
+
+td
+	input
+		&[type="submit"], &[type="button"]
+			font-size: 1em
+			padding: 4px
+			margin-right: 4px
+	button
+		font-size: 1em
+		padding: 4px
+		margin-right: 4px
+
+// info and errors
+
+.message-info
+	border: 1px solid
+	clear: both
+	padding: 10px 20px
+
+.message-error
+	clear: both
+	color: #e80c4d
+	font-size: 1.1em
+	font-weight: bold
+	margin: 20px 0 10px 0
+
+.message-success
+	color: #7ac0da
+	font-size: 1.3em
+	font-weight: bold
+	margin: 20px 0 10px 0
+
+.error
+	color: #e80c4d
+
+// styles for validation helpers
+
+.field-validation-error
+	color: #e80c4d
+	font-weight: bold
+
+.field-validation-valid
+	display: none
+
+input
+	&.input-validation-error
+		border: 1px solid #e80c4d
+	&[type="checkbox"].input-validation-error
+		border: 0 none
+
+.validation-summary-errors
+	color: #e80c4d
+	font-weight: bold
+	font-size: 1.1em
+
+.validation-summary-valid
+	display: none
+
+// tables
+
+
+table
+	border-collapse: collapse
+	border-spacing: 0
+	margin-top: 0.75em
+	border: 0 none
+
+th
+	font-size: 1.2em
+	text-align: left
+	border: none 0px
+	padding-left: 0
+	a
+		display: block
+		position: relative
+		&:link, &:visited, &:active
+			color: #333
+			font-weight: 600
+			text-decoration: none
+			padding: 0
+		&:hover
+			color: #333
+			font-weight: 600
+			text-decoration: none
+			padding: 0
+			color: #000
+	&.asc a, &.desc a
+		margin-right: .75em
+	&.asc a:after, &.desc a:after
+		display: block
+		position: absolute
+		right: 0em
+		top: 0
+		font-size: 0.75em
+	&.asc a:after
+		content: '▲'
+	&.desc a:after
+		content: '▼'
+
+td
+	padding: 0.25em 2em 0.25em 0em
+	border: 0 none
+
+tr.pager td
+	padding: 0 0.25em 0 0
+
+//*******************
+
+@import "mobile"

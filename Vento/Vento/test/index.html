@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+<meta charset="utf-8" />
+<title>Volkswagen - Vento</title>
+<link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+<link rel="stylesheet" href="Scripts/fancybox/source/jquery.fancybox.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="Content/component.css">
+<link rel="stylesheet" href="Content/Site.css">
+<meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1, user-scalable=no" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="P3P" content='CP="IDC DSP COR CURa ADMa OUR IND PHY ONL COM STA"'>
+<meta http-equiv="X-UA-Compatible" content="IE=8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="description" content='Te has preguntado, ¿qué pasaría si por lo menos una de tus grandes ideas, la llevaras a cabo? Volkswagen te invita a descubrirlo en la Ruta de las Ideas' />
+<meta name="keywords" content="volkswagen, ruta, idea, mundo, auto" />
+<meta property="og:title" content="Conduce tu creatividad hasta llegar a la meta" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://volkswagen-nuevovento.com.mx" />
+<meta property="og:image" content="http://volkswagen-nuevovento.com.mx/share.jpg" />
+<meta property="og:description" content='Te has preguntado, ¿qué pasaría si por lo menos una de tus grandes ideas, la llevaras a cabo? Volkswagen te invita a descubrirlo en la Ruta de las Ideas' />
+<script src="Scripts/jquery-1.7.1.min.js"></script>
+<script src="Scripts/jquery.scrollTo-1.4.3.1-min.js"></script>
+<script src="Scripts/jquery.media.js"></script>
+<script src="Scripts/jquery.spriteOnHover-0.2.5.min.js"></script>
+<script src="Scripts/TimelineMax.min.js"></script>
+<script src="Scripts/TweenMax.min.js"></script>
+<script src="Scripts/fancybox/source/jquery.fancybox.pack.js"></script>
+<!--script src="Scripts/modernizr.custom.js"></script-->
+</head>
+<!--body>
+				<form id="nl-form" class="nl-form">
+					I feel to eat 
+					<select>
+						<option value="1" selected>any food</option>
+						<option value="2">Indian</option>
+						<option value="3">French</option>
+						<option value="4">Japanese</option>
+						<option value="2">Italian</option>
+					</select>
+					<br />in a
+					<select>
+						<option value="1" selected>standard</option>
+						<option value="2">fancy</option>
+						<option value="3">hip</option>
+						<option value="4">traditional</option>
+						<option value="2">romantic</option>
+					</select>
+					restaurant
+					<br />at 
+					<select>
+						<option value="1" selected>anytime</option>
+					 	<option value="1">7 p.m.</option>
+					 	<option value="2">8 p.m.</option>
+					 	<option value="3">9 p.m.</option>
+					</select>
+					in <input type="text" value="" placeholder="any city" data-subline="For example: <em>Los Angeles</em> or <em>New York</em>"/>
+					<div class="nl-submit-wrap">
+						<button class="nl-submit" type="submit">Find a restaurant</button>
+					</div>
+					<div class="nl-overlay"></div>
+				</form>
+		<script src="Scripts/nlform.js"></script>
+		<script>
+			var nlform = new NLForm( document.getElementById( 'nl-form' ) );
+		</script>
+	</body-->
+<body>
+  <script src="Scripts/main.js"></script> 
+  <script src="Scripts/mobile.js"></script>
+  <header>
+    <div class="content-wrapper">
+      <div class="float-left"> <a runat="server" class="logovw" href="~/"><img src="Images/header/logo_vw.png" alt=""></a> </div>
+      <div class="float-center">
+        <nav class="header-nav">
+          <ul id="menu">
+            <li><a runat="server" href="Registro.aspx" onclick="javascript:window.selected=1;" class="chackbox">
+              <div class="register">Participa</div>
+              </a></li>
+            <li><a runat="server" href="Registro.aspx" onclick="javascript:window.selected=2;" class="chackbox">
+              <div class="test">Prueba de manejo</div>
+              </a></li>
+            <li><a runat="server" href="Mecanica.aspx">
+              <div class="rules">Mecánica</div>
+              </a></li>
+            <li><a runat="server" href="Ruta.aspx">
+              <div class="route">Ruta</div>
+              </a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="float-right">
+        <div class="menu_btn"><a class="btn" href="#"><img src="Images/header/menu_mobile.png" width="33" height="25" alt=""></a></div>
+        <div class="social-share">
+          <ul id="share">
+            <li><a href="https://www.facebook.com/VolkswagenMexico?fref=ts">
+              <div class="facebook"></div>
+              </a></li>
+            <li><a href="https://twitter.com/Volkswagen_MX">
+              <div class="twitter"></div>
+              </a></li>
+          </ul>
+        </div>
+        <section id="login">
+          <asp:LoginView runat="server" ViewStateMode="Disabled">
+            <AnonymousTemplate>
+              <ul>
+                <li><a id="registerLink" runat="server" href="~/Account/Register.aspx">Register</a></li>
+                <li><a id="loginLink" runat="server" href="~/Account/Login.aspx">Log in</a></li>
+              </ul>
+            </AnonymousTemplate>
+            <LoggedInTemplate>
+              <p> Hello, <a runat="server" class="username" href="~/Account/Manage.aspx" title="Manage your account">
+                <asp:LoginName runat="server" CssClass="username" />
+                </a>!
+                <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" />
+              </p>
+            </LoggedInTemplate>
+          </asp:LoginView>
+        </section>
+      </div>
+    </div>
+  </header>
+  <nav class="header-nav-mobile">
+    <ul id="menu">
+      <li><a runat="server" href="Registro.aspx" onclick="javascript:window.selected=1;" class="chackbox">
+        <div class="register">Participa</div>
+        </a></li>
+      <li><a runat="server" href="Registro.aspx" onclick="javascript:window.selected=2;" class="chackbox">
+        <div class="test">Prueba de manejo</div>
+        </a></li>
+      <li><a runat="server" href="Mecanica.aspx">
+        <div class="rules">Mecánica</div>
+        </a></li>
+      <li><a runat="server" href="Ruta.aspx">
+        <div class="route">Ruta</div>
+        </a></li>
+      <li class="fb"><a href="https://www.facebook.com/VolkswagenMexico?fref=ts">
+        <div class="facebook">Facebook VW</div>
+        </a></li>
+      <li class="tw"><a href="https://twitter.com/Volkswagen_MX">
+        <div class="twitter">Twitter VW</div>
+        </a></li>
+    </ul>
+  </nav>
+  <div id="body">
+  
+  
+  	
+    
+  
+  	<!--div class="rules">
+        <h1>MECÁNICA</h1>
+        <ol>
+            <li>Una idea que sea buena para todos, ¿es posible? Cuéntanos por qué quieres vivir esta experiencia y ocupa un lugar en el vehículo que está de tu lado: Nuevo Vento.</li>
+            <li>Para participar registra tus datos y si eres uno de los seleccionados, te notificaremos el 22 de octubre de 2013. La aventura comienza el 28 de octubre de 2013 en Puebla, donde te daremos la información que necesitas para recorrer la Ruta de las Ideas. Confirma tu asistencia y emprende el viaje saliendo de la Planta Volkswagen Puebla el 29 de Octubre de 2013 con dirección a Los Cabos, BCS, donde se presentarán las ideas en el Invader Festival el 1 de noviembre de 2013.</li>
+            <li>Trabajarás en equipo con 3 desconocidos en un recorrido de 3 días y 2 mil kilómetros. Durante el viaje encontrarás diferentes retos que deberás superar con la ayuda de Nuevo Vento. Recuerda que el trabajo en equipo será decisivo para ganar.</li>
+            <li>El equipo con la idea más innovadora, realizable y que haga uso de las nuevas tecnologías, ganará dos noches de Hotel y viáticos en Los Cabos, un paquete de regalos Volkswagen, difusión en redes sociales y la posibilidad de llevar a cabo su idea.</li>
+        </ol>
+        
+        <h3>Requisitos para ser seleccionado</h3>
+        <ul>
+            <li>Ser mayor de 18 años</li>
+            <li>Tener licencia de conducir vigente</li>
+            <li>No padecer ningún tipo de enfermedad y/o limitación que provoque o aumente problemas de salud ocasionados por un viaje largo.</li>
+            <li>Tener un Smartphone con internet.</li>
+        </ul>
+ 
+        <h3>Confirmación de Selección</h3>
+         
+        <p>Los elegidos para participar en la dinámica La Ruta de las Ideas serán notificados una semana previa al inicio del viaje, en un periodo no mayor al 22 de octubre de 2013, y deberán confirmar su asistencia a más tardar el 23 de octubre del mismo año.</p>
+        <p>El traslado de los seleccionados de su ciudad de origen a la ciudad de Puebla, correrá a cargo de Volkswagen, así como los viáticos de comida, gasolina, hospedaje y seguro de viaje durante el trayecto. </p>
+        <p>El regreso estará a cargo de Volkswagen y será vía aérea a la Ciudad de México.</p> 
+ 
+
+<h3>Consideraciones generales</h3>
+ 
+<p>Volkswagen México se reserva el derecho de admisión si el participante invitado incumple con las bases de participación, se encuentra en estado de ebriedad y/o de ánimo alterado.</p> 
+        
+    </div-->
+  
+  
+  
+  
+    <!--div class="home">
+      <div class="logo">
+        <div class="holder">
+          <div class="title1"></div>
+          <div class="title2"></div>
+          <div class="title3"></div>
+          <div class="title4"></div>
+          <div class="title5"></div>
+          <div class="car"><a href="http://www.youtube.com/embed/n-dRhdx45Sw?autoplay=1&vq=hd1080&controls=0&rel=0&showinfo=0" class="click_none fancybox fancybox.iframe">
+            <div class="state1"></div>
+            <div class="state2"></div>
+            <div class="state3"></div>
+            </a> </div>
+          <div class="title6"></div>
+        </div>
+      </div>
+      <div class="arrow1_btn"><a href="#">
+        <div class="btn"></div>
+        </a></div>
+      <div class="video_btn"><a href="#">
+        <div class="btn"></div>
+        </a></div>
+      <div class="video2_btn"><a href="#"></a></div>
+      <div class="share_txt">Comparte</div>
+      <div class="social-share">
+        <ul id="menu">
+          <li><a href="">
+            <div class="facebook"></div>
+            </a></li>
+          <li><a href="">
+            <div class="twitter"></div>
+            </a></li>
+        </ul>
+      </div>
+      <div class="arrow2_btn"><a href="#">
+        <div class="btn"></div>
+        </a></div>
+      <div class="content">
+        <h1>Conduce tu creatividad</h1>
+        <h2>hasta llegar a la meta</h2>
+        <p><br>
+          VOLKSWAGEN te invita a un <span class="t1">recorrido por varios estados de México</span> para que encontremos una idea innovadora, inteligente, realizable, diferente, una idea capaz de mover conciencias en beneficio del planeta.</p>
+        <p>Durante esta Ruta de las Ideas, serás uno de los primeros en manejar <span class="t1">Nuevo Vento</span>, que será tu aliado para superar una serie de pruebas que encontrarás en el camino.<br>
+          <br>
+        </p>
+        <h3>Participa y vive esta experiencia innovadora en un viaje memorable de 3 días y 2 mil kilómetros.</h3>
+      </div>
+      <div class="buttons">
+        <div class="button1"> <a runat="server" href="Registro.aspx" onclick="javascript:window.selected=1;" class="chackbox">
+          <div class="holder">
+            <div class="imageA"></div>
+            <div class="imageB"></div>
+            <div class="text">
+              <div class="text1">Participa</div>
+              <div class="text2">Ver más <img src="Images/home/vento_microsite_contenido_flecha_vermas.png" class="arrow" alt=""></div>
+            </div>
+          </div>
+          </a> </div>
+        <div class="button2"> <a runat="server" href="Mecanica.aspx">
+          <div class="holder">
+            <div class="imageA"></div>
+            <div class="imageB"></div>
+            <div class="text">
+              <div class="text1">Mecánica</div>
+              <div class="text2">Ver más <img src="Images/home/vento_microsite_contenido_flecha_vermas.png" class="arrow" alt=""></div>
+            </div>
+          </div>
+          </a> </div>
+        <div class="button3"> <a runat="server" href="Ruta.aspx">
+          <div class="holder">
+            <div class="imageA"></div>
+            <div class="imageB"></div>
+            <div class="text">
+              <div class="text1">Ruta</div>
+              <div class="text2">Ver más <img src="Images/home/vento_microsite_contenido_flecha_vermas.png" class="arrow" alt=""></div>
+            </div>
+          </div>
+          </a> </div>
+      </div>
+    </div-->
+    
+    
+    <!--div class="register"><div class="main-form">
+    	<form id="nl-form" class="nl-form">
+        
+        	<div class="close"><a href="/"><div class="btn"></div></a></div>
+            <h1 class="t2">Registro</h1>
+            <p class="t3">Llena la información</p>
+            <br>
+            <p class="t4">Me llamo <input type="text" id="txtNombre" placeholder="Nombre y apellido" data-subline=""></p>
+            <p class="t4">tengo <input type="text" id="txtEdad" maxlength="2" placeholder="XX Años"  data-subline=""> de edad y vivo en <input type="text" id="txtResidencia" placeholder="Ciudad, Estado" data-subline="Ejemplo: Pachuca, Hgo"></p>
+            <p class="t4">Mi correo es <input type="text" id="txtEmail" placeholder="Correo electrónico" data-subline="Ejemplo: usuario@dominio.com"></p>
+            <p class="t4">mi teléfono es <input type="text" id="txtTelefono" placeholder="Número y lada" data-subline="Ejemplo: (55) 1234-5678"></p>
+            <p class="t4">me gustaría <select id="choice" runat="server" name="sel1">
+        <option value="Ninguno">Elegir opcion</option>
+        <option value="Registro">Participar</option>
+        <option value="Prueba">Una prueba de manejo</option>
+        </select></p>
+            <br>
+            <p class="t4">Soy <input type="text" id="txtOcupacion" placeholder="Ocupación" data-subline="Ejemplo: Estudiante"> y quiero</p>
+            <p class="t4">vivir esta experiencia porque:</p>
+            <p class="t4"><input id="txtExperiencia" placeholder='"Escribe tu idea"' data-subline="Ejemplo: Tú idea"></p>
+            <br>
+           <p class="t6">He leído las bases y Acepto<br> los términos y condiciones</p>
+           <div class="check"><input type="checkbox" ID="CheckBox1"><label for="CheckBox1"></label></div>
+        	<button class="nl-submit" type="submit"></button>
+            
+            
+        </form></div>
+   </div>
+   <div class="nl-overlay"></div>
+   
+        <script src="Scripts/nlform.js"></script>
+		<script>
+			var nlform = new NLForm( document.getElementById( 'nl-form' ) );
+		</script-->
+        
+    	<div class="route">
+    		<div class="main-route">
+            	<div class="close">
+                	<a href="/"><div class="btn"></div></a>
+                </div>
+                <div class="main-map">
+                	<div class="map"></div>
+                </div>
+                <div class="main-map-mobile">
+                	<div class="holder"></div>
+                	<div class="map"></div>
+                    <div class="map2"></div>
+                </div>
+                <div class="main-content">
+                	<div class="title"></div>
+                    <div class="detail">
+                        <div class="line1">
+                            <span class="d1">1<span class="e1">-</span></span> 
+                            <span class="d2">Puebla<span class="e1">:</span> </span>
+                            <span class="d3">Escenario de cañadas y serranías</span>
+                        </div>
+                        <div class="line2">
+                            <span class="d1">2<span class="e1">-</span></span>
+                            <span class="d2">Guadalajara<span class="e1">:</span> </span>
+                            <span class="d3">El auténtico jaripeo</span>
+                        </div>
+                        <div class="line3">
+                            <span class="d1">3<span class="e1">-</span></span>
+                            <span class="d2">mazatlán<span class="e1">:</span> </span>
+                            <span class="d3">Un océano de estrellas</span>
+                        </div>
+                        <div class="line4">
+                            <span class="d1">4<span class="e1">-</span></span>
+                            <span class="d2">La Paz<span class="e1">:</span> </span>
+                            <span class="d3">Armonía en equilibrio</span>
+                        </div>
+                        <div class="line5">
+                            <span class="d1">5<span class="e1">-</span></span>
+                            <span class="d2">Los Cabos<span class="e1">:</span> </span>
+                            <span class="d3">A la orilla de la tierra</span>
+                        </div>
+                    </div>
+                </div>
+        	</div>
+		</div>
+    
+  </div>
+        
+  <footer>
+    <div class="copy">
+      <p>&copy; Volkswagen México 2013</p>
+    </div>
+    <div class="legals">
+      <p>Aspectos legales</p>
+    </div>
+  </footer>
+</body>
+</html>

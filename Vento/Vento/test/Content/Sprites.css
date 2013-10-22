@@ -1,0 +1,212 @@
+.button1 .imageA {
+	background: url(../Images/home/registro_sprite.png) no-repeat scroll 0 0 transparent;
+	width: 123px;
+	height: 123px;
+}
+.button2 .imageA {
+	background: url(../Images/home/mecanica_sprite_site.png) no-repeat scroll 0 0 transparent;
+	width: 123px;
+	height: 123px;
+}
+.button3 .imageA {
+	background: url(../Images/home/sprite_ruta_site.png) no-repeat scroll 0 0 transparent;
+	width: 123px;
+	height: 123px;
+}
+.button1 .imageB {
+	background: url(../Images/home/gif_registro_site.gif) no-repeat scroll 0 0 transparent;
+	width: 123px;
+	height: 123px;
+}
+.button2 .imageB {
+	background: url(../Images/home/gif_mecanica_site.gif) no-repeat scroll 0 0 transparent;
+	width: 123px;
+	height: 123px;
+}
+.button3 .imageB {
+	background: url(../Images/home/gif_ruta_site.gif) no-repeat scroll 0 0 transparent;
+	width: 123px;
+	height: 123px;
+}
+.float-right .social-share .facebook {
+	background: url(../Images/header/btn_facebook_header.png) no-repeat scroll 0 0 transparent;
+	width: 26px;
+	height: 26px;
+}
+.float-right .social-share .facebook:hover {
+	background: url(../Images/header/btn_facebook_header.png) no-repeat scroll -26px 0 transparent;
+	width: 26px;
+	height: 26px;
+}
+.float-right .social-share .twitter {
+	background: url(../Images/header/btn_twitter_header.png) no-repeat scroll 0 0 transparent;
+	width: 26px;
+	height: 26px;
+}
+.float-right .social-share .twitter:hover {
+	background: url(../Images/header/btn_twitter_header.png) no-repeat scroll -26px 0 transparent;
+	width: 26px;
+	height: 26px;
+}
+.home .arrow1_btn .btn, .home .arrow2_btn .btn {
+	background: url(../Images/home/btn_sprite_arrow.png) no-repeat scroll 0 0 transparent;
+	width: 24px;
+	height: 24px;
+}
+.home .arrow1_btn .btn:hover, .home .arrow2_btn .btn:hover {
+	background: url(../Images/home/btn_sprite_arrow.png) no-repeat scroll -24px 0 transparent;
+	width: 24px;
+	height: 24px;
+}
+.home .logo .title1 {
+	background: url(../Images/home/video/vento_microsite_home_logo_txt_volkswaguen.png) no-repeat scroll 0 0 transparent;
+	width: 234px;
+	height: 334px;
+}
+.home .logo .title2 {
+	background: url(../Images/home/video/vento_microsite_home_logo_txt_la.png) no-repeat scroll 0 0 transparent;
+	width: 89px;
+	height: 14px;
+}
+.home .logo .title3 {
+	background: url(../Images/home/video/vento_microsite_home_logo_txt_ruta.png) no-repeat scroll 0 0 transparent;
+	background-position: center;
+	background-size: 139px;
+	width: 278px;
+	height: 95px;
+}
+.home .logo .title4 {
+	background: url(../Images/home/video/vento_microsite_home_logo_txt_delas.png) no-repeat scroll 0 0 transparent;
+	width: 206px;
+	height: 18px;
+}
+.home .logo .title5 {
+	background: url(../Images/home/video/vento_microsite_home_logo_ver_video.png) no-repeat scroll 0 0 transparent;
+	width: 63px;
+	height: 7px;
+}
+.home .logo .title6 {
+	background: url(../Images/home/video/todo.png) no-repeat scroll 0 0 transparent;
+	width: 278px;
+	height: 334px;
+}
+.home .logo .state1 {
+	background: url(../Images/home/video/sprite_loop_play.png) no-repeat scroll 0 0 transparent;
+	width: 120px;
+	height: 76px;
+}
+.home .logo .state2 {
+	background: url(../Images/home/video/sprite_rollover_video.png) no-repeat scroll 0 0 transparent;
+	width: 120px;
+	height: 76px;
+}
+.home .logo .state3 {
+	background: url(../Images/home/video/sprite_loop_vento.png) no-repeat scroll 0 0 transparent;
+	width: 120px;
+	height: 76px;
+}
+.home .social-share .facebook {
+	background: url(../Images/home/btn_facebook_share_sprite.png) no-repeat scroll 0 0 transparent;
+	background-size: 84px auto;
+	width: 42px;
+	height: 41px;
+}
+.home .social-share .facebook:hover {
+	background: url(../Images/home/btn_facebook_share_sprite.png) no-repeat scroll -42px 0 transparent;
+	background-size: 84px auto;
+	width: 42px;
+	height: 41px;
+}
+.home .social-share .twitter {
+	background: url(../Images/home/btn_twitter_share.png) no-repeat scroll 0 0 transparent;
+	background-size: 88px auto;
+	width: 44px;
+	height: 41px;
+}
+.home .social-share .twitter:hover {
+	background: url(../Images/home/btn_twitter_share.png) no-repeat scroll -44px 0 transparent;
+	background-size: 88px auto;
+	width: 44px;
+	height: 41px;
+}
+.register .close .btn {
+	background: url(../Images/register/btn_cerrar.png) no-repeat scroll 0 0 transparent;
+	width: 34px;
+	height: 34px;
+}
+.register .send .btn {
+	background: url(../Images/register/btn_enviar.png) no-repeat scroll 0 0 transparent;
+	background-size: 148px auto;
+	border: none;
+	width: 74px;
+	height: 28px;
+	cursor: pointer;
+	cursor: hand;
+}
+.register .send .btn:hover {
+	background: url(../Images/register/btn_enviar.png) no-repeat scroll -74px 0 transparent;
+	background-size: 148px auto;
+	border: none;
+	width: 74px;
+	height: 28px;
+}
+.route .close .btn {
+	background: url(../Images/route/sprite_cerrar_ruta_mobile.png) no-repeat scroll 0 0 transparent;
+	background-size: 66px auto;
+	width: 33px;
+	height: 33px;
+}
+.route .close .btn:hover {
+	background: url(../Images/route/sprite_cerrar_ruta_mobile.png) no-repeat scroll -33px 0 transparent;
+	background-size: 66px auto;
+	width: 33px;
+	height: 33px;
+}
+.route .main-map .map {
+	background: url(../Images/route/mapa_background.png) no-repeat;
+  	background-size: cover;
+	width: 1200px;
+	height:968px;
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+}
+.route .main-map-mobile .holder {
+	background: url(../Images/route/pixel.png) no-repeat;
+	background-size:cover;
+	width: 1px;
+	height: 1px;
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+}
+.route .main-map-mobile .map {
+	background: url(../Images/route/mapa_back.png) no-repeat;
+	background-size:cover;
+	width: 800px;
+	height: 2876px;
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+}
+.route .main-map-mobile .map2 {
+	background: url(../Images/route/ruta_camino.png) no-repeat;
+	background-size:cover;
+	width: 563px;
+	height: 2200px;
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+}
+.route .title {
+	background: url(../Images/route/ruta_titulo.png) no-repeat transparent;
+	width: 253px;
+	height: 89px;
+}
+@media only screen and (max-width: 640px) {
+.buttons .holder {
+	background: url(../Images/home/back_icons_circulo.png) no-repeat;
+	width: 180px;
+	height: 180px;
+}
+}

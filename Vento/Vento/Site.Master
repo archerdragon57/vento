@@ -1,0 +1,212 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Vento.SiteMaster" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <title>Vento</title>
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <asp:PlaceHolder runat="server">
+          <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
+    <!-- <link rel="stylesheet" href="~/Content/mobile.css"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1, user-scalable=no" />
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="P3P" content='CP="IDC DSP COR CURa ADMa OUR IND PHY ONL COM STA"'>
+<meta http-equiv="X-UA-Compatible" content="IE=8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="description" content='Te has preguntado, ¿qué pasaría si por lo menos una de tus grandes ideas, la llevaras a cabo? Volkswagen te invita a descubrirlo en la Ruta de las Ideas' />
+<meta name="keywords" content="volkswagen, ruta, idea, mundo, auto" />
+<meta property="og:title" content="La ruta de las ideas" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://nuevovento.mx/" />
+<meta property="og:image" content="http://nuevovento.mx/share.jpg" />
+<meta property="og:description" content='¿Qué pasaría si una de tus ideas la llevaras a cabo? Volkswagen y Nuevo Vento te invitan a descubrirlo' />
+    <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
+    <!-- Segment Pixel - Headway Digital - Mediacom MX - VW Vento Segment Include - DO NOT MODIFY -->
+<img src="http://ads.resultsaccelerator.net/seg?add=1051539&t=2" width="0" height="0" style="display: none;"/>
+<!-- End of Segment Pixel -->
+
+</head>
+<body>
+<script type='text/javascript'>
+    var ebRand = Math.random() + '';
+    ebRand = ebRand * 1000000;
+    //<![CDATA[
+    document.write('<scr' + 'ipt src="HTTP://bs.serving-sys.com/BurstingPipe/ActivityServer.bs?cn=as&amp;ActivityID=369561&amp;rnd=' + ebRand + '"></scr' + 'ipt>');
+    //]]>
+</script>
+<noscript>
+<img width="1" height="1" style="border:0" src="HTTP://bs.serving-sys.com/BurstingPipe/ActivityServer.bs?cn=as&amp;ActivityID=369561&amp;ns=1"/>
+</noscript>
+    <script>
+        var _gaq = [['_setAccount', 'UA-38641079-14'], ['_trackPageview']];
+        (function (d, t) {
+            var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
+            g.src = ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g, s)
+        }(document, 'script'));
+</script>
+
+    <div id="preloader">
+      <div id="preloader-content" class="preloading">
+        <div class="ui-spinner">
+          <div class="wheel"></div>
+          <div class="preloader-text">Cargando...</div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <form runat="server">
+    <asp:ScriptManager runat="server">
+        <Scripts>
+            <%--Framework Scripts--%>
+            <asp:ScriptReference Name="MsAjaxBundle" />
+            <asp:ScriptReference Name="jquery" />
+            <asp:ScriptReference Name="jquery.ui.combined" />
+            <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+            <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+            <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+            <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+            <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+            <asp:ScriptReference Name="TreeVfiew.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+            <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+            <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+            <asp:ScriptReference Name="WebFormsBundle" />
+            <%--Site Scripts--%>
+
+        </Scripts>
+
+    </asp:ScriptManager>
+    <script src="Scripts/jquery.scrollTo-1.4.3.1-min.js"></script>
+    <script src="Scripts/jquery.media.js"></script>
+    <script src="Scripts/jquery.spriteOnHover-0.2.5.min.js"></script>
+    <script src="Scripts/TimelineMax.min.js"></script>
+    <script src="Scripts/TweenMax.min.js"></script>
+    <script src="Scripts/main.js"></script>
+        <script>var selected = 0;</script>
+
+
+
+
+
+
+    <header>
+        <div class="content-wrapper">
+          <div class="float-left"> <a runat="server" class="logovw" href="~/"><img src="Images/header/logo_vw.png" alt=""></a> </div>
+          <div class="float-center">
+            <nav class="header-nav">
+              <ul id="menu">
+                <li><a href="Registro.aspx" onclick="javascript:window.selected=1;" class="chackbox">
+                  <div class="register">Participa</div>
+                  </a></li>
+                <li>|</li>
+                <li><a href="Registro.aspx" onclick="javascript:window.selected=2;" class="chackbox">
+                  <div class="test">Prueba de manejo</div>
+                  </a></li>
+                <li>|</li>
+                <li><a runat="server" href="mecanica.aspx" class="chackbox">
+                  <div class="rules">Mecánica</div>
+                  </a></li>
+                <li>|</li>
+                <li><a runat="server" href="ruta.aspx" class="chackbox">
+                  <div class="route">Ruta</div>
+                  </a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="float-right">
+            <div class="menu_btn"><a class="btn" href="#"><img src="Images/header/menu_mobile.png" width="33" height="25" alt=""></a></div>
+            <div class="social-share">
+              <ul id="share">
+                <li><a href="https://www.facebook.com/VolkswagenMexico?fref=ts">
+                  <div class="facebook"></div>
+                  </a></li>
+                <li><a href="https://twitter.com/Volkswagen_MX">
+                  <div class="twitter"></div>
+                  </a></li>
+              </ul>
+            </div>
+            <section id="login">
+              <asp:LoginView runat="server" ViewStateMode="Disabled">
+                <AnonymousTemplate>
+                  <ul>
+                    <li><a id="registerLink" runat="server" href="~/Account/Register.aspx">Register</a></li>
+                    <li><a id="loginLink" runat="server" href="~/Account/Login.aspx">Log in</a></li>
+                  </ul>
+                </AnonymousTemplate>
+                <LoggedInTemplate>
+                  <p>
+                    Hello, <a runat="server" class="username" href="~/Account/Manage.aspx" title="Manage your account">
+                    <asp:LoginName runat="server" CssClass="username" /></a>!
+                    <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" />
+                  </p>
+                </LoggedInTemplate>
+                </asp:LoginView>
+              </section>
+          </div>
+        </div>
+    </header>
+    <nav class="header-nav-mobile">
+      <ul id="menu">
+        <li><a id="A1" runat="server" href="Registro.aspx?Selected=1" class="chackbox">
+          <div class="register">Participa</div>
+          </a></li>
+        <li><a href="Registro.aspx" onclick="javascript:window.selected=2;" class="chackbox">
+          <div class="test">Prueba de manejo</div>
+          </a></li>
+        <li><a runat="server" href="mecanica.aspx" class="chackbox">
+          <div class="rules">Mecánica</div>
+          </a></li>
+        <li><a runat="server" href="ruta.aspx" class="chackbox">
+          <div class="route">Ruta</div>
+          </a></li>
+        <li class="fb"><a href="#"  class="chackbox">
+          <div class="facebook">Facebook VW</div>
+          </a></li>
+        <li class="tw"><a href="#" class="chackbox">
+          <div class="twitter">Twitter VW</div>
+          </a></li>
+      </ul>
+    </nav>
+    <div id="body">
+        <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
+        <section class="content-wrapper main-content clear-fix">
+            <asp:ContentPlaceHolder runat="server" ID="MainContent" />
+        </section>
+    </div>
+    <footer>
+      <div class="main-footer">
+        <div class="copy">
+          <p><a runat="server" href="http://www.vw.com.mx/" target="_blank">&copy; Volkswagen México 2013</a></p>
+        </div>
+        <div class="privacy">
+          <p><a runat="server" href="http://www.vw.com.mx/es/tools/navigation/footer/aspectos_legalesyavisodeprivacidad.html" target="_blank">Políticas de privacidad</a></p>
+        </div>
+        <div class="legals">
+          <p><a runat="server" class="chackbox" href="AspectosLegales.aspx" target="_blank">Términos y condiciones</a></p>
+        </div>
+      </div>
+    </footer>
+    </form>
+    <script type="text/javascript">
+        /* <![CDATA[ */
+        var google_conversion_id = 979931181;
+        var google_custom_params = window.google_tag_params;
+        var google_remarketing_only = true;
+        /* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/979931181/?value=0&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+
+</body>
+</html>
