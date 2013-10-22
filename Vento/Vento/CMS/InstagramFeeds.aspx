@@ -7,107 +7,182 @@
     <title></title>
 </head>
 <body>
-    <form id="form1" runat="server">
+    
+ <form id="form1" runat="server">
     <div>
-    <asp:Button ID="btnLogout" CssClass="logoutRight btn btn-info" runat="server" Text="log out" OnClick="btnLogout_Click" />
+    <asp:Button ID="btnLogout" CssClass="logoutRight btn btn-info" runat="server" Text="log out" OnClick="btnLogout_Click1" />
     <asp:DataGrid ID="GridView1" CssClass="table table-striped table-bordered" runat="server" AutoGenerateColumns="False" AllowPaging="true" OnPageIndexChanged="GridView1_PageIndexChanged" DataKeyField="id" OnDeleteCommand="GridView1_DeleteCommand" OnEditCommand="GridView1_EditCommand" OnUpdateCommand="GridView1_UpdateCommand" OnCancelCommand="GridView1_CancelCommand" OnItemCommand="GridView1_ItemCommand">
         <Columns>
+
             <asp:TemplateColumn HeaderText="Id" HeaderStyle-Font-Bold="true">
                 <EditItemTemplate>
-                    <asp:Label ID="lbladdid_e" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.id") %>'></asp:Label>
+                    <asp:Label ID="lblId_e" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.id") %>'></asp:Label>
                 </EditItemTemplate>
                 <ItemTemplate>
-                    <asp:Label ID="lbladdid" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.id") %>'></asp:Label>
+                    <asp:Label ID="lblId" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.id") %>'></asp:Label>
                 </ItemTemplate>
                 <FooterTemplate>
                     <asp:Button ID="btnaddid_f" runat="server" CommandName="AddNew" Text="Insert" />
                 </FooterTemplate>
                 <HeaderStyle Font-Bold="True"></HeaderStyle>
             </asp:TemplateColumn>
-            <asp:TemplateColumn HeaderText="Twit" HeaderStyle-Font-Bold="true">
+
+            <asp:TemplateColumn HeaderText="Caption Text" HeaderStyle-Font-Bold="true">
                 <EditItemTemplate>
-                    <asp:TextBox ID="txtaddcontent_e" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.content") %>'></asp:TextBox>
+                    <asp:TextBox ID="txtCaptionText_e" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.captiontext") %>'></asp:TextBox>
                 </EditItemTemplate>
                 <ItemTemplate>
-                    <asp:Label ID="lbladdcontent" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.content") %>'></asp:Label>
+                    <asp:Label ID="lblCaptionText" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.captiontext") %>'></asp:Label>
                 </ItemTemplate>
                 <FooterTemplate>
                     <asp:TextBox ID="txtcontent_f" runat="server"></asp:TextBox>
                 </FooterTemplate>
                 <HeaderStyle Font-Bold="True"></HeaderStyle>
             </asp:TemplateColumn>
-            <asp:TemplateColumn HeaderText="id_usuario" HeaderStyle-Font-Bold="true">
+
+            <asp:TemplateColumn HeaderText="Filter" HeaderStyle-Font-Bold="true">
                 <EditItemTemplate>
-                    <asp:TextBox ID="txtaddiduser_e" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.id_user") %>'></asp:TextBox>
+                    <asp:TextBox ID="txtFilter_e" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.filter") %>'></asp:TextBox>
                 </EditItemTemplate>
                 <ItemTemplate>
-                    <asp:Label ID="lbladdiduser" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.id_user") %>'></asp:Label>
+                    <asp:Label ID="lblFilter" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.filter") %>'></asp:Label>
                 </ItemTemplate>
                 <FooterTemplate>
                     <asp:TextBox ID="txtiduser_f" runat="server"></asp:TextBox>
                 </FooterTemplate>
                 <HeaderStyle Font-Bold="True"></HeaderStyle>
             </asp:TemplateColumn>
-            <asp:TemplateColumn HeaderText="Nombre usuario" HeaderStyle-Font-Bold="true">
+
+            <asp:TemplateColumn HeaderText="Dato Id usuario" HeaderStyle-Font-Bold="true">
                 <EditItemTemplate>
-                    <asp:TextBox ID="txtaddnombre_e" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.name_user") %>'></asp:TextBox>
+                    <asp:TextBox ID="txtDatoId_e" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.dato_id") %>'></asp:TextBox>
                 </EditItemTemplate>
                 <ItemTemplate>
-                    <asp:Label ID="lbladdnombre" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.name_user") %>'></asp:Label>
+                    <asp:Label ID="lblDatoId" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.dato_id") %>'></asp:Label>
                 </ItemTemplate>
                 <FooterTemplate>
                     <asp:TextBox ID="txtnombre_f" runat="server"></asp:TextBox>
                 </FooterTemplate>
                 <HeaderStyle Font-Bold="True"></HeaderStyle>
             </asp:TemplateColumn>
-            <asp:TemplateColumn HeaderText="Screen Name" HeaderStyle-Font-Bold="true">
+
+            <asp:TemplateColumn HeaderText="Like Count" HeaderStyle-Font-Bold="true">
                 <EditItemTemplate>
-                    <asp:TextBox ID="txtaddscreen_e" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.screen_name") %>'></asp:TextBox>
+                    <asp:TextBox ID="txtLikeCount_e" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.like_count") %>'></asp:TextBox>
                 </EditItemTemplate>
                 <ItemTemplate>
-                    <asp:Label ID="lbladdscreen" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.screen_name") %>'></asp:Label>
+                    <asp:Label ID="lblLikeCount" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.like_count") %>'></asp:Label>
                 </ItemTemplate>
                 <FooterTemplate>
                     <asp:TextBox ID="txtscreen_f" runat="server"></asp:TextBox>
                 </FooterTemplate>
                 <HeaderStyle Font-Bold="True"></HeaderStyle>
             </asp:TemplateColumn>
-            <asp:TemplateColumn HeaderText="User Location" HeaderStyle-Font-Bold="true">
+
+            <asp:TemplateColumn HeaderText="Link" HeaderStyle-Font-Bold="true">
                 <EditItemTemplate>
-                    <asp:TextBox ID="txtaddlocation_e" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.user_location") %>'></asp:TextBox>
+                    <asp:TextBox ID="txtLink_e" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.link") %>'></asp:TextBox>
                 </EditItemTemplate>
                 <ItemTemplate>
-                    <asp:Label ID="lbladdlocation" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.user_location") %>'></asp:Label>
+                    <asp:Label ID="lblLink" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.link") %>'></asp:Label>
                 </ItemTemplate>
                 <FooterTemplate>
                     <asp:TextBox ID="txtlocation_f" runat="server"></asp:TextBox>
                 </FooterTemplate>
                 <HeaderStyle Font-Bold="True"></HeaderStyle>
             </asp:TemplateColumn>
-            <asp:TemplateColumn HeaderText="Foto" HeaderStyle-Font-Bold="true">
+
+            <asp:TemplateColumn HeaderText="Location" HeaderStyle-Font-Bold="true">
                 <EditItemTemplate>
-                    <asp:TextBox ID="txtaddphone_e" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.profilebackgroundimageurl") %>'></asp:TextBox>
+                    <asp:TextBox ID="txtLocation_e" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.location") %>'></asp:TextBox>
                 </EditItemTemplate>
                 <ItemTemplate>
-                    <asp:Label ID="lbladdphone" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.profilebackgroundimageurl") %>'></asp:Label>
+                    <asp:Label ID="lblLocation" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.location") %>'></asp:Label>
                 </ItemTemplate>
                 <FooterTemplate>
                     <asp:TextBox ID="txtphoto_f" runat="server"></asp:TextBox>
                 </FooterTemplate>
                 <HeaderStyle Font-Bold="True"></HeaderStyle>
             </asp:TemplateColumn>
-            <asp:TemplateColumn HeaderText="Visible" HeaderStyle-Font-Bold="true">
+
+            <asp:TemplateColumn HeaderText="Lowres" HeaderStyle-Font-Bold="true">
                 <EditItemTemplate>
-                    <asp:TextBox ID="txtaddphoto" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.visible") %>'></asp:TextBox>
+                    <asp:TextBox ID="txtLowres_e" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.lowres") %>'></asp:TextBox>
                 </EditItemTemplate>
                 <ItemTemplate>
-                    <asp:Label ID="lbladdphoto" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.visible") %>'></asp:Label>
+                    <asp:Label ID="lblLowres" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.lowres") %>'></asp:Label>
                 </ItemTemplate>
                 <FooterTemplate>
                     <asp:CheckBox  ID="checkbox_f" runat="server"></asp:CheckBox>
                 </FooterTemplate>
                 <HeaderStyle Font-Bold="True"></HeaderStyle>
             </asp:TemplateColumn>
+
+            <asp:TemplateColumn HeaderText="Normal" HeaderStyle-Font-Bold="true">
+                <EditItemTemplate>
+                    <asp:TextBox ID="txtNormal_e" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.normal") %>'></asp:TextBox>
+                </EditItemTemplate>
+                <ItemTemplate>
+                    <asp:Label ID="lblNormal" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.normal") %>'></asp:Label>
+                </ItemTemplate>
+                <FooterTemplate>
+                    <asp:CheckBox  ID="checkbox_f1" runat="server"></asp:CheckBox>
+                </FooterTemplate>
+                <HeaderStyle Font-Bold="True"></HeaderStyle>
+            </asp:TemplateColumn>
+
+            <asp:TemplateColumn HeaderText="Thumbnail" HeaderStyle-Font-Bold="true">
+                <EditItemTemplate>
+                    <asp:TextBox ID="txtThumbnail_e" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.thumbnail") %>'></asp:TextBox>
+                </EditItemTemplate>
+                <ItemTemplate>
+                    <asp:Label ID="lblThumbnail" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.thumbnail") %>'></asp:Label>
+                </ItemTemplate>
+                <FooterTemplate>
+                    <asp:CheckBox  ID="checkbox_f2" runat="server"></asp:CheckBox>
+                </FooterTemplate>
+                <HeaderStyle Font-Bold="True"></HeaderStyle>
+            </asp:TemplateColumn>
+
+            <asp:TemplateColumn HeaderText="Data Type" HeaderStyle-Font-Bold="true">
+                <EditItemTemplate>
+                    <asp:TextBox ID="txtDataType_e" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.data_type") %>'></asp:TextBox>
+                </EditItemTemplate>
+                <ItemTemplate>
+                    <asp:Label ID="lblDataType" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.data_type") %>'></asp:Label>
+                </ItemTemplate>
+                <FooterTemplate>
+                    <asp:CheckBox  ID="checkbox_f3" runat="server"></asp:CheckBox>
+                </FooterTemplate>
+                <HeaderStyle Font-Bold="True"></HeaderStyle>
+            </asp:TemplateColumn>
+
+            <asp:TemplateColumn HeaderText="Dia Id" HeaderStyle-Font-Bold="true">
+                <EditItemTemplate>
+                    <asp:TextBox ID="txtDia_e" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.dia_id") %>'></asp:TextBox>
+                </EditItemTemplate>
+                <ItemTemplate>
+                    <asp:Label ID="lblDia" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.dia_id") %>'></asp:Label>
+                </ItemTemplate>
+                <FooterTemplate>
+                    <asp:CheckBox  ID="checkbox_f4" runat="server"></asp:CheckBox>
+                </FooterTemplate>
+                <HeaderStyle Font-Bold="True"></HeaderStyle>
+            </asp:TemplateColumn>
+
+            <asp:TemplateColumn HeaderText="Visible" HeaderStyle-Font-Bold="true">
+                <EditItemTemplate>
+                    <asp:TextBox ID="txtVisible_e" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.visible") %>'></asp:TextBox>
+                </EditItemTemplate>
+                <ItemTemplate>
+                    <asp:Label ID="lblVisible" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.visible") %>'></asp:Label>
+                </ItemTemplate>
+                <FooterTemplate>
+                    <asp:CheckBox  ID="checkbox_f5" runat="server"></asp:CheckBox>
+                </FooterTemplate>
+                <HeaderStyle Font-Bold="True"></HeaderStyle>
+            </asp:TemplateColumn>
+
             <asp:EditCommandColumn CancelText="Cancel" EditText="Edit" HeaderText="" UpdateText="Update"></asp:EditCommandColumn>
             <asp:ButtonColumn Text="Delete" ButtonType="PushButton" CommandName="Delete"></asp:ButtonColumn>
         </Columns>
@@ -130,3 +205,5 @@
             }
         }
     </script>
+</body>
+</html>

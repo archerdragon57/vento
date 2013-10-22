@@ -188,6 +188,7 @@
     <Content Include="bin\Vento.pdb" />
     <Content Include="bin\WebGrease.dll" />
     <Content Include="CMS\admin.aspx" />
+    <Content Include="CMS\edit\instagram_feed.aspx" />
     <Content Include="CMS\edit\twit_feed.aspx" />
     <Content Include="CMS\FacebookFeeds.aspx" />
     <Content Include="CMS\InstagramFeeds.aspx" />
@@ -440,6 +441,13 @@
     </Compile>
     <Compile Include="CMS\admin.aspx.designer.cs">
       <DependentUpon>admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CMS\edit\instagram_feed.aspx.cs">
+      <DependentUpon>instagram_feed.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CMS\edit\instagram_feed.aspx.designer.cs">
+      <DependentUpon>instagram_feed.aspx</DependentUpon>
     </Compile>
     <Compile Include="CMS\edit\twit_feed.aspx.cs">
       <DependentUpon>twit_feed.aspx</DependentUpon>

@@ -9,7 +9,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
-<h5><asp:Label ID="lblMessage" runat="server" Text=""></asp:Label></h5>
+        <h5><asp:Label ID="lblMessage" runat="server" Text=""></asp:Label></h5>
 
 
         <asp:Button ID="btnLogout" CssClass="logoutRight btn btn-info" runat="server" Text="log out" OnClick="btnLogout_Click" />
