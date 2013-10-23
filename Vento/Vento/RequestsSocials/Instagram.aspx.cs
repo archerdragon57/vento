@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Globalization;
 using System.Linq;
 using System.Web;
 using System.Web.Configuration;
@@ -38,18 +39,18 @@ namespace Vento.RequestsSocials
                 }
                 if (totalp < 1)
                 {
-                string sConection = WebConfigurationManager.ConnectionStrings["ApplicationServices"].ConnectionString;
-                using (SqlConnection sqlCon = new SqlConnection(sConection))
-                {
-                    SqlCommand sqlCom = new SqlCommand("INSERT INTO instagram_users (instid,fullname,profilepic,username,code,token) OUTPUT inserted.id VALUES ('" + service.CurrentUser.Id+ "','"+service.CurrentUser.FullName+"','"+service.CurrentUser.ProfilePicture+"','"+service.CurrentUser.Username+"','"+instatoken+"','"+service.AccessToken+"')", sqlCon);
-                    sqlCon.Open();
-                    SqlDataReader reader = sqlCom.ExecuteReader();
-                    while (reader.Read())
+                    string sConection = WebConfigurationManager.ConnectionStrings["ApplicationServices"].ConnectionString;
+                    using (SqlConnection sqlCon = new SqlConnection(sConection))
                     {
-                        //sb.Append(Convert.ToString(reader[0]));
+                        SqlCommand sqlCom = new SqlCommand("INSERT INTO instagram_users (instid,fullname,profilepic,username,code,token) OUTPUT inserted.id VALUES ('" + service.CurrentUser.Id+ "','"+service.CurrentUser.FullName+"','"+service.CurrentUser.ProfilePicture+"','"+service.CurrentUser.Username+"','"+instatoken+"','"+service.AccessToken+"')", sqlCon);
+                        sqlCon.Open();
+                        SqlDataReader reader = sqlCom.ExecuteReader();
+                        while (reader.Read())
+                        {
+                            //sb.Append(Convert.ToString(reader[0]));
+                        }
+                        sqlCon.Close();
                     }
-                    sqlCon.Close();
-                }
                 }
                 else
                 {
@@ -65,6 +66,24 @@ namespace Vento.RequestsSocials
                         }
                         sqlCon.Close();
                     }
+                }
+                int dia = 1;
+                string us = DateTime.Now.ToString(new CultureInfo("en-US"));
+                if (us.IndexOf("28/10/2012") > -1)
+                {
+                    dia = 1;
+                }
+                if (us.IndexOf("29/10/2012") > -1)
+                {
+                    dia = 2;
+                }
+                if (us.IndexOf("30/10/2012") > -1)
+                {
+                    dia = 3;
+                }
+                if (us.IndexOf("31/10/2012") > -1)
+                {
+                    dia = 4;
                 }
                 foreach (var img in media.Images)
                 {
@@ -86,7 +105,7 @@ namespace Vento.RequestsSocials
                         string sConection2 = WebConfigurationManager.ConnectionStrings["ApplicationServices"].ConnectionString;
                         using (SqlConnection sqlCon2 = new SqlConnection(sConection2))
                         {
-                            SqlCommand sqlCom2 = new SqlCommand("INSERT INTO instagramfeeds (captiontext,filter,dato_id,like_count,link,location,lowres,normal,thumbnail,data_type,dia_id) OUTPUT inserted.id VALUES ('" + img.CaptionText + "','" + img.Filter + "','" + img.Id + "'," + img.LikeCount + ",'" + img.Link + "','" + img.Location + "','" + img.LowRes + "','" + img.Standard + "','" + img.Thumbnail + "','" + img.Type + "',1)", sqlCon2);
+                            SqlCommand sqlCom2 = new SqlCommand("INSERT INTO instagramfeeds (captiontext,filter,dato_id,like_count,link,location,lowres,normal,thumbnail,data_type,dia_id) OUTPUT inserted.id VALUES ('" + img.CaptionText + "','" + img.Filter + "','" + img.Id + "'," + img.LikeCount + ",'" + img.Link + "','" + img.Location + "','" + img.LowRes + "','" + img.Standard + "','" + img.Thumbnail + "','" + img.Type + "',"+dia+")", sqlCon2);
                             sqlCon2.Open();
                             SqlDataReader reader = sqlCom2.ExecuteReader();
                             while (reader.Read())
@@ -170,6 +189,24 @@ namespace Vento.RequestsSocials
         {
             InstagramService service = InstagramService.CreateFromAccessToken(instatoken);
             var media = service.Endpoints.Users.GetMedia(34655664);
+            int dia = 1;
+            string us = DateTime.Now.ToString(new CultureInfo("en-US"));
+            if (us.IndexOf("28/10/2012") > -1)
+            {
+                dia = 1;
+            }
+            if (us.IndexOf("29/10/2012") > -1)
+            {
+                dia = 2;
+            }
+            if (us.IndexOf("30/10/2012") > -1)
+            {
+                dia = 3;
+            }
+            if (us.IndexOf("31/10/2012") > -1)
+            {
+                dia = 4;
+            }
             foreach (var img in media.Images)
             {
                 int totalp = 0;
@@ -190,7 +227,7 @@ namespace Vento.RequestsSocials
                     string sConection = WebConfigurationManager.ConnectionStrings["ApplicationServices"].ConnectionString;
                     using (SqlConnection sqlCon = new SqlConnection(sConection))
                     {
-                        SqlCommand sqlCom = new SqlCommand("INSERT INTO instagramfeeds (captiontext,filter,dato_id,like_count,link,location,lowres,normal,thumbnail,data_type,dia_id) OUTPUT inserted.id VALUES ('"+img.CaptionText+"','"+img.Filter+"','"+img.Id+"',"+img.LikeCount+",'"+img.Link+"','"+img.Location+"','"+img.LowRes+"','"+img.Standard+"','"+img.Thumbnail+"','"+img.Type+"',1)", sqlCon);
+                        SqlCommand sqlCom = new SqlCommand("INSERT INTO instagramfeeds (captiontext,filter,dato_id,like_count,link,location,lowres,normal,thumbnail,data_type,dia_id) OUTPUT inserted.id VALUES ('"+img.CaptionText+"','"+img.Filter+"','"+img.Id+"',"+img.LikeCount+",'"+img.Link+"','"+img.Location+"','"+img.LowRes+"','"+img.Standard+"','"+img.Thumbnail+"','"+img.Type+"',"+dia+")", sqlCon);
                         sqlCon.Open();
                         SqlDataReader reader = sqlCom.ExecuteReader();
                         while (reader.Read())
@@ -236,7 +273,7 @@ namespace Vento.RequestsSocials
                     string sConection = WebConfigurationManager.ConnectionStrings["ApplicationServices"].ConnectionString;
                     using (SqlConnection sqlCon = new SqlConnection(sConection))
                     {
-                        SqlCommand sqlCom = new SqlCommand("INSERT INTO instagramfeeds (captiontext,filter,dato_id,like_count,link,location,lowres,normal,thumbnail,data_type,dia_id) OUTPUT inserted.id VALUES ('" + vid.CaptionText + "','" + vid.Filter + "','" + vid.Id + "'," + vid.LikeCount + ",'" + vid.Link + "','" + vid.Location + "','" + vid.LowRes + "','" + vid.Standard + "','" + vid.Thumbnail + "','" + vid.Type + "',1)", sqlCon);
+                        SqlCommand sqlCom = new SqlCommand("INSERT INTO instagramfeeds (captiontext,filter,dato_id,like_count,link,location,lowres,normal,thumbnail,data_type,dia_id) OUTPUT inserted.id VALUES ('" + vid.CaptionText + "','" + vid.Filter + "','" + vid.Id + "'," + vid.LikeCount + ",'" + vid.Link + "','" + vid.Location + "','" + vid.LowRes + "','" + vid.Standard + "','" + vid.Thumbnail + "','" + vid.Type + "',"+dia+")", sqlCon);
                         sqlCon.Open();
                         SqlDataReader reader = sqlCom.ExecuteReader();
                         while (reader.Read())

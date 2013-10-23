@@ -116,6 +116,10 @@
     <asp:Label ID="lblMessage" runat="server"></asp:Label>
     </div>
     </form>
+        <a href="TwitterFeeds.aspx">Listados Twitter</a>
+    <a href="InstagramFeeds.aspx">Listados Instagram</a>
+    <a href="DatosAutos.aspx">Datos de los autos</a>
+    <a href="#">Datos de los usuarios</a>
     <script>
         function ondeleteclick() {
             return confirm("Are you sure you want to delete this?")
