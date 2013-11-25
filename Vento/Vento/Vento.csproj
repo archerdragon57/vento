@@ -151,6 +151,203 @@
     <Content Include="Account\Register.aspx" />
     <Content Include="Account\RegisterExternalLogin.aspx" />
     <Content Include="AspectosLegales.aspx" />
+    <Content Include="Auto\css\component.css" />
+    <Content Include="Auto\css\fonts\VWHeabla\vwheabla.css" />
+    <Content Include="Auto\css\fonts\VWHeabla\vwheabla.svg" />
+    <Content Include="Auto\css\fonts\VWHeaboo\vwheaboo.css" />
+    <Content Include="Auto\css\fonts\VWHeaboo\vwheaboo.svg" />
+    <Content Include="Auto\css\fonts\VWHeadlineOT-Black\vwheadlineot-black.css" />
+    <Content Include="Auto\css\fonts\VWHeadlineOT-Black\vwheadlineot-black.svg" />
+    <Content Include="Auto\css\fonts\VWHeadlineOT-Book\vwheadlineot-book.css" />
+    <Content Include="Auto\css\fonts\VWHeadlineOT-Book\vwheadlineot-book.svg" />
+    <Content Include="Auto\css\fonts\VWHeadlineOT-Semibold\vwheadlineot-semibold.css" />
+    <Content Include="Auto\css\fonts\VWHeadlineOT-Semibold\vwheadlineot-semibold.svg" />
+    <Content Include="Auto\css\fonts\VWUtopia\vwutobit-webfont.svg" />
+    <Content Include="Auto\css\fonts\VWUtopia\vwutobit.css" />
+    <Content Include="Auto\css\style.css" />
+    <Content Include="Auto\Images\assets\Messages\alerta_exclamacion.png" />
+    <Content Include="Auto\Images\assets\Messages\alerta_paloma.png" />
+    <Content Include="Auto\Images\assets\Messages\sprite_cerrar_alerta.png" />
+    <Content Include="Auto\Images\header\logo_vw.png" />
+    <Content Include="Auto\img\back_play_bg.png" />
+    <Content Include="Auto\img\bajo_consumo_icon_azul_menu.png" />
+    <Content Include="Auto\img\bajo_consumo_icon_menu.png" />
+    <Content Include="Auto\img\btnMapa_back.png" />
+    <Content Include="Auto\img\btnMapa_bg.png" />
+    <Content Include="Auto\img\btnMapa_bg2.png" />
+    <Content Include="Auto\img\btnMapa_toMap.png" />
+    <Content Include="Auto\img\btn_shape_vento_color.png" />
+    <Content Include="Auto\img\btn_social_icons_shape.png" />
+    <Content Include="Auto\img\cerrar_foto_full.png" />
+    <Content Include="Auto\img\comodidad_icon_azul_menu.png" />
+    <Content Include="Auto\img\comodidad_icon_menu.png" />
+    <Content Include="Auto\img\equipamiento_icon_azul_menu.png" />
+    <Content Include="Auto\img\equipamiento_icon_menu.png" />
+    <Content Include="Auto\img\facebook_icon.png" />
+    <Content Include="Auto\img\fotos_full\aqui_cabe_todo.png" />
+    <Content Include="Auto\img\fotos_full\atmosfera_interior.png" />
+    <Content Include="Auto\img\fotos_full\computadora.png" />
+    <Content Include="Auto\img\fotos_full\escucha.png" />
+    <Content Include="Auto\img\fotos_full\espacio.png" />
+    <Content Include="Auto\img\fotos_full\ideas_que_funcionan.png" />
+    <Content Include="Auto\img\fotos_full\inteligente.png" />
+    <Content Include="Auto\img\fotos_full\no_patines.png" />
+    <Content Include="Auto\img\fotos_full\piensa_en_todo.png" />
+    <Content Include="Auto\img\fotos_full\potencia.png" />
+    <Content Include="Auto\img\fotos_full\sujetate.png" />
+    <Content Include="Auto\img\fotos_full\tiempo.png" />
+    <Content Include="Auto\img\hotspot.png" />
+    <Content Include="Auto\img\hotspotclosebg.png" />
+    <Content Include="Auto\img\hotspotclosecross.png" />
+    <Content Include="Auto\img\hotspotOpenContainer.png" />
+    <Content Include="Auto\img\hotspots\btn_shape_vento_color.png" />
+    <Content Include="Auto\img\hotspots\hotspots.mp4" />
+    <Content Include="Auto\img\hotspots_images\foto_aqui_cabe_todo_hotspot.png" />
+    <Content Include="Auto\img\hotspots_images\foto_atmosfera_hotspot.png" />
+    <Content Include="Auto\img\hotspots_images\foto_computadora_hotspot.png" />
+    <Content Include="Auto\img\hotspots_images\foto_escucha_hotspot.png" />
+    <Content Include="Auto\img\hotspots_images\foto_espacio_hotspot.png" />
+    <Content Include="Auto\img\hotspots_images\foto_ideas_que_funcionan_hotspot.png" />
+    <Content Include="Auto\img\hotspots_images\foto_inteligente_hotspot.png" />
+    <Content Include="Auto\img\hotspots_images\foto_no_patines_hotspot.png" />
+    <Content Include="Auto\img\hotspots_images\foto_piensa_en_todo_hotspot.png" />
+    <Content Include="Auto\img\hotspots_images\foto_potencia_hotspot.png" />
+    <Content Include="Auto\img\hotspots_images\foto_sujetate_hotspot.png" />
+    <Content Include="Auto\img\hotspots_images\foto_tiempo_hotspot.png" />
+    <Content Include="Auto\img\hotspot_rollover.png" />
+    <Content Include="Auto\img\icons_hotspots\back_icon_hotspot.png" />
+    <Content Include="Auto\img\icons_hotspots\foto_icon_activo_hotspot.png" />
+    <Content Include="Auto\img\icons_hotspots\foto_icon_hotspot.png" />
+    <Content Include="Auto\img\icons_hotspots\foto_play_activo_hotspot.png" />
+    <Content Include="Auto\img\icons_hotspots\foto_play_hotspot.png" />
+    <Content Include="Auto\img\icons_hotspots\info_icon_activo_hotspot.png" />
+    <Content Include="Auto\img\icons_hotspots\info_icon_hotspot.png" />
+    <Content Include="Auto\img\icon_btn_vento_color.png" />
+    <Content Include="Auto\img\la_ruta_rollover.png" />
+    <Content Include="Auto\img\logo_vw.jpg" />
+    <Content Include="Auto\img\logo_vw_100px.png" />
+    <Content Include="Auto\img\logo_vw_150px.png" />
+    <Content Include="Auto\img\map\close_icon_marker_ruta.png" />
+    <Content Include="Auto\img\map\equipo2.png" />
+    <Content Include="Auto\img\map\equipo3.png" />
+    <Content Include="Auto\img\map\equipo_1_ganador.png" />
+    <Content Include="Auto\img\map\ganador_btn.png" />
+    <Content Include="Auto\img\map\ganador_shape_btn.png" />
+    <Content Include="Auto\img\map\instagram_icon.png" />
+    <Content Include="Auto\img\map\like_instagram.png" />
+    <Content Include="Auto\img\map\mapa_back - Copy.jpg" />
+    <Content Include="Auto\img\map\mapa_back.jpg" />
+    <Content Include="Auto\img\map\marker_back_ruta.png" />
+    <Content Include="Auto\img\map\marker_btn_instagram.png" />
+    <Content Include="Auto\img\map\marker_btn_twitter.png" />
+    <Content Include="Auto\img\map\nube3.png" />
+    <Content Include="Auto\img\map\nube5.png" />
+    <Content Include="Auto\img\map\nube_1.png" />
+    <Content Include="Auto\img\map\nuve_2.png" />
+    <Content Include="Auto\img\map\play_icon.png" />
+    <Content Include="Auto\img\map\shape_2y3.png" />
+    <Content Include="Auto\img\map\shape_close_marker_ruta.png" />
+    <Content Include="Auto\img\map\shape_play_icon.png" />
+    <Content Include="Auto\img\map\shape_ruta.png" />
+    <Content Include="Auto\img\map\sprites\agua1.png" />
+    <Content Include="Auto\img\map\sprites\agua2.png" />
+    <Content Include="Auto\img\map\sprites\agua3.png" />
+    <Content Include="Auto\img\map\sprites\ancla.png" />
+    <Content Include="Auto\img\map\sprites\bailarina.png" />
+    <Content Include="Auto\img\map\sprites\carro1.png" />
+    <Content Include="Auto\img\map\sprites\carro2.png" />
+    <Content Include="Auto\img\map\sprites\fabrica.png" />
+    <Content Include="Auto\img\map\sprites\ferry.png" />
+    <Content Include="Auto\img\map\sprites\maguey.png" />
+    <Content Include="Auto\img\map\sprites\palmera1.png" />
+    <Content Include="Auto\img\map\sprites\palmera2.png" />
+    <Content Include="Auto\img\map\sprites\pez.png" />
+    <Content Include="Auto\img\map\sprites\pulpo.png" />
+    <Content Include="Auto\img\map\sprites\sombrero.png" />
+    <Content Include="Auto\img\map\sprites\sombrilla.png" />
+    <Content Include="Auto\img\map\sprites\volcan.png" />
+    <Content Include="Auto\img\map\twitter_icon.png" />
+    <Content Include="Auto\img\marker_instagram.png" />
+    <Content Include="Auto\img\marker_twitter.png" />
+    <Content Include="Auto\img\paint\back_auto.jpg" />
+    <Content Include="Auto\img\paint\beige_tierra.png" />
+    <Content Include="Auto\img\paint\blanco_candy.png" />
+    <Content Include="Auto\img\paint\cubeta_icon.png" />
+    <Content Include="Auto\img\paint\gris_pimienta.png" />
+    <Content Include="Auto\img\paint\negro_profundo.png" />
+    <Content Include="Auto\img\paint\nuevo_vento_copy.png" />
+    <Content Include="Auto\img\paint\plata_reflex.png" />
+    <Content Include="Auto\img\paint\regresar_icon.png" />
+    <Content Include="Auto\img\paint\rojo_flash.png" />
+    <Content Include="Auto\img\paint\shadow_blue.png" />
+    <Content Include="Auto\img\paint\Shape_cubeta.png" />
+    <Content Include="Auto\img\paint\sombra.png" />
+    <Content Include="Auto\img\play_icon_menu.png" />
+    <Content Include="Auto\img\regresar_video_icon_flat.png" />
+    <Content Include="Auto\img\seguridad_icon.png" />
+    <Content Include="Auto\img\seguridad_icon_azul.png" />
+    <Content Include="Auto\img\shape_cerrar_foto_full.png" />
+    <Content Include="Auto\img\shape_rollover_azul_menu.png" />
+    <Content Include="Auto\img\shape_rollover_blanco_menu.png" />
+    <Content Include="Auto\img\shape_share_ficha.png" />
+    <Content Include="Auto\img\share_face_ficha_hotspot.png" />
+    <Content Include="Auto\img\share_twitter_ficha_hotspot.png" />
+    <Content Include="Auto\img\timelinepoint.png" />
+    <Content Include="Auto\img\timelinepoint_over.png" />
+    <Content Include="Auto\img\trama_pattern.png" />
+    <Content Include="Auto\img\trama_pattern2.png" />
+    <Content Include="Auto\img\twitter_icon.png" />
+    <Content Include="Auto\img\vento_loader.gif" />
+    <Content Include="Auto\img\video\sprite_loop_play.png" />
+    <Content Include="Auto\img\video\sprite_loop_vento.png" />
+    <Content Include="Auto\img\video\sprite_rollover_video.png" />
+    <Content Include="Auto\img\video\todo.png" />
+    <Content Include="Auto\img\video\vento_microsite_home_logo_txt_delas.png" />
+    <Content Include="Auto\img\video\vento_microsite_home_logo_txt_la.png" />
+    <Content Include="Auto\img\video\vento_microsite_home_logo_txt_ruta.png" />
+    <Content Include="Auto\img\video\vento_microsite_home_logo_txt_volkswaguen.png" />
+    <Content Include="Auto\img\video\vento_microsite_home_logo_ver_video.png" />
+    <Content Include="Auto\js\animation.js" />
+    <Content Include="Auto\js\AnimationFrame.min.js" />
+    <Content Include="Auto\js\animations\animation.js" />
+    <Content Include="Auto\js\animations\animation_carColor.js" />
+    <Content Include="Auto\js\animations\animation_map.js" />
+    <Content Include="Auto\js\animations\copys.js" />
+    <Content Include="Auto\js\classie.js" />
+    <Content Include="Auto\js\copys.js" />
+    <Content Include="Auto\js\cuepoints.js" />
+    <Content Include="Auto\js\easing.js" />
+    <Content Include="Auto\js\fancybox\lib\jquery-1.10.1.min.js" />
+    <Content Include="Auto\js\fancybox\lib\jquery-1.9.0.min.js" />
+    <Content Include="Auto\js\fancybox\lib\jquery.mousewheel-3.0.6.pack.js" />
+    <Content Include="Auto\js\fancybox\source\blank.gif" />
+    <Content Include="Auto\js\fancybox\source\fancybox_loading%402x.gif" />
+    <Content Include="Auto\js\fancybox\source\fancybox_loading.gif" />
+    <Content Include="Auto\js\fancybox\source\fancybox_overlay.png" />
+    <Content Include="Auto\js\fancybox\source\fancybox_sprite%402x.png" />
+    <Content Include="Auto\js\fancybox\source\fancybox_sprite.png" />
+    <Content Include="Auto\js\fancybox\source\helpers\fancybox_buttons.png" />
+    <Content Include="Auto\js\fancybox\source\helpers\jquery.fancybox-buttons.css" />
+    <Content Include="Auto\js\fancybox\source\helpers\jquery.fancybox-buttons.js" />
+    <Content Include="Auto\js\fancybox\source\helpers\jquery.fancybox-media.js" />
+    <Content Include="Auto\js\fancybox\source\helpers\jquery.fancybox-thumbs.css" />
+    <Content Include="Auto\js\fancybox\source\helpers\jquery.fancybox-thumbs.js" />
+    <Content Include="Auto\js\fancybox\source\jquery.fancybox.css" />
+    <Content Include="Auto\js\fancybox\source\jquery.fancybox.js" />
+    <Content Include="Auto\js\fancybox\source\jquery.fancybox.pack.js" />
+    <Content Include="Auto\js\imageFiles.js" />
+    <Content Include="Auto\js\jquery.localscroll.min.js" />
+    <Content Include="Auto\js\jquery.scrollTo.min.js" />
+    <Content Include="Auto\js\jquery.spritely.js" />
+    <Content Include="Auto\js\jquery.spriteOnHover-0.2.5.min.js" />
+    <Content Include="Auto\js\main.js" />
+    <Content Include="Auto\js\modernizr-2.5.3.js" />
+    <Content Include="Auto\js\modernizr.custom.js" />
+    <Content Include="Auto\js\slider.js" />
+    <Content Include="Auto\js\TimelineMax.min.js" />
+    <Content Include="Auto\js\tinyscrollbar.js" />
+    <Content Include="Auto\js\TweenMax.min.js" />
+    <Content Include="Auto\Vento.aspx" />
     <Content Include="bin\Antlr3.Runtime.dll" />
     <Content Include="bin\AspNet.ScriptManager.jQuery.dll" />
     <Content Include="bin\AspNet.ScriptManager.jQuery.UI.Combined.dll" />
@@ -187,15 +384,25 @@
     <Content Include="bin\Vento.dll" />
     <Content Include="bin\Vento.pdb" />
     <Content Include="bin\WebGrease.dll" />
+    <Content Include="CMS\add\new_car.aspx" />
+    <Content Include="CMS\add\new_day.aspx" />
+    <Content Include="CMS\add\new_user.aspx" />
     <Content Include="CMS\admin.aspx" />
+    <Content Include="CMS\DatosAutos.aspx" />
+    <Content Include="CMS\DiasDatos.aspx" />
+    <Content Include="CMS\edit\car_data.aspx" />
+    <Content Include="CMS\edit\dia.aspx" />
     <Content Include="CMS\edit\instagram_feed.aspx" />
     <Content Include="CMS\edit\twit_feed.aspx" />
+    <Content Include="CMS\edit\user_data.aspx" />
     <Content Include="CMS\FacebookFeeds.aspx" />
     <Content Include="CMS\InstagramFeeds.aspx" />
     <Content Include="CMS\ListasManejo.aspx" />
     <Content Include="CMS\ListasRegistro.aspx" />
     <Content Include="CMS\login.aspx" />
     <Content Include="CMS\TwitterFeeds.aspx" />
+    <Content Include="CMS\Usuarios.aspx" />
+    <Content Include="CMS\UsuariosInstagram.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
@@ -299,11 +506,38 @@
     <Content Include="fonts\VWUtopia\vwutobit-webfont.eot" />
     <Content Include="fonts\VWUtopia\vwutobit-webfont.ttf" />
     <Content Include="fonts\VWUtopia\vwutobit-webfont.woff" />
+    <Content Include="Auto\css\colors.sass" />
+    <Content Include="Auto\css\fonts.sass" />
+    <Content Include="Auto\css\fonts\VWHeabla\vwheabla.eot" />
+    <Content Include="Auto\css\fonts\VWHeabla\vwheabla.ttf" />
+    <Content Include="Auto\css\fonts\VWHeabla\vwheabla.woff" />
+    <Content Include="Auto\css\fonts\VWHeaboo\vwheaboo.eot" />
+    <Content Include="Auto\css\fonts\VWHeaboo\vwheaboo.ttf" />
+    <Content Include="Auto\css\fonts\VWHeaboo\vwheaboo.woff" />
+    <Content Include="Auto\css\fonts\VWHeadlineOT-Black\vwheadlineot-black.eot" />
+    <Content Include="Auto\css\fonts\VWHeadlineOT-Black\vwheadlineot-black.ttf" />
+    <Content Include="Auto\css\fonts\VWHeadlineOT-Black\vwheadlineot-black.woff" />
+    <Content Include="Auto\css\fonts\VWHeadlineOT-Book\vwheadlineot-book.eot" />
+    <Content Include="Auto\css\fonts\VWHeadlineOT-Book\vwheadlineot-book.ttf" />
+    <Content Include="Auto\css\fonts\VWHeadlineOT-Book\vwheadlineot-book.woff" />
+    <Content Include="Auto\css\fonts\VWHeadlineOT-Semibold\vwheadlineot-semibold.eot" />
+    <Content Include="Auto\css\fonts\VWHeadlineOT-Semibold\vwheadlineot-semibold.ttf" />
+    <Content Include="Auto\css\fonts\VWHeadlineOT-Semibold\vwheadlineot-semibold.woff" />
+    <Content Include="Auto\css\fonts\VWUtopia\vwutobit-webfont.eot" />
+    <Content Include="Auto\css\fonts\VWUtopia\vwutobit-webfont.ttf" />
+    <Content Include="Auto\css\fonts\VWUtopia\vwutobit-webfont.woff" />
+    <Content Include="Auto\css\mixins.sass" />
+    <Content Include="Auto\css\mobile.sass" />
+    <Content Include="Auto\css\reset.sass" />
+    <Content Include="Auto\css\style.sass" />
+    <Content Include="Auto\js\main.coffee" />
+    <Content Include="Auto\Vento.haml" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Registro.aspx" />
     <Content Include="RequestsSocials\Facebook.aspx" />
     <Content Include="RequestsSocials\fb.js" />
     <Content Include="RequestsSocials\Foursquare.aspx" />
+    <Content Include="RequestsSocials\InstaFeeds.aspx" />
     <Content Include="RequestsSocials\Instagram.aspx" />
     <Content Include="RequestsSocials\jquery-1.7.1.js" />
     <Content Include="RequestsSocials\Twitter.aspx" />
@@ -368,15 +602,20 @@
     <Content Include="Global.asax" />
     <Content Include="share.jpg" />
     <Content Include="Terminos.aspx" />
+    <Content Include="Viaje\AspectosLegales.aspx" />
     <Content Include="Viaje\Auto.aspx" />
     <Content Include="Viaje\Contenido.aspx" />
+    <Content Include="Viaje\Error.aspx" />
     <Content Include="Viaje\Feed.aspx" />
     <Content Include="Viaje\Mecanica.aspx" />
     <Content Include="Viaje\Muro.aspx" />
     <Content Include="Viaje\Participante.aspx" />
     <Content Include="Viaje\Ranking.aspx" />
+    <Content Include="Viaje\Registro.aspx" />
     <Content Include="Viaje\Resumen.aspx" />
     <Content Include="Viaje\Site.aspx" />
+    <Content Include="Viaje\Success.aspx" />
+    <Content Include="Viaje\Votos.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -434,13 +673,69 @@
     <Compile Include="AspectosLegales.aspx.designer.cs">
       <DependentUpon>AspectosLegales.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Auto\Vento.aspx.cs">
+      <DependentUpon>Vento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Auto\Vento.aspx.designer.cs">
+      <DependentUpon>Vento.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Classes\TwitterReader.cs" />
+    <Compile Include="CMS\add\new_car.aspx.cs">
+      <DependentUpon>new_car.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CMS\add\new_car.aspx.designer.cs">
+      <DependentUpon>new_car.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CMS\add\new_day.aspx.cs">
+      <DependentUpon>new_day.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CMS\add\new_day.aspx.designer.cs">
+      <DependentUpon>new_day.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CMS\add\new_user.aspx.cs">
+      <DependentUpon>new_user.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CMS\add\new_user.aspx.designer.cs">
+      <DependentUpon>new_user.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CMS\admin.aspx.cs">
       <DependentUpon>admin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="CMS\admin.aspx.designer.cs">
       <DependentUpon>admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CMS\DatosAutos.aspx.cs">
+      <DependentUpon>DatosAutos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CMS\DatosAutos.aspx.designer.cs">
+      <DependentUpon>DatosAutos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CMS\DiasDatos.aspx.cs">
+      <DependentUpon>DiasDatos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CMS\DiasDatos.aspx.designer.cs">
+      <DependentUpon>DiasDatos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CMS\edit\car_data.aspx.cs">
+      <DependentUpon>car_data.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CMS\edit\car_data.aspx.designer.cs">
+      <DependentUpon>car_data.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CMS\edit\dia.aspx.cs">
+      <DependentUpon>dia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CMS\edit\dia.aspx.designer.cs">
+      <DependentUpon>dia.aspx</DependentUpon>
     </Compile>
     <Compile Include="CMS\edit\instagram_feed.aspx.cs">
       <DependentUpon>instagram_feed.aspx</DependentUpon>
@@ -455,6 +750,13 @@
     </Compile>
     <Compile Include="CMS\edit\twit_feed.aspx.designer.cs">
       <DependentUpon>twit_feed.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CMS\edit\user_data.aspx.cs">
+      <DependentUpon>user_data.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CMS\edit\user_data.aspx.designer.cs">
+      <DependentUpon>user_data.aspx</DependentUpon>
     </Compile>
     <Compile Include="CMS\FacebookFeeds.aspx.cs">
       <DependentUpon>FacebookFeeds.aspx</DependentUpon>
@@ -497,6 +799,20 @@
     </Compile>
     <Compile Include="CMS\TwitterFeeds.aspx.designer.cs">
       <DependentUpon>TwitterFeeds.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CMS\Usuarios.aspx.cs">
+      <DependentUpon>Usuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CMS\Usuarios.aspx.designer.cs">
+      <DependentUpon>Usuarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CMS\UsuariosInstagram.aspx.cs">
+      <DependentUpon>UsuariosInstagram.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CMS\UsuariosInstagram.aspx.designer.cs">
+      <DependentUpon>UsuariosInstagram.aspx</DependentUpon>
     </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
@@ -558,6 +874,13 @@
     <Compile Include="RequestsSocials\Foursquare.aspx.designer.cs">
       <DependentUpon>Foursquare.aspx</DependentUpon>
     </Compile>
+    <Compile Include="RequestsSocials\InstaFeeds.aspx.cs">
+      <DependentUpon>InstaFeeds.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RequestsSocials\InstaFeeds.aspx.designer.cs">
+      <DependentUpon>InstaFeeds.aspx</DependentUpon>
+    </Compile>
     <Compile Include="RequestsSocials\Instagram.aspx.cs">
       <DependentUpon>Instagram.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -593,6 +916,13 @@
     <Compile Include="Terminos.aspx.designer.cs">
       <DependentUpon>Terminos.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Viaje\AspectosLegales.aspx.cs">
+      <DependentUpon>AspectosLegales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Viaje\AspectosLegales.aspx.designer.cs">
+      <DependentUpon>AspectosLegales.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Viaje\Auto.aspx.cs">
       <DependentUpon>Auto.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -606,6 +936,13 @@
     </Compile>
     <Compile Include="Viaje\Contenido.aspx.designer.cs">
       <DependentUpon>Contenido.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Viaje\Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Viaje\Error.aspx.designer.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
     </Compile>
     <Compile Include="Viaje\Feed.aspx.cs">
       <DependentUpon>Feed.aspx</DependentUpon>
@@ -642,6 +979,13 @@
     <Compile Include="Viaje\Ranking.aspx.designer.cs">
       <DependentUpon>Ranking.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Viaje\Registro.aspx.cs">
+      <DependentUpon>Registro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Viaje\Registro.aspx.designer.cs">
+      <DependentUpon>Registro.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Viaje\Resumen.aspx.cs">
       <DependentUpon>Resumen.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -656,9 +1000,24 @@
     <Compile Include="Viaje\Site.aspx.designer.cs">
       <DependentUpon>Site.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Viaje\Success.aspx.cs">
+      <DependentUpon>Success.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Viaje\Success.aspx.designer.cs">
+      <DependentUpon>Success.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Viaje\Votos.aspx.cs">
+      <DependentUpon>Votos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Viaje\Votos.aspx.designer.cs">
+      <DependentUpon>Votos.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Auto\img\New folder\" />
     <Folder Include="Images\assets\Fotos\Registro\" />
   </ItemGroup>
   <ItemGroup>

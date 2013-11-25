@@ -1,0 +1,510 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Vento.aspx.cs" Inherits="Vento.Auto.Vento" %>
+!!!
+
+%html
+	%head{:runat=>"server"}
+		%meta{:charset=>"iso-8859-1"}/
+		%meta#viewport{:name=>"viewport", :content=>"width=device-width, initial-scale=1.0"}
+		/ %meta{:name=>"viewport", :content=>"width=device-width,minimum-scale=0.5,maximum-scale=0.5,initial-scale=0.5"}
+		%meta{:title=>"Volkswagen Vento - La Ruta de las Ideas"}/
+		%meta{:description=>"En busca de una idea para salvar al planeta de la contaminación. Suena complicado, por suerte, el nuevo Vento de Volkswagen está de su lado"}/
+		%meta{:keywords=>"volkswagen, vento, carros, ideas, creatividad, invaders fest, publicidad, marketing, ruta vento, roadtrip, mejor carro para roadtrip, contaminacion, ecologia, cuidar el planeta"}/
+		<%: Scripts.Render("~/bundles/modernizr") %>
+		%link{:href => "css/style.css", :rel =>"stylesheet"}
+
+
+
+
+	%body
+
+		#fb-root
+		%form{:runat=>"server"}
+			%asp:ScriptManager{:runat => "server"}
+				%Scripts
+					%asp:ScriptReference{:Name =>"MsAjaxBundle"}
+					%asp:ScriptReference{:Name =>"jquery"}
+					%asp:ScriptReference{:Name =>"jquery.ui.combined"}
+					%asp:ScriptReference{:Name =>"WebForms.js", :Assembly=>"System.Web", :Path=>"~/Scripts/WebForms/WebForms.js"}
+
+					%asp:ScriptReference{:Name =>"WebFormsBundle"}
+
+		/ %script{:src=>"js/click_tags.js"}
+
+
+
+
+
+		#preloader
+			#preloader-content.preloading
+				.ui-spinner
+					.wheel
+					.preloader-text
+						Cargando...
+
+		#overlay
+
+			%a#logoHeader{:href=>"http://www.vw.com.mx", :target=>"_blank"}
+			#socialHeader
+				%a.colorsLinkCont{:href => "http://www.configuratuvw.mx/Vento", :target=>"_blank"}
+					.colorsLink
+					.colorscoche
+					%p.colorsText
+						Configúralo
+
+				%a.fbPageCont{:href => "http://www.facebook.com/VolkswagenMexico", :target=>"_blank"}
+					.fbPageBack
+					.fbPageIcon
+				%a.twPageCont{:href => "https://twitter.com/Volkswagen_MX", :target=>"_blank"}
+					.twPageBack
+					.twPageIcon
+			%a#paintBtn{:href => "#colores"}
+				.paintBtnBack
+				.paintBtnIcon
+					.paintBtnIconBack
+					.paintBtnIconFront
+			%a#mapBtn{:href => "#ruta"}
+				.mapBtnBack
+				.mapBtnIcon
+					.mapBtnIconBack
+					.mapBtnIconFront
+
+
+			#videoNav
+				.videoNavCont
+					.videoProgressCont
+						.videoProgressbar
+					%a.videoPoint#videouno{:href=>"#", :time=>"0"}
+						.videoPointActive
+						.videoPointPlay
+					%a.videoPoint#videodos{:href=>"#", :time=>"7"}
+						.videoPointActive
+						.videoPointPlay
+							.videoPlayBack
+							.videoPlayIcon
+						.videoFeature
+							.videoFeatureBack
+							.videoFeatureIcon.vequipamiento
+							%p.videoFeatureText
+								Equipamiento
+					%a.videoPoint#videotres{:href => "#", :time=>"14"}
+						.videoPointActive
+						.videoPointPlay
+							.videoPlayBack
+							.videoPlayIcon
+						.videoFeature
+							.videoFeatureBack
+							.videoFeatureIcon.vcomodidad
+							%p.videoFeatureText
+								Comodidad
+					%a.videoPoint#videocuatro{:href => "#", :time=>"21"}
+						.videoPointActive
+						.videoPointPlay
+							.videoPlayBack
+							.videoPlayIcon
+						.videoFeature
+							.videoFeatureBack
+							.videoFeatureIcon.vconsumo
+							%p.videoFeatureText
+								Bajo Consumo
+					%a.videoPoint#videocinco{:href => "#", :time=>"28"}
+						.videoPointActive
+						.videoPointPlay
+							.videoPlayBack
+							.videoPlayIcon
+						.videoFeature
+							.videoFeatureBack
+							.videoFeatureIcon.vseguridad
+							%p.videoFeatureText
+								Seguridad
+					%a.videoPoint#videoseis{:href => "#", :time=>"0"}
+						.videoPointActive
+						.videoPointPlay
+
+
+
+
+
+		#mainCont
+
+			.container#features
+
+				%video#video{:src => "img/hotspots/hotspots.mp4", :autplay=>"", :preload=>"auto"}
+				.pattern
+
+				.pattern2
+
+				#equipamiento.feature
+					.featureCont
+						.titleCont
+							.titleMaskCont
+								.titleMask
+									%p.title
+										Equipamiento
+						.subtitleCont
+							%p.subtitle
+								Mayor espacio para las grandes ideas.
+						.descriptionCont
+							%p.description
+								Una buena razón para continuar lo que empezaste.
+								Nuevo Vento, está de tu lado.
+						%a.knowMoreCont{:href => "#"}
+							.knowMore
+							%p.knowMoreText
+								Conoce más
+
+					.hotspotCont#hotuno{:href => "#", :hotspot=>"hotuno"}
+						.hotspotIdle
+						.hotspotOver{:hotspot=>"hotuno"}
+						.hotspotOpenContainer
+							.hotspotOpen
+								.hotspotMask
+									.hotspotContent
+										.contentInfo.contentCont.active
+											%p.titleInfo
+												Escucha
+											%p.descriptionInfo
+												El mundo está hablando y tiene algo que decirte a través del Radio AM/FM, lector de CD/MP3, conexión telefónica manos libres, Aux-in, USB con control para iPod, SD Card.
+											%p.compartir
+												compartir
+											.shareCont
+												%a.twShareCont{:href => "#", :target=>"_blank"}
+													.twShareBack
+													.twShareIcon
+												%a.fbShareCont{:href => "#", :target=>"_blank"}
+													.fbShareBack
+													.fbShareIcon
+										.contentImagen.contentCont
+											%a.hotspotImage.fancybox{:href => "img/fotos_full/escucha.png"}
+												%img{:src => "img/hotspots_images/foto_escucha_hotspot.png", :alt => ""}/
+
+										.contentVideo.contentCont
+											.playBtnCont
+												.playBtnBack
+												.playBtnIcon
+
+							%a.hotspotCloseCont.hotspotbtn{:href => "#", :hscont=>"hotuno .contentInfo", :hotspot=>"hotuno"}
+								.hotspotCloseBack.hotspotbtnBack
+								.hotspotCloseIcon.hotspotbtnIcon
+							%a.hotspotInfoCont.hotspotbtn.active{:href => "#", :hscont=>"hotuno .contentInfo"}
+								.hotspotInfoBack.hotspotbtnBack
+								.hotspotInfoIcon.hotspotbtnIcon
+							%a.hotspotImageCont.hotspotbtn{:href => "#", :hscont=>"hotuno .contentImagen"}
+								.hotspotImageBack.hotspotbtnBack
+								.hotspotImageIcon.hotspotbtnIcon
+							%a.hotspotVideoCont.fancybox.hotspotbtn{:href => "#", :hscont=>"hotuno .contentInfo", :data=>{:fancybox_type=>"iframe"}}
+								.hotspotVideoBack.hotspotbtnBack
+								.hotspotVideoIcon.hotspotbtnIcon
+
+
+
+					.hotspotCont#hotdos{:href => "#", :hotspot=>"hotdos"}
+						.hotspotIdle
+						.hotspotOver{:hotspot=>"hotdos"}
+						.hotspotOpenContainer
+							.hotspotOpen
+								.hotspotMask
+									.hotspotContent
+										.contentInfo.contentCont.active
+											%p.titleInfo
+												Buen tiempo
+											%p.descriptionInfo
+												En nuevo Vento siempre hay clima perfecto gracias a su aire acondicionado de ajuste automático: Climatronic. Además, disfruta del ambiente exterior con sus elevadores eléctricos en cristales.
+											%p.compartir
+												compartir
+											.shareCont
+												%a.twShareCont{:href => "#", :target=>"_blank"}
+													.twShareBack
+													.twShareIcon
+												%a.fbShareCont{:href => "#", :target=>"_blank"}
+													.fbShareBack
+													.fbShareIcon
+										.contentImagen.contentCont
+											%a.hotspotImage{:href => "img/fotos_full/tiempo.png"}
+												%img{:src => "img/hotspots_images/foto_tiempo_hotspot.png", :alt => ""}/
+
+										.contentVideo.contentCont
+											.playBtnCont
+												.playBtnBack
+												.playBtnIcon
+
+							%a.hotspotCloseCont.hotspotbtn{:href => "#", :hscont=>"hotdos .contentInfo", :hotspot=>"hotdos"}
+								.hotspotCloseBack.hotspotbtnBack
+								.hotspotCloseIcon.hotspotbtnIcon
+							%a.hotspotInfoCont.hotspotbtn.active{:href => "#", :hscont=>"hotdos .contentInfo"}
+								.hotspotInfoBack.hotspotbtnBack
+								.hotspotInfoIcon.hotspotbtnIcon
+							%a.hotspotImageCont.hotspotbtn{:href => "#", :hscont=>"hotdos .contentImagen"}
+								.hotspotImageBack.hotspotbtnBack
+								.hotspotImageIcon.hotspotbtnIcon
+							%a.hotspotVideoCont.fancybox.hotspotbtn{:href => "#", :hscont=>"hotdos .contentInfo", :data=>{:fancybox_type=>"iframe"}}
+								.hotspotVideoBack.hotspotbtnBack
+								.hotspotVideoIcon.hotspotbtnIcon
+
+
+					.hotspotCont#hottres{:href => "#", :hotspot=>"hottres"}
+						.hotspotIdle
+						.hotspotOver{:hotspot=>"hottres"}
+						.hotspotOpenContainer
+							.hotspotOpen
+								.hotspotMask
+									.hotspotContent
+										.contentInfo.contentCont.active
+											%p.titleInfo
+												Tú dices a dónde
+											%p.descriptionInfo
+												Guía tu proyecto por buen camino con la computadora de viaje, disponible en la versión Tiptronic, que registra consumo, kilometraje, combustible y desempeño del auto.
+											%p.compartir
+												compartir
+											.shareCont
+												%a.twShareCont{:href => "#", :target=>"_blank"}
+													.twShareBack
+													.twShareIcon
+												%a.fbShareCont{:href => "#", :target=>"_blank"}
+													.fbShareBack
+													.fbShareIcon
+										.contentImagen.contentCont
+											%a.hotspotImage{:href => "img/fotos_full/computadora.png"}
+												%img{:src => "img/hotspots_images/foto_computadora_hotspot.png", :alt => ""}/
+
+										.contentVideo.contentCont
+											.playBtnCont
+												.playBtnBack
+												.playBtnIcon
+
+							%a.hotspotCloseCont.hotspotbtn{:href => "#", :hscont=>"hottres .contentInfo", :hotspot=>"hottres"}
+								.hotspotCloseBack.hotspotbtnBack
+								.hotspotCloseIcon.hotspotbtnIcon
+							%a.hotspotInfoCont.hotspotbtn.active{:href => "#", :hscont=>"hottres .contentInfo"}
+								.hotspotInfoBack.hotspotbtnBack
+								.hotspotInfoIcon.hotspotbtnIcon
+							%a.hotspotImageCont.hotspotbtn{:href => "#", :hscont=>"hottres .contentImagen"}
+								.hotspotImageBack.hotspotbtnBack
+								.hotspotImageIcon.hotspotbtnIcon
+							%a.hotspotVideoCont.fancybox.hotspotbtn{:href => "#", :hscont=>"hottres .contentInfo", :data=>{:fancybox_type=>"iframe"}}
+								.hotspotVideoBack.hotspotbtnBack
+								.hotspotVideoIcon.hotspotbtnIcon
+			.container#map
+				.mapCont
+					.mapCont2
+						.map.drag
+							.animated#sprt-carro1
+							.animated#sprt-carro2
+							.animated#sprt-sombrilla
+							.animated#sprt-maguey
+							.animated#sprt-sombrero
+							.animated#sprt-pulpo
+							.animated#sprt-pez
+							.animated#sprt-palmera1
+							.animated#sprt-palmera2
+							.animated#sprt-ferry
+							.animated#sprt-bailarina
+							.animated#sprt-fabrica
+							.animated#sprt-ancla
+							.animated#sprt-agua3
+							.animated#sprt-agua2
+							.animated#sprt-agua1
+							.animated#sprt-volcan
+
+							.equipo01
+								.back
+								.icon
+
+							%a.videoRecap.fancybox{:href => "http://www.youtube.com/embed/FVVd_nFiOtA?autoplay=1&amp;vq=hd1080&amp;controls=0&amp;rel=0&amp;showinfo=0", :data=>{:fancybox_type=>"iframe"}}
+
+
+							%a.videoPinMap#videoMap01.fancybox{:href => "http://www.youtube.com/embed/Fsw5Cfsasd4?autoplay=1&amp;vq=hd1080&amp;controls=0&amp;rel=0&amp;showinfo=0", :data=>{:fancybox_type=>"iframe"}}
+								.vpBack
+								.vpIcon
+							%a.videoPinMap#videoMap02.fancybox{:href => "http://www.youtube.com/embed/P4sYsWzpN_k?autoplay=1&amp;vq=hd1080&amp;controls=0&amp;rel=0&amp;showinfo=0", :data=>{:fancybox_type=>"iframe"}}
+								.vpBack
+								.vpIcon
+							%a.videoPinMap#videoMap03.fancybox{:href => "http://www.youtube.com/embed/tdVw-9U_4bY?autoplay=1&amp;vq=hd1080&amp;controls=0&amp;rel=0&amp;showinfo=0", :data=>{:fancybox_type=>"iframe"}}
+								.vpBack
+								.vpIcon
+							/ %a.videoPinMap#videoMap04.fancybox{:href => "http://www.youtube.com/embed/AUWcaJ7tsys?autoplay=1&amp;vq=hd1080&amp;controls=0&amp;rel=0&amp;showinfo=0", :data=>{:fancybox_type=>"iframe"}}
+							/ 	.vpBack
+							/ 	.vpIcon
+
+							.pinInstagram#pinIns01
+								.pinPoint
+								.pinInstaBack
+								.pinInstaIcon
+								.pinInstaCont
+									.instagraminfocont
+
+
+										.userCont
+											%img.userPhoto{:src => "", :alt => ""}/
+											%p.user
+												VentoUno
+										%img.photo{:src => "", :alt => ""}/
+										.likeandcaptionCont
+											%p.caption
+												Veto está de mi lado
+											.likesCont
+												.likeIcon
+												%p.likesCount
+													10
+									.closeIns
+										.closeBack
+										.closeIcon
+
+							.pinInstagram#pinIns02
+								.pinPoint
+								.pinInstaBack
+								.pinInstaIcon
+								.pinInstaCont
+									.instagraminfocont
+
+
+										.userCont
+											%img.userPhoto{:src => "", :alt => ""}/
+											%p.user
+												VentoUno
+										%img.photo{:src => "", :alt => ""}/
+										.likeandcaptionCont
+											%p.caption
+												Veto está de mi lado
+											.likesCont
+												.likeIcon
+												%p.likesCount
+													10
+							.pinTwitter#pinTwit01
+								.pinPoint
+								.pinTwitBack
+								.pinTwitIcon
+								.pinTwitCont
+									.infobox
+										.twicoinfow
+										.titleUsertwinfo
+											<span>@gamanox</span>
+										.descriptiontwinfo
+											Desde Navoleto vengo dicen que nací en el norte.... Nuevo Vento #LaRutaDeLasIdeas http://t.co/LdwzsSpNFy
+
+
+							.hotspotMapCont#hotmap01{:href => "#", :hotspot=>"hotmap01"}
+								.hotspotIdle
+								.hotspotOver{:hotspot=>"hotmap01"}
+								.hotspotOpenContainer
+									.hotspotOpen
+										.hotspotMask
+											.hotspotContent
+												.contentInfo.contentCont.active
+													%p.titleInfo
+														Gran espacio
+													%p.descriptionInfo
+														Cinco pasajeros, más temas de conversación. Distancias al interior realmente amplias para que el viaje sea más ligero: casi 1.70 metros de ancho y 1.46 de alto.
+													%p.compartir
+														compartir
+													.shareCont
+														%a.twShareCont{:href => "#"}
+															.twShareBack
+															.twShareIcon
+														%a.fbShareCont{:href => "#"}
+															.fbShareBack
+															.fbShareIcon
+												.contentImagen.contentCont
+													%a.hotspotImage{:href => "#"}
+														%img{:src => "img/hotspots_images/foto_aqui_cabe_todo_hotspot.png", :alt => ""}/
+
+												.contentVideo.contentCont
+													.playBtnCont
+														.playBtnBack
+														.playBtnIcon
+									%a.hotspotCloseCont.hotspotbtn{:href => "#", :hscont=>"contentInfo", :hotspot=>"hotmap01"}
+										.hotspotCloseBack.hotspotbtnBack
+										.hotspotCloseIcon.hotspotbtnIcon
+									%a.hotspotInfoCont.hotspotbtn.active{:href => "#", :hscont=>"contentInfo"}
+										.hotspotInfoBack.hotspotbtnBack
+										.hotspotInfoIcon.hotspotbtnIcon
+									%a.hotspotImageCont.hotspotbtn{:href => "#", :hscont=>"contentImage"}
+										.hotspotImageBack.hotspotbtnBack
+										.hotspotImageIcon.hotspotbtnIcon
+									%a.hotspotVideoCont.fancybox.hotspotbtn{:href => "#", :hscont=>"contentInfo"}
+										.hotspotVideoBack.hotspotbtnBack
+										.hotspotVideoIcon.hotspotbtnIcon
+
+
+
+
+
+
+			.container#paint
+				.paintContAll
+					.bgCont
+					.titleVentoCont
+						.titleVentoMask
+							.titleVento
+								.titleVentoImg
+							.paintColorCont
+								%p#paintColor
+									Blanco Candy
+
+
+					.coche
+						.cocheCont
+
+							.cochePaintCont
+								.cocheShadow
+								.cochePaint#paint-blanco.active
+
+								.cochePaint#paint-negro
+
+								.cochePaint#paint-gris
+
+								.cochePaint#paint-rojo
+
+								.cochePaint#paint-plata
+
+								.cochePaint#paint-azul
+
+								.cochePaint#paint-beige
+
+							.changePaint
+								.changePaintBack
+								.changePaintIcon
+								%p.changePaintText
+									Colores
+			.container#pictureGalleryCont
+				.pictureGalleryAll
+					%img.pictureGallery{:src => "img/fotos_full/aqui_cabe_todo.png", :alt => ""}/
+					.pictureGalleryClose
+						.pictureGalleryCloseBack
+						.pictureGalleryCloseIcon
+
+
+
+
+
+
+
+
+
+
+
+		%link{:href => "js/fancybox/source/jquery.fancybox.css", :rel =>"stylesheet"}
+
+		%script{:src=>"js/TweenMax.min.js"}
+		%script{:src=>"js/TimelineMax.min.js"}
+		%script{:src=>"js/jquery.scrollTo.min.js"}
+		%script{:src=>"js/jquery.localscroll.min.js"}
+
+		/ %script{:src=>"js/jquery.spriteOnHover-0.2.5.min.js"}
+		%script{:src=>"js/fancybox/source/jquery.fancybox.pack.js"}
+		%script{:src=>"js/tinyscrollbar.js"}
+		%script{:src=>"js/jquery.spritely.js"}
+
+		%script{:src=>"js/easing.js"}
+		/ %script{:src=>"js/modernizr-2.5.3.js"}
+
+
+
+		%script{:src=>"js/animations/animation.js"}
+		%script{:src=>"js/animations/animation_carColor.js"}
+		%script{:src=>"js/animations/animation_map.js"}
+		%script{:src=>"js/cuepoints.js"}
+		%script{:src=>"js/imageFiles.js"}
+		%script{:src=>"js/copys.js"}
+		%script{:src=>"js/main.js"}
+
+

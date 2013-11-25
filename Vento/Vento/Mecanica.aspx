@@ -29,7 +29,7 @@
                         <p class="r5">Trabajarás en equipo con 3 desconocidos en un recorrido de <span class="r6">3 días y 2 mil kilómetros.</span> Durante el viaje encontrarás diferentes retos que deberás superar con la ayuda de Nuevo Vento. Recuerda que el trabajo en equipo y tu creatividad serán decisivos para ganar.</p>
                         <br>
                         <h2 class="r4">Premio</h2>
-                        <p class="r5">El equipo que supere con éxito la mayor cantidad de pruebas y que desarrolle <span class="r6">la idea más innovadora,</span> realizable y que haga uso de las nuevas tecnologías, ganará dos noches de Hotel y viáticos en Los Cabos (del 1° al 3 de noviembre del 2013), un paquete de regalos Volkswagen, difusión en redes sociales y la posibilidad de llevar a cabo su idea.</p>
+                        <p class="r5">El equipo que supere con éxito la mayor cantidad de pruebas y que desarrolle <span class="r6">la idea más innovadora,</span> realizable y que haga uso de las nuevas tecnologías, ganará dos noches de Hotel y viáticos en Los Cabos (del 2° al 4 de noviembre del 2013), un paquete de regalos Volkswagen, difusión en redes sociales y la posibilidad de llevar a cabo su idea.</p>
                     </div>
                     <div class="side-right">
                         <div class="side-box1">

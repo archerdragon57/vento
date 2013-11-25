@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'VWHeadlineOTBlack';
+    src: url('vwheadlineot-black.eot');
+    src: url('vwheadlineot-black.eot') format('embedded-opentype'),
+         url('vwheadlineot-black.woff') format('woff'),
+         url('vwheadlineot-black.ttf') format('truetype'),
+         url('vwheadlineot-black.svg#VWHeadlineOTBlack') format('svg');
+	font-style: normal;
+	font-weight: normal;
+}

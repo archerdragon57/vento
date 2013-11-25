@@ -1,0 +1,58 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Auto.aspx.cs" Inherits="Vento.Viaje.InfoAuto" %>
+
+.autoContent.sidebarCont
+	.scrollbar
+		.track
+			.thumb
+				.end
+	.viewport
+		.overview
+			.titleAnimation
+				%p
+					<span>#</span>
+
+					VentoDos
+				.animation
+			.descriptionAuto
+				%p.title#titleAuto{:runat=>"server"}
+					Lorem Ipsum
+				%p.description#descriptionAuto{:runat=>"server"}
+					Lorem ipsum Aliquip sunt dolor irure non ex cillum magna est nisi amet qui laborum aliqua dolore nulla amet
+					%span
+						anim ut anim dolor
+					non minim ad fugiat dolor deserunt mollit nisi aliquip nisi aute sit.
+			.personsAuto
+				%p.titlePersons
+					Integrantes
+				%a.showRank{:href=>"#", :request=>"Ranking.aspx", :currentid=>""}
+					%p.showrank-txt
+						ver ranking
+					%span
+
+			.personsPictures
+				%a.personPicture#personProfile1{:href=>"#", :request=>"Participante.aspx", :currentid=>"1"}
+					%img#person1{:src => "", :alt => "", :runat=>"server"}/
+					%span
+						%p#personName1{:runat=>"server"}
+							@persona1
+				%a.personPicture#personProfile2{:href=>"#", :request=>"Participante.aspx", :currentid=>"2"}
+					%img#person2{:src => "", :alt => "", :runat=>"server"}/
+					%span
+						%p#personName2{:runat=>"server"}
+							@persona2
+				%a.personPicture#personProfile3{:href=>"#", :request=>"Participante.aspx", :currentid=>"3"}
+					%img#person3{:src => "", :alt => "", :runat=>"server"}/
+					%span
+						%p#personName3{:runat=>"server"}
+							@persona3
+				%a.personPicture#personProfile4{:href=>"#", :request=>"Participante.aspx", :currentid=>"4"}
+					%img#person4{:src => "", :alt => "", :runat=>"server"}/
+					%span
+						%p#personName4{:runat=>"server"}
+							@persona4
+
+
+
+
+%script{:src=>"js/sidebar.js"}
+%script{:src=>"js/auto.js"}

@@ -97,7 +97,7 @@
 
     <header>
         <div class="content-wrapper">
-          <div class="float-left"> <a runat="server" class="logovw" href="~/"><img src="Images/header/logo_vw.png" alt=""></a> </div>
+          <div class="float-left"> <a runat="server" class="logovw" href="~/"><img src="img/logo_vw_100px.png" alt=""></a> </div>
           <div class="float-center">
             <nav class="header-nav">
               <ul id="menu">

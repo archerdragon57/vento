@@ -64,7 +64,7 @@ namespace Vento.CMS
         public void BindData()
         {
             con = new SqlConnection(dbcon);
-            da = new SqlDataAdapter("SELECT * from InstagramFeeds", con);
+            da = new SqlDataAdapter("SELECT * from InstagramFeeds order by dato_id desc", con);
             ds = new DataSet();
             da.Fill(ds, "[dbo].[CmsUsers]");
             GridView1.DataSource = ds.Tables["[dbo].[CmsUsers]"].DefaultView;
@@ -88,7 +88,8 @@ namespace Vento.CMS
         {
             Session["Authenticated"] = "";
             Session["uname"] = "";
-            LoginCheck();
+            //LoginCheck();
+            Response.Redirect("../login.aspx", false);
         }
     }
 }

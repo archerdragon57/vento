@@ -25,7 +25,8 @@ namespace Vento.CMS.add
         protected void btnLogout_Click(object sender, EventArgs e)
         {
             Session["Authenticated"] = "";
-            LoginCheck();
+            //LoginCheck();
+            Response.Redirect("../login.aspx", false);
         }
         protected void btnNext1_Click(object sender, EventArgs e)
         {
@@ -33,7 +34,7 @@ namespace Vento.CMS.add
             string sConectionsku16 = WebConfigurationManager.ConnectionStrings["ApplicationServices"].ConnectionString;
             using (SqlConnection sqlConsku16 = new SqlConnection(sConectionsku16))
             {
-                SqlCommand sqlComsku16 = new SqlCommand("insert into users_travel (nombre,twitter_id,instagram_id,auto_id,picture,likes,edad,ocupacion,origen) values ('" + txtNombre.Text + "', '" + txtTwitter.Text + "', " + txtInstagram.Text + "," + txtAuto.Text + ",'" + txtFoto.Text + "'," + txtLike.Text + "," + txtEdad.Text + ",'" + txtOcupacion.Text + "','" + txtOrigen.Text + "')", sqlConsku16);
+                SqlCommand sqlComsku16 = new SqlCommand("insert into users_travel (nombre,twitter_id,instagram_id,auto_id,picture,likes,edad,ocupacion,origen,descripcion) values ('" + txtNombre.Text + "', '" + txtTwitter.Text + "', " + txtInstagram.Text + "," + txtAuto.Text + ",'" + txtFoto.Text + "'," + txtLike.Text + "," + txtEdad.Text + ",'" + txtOcupacion.Text + "','" + txtOrigen.Text + "','"+txtBio.Text+"')", sqlConsku16);
                 sqlConsku16.Open();
                 sqlComsku16.ExecuteNonQuery();
                 sqlConsku16.Close();

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="dia.aspx.cs" Inherits="Vento.CMS.edit.dia" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="dia.aspx.cs" Inherits="Vento.CMS.edit.dia" ValidateRequest="false"%>
 
 <!DOCTYPE html>
 
@@ -13,20 +13,32 @@
 
 
         <asp:Button ID="btnLogout" CssClass="logoutRight btn btn-info" runat="server" Text="log out" OnClick="btnLogout_Click" />
-        <p><b>Twit</b><br />
-            <asp:TextBox ID="txtTitle" runat="server"></asp:TextBox>
+                        <p>
+                Primera pantalla (dinámica)
+                </p>
+        <p><b>Título dinámica</b><br />
+            <asp:TextBox ID="txtTitle2" runat="server"></asp:TextBox>
         </p>
-        <p><b>Id Usuario</b><br />
+        <p><b>Objetivo</b><br />
             <asp:TextBox ID="txtObjetivo" runat="server"></asp:TextBox>
         </p>
-        <p><b>Nombre usuario</b><br />
+        <p><b>Descripción</b><br />
             <asp:TextBox ID="txtDescripcion" runat="server"></asp:TextBox>
         </p>
-        <p><b>Screen name</b><br />
-            <asp:TextBox ID="txtImagen" runat="server"></asp:TextBox>
+        <p><b>Título</b><br />
+            <asp:TextBox ID="txtTitle" runat="server"></asp:TextBox>
         </p>
-        <p><b>Location</b><br />
+        <p><b>Video del día</b><br />
             <asp:TextBox ID="txtvideo_dia" runat="server"></asp:TextBox>
+        </p>
+            <p>
+                Segunda pantalla (resúmen)
+                </p>
+        <p><b>Título del resumen</b><br />
+            <asp:TextBox ID="txtTitleRes" runat="server"></asp:TextBox>
+        </p>
+            <p><b>Texto resumen del día</b><br />
+            <asp:TextBox ID="txtResumen" runat="server"></asp:TextBox>
         </p>
             <p><asp:Button ID="btnNext1" CssClass="btn btn-primary" runat="server" Text="Guardar" OnClick="btnNext1_Click" /></p>
         </div>

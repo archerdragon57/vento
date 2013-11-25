@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="new_user.aspx.cs" Inherits="Vento.CMS.add.NEW_USER" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="new_user.aspx.cs" Inherits="Vento.CMS.add.NEW_USER"  ValidateRequest="false"%>
 
 <!DOCTYPE html>
 
@@ -11,19 +11,22 @@
         <div>
         <h5><asp:Label ID="lblMessage" runat="server" Text=""></asp:Label></h5>
         <asp:Button ID="btnLogout" CssClass="logoutRight btn btn-info" runat="server" Text="log out" OnClick="btnLogout_Click" />
-        <p><b>Nombre</b><br />
+        <p><b>Nombre</b>(150)<br />
             <asp:TextBox ID="txtNombre" runat="server"></asp:TextBox>
         </p>
-        <p><b>Twitter</b><br />
+        <p><b>Twitter</b>(50)<br />
             <asp:TextBox ID="txtTwitter" runat="server"></asp:TextBox>
         </p>
         <p><b>Instagram</b><br />
             <asp:TextBox ID="txtInstagram" runat="server"></asp:TextBox>
         </p>
+            <p><b>Bio</b>(400)<br />
+            <asp:TextBox ID="txtBio" runat="server"></asp:TextBox>
+        </p>
             <p><b>Auto</b><br />
             <asp:TextBox ID="txtAuto" runat="server"></asp:TextBox>
         </p>
-            <p><b>Foto</b><br />
+            <p><b>Foto</b>(200)<br />
             <asp:TextBox ID="txtFoto" runat="server"></asp:TextBox>
         </p>
             <p><b>Likes</b><br />
@@ -32,10 +35,10 @@
             <p><b>Edad</b><br />
             <asp:TextBox ID="txtEdad" runat="server"></asp:TextBox>
         </p>
-            <p><b>Ocupación</b><br />
+            <p><b>Ocupación</b>(100)<br />
             <asp:TextBox ID="txtOcupacion" runat="server"></asp:TextBox>
         </p>
-            <p><b>Origen</b><br />
+            <p><b>Origen</b>(100)<br />
             <asp:TextBox ID="txtOrigen" runat="server"></asp:TextBox>
         </p>
             <p><asp:Button ID="btnNext1" CssClass="btn btn-primary" runat="server" Text="Guardar" OnClick="btnNext1_Click" /></p>

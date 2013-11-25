@@ -1,0 +1,47 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Participante.aspx.cs" Inherits="Vento.Viaje.Participante" %>
+
+
+.competitorCont.sidebarCont
+	.scrollbar
+		.track
+			.thumb
+				.end
+	.viewport
+		.overview
+			.competitor
+				%a.backBtn#backParticipante{:runat=>"server", :href=>"#", :request=>"Auto.aspx", :currentid=>""}
+					%p
+						Regresar
+					%span
+				.imgCont
+					%img#competitorImg{:runat => "server"}
+				.nameandlikeCont
+					%p.name#competitorName{:runat => "server"}
+						Esteban Ramirez
+					%a.like#competitorLike{:href => "#", :runat => "server"}
+						Like Me
+				.competitorData
+					%p.description#competitorBio{:runat => "server"}
+						Lorem ipsum Anim enim dolor Excepteur Duis dolor commodo incididunt magna exercitation in cupidatat anim do qui minim in laboris reprehenderit amet reprehenderit amet ad anim in fugiat Ut est Excepteur laborum nostrud et dolor do velit est enim ea.
+					.contData
+						%p.data
+							Edad:
+							%span#competitorAge{:runat => "server"}
+								29
+						%p.data
+							Origen:
+							%span#competitorCity{:runat => "server"}
+								GDL
+						%p.data
+
+							%span#competitorOcupation{:runat => "server"}
+								Arquitecto
+						%p.data
+							@
+							%span#competitorTwitter{:runat => "server"}
+								Esteban_R
+
+
+%script{:src=>"js/sidebar.js"}
+%script
+	sideMenu("#backParticipante");

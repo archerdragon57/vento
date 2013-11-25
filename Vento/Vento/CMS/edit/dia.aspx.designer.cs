@@ -40,13 +40,13 @@ namespace Vento.CMS.edit {
         protected global::System.Web.UI.WebControls.Button btnLogout;
         
         /// <summary>
-        /// txtTitle control.
+        /// txtTitle2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTitle;
+        protected global::System.Web.UI.WebControls.TextBox txtTitle2;
         
         /// <summary>
         /// txtObjetivo control.
@@ -67,13 +67,13 @@ namespace Vento.CMS.edit {
         protected global::System.Web.UI.WebControls.TextBox txtDescripcion;
         
         /// <summary>
-        /// txtImagen control.
+        /// txtTitle control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtImagen;
+        protected global::System.Web.UI.WebControls.TextBox txtTitle;
         
         /// <summary>
         /// txtvideo_dia control.
@@ -83,6 +83,24 @@ namespace Vento.CMS.edit {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtvideo_dia;
+        
+        /// <summary>
+        /// txtTitleRes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtTitleRes;
+        
+        /// <summary>
+        /// txtResumen control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtResumen;
         
         /// <summary>
         /// btnNext1 control.

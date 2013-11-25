@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="InstagramFeeds.aspx.cs" Inherits="Vento.CMS.InstagramFeeds" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="InstagramFeeds.aspx.cs" Inherits="Vento.CMS.InstagramFeeds"  ValidateRequest="false"%>
 
 <!DOCTYPE html>
 
@@ -105,38 +105,12 @@
                 <HeaderStyle Font-Bold="True"></HeaderStyle>
             </asp:TemplateColumn>
 
-            <asp:TemplateColumn HeaderText="Lowres" HeaderStyle-Font-Bold="true">
-                <EditItemTemplate>
-                    <asp:TextBox ID="txtLowres_e" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.lowres") %>'></asp:TextBox>
-                </EditItemTemplate>
-                <ItemTemplate>
-                    <asp:Label ID="lblLowres" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.lowres") %>'></asp:Label>
-                </ItemTemplate>
-                <FooterTemplate>
-                    <asp:CheckBox  ID="checkbox_f" runat="server"></asp:CheckBox>
-                </FooterTemplate>
-                <HeaderStyle Font-Bold="True"></HeaderStyle>
-            </asp:TemplateColumn>
-
-            <asp:TemplateColumn HeaderText="Normal" HeaderStyle-Font-Bold="true">
-                <EditItemTemplate>
-                    <asp:TextBox ID="txtNormal_e" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.normal") %>'></asp:TextBox>
-                </EditItemTemplate>
-                <ItemTemplate>
-                    <asp:Label ID="lblNormal" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.normal") %>'></asp:Label>
-                </ItemTemplate>
-                <FooterTemplate>
-                    <asp:CheckBox  ID="checkbox_f1" runat="server"></asp:CheckBox>
-                </FooterTemplate>
-                <HeaderStyle Font-Bold="True"></HeaderStyle>
-            </asp:TemplateColumn>
-
             <asp:TemplateColumn HeaderText="Thumbnail" HeaderStyle-Font-Bold="true">
                 <EditItemTemplate>
                     <asp:TextBox ID="txtThumbnail_e" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.thumbnail") %>'></asp:TextBox>
                 </EditItemTemplate>
                 <ItemTemplate>
-                    <asp:Label ID="lblThumbnail" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.thumbnail") %>'></asp:Label>
+                    <img src='<%#DataBinder.Eval(Container, "DataItem.thumbnail") %>' />
                 </ItemTemplate>
                 <FooterTemplate>
                     <asp:CheckBox  ID="checkbox_f2" runat="server"></asp:CheckBox>
@@ -191,10 +165,12 @@
     <asp:Label ID="lblMessage" runat="server"></asp:Label>
     </div>
     </form>
-        <a href="TwitterFeeds.aspx">Listados Twitter</a>
+    <a href="TwitterFeeds.aspx">Listados Twitter</a>
+    <a href="DiasDatos.aspx">Datos días</a>
     <a href="InstagramFeeds.aspx">Listados Instagram</a>
     <a href="DatosAutos.aspx">Datos de los autos</a>
     <a href="Usuarios.aspx">Datos de los usuarios</a>
+    <a href="UsuariosInstagram.aspx">Datos de los usuarios de instagram</a>
     <script>
         function ondeleteclick() {
             return confirm("Are you sure you want to delete this?")

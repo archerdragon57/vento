@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DiasDatos.aspx.cs" Inherits="Vento.CMS.DiasDatos" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DiasDatos.aspx.cs" Inherits="Vento.CMS.DiasDatos" ValidateRequest="false" %>
 
 <!DOCTYPE html>
 
@@ -24,15 +24,15 @@
                 </FooterTemplate>
                 <HeaderStyle Font-Bold="True"></HeaderStyle>
             </asp:TemplateColumn>
-            <asp:TemplateColumn HeaderText="Título" HeaderStyle-Font-Bold="true">
+            <asp:TemplateColumn HeaderText="Título dinámica" HeaderStyle-Font-Bold="true">
                 <EditItemTemplate>
-                    <asp:TextBox ID="txtaddtitle_e" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.title") %>'></asp:TextBox>
+                    <asp:TextBox ID="txtaddtitled_e" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.titulo_dinamica") %>'></asp:TextBox>
                 </EditItemTemplate>
                 <ItemTemplate>
-                    <asp:Label ID="lbladdtitle" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.title") %>'></asp:Label>
+                    <asp:Label ID="lbladdtitled" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.titulo_dinamica") %>'></asp:Label>
                 </ItemTemplate>
                 <FooterTemplate>
-                    <asp:TextBox ID="txttitle_f" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txttitled_f" runat="server"></asp:TextBox>
                 </FooterTemplate>
                 <HeaderStyle Font-Bold="True"></HeaderStyle>
             </asp:TemplateColumn>
@@ -60,6 +60,18 @@
                 </FooterTemplate>
                 <HeaderStyle Font-Bold="True"></HeaderStyle>
             </asp:TemplateColumn>
+                        <asp:TemplateColumn HeaderText="Título" HeaderStyle-Font-Bold="true">
+                <EditItemTemplate>
+                    <asp:TextBox ID="txtaddtitle_e" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.title") %>'></asp:TextBox>
+                </EditItemTemplate>
+                <ItemTemplate>
+                    <asp:Label ID="lbladdtitle" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.title") %>'></asp:Label>
+                </ItemTemplate>
+                <FooterTemplate>
+                    <asp:TextBox ID="txttitle_f" runat="server"></asp:TextBox>
+                </FooterTemplate>
+                <HeaderStyle Font-Bold="True"></HeaderStyle>
+            </asp:TemplateColumn>
             <asp:TemplateColumn HeaderText="Imagen" HeaderStyle-Font-Bold="true">
                 <EditItemTemplate>
                     <asp:TextBox ID="txtaddimage_e" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.imagen") %>'></asp:TextBox>
@@ -69,6 +81,18 @@
                 </ItemTemplate>
                 <FooterTemplate>
                     <asp:TextBox ID="txtimage_f" runat="server"></asp:TextBox>
+                </FooterTemplate>
+                <HeaderStyle Font-Bold="True"></HeaderStyle>
+            </asp:TemplateColumn>
+            <asp:TemplateColumn HeaderText="Fecha" HeaderStyle-Font-Bold="true">
+                <EditItemTemplate>
+                    <asp:TextBox ID="txtadddate_e" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.date") %>'></asp:TextBox>
+                </EditItemTemplate>
+                <ItemTemplate>
+                    <asp:Label ID="lbladddate" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.date") %>'></asp:Label>
+                </ItemTemplate>
+                <FooterTemplate>
+                    <asp:TextBox ID="txtdate_f" runat="server"></asp:TextBox>
                 </FooterTemplate>
                 <HeaderStyle Font-Bold="True"></HeaderStyle>
             </asp:TemplateColumn>
@@ -84,6 +108,30 @@
                 </FooterTemplate>
                 <HeaderStyle Font-Bold="True"></HeaderStyle>
             </asp:TemplateColumn>
+            <asp:TemplateColumn HeaderText="Título resumen" HeaderStyle-Font-Bold="true">
+                <EditItemTemplate>
+                    <asp:TextBox ID="txtaddtr_e" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.titulo_resumen") %>'></asp:TextBox>
+                </EditItemTemplate>
+                <ItemTemplate>
+                    <asp:Label ID="lbladdtr" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.titulo_resumen") %>'></asp:Label>
+                </ItemTemplate>
+                <FooterTemplate>
+                    <asp:TextBox ID="txttr_f" runat="server"></asp:TextBox>
+                </FooterTemplate>
+                <HeaderStyle Font-Bold="True"></HeaderStyle>
+            </asp:TemplateColumn>
+            <asp:TemplateColumn HeaderText="Resumen día" HeaderStyle-Font-Bold="true">
+                <EditItemTemplate>
+                    <asp:TextBox ID="txtaddrd_e" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.resumen_dia") %>'></asp:TextBox>
+                </EditItemTemplate>
+                <ItemTemplate>
+                    <asp:Label ID="lbladdrd" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.resumen_dia") %>'></asp:Label>
+                </ItemTemplate>
+                <FooterTemplate>
+                    <asp:TextBox ID="txtrd_f" runat="server"></asp:TextBox>
+                </FooterTemplate>
+                <HeaderStyle Font-Bold="True"></HeaderStyle>
+            </asp:TemplateColumn>
             <asp:EditCommandColumn CancelText="Cancel" EditText="Edit" HeaderText="" UpdateText="Update"></asp:EditCommandColumn>
             <asp:ButtonColumn Text="Delete" ButtonType="PushButton" CommandName="Delete"></asp:ButtonColumn>
         </Columns>
@@ -92,10 +140,14 @@
     <asp:Label ID="lblMessage" runat="server"></asp:Label>
     </div>
     </form>
-        <a href="TwitterFeeds.aspx">Listados Twitter</a>
+    <a href="add/new_day.aspx">Nuevo dia</a>
+    <br/>
+    <a href="TwitterFeeds.aspx">Listados Twitter</a>
+    <a href="DiasDatos.aspx">Datos días</a>
     <a href="InstagramFeeds.aspx">Listados Instagram</a>
     <a href="DatosAutos.aspx">Datos de los autos</a>
     <a href="Usuarios.aspx">Datos de los usuarios</a>
+    <a href="UsuariosInstagram.aspx">Datos de los usuarios de instagram</a>
     <script>
         function ondeleteclick() {
             return confirm("Are you sure you want to delete this?")

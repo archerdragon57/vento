@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'VWHeadlineOTSemibold';
+    src: url('vwheadlineot-semibold.eot');
+    src: url('vwheadlineot-semibold.eot') format('embedded-opentype'),
+         url('vwheadlineot-semibold.woff') format('woff'),
+         url('vwheadlineot-semibold.ttf') format('truetype'),
+         url('vwheadlineot-semibold.svg#VWHeadlineOTSemibold') format('svg');
+	font-style: normal;
+	font-weight: normal;
+}

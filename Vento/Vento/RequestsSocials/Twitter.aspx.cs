@@ -21,21 +21,25 @@ namespace Vento.RequestsSocials
         [WebMethod]
         public static string getHashes(string hash)
         {
-            int dia = 1;
+            int dia = 4;
             string us = DateTime.Now.ToString(new CultureInfo("en-US"));
-            if (us.IndexOf("28/10/2012") > -1)
+            if (us.IndexOf("10/28/2013") > -1)
             {
                 dia = 1;
             }
-            if (us.IndexOf("29/10/2012") > -1)
+            if (us.IndexOf("10/29/2013") > -1)
+            {
+                dia = 1;
+            }
+            if (us.IndexOf("10/30/2013") > -1)
             {
                 dia = 2;
             }
-            if (us.IndexOf("30/10/2012") > -1)
+            if (us.IndexOf("10/31/2013") > -1)
             {
                 dia = 3;
             }
-            if (us.IndexOf("31/10/2012") > -1)
+            if (us.IndexOf("11/1/2013") > -1)
             {
                 dia = 4;
             }
@@ -69,7 +73,7 @@ namespace Vento.RequestsSocials
                     string sConection = WebConfigurationManager.ConnectionStrings["ApplicationServices"].ConnectionString;
                     using (SqlConnection sqlCon = new SqlConnection(sConection))
                     {
-                        SqlCommand sqlCom = new SqlCommand("INSERT INTO twitter_feeds (id,content,id_user,name_user,screen_name,user_location,profilebackgroundimageurl,visible,dia_id) OUTPUT inserted.id VALUES ('" + twt.Id + "','" + twt.Text.Replace('\'','\"') + "','" + twt.User.Id + "','" + twt.User.Name + "','" + twt.User.ScreenName + "','" + twt.Location + "','" + twt.User.ProfileImageUrl + "',1,"+dia+")", sqlCon);
+                        SqlCommand sqlCom = new SqlCommand("INSERT INTO twitter_feeds (id,content,id_user,name_user,screen_name,user_location,profilebackgroundimageurl,visible,dia_id) OUTPUT inserted.id VALUES ('" + twt.Id + "','" + twt.Text.Replace('\'', '\"') + "','" + twt.User.Id + "','" + twt.User.Name + "','" + twt.User.ScreenName + "','" + twt.Location + "','" + twt.User.ProfileImageUrl + "',1," + dia.ToString() + ")", sqlCon);
                         sqlCon.Open();
                         SqlDataReader reader = sqlCom.ExecuteReader();
                         while (reader.Read())
@@ -85,21 +89,25 @@ namespace Vento.RequestsSocials
         [WebMethod]
         public static string getTwits(string screenName)
         {
-            int dia = 1;
+            int dia = 4;
             string us = DateTime.Now.ToString(new CultureInfo("en-US"));
-            if (us.IndexOf("28/10/2012") > -1)
+            if (us.IndexOf("10/28/2013") > -1)
             {
                 dia = 1;
             }
-            if (us.IndexOf("29/10/2012") > -1)
+            if (us.IndexOf("10/29/2013") > -1)
+            {
+                dia = 1;
+            }
+            if (us.IndexOf("10/30/2013") > -1)
             {
                 dia = 2;
             }
-            if (us.IndexOf("30/10/2012") > -1)
+            if (us.IndexOf("10/31/2013") > -1)
             {
                 dia = 3;
             }
-            if (us.IndexOf("31/10/2012") > -1)
+            if (us.IndexOf("11/1/2013") > -1)
             {
                 dia = 4;
             }
@@ -128,7 +136,7 @@ namespace Vento.RequestsSocials
                     string sConection = WebConfigurationManager.ConnectionStrings["ApplicationServices"].ConnectionString;
                     using (SqlConnection sqlCon = new SqlConnection(sConection))
                     {
-                        SqlCommand sqlCom = new SqlCommand("INSERT INTO twitter_feeds (id,content,id_user,name_user,screen_name,user_location,profilebackgroundimageurl,visible,dia_id) OUTPUT inserted.id VALUES ('" + twt.Id + "','" + twt.Text.Replace('\'','\"') + "','" + twt.User.Id + "','" + twt.User.Name + "','" + twt.User.ScreenName + "','" + twt.Location + "','" + twt.User.ProfileImageUrl + "',1,"+dia+")", sqlCon);
+                        SqlCommand sqlCom = new SqlCommand("INSERT INTO twitter_feeds (id,content,id_user,name_user,screen_name,user_location,profilebackgroundimageurl,visible,dia_id) OUTPUT inserted.id VALUES ('" + twt.Id + "','" + twt.Text.Replace('\'','\"') + "','" + twt.User.Id + "','" + twt.User.Name + "','" + twt.User.ScreenName + "','" + twt.Location + "','" + twt.User.ProfileImageUrl + "',1,"+dia.ToString()+")", sqlCon);
                         sqlCon.Open();
                         SqlDataReader reader = sqlCom.ExecuteReader();
                         while (reader.Read())

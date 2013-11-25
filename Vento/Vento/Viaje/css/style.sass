@@ -1,0 +1,1957 @@
+@import "reset"
+@import "fonts"
+@import "colors"
+@import "mixins"
+
+img[src*="https://maps.gstatic.com/mapfiles/api-3/images/google_white2.png"]
+	display: none !important
+
+.gm-style-cc
+	display: none !important
+
+body, html
+	margin: 0
+	padding: 0
+	width: 100%
+	height: 100%
+	overflow: hidden
+	background-color: $dblue
+
+	#preloader
+		// display: none
+
+.fancybox-lock
+	.fancybox-overlay
+		z-index: 20000
+
+
+
+#preloader
+	width: 100%
+	height: 100%
+	position: fixed
+	float: left
+	z-index: 1000000
+
+#preloader-content
+	position: absolute
+	z-index: 1000000000000
+	width: 100%
+	height: 100%
+	background: #152755
+
+#preloader .ui-spinner
+	margin-left: auto
+	margin-right: auto
+	position: relative
+	top: 40%
+	width: 100px
+
+#preloader .wheel
+	margin-left: auto
+	margin-right: auto
+	background: url(../img/vento_loader.gif) no-repeat scroll 0 0 transparent
+	width: 61px
+	height: 62px
+
+#preloader .preloader-text
+	color: #fff
+	font-family: "VWHeadlineOTBook"
+	font-size: 12px
+	margin-top: 10px
+	margin-left: auto
+	margin-right: auto
+	text-align: center
+	width: 100px
+	-webkit-font-smoothing: antialiased
+
+
+
+header
+	position: absolute
+	z-index: 100
+	width: 100%
+	top: 0
+	left: 0
+
+
+
+	#logoHeader
+		display: block
+		width: 100px
+		height: 100px
+		position: absolute
+		z-index: 100
+		top: 0
+		left: 60px
+		background-image: url("../img/logo_vw_100px.png")
+		background-color: $white
+	#menuLeft
+		display: block
+		width: 60px
+		height: 60px
+		position: absolute
+		top: 0
+		right: 0
+
+		background-color: $orange
+		background-image: url("../img/menuLeft.png")
+		background-position: -60px 0px
+		@include transitionT(background-color, 0.07s, linear)
+		.menuExtend
+			width: 300px
+			height: 60px
+			position: fixed
+			top: 0
+			right: -300px
+			background-color: $orange
+			@include transitionT(background-color, 0.07s, linear)
+
+
+		&.close
+			background-position: 0px 0px
+			background-color: $orange
+			&:hover
+				@include transitionT(background-color, 0.07s, linear)
+				background-color: $white
+
+		&:hover
+			.menuExtend
+				background-color: $white
+				@include transitionT(background-color, 0.07s, linear)
+
+			@include transitionT(background-color, 0.07s, linear)
+			background-color: $white
+
+
+
+
+
+
+
+#leftMenuCont
+	position: fixed
+	top: 0
+	right: -300px
+	width: 300px
+	height: 100%
+	display: block
+	background-color: #001536
+	padding-top: 60px
+	.pruebaManejo
+		display: block
+		width: 300px
+		height: 45px
+		margin-top: 2px
+		background-color: $lblue
+		color: $dblue
+		padding-top: 15px
+		text-indent: 25px
+		img
+			float: left
+			margin-right: 15px
+			margin-left: 30px
+
+		p
+			color: $dblue
+			font-family: $fblack
+			float: left
+			padding: 0
+			margin: 0
+			padding-top: 5px
+		@include transitionT(background-color, 0.1s, linear)
+		&.active
+			background-color: $lblueover
+			@include transition(background-color)
+		&:hover
+			background-color: $lblueover
+			@include transitionT(background-color, 0.1s, linear)
+		img
+			margin-left: 12px
+			margin-right: 18px
+	.link
+		&.pruebaManejo
+			text-indent: 15px
+		&.video
+			img
+				margin-left: 16px
+		&.mapa
+			img
+				margin-left: 21px
+				margin-right: 22px
+		&.Bitacora
+			img
+				margin-left: 15px
+
+
+		display: block
+		width: 300px
+		height: 45px
+		margin-top: 2px
+		background-color: $lblue
+		color: $dblue
+		padding-top: 15px
+		text-indent: 25px
+		img
+			float: left
+			margin-right: 15px
+			margin-left: 30px
+
+		p
+			color: $dblue
+			font-family: $fblack
+			float: left
+			padding: 0
+			margin: 0
+			padding-top: 5px
+		@include transitionT(background-color, 0.1s, linear)
+		&.active
+			background-color: $lblueover
+			@include transition(background-color)
+		&:hover
+			background-color: $lblueover
+			@include transitionT(background-color, 0.1s, linear)
+	.mapa
+		img
+			margin-right: 30px
+
+
+#videodelDia
+	width: 100%
+	height: 100%
+	display: block
+	position: absolute
+	top: 0
+	left: 0
+
+
+
+#leftTwitter
+	bottom: 0
+	left: -250px
+	width: 250px
+	height: 100%
+	position: absolute
+	background-color: #152755
+	background-image: url("../img/vento_loader.gif")
+	background-repeat: no-repeat
+	background-position: 50% 50%
+	z-index: 101
+
+	.sidebarCont
+		.viewport
+			width: 100%
+			height: 100%
+			overflow: hidden
+			position: relative
+		.overview
+			list-style: none
+			position: absolute
+			width: 100%
+			left: 0
+			top: 0
+		.thumb .end, .thumb
+			background-color: #003D5D
+		.scrollbar
+			position: relative
+			float: right
+			width: 15px
+			display: none
+
+		.track
+			background-color: #D8EEFD
+			height: 100%
+			width: 13px
+			position: relative
+			padding: 0 1px
+
+		.thumb
+			height: 20px
+			width: 13px
+			cursor: pointer
+			overflow: hidden
+			position: absolute
+			top: 0
+
+		.thumb .end
+			overflow: hidden
+			height: 5px
+			width: 13px
+
+		.disable
+			display: none
+
+
+	.twFeedCont
+		height: 100%
+		width: 100%
+		display: block
+		background-color: $dblue
+		.twfeedModule
+			width: 100%
+			height: 160px
+			margin-bottom: 2px
+			.controls
+				width: 100%
+				height: 30px
+				margin-bottom: 2px
+				p.titleHash
+					width: 186px
+					height: 26px
+					background-color: $lblue
+					text-indent: 20px
+					@include texto($fblack, 16px, $dblue)
+					float: left
+					display: block
+					padding-top: 4px
+				.left
+					display: block
+					text-indent: 9000px
+					float: left
+					width: 30px
+					height: 30px
+					margin-left: 2px
+					margin-right: 2px
+					background-color: $orange
+					background-image: url("../img/arrow_left.png")
+					background-position: 50% 50%
+					background-repeat: no-repeat
+					cursor: pointer
+					&:hover
+						background-color: $dblue
+				.right
+					display: block
+					text-indent: 9000px
+					float: left
+					width: 30px
+					height: 30px
+					// margin-left: 2px
+					// margin-right: 2px
+					background-color: $orange
+					background-image: url("../img/arrow_right.png")
+					background-position: 50% 50%
+					background-repeat: no-repeat
+					cursor: pointer
+					&:hover
+						background-color: $dblue
+			ul.slider
+				width: 100%
+				height: 100%
+				li
+					width: 210px
+					height: 113px
+					background-color: $white
+					padding-top: 15px
+					padding-left: 20px
+					padding-right: 20px
+					p.tweetUser
+						@include texto($fblack, 18px, $lblue)
+					p.tweetText
+						@include texto($fbook, 13px, $dblue)
+						text-align: left
+						padding-top: 10px
+
+
+
+
+
+
+
+
+#rightMenuCont
+	position: fixed
+	top: 0
+	right: -400px
+	width: 400px
+	height: 100%
+	display: block
+	background-color: #152755
+	background-image: url("../img/vento_loader.gif")
+	background-position: 50% 50%
+	background-repeat: no-repeat
+	z-index: 101
+	overflow: hidden
+	.cerrar
+		display: none
+
+	.sidebarCont
+		.viewport
+			width: 100%
+			height: 100%
+			overflow: hidden
+			position: relative
+		.overview
+			list-style: none
+			position: absolute
+			width: 100%
+			left: 0
+			top: 0
+		.thumb .end, .thumb
+			background-color: #003D5D
+		.scrollbar
+			position: relative
+			float: right
+			width: 15px
+			display: none
+
+		.track
+			background-color: #D8EEFD
+			height: 100%
+			width: 13px
+			position: relative
+			padding: 0 1px
+
+		.thumb
+			height: 20px
+			width: 13px
+			cursor: pointer
+			overflow: hidden
+			position: absolute
+			top: 0
+
+		.thumb .end
+			overflow: hidden
+			height: 5px
+			width: 13px
+
+		.disable
+			display: none
+
+	.competitorCont
+		width: 100%
+		height: 100%
+		background-color: $dblue
+		.competitor
+			width: 100%
+			height: auto
+			display: block
+			a.backBtn
+				height: 30px
+				display: block
+				position: absolute
+				left: 30px
+				top: 20px
+				text-indent: 15px
+				background-color: $orange
+				width: 100px
+				// @include transition(background-color)
+				&:hover
+					background-color: $lblue
+					// @include transition(background-color)
+					span
+						border-right: 15px solid $lblue
+
+
+				p
+					float: left
+					padding-top: 8px
+					font-family: $fblack
+					font-size: 14px
+					color: $dblue
+				span
+					display: block
+
+					border-right: 15px solid $orange
+					border-top: 15px solid transparent
+					border-bottom: 15px solid transparent
+					width: 0
+					height: 0
+					position: absolute
+					left: -15px
+			.imgCont
+				width: 400px
+				height: 333px
+				overflow: hidden
+				background-color: $white
+				img
+					width: 400px
+					height: 400px
+					border: none
+			.nameandlikeCont
+				width: 400px
+				height: 65px
+				margin-bottom: 2px
+				p.name
+					font-family: $fblack
+					font-size: 15px
+					color: $white
+					width: 262px
+					float: left
+					text-align: left
+					padding-top: 27px
+					text-indent: 30px
+					// letter-spacing: 4px
+				a.like
+					display: block
+					float: left
+					width: 138px
+					height: 22px
+					background-color: $orange
+					font-family: $fblack
+					font-size: 14px
+					color: $dblue
+					text-align: center
+					padding-top: 43px
+					background-image: url("../img/like_fb.png")
+					background-position: 50% 30%
+					background-repeat: no-repeat
+					@include transition(background-color)
+					&:hover
+						background-color: $white
+						@include transition(background-color)
+
+			.competitorData
+				width: 400px
+				height: auto
+				p.description
+					width: 200px
+					height: 170px
+					padding: 30px
+					background-color: $lblue
+					font-family: $fsemibold
+					font-size: 14px
+					color: $dblue
+					float: left
+					text-align: left
+					line-height: 17px
+					span
+						color: $white
+				.contData
+					float: right
+					width: 138px
+					height: 290px
+					p.data
+						width: 138px
+						height: 30px
+						padding-top: 20px
+						font-family: $fblack
+						font-size: 14px
+						color: $dblue
+						background-color: $lblue
+						margin-bottom: 2px
+						text-align: center
+						padding-bottom: 6px
+
+
+
+
+	.muroContent
+		width: 100%
+		height: 100%
+		background-color: $dblue
+		.twitterModule
+			position: relative
+			width: 288px
+			height: 118px
+			background-color: $white
+			padding-top: 40px
+			padding-left: 55px
+			padding-right: 55px
+			padding-bottom: 40px
+			overflow: hidden
+			margin: 1px
+			float: left
+			.twIconMuro
+				width: 24px
+				height: 20px
+				display: block
+				position: absolute
+				top: 15px
+				right: 15px
+				background-image: url("../img/icon_tweet_logo.png")
+
+			p.twTitle
+				@include texto($fsemibold, 18px, $dblue)
+			p.twText
+				@include texto($fsemibold, 14px, $lblue)
+				text-align: left
+				padding-top: 16px
+				line-height: 18px
+				span
+					color: $dblue
+			a.reTwbtn
+				position: absolute
+				bottom: 15px
+				right: 15px
+				display: block
+				// background-color: $orange
+				background-image: url(../img/retweet.png)
+				width: 20px
+				height: 26px
+
+		.instagramModule
+			width: 400px
+			height: 200px
+			background-color: $dblue
+			float: left
+
+			.instagramPhotoCont
+				width: 198px
+				height: 198px
+				position: relative
+				float: left
+				overflow: hidden
+				margin: 1px
+
+				a.play
+					display: none
+				&.video
+					&:hover
+						a.play
+							opacity: 0.9
+							@include transition(opacity)
+					a.play
+						display: block
+						width: 200px
+						height: 200px
+						position: absolute
+						z-index: 11
+						top: 0
+						left: 0
+						opacity: 0
+						@include transition(opacity)
+						background-color: $orange
+
+					span
+						display: none
+				&:hover
+					span
+						opacity: 0.9
+						@include transition(opacity)
+				img.photo
+					width: 200px
+					height: 200px
+					position: relative
+					z-index: 10
+				span
+					top: 0
+					left: 0
+					width: 200px
+					height: 200px
+					opacity: 0
+					@include transition(opacity)
+					position: absolute
+					z-index: 11
+					background-color: $white
+					.userCont
+						position: absolute
+						top: 15px
+						left: 15px
+						img.userPhoto
+							width: 25px
+							height: 25px
+							float: left
+						p.user
+							@include texto($fsemibold, 13px, $dblue)
+							float: left
+							padding-top: 5px
+							margin-left: 5px
+					p.caption
+						@include texto($fsemibold, 13px, $dblue)
+						text-align: center
+						padding-top: 75px
+						padding-left: 15px
+						padding-right: 15px
+					.likesCont
+						position: absolute
+						bottom: 15px
+						left: 15px
+						.likeIcon
+							width: 20px
+							height: 20px
+							// background-color: $lblue
+							float: left
+							background-image: url("../img/like_instagram.png")
+							background-position: 50% 50%
+							background-repeat: no-repeat
+						p.likesCount
+							@include texto($fblack, 13px, $dblue)
+							float: left
+							padding-top: 3px
+					a.shareLink
+						position: absolute
+						bottom: 15px
+						right: 15px
+						display: block
+						// background-color: $orange
+						background-image: url("../img/share_photo.png")
+						width: 25px
+						height: 24px
+
+
+
+
+
+	.rankingsCont
+		width: 100%
+		height: 100%
+		background-color: $dblue
+
+		.rankings
+			width: 100%
+			height: auto
+			// overflow: auto
+			display: block
+
+			.firstCont
+				width: 400px
+				height: 400px
+				.imgCont
+					width: 400px
+					height: 333px
+					overflow: hidden
+					background-color: $white
+					img
+						width: 400px
+						height: 400px
+
+				a.backBtn
+					height: 30px
+					display: block
+					position: absolute
+					left: 30px
+					top: 20px
+					text-indent: 15px
+					background-color: $orange
+					width: 100px
+					// @include transition(background-color)
+					&:hover
+						background-color: $lblue
+						// @include transition(background-color)
+						span
+							border-right: 15px solid $lblue
+
+
+					p
+						float: left
+						padding-top: 8px
+						font-family: $fblack
+						font-size: 14px
+						color: $dblue
+					span
+						display: block
+
+						border-right: 15px solid $orange
+						border-top: 15px solid transparent
+						border-bottom: 15px solid transparent
+						width: 0
+						height: 0
+						position: absolute
+						left: -15px
+				.placeOne
+					position: absolute
+					top: 15px
+					right: 10px
+					width: 80px
+					height: 80px
+					background-color: $lblue
+					p
+						font-family: $fblack
+						font-size: 74px
+						color: $dblue
+						text-align: center
+						padding-top: 5px
+
+					.votes
+						display: block
+						position: absolute
+						top: 83px
+						right: 0px
+						width: 80px
+						height: 80px
+						background-color: $dblue
+
+						p.votesNumber
+							font-family: $fblack
+							font-size: 30px
+							color: $lblue
+							padding-top: 10px
+							text-align: center
+						p.votesTitle
+							font-family: $fblack
+							font-size: 18px
+							color: $white
+							text-align: center
+							padding-top: 7px
+
+				p.personName
+					font-family: $fblack
+					font-size: 17px
+					color: $white
+					text-align: center
+					padding-top: 27px
+					letter-spacing: 4px
+
+			.secondCont
+				width: 200px
+				height: 200px
+				position: relative
+				float: left
+				.imgCont
+					height: 165px
+					width: 200px
+					overflow: hidden
+					background-color: $white
+					img
+						width: 200px
+						height: 200px
+				.placeTwo
+					position: absolute
+					top: 15px
+					right: 10px
+					width: 40px
+					height: 40px
+					background-color: $lblue
+					p
+						font-family: $fblack
+						font-size: 40px
+						color: $dblue
+						text-align: center
+						padding-top: 2px
+				.votes
+					width: 200px
+					height: auto
+					p.votesNumber
+						font-family: $fblack
+						font-size: 20px
+						color: $lblue
+						padding-top: 8px
+						margin-right: 6px
+						text-align: center
+						span
+							font-family: $fbook
+							font-size: 18px
+							color: $white
+			.thirdCont
+				width: 132px
+				height: 132px
+				position: relative
+				float: left
+				&.middle
+					margin-left: 2px
+					margin-right: 2px
+				.imgCont
+					height: 94px
+					width: 132px
+					overflow: hidden
+					background-color: $white
+					img
+						width: 132px
+						height: 132px
+				.placeThree
+					position: absolute
+					top: 10px
+					right: 10px
+					width: 30px
+					height: 30px
+					background-color: $lblue
+
+					p
+						font-family: $fblack
+						font-size: 18px
+						color: $dblue
+						text-align: center
+						padding-top: 7px
+				.votes
+					width: 132px
+					height: auto
+					p.votesNumber
+						font-family: $fblack
+						font-size: 20px
+						color: $lblue
+						padding-top: 7px
+						margin-right: 6px
+						text-align: center
+						span
+							font-family: $fbook
+							font-size: 16px
+							color: $white
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	.challengeContent
+		// background-color: $white
+		background: $white url("../img/montes_objetivo.png") center bottom no-repeat
+		width: 100%
+		height: 100%
+
+		.challenge
+			width: 100%
+			height: auto
+			overflow: auto
+			display: block
+			padding-top: 50px
+
+			.challImg
+				background-image: url("../img/menuright.png")
+				width: 50px
+				height: 50px
+				margin-left: auto
+				margin-right: auto
+				margin-bottom: 30px
+
+			p.chall_title
+				font-family: $fblack
+				font-size: 20px
+				color: $lblue
+				margin-bottom: 40px
+				text-align: center
+
+			p.chall_description
+				font-family: $fbook
+				font-size: 14px
+				color: $dblue
+				text-align: left
+				padding-left: 74px
+				padding-right: 74px
+				margin-bottom: 22px
+				line-height: 23px
+				span
+					font-family: $fblack
+
+
+
+	.autoContent
+		width: 100%
+		height: 100%
+		clear: both
+		margin: 0
+		z-index: 10
+		position: relative
+		background-color: $dblue
+
+
+		.titleAnimation
+			width: 100%
+			height: 200px
+			background-color: $lblue
+			margin-bottom: 2px
+			position: relative
+			overflow: hidden
+			.animation
+				width: 401px
+				height: 199px
+				position: absolute
+				top: 20px
+				left: 20px
+				background-image: url("../img/auto/dia/vento_dia.png")
+				background-position: 0 0
+				background-repeat: no-repeat
+
+
+			p
+				position: relative
+				z-index: 11
+				span
+					color: $dblue
+				font-family: $fblack
+				font-size: 24px
+				text-align: center
+				padding-top: 20px
+				color: $white
+		.descriptionAuto
+			width: 100%
+			// height: 250px
+			background-color: $lblue
+			margin-bottom: 2px
+
+			p.title
+				font-family: $fblack
+				font-size: 18px
+				color: $white
+				padding: 0
+				margin: 0
+				padding-top: 20px
+				padding-left: 35px
+				padding-right: 35px
+				text-align: left
+			p.description
+
+				padding: 0
+				margin: 0
+				padding-left: 35px
+				padding-right: 35px
+				font-family: $fsemibold
+				color: $dblue
+				font-size: 14px
+				padding-top: 15px
+				text-align: left
+				line-height: 25px
+				padding-bottom: 40px
+				span
+					color: $white
+		.personsAuto
+			width: 100%
+			height: 70px
+			margin-bottom: 2px
+			background-color: $white
+			position: relative
+			p.titlePersons
+				font-family: $fblack
+				font-size: 21px
+				color: $dblue
+				text-align: left
+				padding-top: 25px
+				letter-spacing: 5px
+				text-indent: 35px
+			a.showRank
+				height: 30px
+				display: block
+				position: absolute
+				right: 40px
+				top: 20px
+				text-indent: 15px
+				background-color: $orange
+				width: 100px
+				// @include transition(background-color)
+				&:hover
+					background-color: $lblue
+					// @include transition(background-color)
+					span
+						border-left: 15px solid $lblue
+
+
+				p.showrank-txt
+					float: left
+					padding-top: 8px
+					font-family: $fblack
+					font-size: 14px
+					color: $dblue
+				span
+					display: block
+
+					border-left: 15px solid $orange
+					border-top: 15px solid transparent
+					border-bottom: 15px solid transparent
+					width: 0
+					height: 0
+					position: absolute
+					right: -15px
+		.personsPictures
+			width: 100%
+			height: 400px
+			background-color: $white
+
+			a.personPicture
+				display: block
+				float: left
+				position: relative
+				width: 200px
+				height: 200px
+				overflow: hidden
+				&:hover
+					span
+						opacity: 0.4
+
+						@include transition(opacity)
+
+
+				img
+					width: 200px
+					height: 200px
+					background-color: $lblue
+				span
+					position: absolute
+					display: block
+					top: 0
+					left: 0
+					z-index: 11
+					width: 200px
+					height: 200px
+					background-color: $black
+					opacity: 0
+					@include transition(opacity)
+					p
+						font-family: $fblack
+						font-size: 18px
+						color: $white
+						padding-top: 90px
+						text-align: center
+
+
+
+
+
+
+
+
+
+
+
+
+	.noSelect
+		user-select: none
+		-o-user-select: none
+		-moz-user-select: none
+		-khtml-user-select: none
+		-webkit-user-select: none
+
+
+
+.updownnav
+	position: absolute
+	display: block
+	width: 70px
+	height: 30px
+	background-color: $white
+	left: 50%
+	margin-left: -35px
+	z-index: 10
+
+.upNav
+	top: 0
+	background-image: url("../img/arrow_up.png")
+	background-position: 50% 50%
+	background-repeat: no-repeat
+	// display: none
+
+
+
+.downNav
+	bottom: 0
+	background-image: url("../img/arrow_down.png")
+	background-position: 50% 50%
+	background-repeat: no-repeat
+
+#mainCont
+	width: 100%
+	height: 100%
+	display: block
+	position: relative
+	overflow: hidden
+	.container
+		width: 100%
+		height: 100%
+		display: block
+		position: relative
+
+	#intro
+		background: url("../img/mapa_izquierda.png") no-repeat left top, url("../img/mapa_derecha.png") no-repeat right top
+		background-color: #022358
+		// background-color: $dblue
+		.upNav
+			display: none
+
+		#confeti
+			// position: absolute
+			// top: 0
+			// left: 0
+			// width: 100%
+			// height: 100%
+			z-index: 1001
+		.share_txt
+			color: #00b2e5
+			font-family: "VWHeadlineOTBlack"
+			font-size: 10px
+			letter-spacing: 2px
+			margin-left: auto
+			margin-right: auto
+			margin-top: 40px
+			text-align: center
+			text-transform: uppercase
+			width: 263px
+			-webkit-font-smoothing: antialiased
+		.social-share
+			margin-left: auto
+			margin-right: auto
+			margin-top: 5px
+			text-align: center
+			width: 403px
+			ul#menu
+				li
+					display: inline-block
+					list-style: none
+					margin-right: 15px
+					&:last-child
+						margin-right: 0
+			.facebook
+				background-image: url(../img/btn_facebook_share_sprite.png)
+				background-position: 0 0
+				background-size: 84px auto
+				width: 42px
+				height: 41px
+				&:hover
+					background-position: -42px 0px
+			.twitter
+				background-image: url(../img/btn_twitter_share.png)
+				background-position: 0 0
+				background-size: 88px auto
+				width: 44px
+				height: 41px
+				&:hover
+					background-position: -44px 0px
+
+		.logo
+			height: 334px
+			margin-left: auto
+			margin-right: auto
+			padding-top: 70px
+			overflow: hidden
+			width: 334px
+
+			.car
+				position: relative
+				z-index: 1
+			.title1
+				margin: 0 auto
+				opacity: 0
+				position: relative
+				-webkit-transform: rotate(45deg)
+				-moz-transform: rotate(45deg)
+				-ms-transform: rotate(45deg)
+				-o-transform: rotate(45deg)
+				transform: rotate(45deg)
+				background: url(../img/video/vento_microsite_home_logo_txt_volkswaguen.png) no-repeat scroll 0 0 transparent
+				width: 250px
+				height: 334px
+
+			.title2
+				background: url(../img/video/vento_microsite_home_logo_txt_la.png) no-repeat scroll 0 0 transparent
+				width: 89px
+				height: 14px
+				margin: 0 auto
+				opacity: 0
+				position: relative
+				top: -280px
+
+			.title3
+				background: url(../img/video/vento_microsite_home_logo_txt_ruta.png) no-repeat scroll 0 0 transparent
+				background-position: center
+				background-size: 139px
+				width: 278px
+				height: 95px
+				background-size: 50% 50%
+				margin: 0 auto
+				opacity: 0
+				position: relative
+				top: -265px
+			.title4
+				background: url(../img/video/vento_microsite_home_logo_txt_delas.png) no-repeat scroll 0 0 transparent
+				width: 206px
+				height: 18px
+				margin: 0 auto
+				position: relative
+				right: -195px
+				top: -252px
+				visibility: hidden
+			.title5
+				background: url(../img/video/vento_microsite_home_logo_ver_video.png) no-repeat scroll 0 0 transparent
+				width: 63px
+				height: 7px
+				margin: 0 auto
+				opacity: 0
+				position: relative
+				top: -178px
+			.title6
+				background: url(../img/video/todo.png) no-repeat scroll 0 0 transparent
+				width: 278px
+				height: 334px
+				margin: 0 auto
+				opacity: 0
+				position: relative
+				top: -696px
+
+			.state1
+				background: url(../img/video/sprite_loop_play.png) no-repeat scroll 0 0 transparent
+				width: 120px
+				height: 76px
+				margin: 0 auto
+				opacity: 0
+				position: relative
+				top: -254px
+			.state2
+				background: url(../img/video/sprite_rollover_video.png) no-repeat scroll 0 0 transparent
+				width: 120px
+				height: 76px
+				margin: 0 auto
+				opacity: 0
+				position: relative
+				top: -332px
+				z-index: 1
+			.state3
+				background: url(../img/video/sprite_loop_vento.png) no-repeat scroll 0 0 transparent
+				width: 120px
+				height: 76px
+				margin: 0 auto
+				opacity: 0
+				position: relative
+				left: -80px
+				top: -410px
+
+
+	#map
+
+		.leyendaRutaactual
+			position: absolute
+			bottom: 50px
+			left: 80px
+			height: 60px
+			width: 470px
+			z-index: 10
+			p.tituloRutaActual
+				width: 100%
+				@include texto($fsemibold, 15px, $white)
+
+				padding-top: 4px
+				span
+					color: $lblue
+			.bottomLabels
+				padding-top: 15px
+				width: 100%
+				height: 22px
+				.clock
+					display: block
+					width: 22px
+					height: 22px
+					background-image: url("../img/reloj_info_ruta.png")
+					background-position: 50% 50%
+					background-repeat: no-repeat
+					float: left
+					margin-right: 5px
+				p
+					@include texto($fsemibold, 15px, $white)
+
+					padding-top: 4px
+					float: left
+					margin-right: 5px
+				.escudo57
+					display: block
+					width: 22px
+					height: 22px
+					background-image: url("../img/ruta57_info_ruta.png")
+					background-position: 50% 50%
+					background-repeat: no-repeat
+					float: left
+					margin-right: 5px
+				.escudo15
+					display: block
+					width: 22px
+					height: 22px
+					background-image: url("../img/ruta_19.png")
+					background-position: 50% 50%
+					background-repeat: no-repeat
+					float: left
+					margin-right: 5px
+				.labelFerry
+					display: block
+					width: 51px
+					height: 22px
+					background-image: url("../img/ruta2/desembarque.png")
+					background-position: 50% 50%
+					background-repeat: no-repeat
+					float: left
+					margin-right: 5px
+
+
+
+
+
+
+		position: relative
+		background-color: $mapblue
+		#mapcontainer
+			width: 100%
+			height: 100%
+			display: block
+			position: relative
+		.instagraminfocont
+			width: 225px
+			height: 351px
+			// overflow: auto
+			position: relative
+			background-color: $white
+			// z-index: 11
+			// top: 50%
+			// left: 50%
+
+			.userCont
+				position: relative
+				height: 25px
+				width: 100%
+				margin-bottom: 5px
+
+
+				img.userPhoto
+					width: 25px
+					height: 25px
+					float: left
+					margin-right: 7px
+
+				p.user
+					@include texto($fsemibold, 13px, $dblue)
+					text-align: left
+					padding-top: 6px
+
+			img.photo
+				width: 225px
+				height: 225px
+				background-color: $lblue
+
+			.likeandcaptionCont
+				width: 100%
+				height: auto
+				// overflow: auto
+				padding-top: 12px
+				p.caption
+					@include texto($fbook, 13px, $dblue)
+					width: 145px
+					float: right
+					height: auto
+					text-align: right
+					padding-top: 6px
+				.likesCont
+					width: 50px
+					height: 25px
+					float: left
+
+					.likeIcon
+						width: 25px
+						height: 25px
+						// background-color: $lblue
+						margin-right: 4px
+						float: left
+						background-image: url("../img/like_instagram.png")
+						background-position: 50% 50%
+						background-repeat: no-repeat
+					p.likesCount
+						float: left
+						@include texto($fblack, 13px, $dblue)
+						padding-top: 6px
+
+
+
+		.infobox
+			width: 260px
+			height: 205px
+			margin: 0 auto
+			padding: 10px
+			position: relative
+			z-index: 10
+			// top: 50%
+			// left: 50%
+			background-color: $white
+			.twicoinfow
+				width: 24px
+				height: 20px
+				display: block
+				position: absolute
+				top: 10px
+				left: 10px
+				background-image: url("../img/icon_tweet_logo.png")
+			.titleUsertwinfo
+				padding-top: 55px
+				text-align: center
+				@include texto($fblack, 21px, $dblue)
+				span
+					color: $lblue
+			.descriptiontwinfo
+				padding-top: 20px
+				text-align: center
+				@include texto($fbook, 14px, $dblue)
+
+
+		#filtromapa
+			position: absolute
+			top: 31%
+			left: 85px
+			background-image: url("../img/mapa_btn_ruta.png")
+			background-position: 0 0
+			display: block
+			cursor: pointer
+			width: 55px
+			height: 55px
+			z-index: 10
+			&.swap
+				background-position: -55px 0px
+
+			&:hover
+				background-position: -55px 0px
+		#zoom
+			position: absolute
+			z-index: 10
+			bottom: 100px
+			left: 92px
+			top: 41%
+			display: block
+			width: 40px
+			height: 82px
+			.in
+				display: block
+				float: left
+				width: 40px
+				height: 36px
+				margin-right: 2px
+				background-color: $white
+				@include texto($fblack, 30px, $dblue)
+				text-align: center
+				padding-top: 4px
+				margin-bottom: 2px
+				cursor: pointer
+				&:hover
+					background-color: $orange
+			.out
+				display: block
+				float: left
+				width: 40px
+				height: 36px
+				margin-top: 60px
+				background-color: $white
+				@include texto($fblack, 30px, $dblue)
+				text-align: center
+				padding-top: 4px
+				cursor: pointer
+				&:hover
+					background-color: $orange
+
+
+		#menuHash
+			width: 60px
+			height: 60px
+			position: absolute
+			bottom: 48px
+			left: 0
+			z-index: 10
+			display: block
+			.close
+				width: 60px
+				height: 60px
+				background-color: $white
+				background-image: url("../img/menuLeft.png")
+				display: none
+				// background-image: url("../img/")
+				@include transitionT(background-color, 0.1s, linear)
+				&:hover
+					@include transitionT(background-color, 0.1s, linear)
+					background-color: $orange
+			.link
+				display: block
+				width: 60px
+				height: 60px
+				background-color: $white
+				background-image: url("../img/btn_twitter_feed.png")
+				@include transitionT(background-color, 0.1s, linear)
+				&:hover
+					@include transitionT(background-color, 0.1s, linear)
+					background-color: $orange
+
+		#menuRight
+
+			right: 2px
+			position: absolute
+			top: 50%
+			margin-top: -150px
+			height: auto
+			z-index: 10
+			// overflow: auto
+			.item
+				background-color: $white
+				height: 50px
+				width: 50px
+				margin-bottom: 2px
+				display: block
+				// @include transition(background-color)
+				background-image: url("../img/menuright.png")
+				&.active
+					background-color: $orange
+
+				&:hover
+					// @include transition(background-color)
+					background-color: $orange
+			.reto
+				background-position: 0 0
+
+			.ventoico
+				background-position: -100px 0px
+				position: relative
+				&:hover
+					.rollOver
+						// @include transition(opacity)
+						opacity: 1
+
+						left: -212px
+						@include transitionT(all, 0.2s, ease-out)
+
+
+				.rollOver
+					width: 210px
+					height: 50px
+					background-color: $white
+					position: absolute
+					// @include transitionT(left, 0.3s, ease-out)
+					left: -230px
+					top: 0
+					@include transitionT(all, 0.1s, ease-out)
+					opacity: 0
+
+					.arrow
+						border-top: 8px solid transparent
+						border-bottom: 8px solid transparent
+						border-left: 8px solid $white
+						position: absolute
+						right: -8px
+						width: 0
+						height: 0
+						top: 18px
+					p.titlesection
+						@include texto($fblack, 18px, $dblue)
+						text-align: center
+						padding-top: 17px
+						span
+							color: $lblue
+
+			.grid
+				background-image: url("../img/mapa_galeria_icon.png")
+				background-position: 0px 0px
+
+
+			.close
+				display: none
+				background-color: $dblue
+				background-image: url("../img/menuright.png")
+
+				height: 50px
+				width: 50px
+				margin-bottom: 2px
+				position: absolute
+				top: -52px
+				background-position: -150px 0px
+				@include transition(background-color)
+				&:hover
+					@include transition(background-color)
+					background-color: $white
+					background-position: -200px 0px
+
+
+	#recap
+		position: relative
+		z-index: 10
+		background: url("../img/mapa_izquierda2.png") no-repeat left top, url("../img/mapa_derecha2.png") no-repeat right top
+		background-color: $lblue
+		#footerMobile
+			display: none
+
+		.downNav
+			display: none
+		.recapResume
+			width: 670px
+			margin-left: auto
+			margin-right: auto
+			height: 100%
+		.recapDay
+			width: 100%
+			height: 100%
+			background-color: $dblue
+			position: relative
+			// border: solid 2px $dblue
+			.dayHeader
+				width: 100%
+				height: 145px
+				background-color: $dblue
+				margin-bottom: 2px
+				.daynumberCont
+					background-color: $white
+					width: 150px
+					height: 145px
+					position: relative
+					margin-right: 2px
+					margin-left: 2px
+					float: left
+					p.daytext
+						@include texto($fblack, 23px, $dblue)
+						padding-top: 20px
+						text-align: center
+					p#dayNumber
+						@include texto($fblack, 90px, $dblue)
+						text-align: center
+						// padding-top: 20px
+
+					a#dayBack
+						position: absolute
+						top: 0
+						left: 0
+						width: 50px
+						height: 100%
+						background-image: url("../img/arrow_left_dia.png")
+						background-repeat: no-repeat
+						background-position: 50% 50%
+					a#dayForward
+						position: absolute
+						top: 0
+						right: 0
+						width: 50px
+						height: 100%
+						background-image: url("../img/arrow_right_dia.png")
+						background-repeat: no-repeat
+						background-position: 50% 50%
+				#maprouteCont
+					float: right
+					width: 150px
+					height: 145px
+					margin-left: 2px
+					margin-right: 2px
+					background-color: $white
+					background-image: url("../img/resumen_los_cabos.jpg")
+
+			.routeCont
+				position: absolute
+				top: 0
+				left: 50%
+				margin-left: -181px
+				width: 362px
+				background-color: $lblue
+				height: 145px
+				float: left
+				p#routefromTo
+					@include texto($fblack, 28px, $dblue)
+					padding-top: 60px
+					text-align: center
+			.dayrecapTitle
+				width: 666px
+				margin-left: 2px
+				margin-right: 2px
+				background-color: $lblue
+				height: 70px
+				margin-bottom: 2px
+				p
+					@include texto($fitalic, 24px, $white)
+					padding-top: 27px
+					text-align: center
+					letter-spacing: 6px
+			#feedContent
+				width: 666px
+				margin-left: 2px
+				margin-right: 2px
+				height: 100%
+				display: block
+
+				.instaphotoCont
+					width: 222px
+					height: 222px
+					float: left
+					display: block
+					overflow: hidden
+					background-color: $lblue
+					position: relative
+					img
+						border: none
+						width: 222px
+						height: 222px
+				.feeddescriptionCont
+					width: 364px
+					height: 142px
+					background-color: $white
+					float: left
+					padding: 40px
+					p.feeddescriptionTitle
+						@include texto($fblack, 16px, $lblue)
+					p.feedDescription
+						@include texto($fbook, 14px, $dblue)
+						text-align: justify
+						span
+							color: $lblue
+							font-family: $fitalic
+						padding-top: 0px
+						line-height: 21px
+				.instavideoCont
+					width: 222px
+					height: 222px
+					float: left
+					display: block
+					overflow: hidden
+					background-color: $lblue
+					position: relative
+					&:hover
+						span
+							opacity: 1
+					video
+						width: 222px
+						height: 222px
+					span
+						cursor: pointer
+						display: block
+						opacity: 0
+						top: 0
+						left: 0
+						position: absolute
+						z-index: 10
+						width: 100%
+						height: 100%
+						background-image: url("../img/play_btn.png")
+						background-position: 50% 50%
+						background-repeat: no-repeat
+				.rankingequiposCont
+					width: 384px
+					height: 192px
+					background-color: $white
+					padding-top: 30px
+					padding-left: 30px
+					padding-right: 30px
+					float: left
+					p.title
+						@include texto($fblack, 16px, $lblue)
+						text-align: center
+						list-style: 15px
+						margin-bottom: 35px
+					.ventorankCont
+						width: 342px
+						height: 20px
+						margin-left: auto
+						margin-right: auto
+						margin-top: 25px
+						p
+							@include texto($fblack, 14px, $lblue)
+							padding-top: 3px
+							float: left
+							span
+								color: $dblue
+						.progressCont
+							height: 20px
+							width: 180px
+							position: relative
+							background-color: $lblue
+							float: right
+							margin-left: 20px
+							.progress
+								height: 20px
+								background-color: $dblue
+								display: block
+								position: absolute
+								top: 0
+								left: 0
+							.car
+								position: absolute
+								width: 33px
+								height: 14px
+								top: -14px
+								left: 50px
+								// background-color: $dblue
+								background-image: url("../img/carro_rank.png")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			.feedContainer
+				width: 100%
+				height: 666px
+				margin-bottom: 45px
+				display: block
+
+
+
+			.viewport
+				width: 100%
+				height: 100%
+				overflow: hidden
+				position: relative
+			.overview
+				list-style: none
+				position: absolute
+				width: 100%
+				left: 0
+				top: 0
+			.thumb .end, .thumb
+				background-color: #003D5D
+			.scrollbar
+				position: relative
+				float: right
+				width: 15px
+				display: none
+
+			.track
+				background-color: #D8EEFD
+				height: 100%
+				width: 13px
+				position: relative
+				padding: 0 1px
+
+			.thumb
+				height: 20px
+				width: 13px
+				cursor: pointer
+				overflow: hidden
+				position: absolute
+				top: 0
+
+			.thumb .end
+				overflow: hidden
+				height: 5px
+				width: 13px
+
+			.disable
+				display: none
+
+		.footer
+			position: absolute
+			z-index: 10
+			width: 100%
+			height: 45px
+			bottom: 0
+			left: 0
+			text-align: center
+			@include texto($fbook, 12px, $white)
+			.copyright
+				margin-right: 10px
+
+			background-color: $dblue
+
+			.footerCont
+				width: 670px
+				height: 45px
+				margin-left: auto
+				margin-right: auto
+				position: relative
+			p.footerCenter
+				padding-top: 17px
+				text-align: left
+
+			a
+				@include texto($fbook, 12px, $white)
+				margin-right: 15px
+				&:last-child
+					margin-right: 0
+
+			a.configurador
+				display: block
+				height: 29px
+				width: 177px
+				position: absolute
+				right: 0
+				top: 0px
+				float: right
+				background-color: $lblue
+				background-image: url("../img/confugurador_icon.png")
+				background-position: 15px 50%
+				background-repeat: no-repeat
+				text-indent: 25px
+				padding-top: 16px
+				@include texto($fblack, 14px, $dblue)
+				&:hover
+					background-color: $orange
+
+
+
+@import "mobile"

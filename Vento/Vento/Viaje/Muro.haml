@@ -1,0 +1,57 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Muro.aspx.cs" Inherits="Vento.Viaje.Medidor" %>
+
+.muroContent.sidebarCont
+	.scrollbar
+		.track
+			.thumb
+				.end
+	.viewport
+		.overview
+			.twitterModule
+				%p.twTitle
+					@Esteban_R
+				%p.twText
+					Aún puedes inscribirte para ser de los primeros en manejar Nuevo Vento y recorrer La Ruta de Las Ideas.
+					%span
+						http://nuevovento.mx/
+				%a.reTwbtn{:href => "#"}
+
+			.instagramModule
+				.instagramPhotoCont
+					%img.photo{:src => "", :alt => ""}/
+					%span
+						.userCont
+							%img.userPhoto{:src => "", :alt => ""}/
+							%p.user
+								VentoUno
+						%p.caption
+							Veto está de mi lado
+						.likesCont
+							.likeIcon
+							%p.likesCount
+								50
+						%a.shareLink{:href => "#"}
+				.instagramPhotoCont.video
+					%img.photo{:src => "", :alt => ""}/
+					%a.play{:href => "#"}
+					%span
+						.userCont
+							%img.userPhoto{:src => "", :alt => ""}/
+							/ %vide.userPhoto{:src => "", :alt => ""}/
+
+							%p.user
+								VentoUno
+						%p.caption
+							Veto está de mi lado
+						.likesCont
+							.likeIcon
+							%p.likesCount
+								50
+						%a.shareLink{:href => "#"}
+
+
+
+%script{:src=>"js/sidebar.js"}
+
+
+

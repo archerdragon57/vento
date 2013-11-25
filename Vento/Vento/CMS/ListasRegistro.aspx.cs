@@ -34,7 +34,8 @@ namespace Vento.CMS
         {
             Session["Authenticated"] = "";
             Session["uname"] = "";
-            LoginCheck();
+            //LoginCheck();
+            Response.Redirect("../login.aspx", false);
         }
         protected void GridView1_DeleteCommand(object source, DataGridCommandEventArgs e)
         {

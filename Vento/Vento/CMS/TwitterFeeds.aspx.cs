@@ -34,7 +34,8 @@ namespace Vento.CMS
         {
             Session["Authenticated"] = "";
             Session["uname"] = "";
-            LoginCheck();
+            //LoginCheck();
+            Response.Redirect("../login.aspx", false);
         }
         protected void GridView1_DeleteCommand(object source, DataGridCommandEventArgs e)
         {
@@ -70,7 +71,7 @@ namespace Vento.CMS
         public void BindData()
         {
             con = new SqlConnection(dbcon);
-            da = new SqlDataAdapter("SELECT * from twitter_feeds", con);
+            da = new SqlDataAdapter("SELECT * from twitter_feeds order by id desc", con);
             ds = new DataSet();
             da.Fill(ds, "[dbo].[CmsUsers]");
             GridView1.DataSource = ds.Tables["[dbo].[CmsUsers]"].DefaultView;

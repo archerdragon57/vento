@@ -1,0 +1,83 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Resumen.aspx.cs" Inherits="Vento.Viaje.InfoDia" %>
+
+
+
+.recapDay.sidebarCont
+	.scrollbar
+		.track
+			.thumb
+				.end
+	.viewport
+		.overview
+			.dayHeader
+				.daynumberCont
+					%p.daytext
+						Día
+					%p#dayNumber{:runat => "server"}
+						1
+					%a#dayBack{:href => "#", :runat => "server", :request=>"Resumen.aspx"}
+					%a#dayForward{:href => "#", :runat => "server", :request=>"Resumen.aspx"}
+				.routeCont
+					%p#routefromTo{:runat => "server"}
+						Puebla-Guadalajara
+				#maprouteCont{:runat => "server"}
+			.dayrecapTitle
+				%p
+					Resumen del Día
+			.feedContainer
+
+				#feedContent{:runat=>"server"}
+					.instaphotoCont
+						%img#id1_in{:src => "", :alt => "", :runat=>"server"}/
+					.feeddescriptionCont
+						%p.feeddescriptionTitle#title2{:runat => "server"}
+							Lorem Ipsum
+						%p.feedDescription#feed_desc_done{:runat=>"server"}
+							Lorem ipsum Incididunt proident in cupidatat officia dolore enim fugiat ea mollit fugiat elit eu ut elit ea anim deserunt amet laboris aute sit cupidatat et officia
+							%span
+								adipisicing
+							nostrud laborum est Ut ut esse enim sint cupidatat ut esse.
+					.instavideoCont#div_video_lift{:runat=>"server"}
+						%video.video#id2_v{:src => "", :runat=>"server"}
+					.instaphotoCont#div_image_lift{:runat=>"server"}
+						%img#id2_in{:src => "", :alt => "", :runat=>"server"}/
+					.instaphotoCont
+						%img#id3_in{:src => "", :alt => "", :runat=>"server"}/
+					.instaphotoCont
+						%img#id4_in{:src => "", :alt => "", :runat=>"server"}/
+					.rankingequiposCont
+						%p.title
+							Ranking de Equipos
+						.ventorankCont
+							%p#rankventoUno{:runat=>"server"}
+								<span>#</span>
+								Vento
+								%span
+									Uno
+							.progressCont
+								.progress#p1{:style=>"width: 50px;", :runat=>"server"}
+								.car#pc1{:runat=>"server"}
+						.ventorankCont
+							%p#rankventoDos{:runat=>"server"}
+								<span>#</span>
+								Vento
+								%span
+									Dos
+							.progressCont
+								.progress#p2{:style=>"width: 50px;", :runat=>"server"}
+								.car#pc2{:runat=>"server"}
+						.ventorankCont
+							%p#rankventoTres{:runat=>"server"}
+								<span>#</span>
+								Vento
+								%span
+									Tres
+							.progressCont
+								.progress#p3{:style=>"width: 50px;", :runat=>"server"}
+								.car#pc3{:runat=>"server"}
+					.instaphotoCont
+						%img#id5_in{:src => "", :alt => "", :runat=>"server"}/
+
+
+%script{:src=>"js/resumen.js"}
+

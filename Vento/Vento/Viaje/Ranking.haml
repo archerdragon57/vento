@@ -1,0 +1,155 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Ranking.aspx.cs" Inherits="Vento.Viaje.Ranking" %>
+
+.rankingsCont.sidebarCont
+	.scrollbar
+		.track
+			.thumb
+				.end
+	.viewport
+		.overview
+			.rankings
+				.firstCont
+					.imgCont
+						%img#firstplaceImg{:src => "", :alt => "", :runat=>"server"}/
+					%a.backBtn#backRanking{:href=>"#", :request=>"Auto.aspx", :currentid=>"", :runat=>"server"}
+						%p
+							Regresar
+						%span
+
+					.placeOne
+						%p
+							1
+						.votes
+							%p.votesNumber#votesFirst{:runat=>"server"}
+								1500
+							%p.votesTitle
+								votos
+					%p.personName#firstName{:runat => "server"}
+						Esteban Ramirez
+
+				.secondCont
+					.imgCont
+						%img#secondplaceImg{:src => "", :alt => "", :runat => "server"}/
+					.placeTwo
+						%p
+							2
+					.votes
+						%p.votesNumber#votesSecond{:runat => "server"}
+							950
+							%span
+								Votos
+				.secondCont
+					.imgCont
+						%img#thirdplaceImg{:src => "", :alt => "", :runat => "server"}/
+					.placeTwo
+						%p
+							3
+					.votes
+						%p.votesNumber#votesThird{:runat => "server"}
+							950
+							%span
+								Votos
+				.thirdCont
+					.imgCont
+						%img#fourthplaceImg{:src => "", :alt => "", :runat => "server"}/
+					.placeThree
+						%p
+							4
+					.votes
+						%p.votesNumber#votesFourth{:runat => "server"}
+							950
+							%span
+								Votos
+				.thirdCont.middle
+					.imgCont
+						%img#fifthplaceImg{:src => "", :alt => "", :runat => "server"}/
+					.placeThree
+						%p
+							5
+					.votes
+						%p.votesNumber#votesFifth{:runat => "server"}
+							950
+							%span
+								Votos
+				.thirdCont
+					.imgCont
+						%img#sixthplaceImg{:src => "", :alt => "", :runat => "server"}/
+					.placeThree
+						%p
+							6
+					.votes
+						%p.votesNumber#votesSixth{:runat => "server"}
+							950
+							%span
+								Votos
+				.thirdCont
+					.imgCont
+						%img#seventhplaceImg{:src => "", :alt => "", :runat => "server"}/
+					.placeThree
+						%p
+							7
+					.votes
+						%p.votesNumber#votesSeventh{:runat => "server"}
+							950
+							%span
+								Votos
+				.thirdCont.middle
+					.imgCont
+						%img#eighthplaceImg{:src => "", :alt => "", :runat => "server"}/
+					.placeThree
+						%p
+							8
+					.votes
+						%p.votesNumber#votesEighth{:runat => "server"}
+							950
+							%span
+								Votos
+				.thirdCont
+					.imgCont
+						%img#ninethplaceImg{:src => "", :alt => "", :runat => "server"}/
+					.placeThree
+						%p
+							9
+					.votes
+						%p.votesNumber#votesNineth{:runat => "server"}
+							950
+							%span
+								Votos
+				.thirdCont
+					.imgCont
+						%img#tenthplaceImg{:src => "", :alt => "", :runat => "server"}/
+					.placeThree
+						%p
+							10
+					.votes
+						%p.votesNumber#votesTenth{:runat => "server"}
+							950
+							%span
+								Votos
+				.thirdCont.middle
+					.imgCont
+						%img#eleventhplaceImg{:src => "", :alt => "", :runat => "server"}/
+					.placeThree
+						%p
+							11
+					.votes
+						%p.votesNumber#votesEleventh{:runat => "server"}
+							950
+							%span
+								Votos
+				.thirdCont
+					.imgCont
+						%img#twelfthplaceImg{:src => "", :alt => "", :runat => "server"}/
+					.placeThree
+						%p
+							12
+					.votes
+						%p.votesNumber#votesTwelfth{:runat => "server"}
+							950
+							%span
+								Votos
+
+
+%script{:src=>"js/sidebar.js"}
+%script
+	sideMenu("#backRanking");

@@ -27,7 +27,8 @@ namespace Vento.CMS.add
            Session["Car_ID"]="";
             Session["Authenticated"] = "";
             Session["uname"] = "";
-            LoginCheck();
+            Response.Redirect("../login.aspx", false);
+            //LoginCheck();
         }
         protected void btnNext1_Click(object sender, EventArgs e)
         {
@@ -35,7 +36,7 @@ namespace Vento.CMS.add
             string sConectionsku16 = WebConfigurationManager.ConnectionStrings["ApplicationServices"].ConnectionString;
             using (SqlConnection sqlConsku16 = new SqlConnection(sConectionsku16))
             {
-                SqlCommand sqlComsku16 = new SqlCommand("insert into cars (name,hashtag,descripcion) values ('" + txtName.Text + "', '" + txtHashtag.Text + "', '" + txtDescripcion.Text + "')", sqlConsku16);
+                SqlCommand sqlComsku16 = new SqlCommand("insert into cars (name,hashtag,descripcion,title,points) values ('" + txtName.Text + "', '" + txtHashtag.Text + "', '" + txtDescripcion.Text + "','"+txtTitulo.Text+"',"+txtPuntos.Text+")", sqlConsku16);
                 sqlConsku16.Open();
                 sqlComsku16.ExecuteNonQuery();
                 sqlConsku16.Close();

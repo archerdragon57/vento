@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="instagram_feed.aspx.cs" Inherits="Vento.CMS.edit.instagram_feed" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="instagram_feed.aspx.cs" Inherits="Vento.CMS.edit.instagram_feed"  ValidateRequest="false"%>
 
 <!DOCTYPE html>
 

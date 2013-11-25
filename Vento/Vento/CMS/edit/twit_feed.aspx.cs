@@ -15,41 +15,38 @@ namespace Vento.CMS.edit
         protected void Page_Load(object sender, EventArgs e)
         {
             LoginCheck();
-            if (!Page.IsPostBack)
+            try
             {
-                try
+                twit_id = Session["Twit_ID"].ToString();
+                string sConection11 = WebConfigurationManager.ConnectionStrings["ApplicationServices"].ConnectionString;
+                using (SqlConnection sqlCon11 = new SqlConnection(sConection11))
                 {
-                    twit_id = Session["Twit_ID"].ToString();
-                    string sConection11 = WebConfigurationManager.ConnectionStrings["ApplicationServices"].ConnectionString;
-                    using (SqlConnection sqlCon11 = new SqlConnection(sConection11))
-                    {
-                        SqlCommand sqlCom11 = new SqlCommand("SELECT content,id_user,name_user,screen_name,user_location,profilebackgroundimageurl,visible from twitter_feeds where id = '" + twit_id + "'", sqlCon11);
-                        sqlCon11.Open();
-                        SqlDataReader reader11 = sqlCom11.ExecuteReader();
-                        while (reader11.Read())
-                        { 
-                            txtTwit.Text=reader11[0].ToString();
-                            txtIdUsuario.Text = reader11[1].ToString();
-                            txtUserName.Text = reader11[2].ToString();
-                            txtScreenName.Text = reader11[3].ToString();
-                            txtUserLocation.Text = reader11[4].ToString();
-                            Image1.ImageUrl = reader11[5].ToString();
-                            if (Convert.ToInt16(reader11[6].ToString()) == 1)
-                            {
-                                checkbox_f.Checked = true;
-                            }
-                            else
-                            {
-                                checkbox_f.Checked = false;
-                            }
+                    SqlCommand sqlCom11 = new SqlCommand("SELECT content,id_user,name_user,screen_name,user_location,profilebackgroundimageurl,visible from twitter_feeds where id = '" + twit_id + "'", sqlCon11);
+                    sqlCon11.Open();
+                    SqlDataReader reader11 = sqlCom11.ExecuteReader();
+                    while (reader11.Read())
+                    { 
+                        txtTwit.Text=reader11[0].ToString();
+                        txtIdUsuario.Text = reader11[1].ToString();
+                        txtUserName.Text = reader11[2].ToString();
+                        txtScreenName.Text = reader11[3].ToString();
+                        txtUserLocation.Text = reader11[4].ToString();
+                        Image1.ImageUrl = reader11[5].ToString();
+                        if (Convert.ToInt16(reader11[6].ToString()) == 1)
+                        {
+                            checkbox_f.Checked = true;
                         }
-                        sqlCon11.Close();
+                        else
+                        {
+                            checkbox_f.Checked = false;
+                        }
                     }
+                    sqlCon11.Close();
                 }
-                catch (Exception)
-                {
-                    //Response.Redirect("../login.aspx", false);
-                }
+            }
+            catch (Exception)
+            {
+                //Response.Redirect("../login.aspx", false);
             }
         }
         public void LoginCheck()
@@ -65,7 +62,8 @@ namespace Vento.CMS.edit
             Session["Authenticated"] = "";
             Session["uname"] = "";
             twit_id = "";
-            LoginCheck();
+            //LoginCheck();
+            Response.Redirect("../login.aspx", false);
         }
         protected void btnNext1_Click(object sender, EventArgs e)
         {

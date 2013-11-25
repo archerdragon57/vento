@@ -23,7 +23,7 @@ namespace Vento.CMS.edit
                     string sConection11 = WebConfigurationManager.ConnectionStrings["ApplicationServices"].ConnectionString;
                     using (SqlConnection sqlCon11 = new SqlConnection(sConection11))
                     {
-                        SqlCommand sqlCom11 = new SqlCommand("SELECT nombre,twitter_id,instagram_id,auto_id,picture,likes,edad,ocupacion,origen from users_travel where id = '" + user_id + "'", sqlCon11);
+                        SqlCommand sqlCom11 = new SqlCommand("SELECT nombre,twitter_id,instagram_id,auto_id,picture,likes,edad,ocupacion,origen,descripcion from users_travel where id = '" + user_id + "'", sqlCon11);
                         sqlCon11.Open();
                         SqlDataReader reader11 = sqlCom11.ExecuteReader();
                         while (reader11.Read())
@@ -37,6 +37,7 @@ namespace Vento.CMS.edit
                             txtEdad.Text = reader11[6].ToString();
                             txtOcupacion.Text = reader11[7].ToString();
                             txtOrigen.Text = reader11[8].ToString();
+                            txtBio.Text = reader11[9].ToString();
                         }
                         sqlCon11.Close();
                     }
@@ -60,9 +61,10 @@ namespace Vento.CMS.edit
             Session["Authenticated"] = "";
             Session["uname"] = "";
             user_id = "";
-            LoginCheck();
+            //LoginCheck();
+            Response.Redirect("../login.aspx", false);
         }
-        protected void btnGuardar_Click(object sender, EventArgs e)
+        protected void btnNext1_Click(object sender, EventArgs e)
         {
             user_id = Session["user_id"].ToString();
             if (user_id != "")
@@ -70,7 +72,7 @@ namespace Vento.CMS.edit
                 string sConectionsku16 = WebConfigurationManager.ConnectionStrings["ApplicationServices"].ConnectionString;
                 using (SqlConnection sqlConsku16 = new SqlConnection(sConectionsku16))
                 {
-                    SqlCommand sqlComsku16 = new SqlCommand("UPDATE users_travel SET nombre='"+txtNombre.Text+"',twitter_id='"+txtTwitter.Text+"',instagram_id="+txtInstagram.Text+",auto_id="+txtAuto.Text+",picture='"+txtFoto.Text+"',likes="+txtLike.Text+",edad="+txtEdad.Text+",origen='"+txtOrigen.Text+"',ocupacion='' WHERE [id] = '" + user_id + "'", sqlConsku16);
+                    SqlCommand sqlComsku16 = new SqlCommand("UPDATE users_travel SET nombre='"+txtNombre.Text+"',twitter_id='"+txtTwitter.Text+"',instagram_id="+txtInstagram.Text+",auto_id="+txtAuto.Text+",picture='"+txtFoto.Text+"',likes="+txtLike.Text+",edad="+txtEdad.Text+",origen='"+txtOrigen.Text+"',ocupacion='"+txtOcupacion.Text+"',descripcion='"+txtBio.Text+"' WHERE [id] = '" + user_id + "'", sqlConsku16);
                     sqlConsku16.Open();
                     sqlComsku16.ExecuteNonQuery();
                     sqlConsku16.Close();

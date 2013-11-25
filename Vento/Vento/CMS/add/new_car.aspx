@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="new_car.aspx.cs" Inherits="Vento.CMS.add.new_car" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="new_car.aspx.cs" Inherits="Vento.CMS.add.new_car" ValidateRequest="false" %>
 
 <!DOCTYPE html>
 
@@ -11,14 +11,20 @@
         <div>
         <h5><asp:Label ID="lblMessage" runat="server" Text=""></asp:Label></h5>
         <asp:Button ID="btnLogout" CssClass="logoutRight btn btn-info" runat="server" Text="log out" OnClick="btnLogout_Click" />
-        <p><b>Nombre</b><br />
+        <p><b>Nombre(140)</b><br />
             <asp:TextBox ID="txtName" runat="server"></asp:TextBox>
         </p>
-        <p><b>Hashtag</b><br />
+            <p><b>Título</b>(200)<br />
+            <asp:TextBox ID="txtTitulo" runat="server"></asp:TextBox>
+        </p>
+        <p><b>Hashtag</b>(50)<br />
             <asp:TextBox ID="txtHashtag" runat="server"></asp:TextBox>
         </p>
-        <p><b>Descripcion</b><br />
+        <p><b>Descripcion</b>(800)<br />
             <asp:TextBox ID="txtDescripcion" runat="server"></asp:TextBox>
+        </p>
+            <p><b>Puntos</b><br />
+            <asp:TextBox ID="txtPuntos" runat="server"></asp:TextBox>
         </p>
             <p><asp:Button ID="btnNext1" CssClass="btn btn-primary" runat="server" Text="Guardar" OnClick="btnNext1_Click" /></p>
         </div>

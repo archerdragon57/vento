@@ -66,7 +66,8 @@ namespace Vento.CMS.edit
             Session["Authenticated"] = "";
             Session["uname"] = "";
             instagram_id = "";
-            LoginCheck();
+            //LoginCheck();
+            Response.Redirect("../login.aspx", false);
         }
         protected void btnGuardar_Click(object sender, EventArgs e)
         {

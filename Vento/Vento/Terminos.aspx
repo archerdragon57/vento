@@ -262,7 +262,7 @@
 
 <h2>&ldquo;LA RUTA DE LAS IDEAS&rdquo;</h2>
 
-<p class="center">A partir del 04 de octubre y hasta el 03 de noviembre del 2013 VOLKSWAGEN DE M&Eacute;XICO, S.A. (en lo sucesivo VWM y/o el organizador de la din&aacute;mica), con sede en Autopista M&eacute;xico-Puebla KM.116, San Lorenzo Almecatla, Cuautlancingo, Puebla, llevar&aacute; a cabo la din&aacute;mica denominada &ldquo;La Ruta de las Ideas&rdquo; (en lo sucesivo la &quot;Din&aacute;mica&rdquo;), misma que se regir&aacute; por las presentes bases y condiciones (en adelante las &quot;Bases&rdquo;).</p>
+<p class="center">A partir del 04 de octubre y hasta el 03 de noviembre del 2013 VOLKSWAGEN DE M&Eacute;XICO, S.A. (en lo sucesivo VWM y/o el organizador de la din&aacute;mica), con sede en Autopista M&eacute;xico-Puebla KM.116, San Lorenzo AlFatla, Cuautlancingo, Puebla, llevar&aacute; a cabo la din&aacute;mica denominada &ldquo;La Ruta de las Ideas&rdquo; (en lo sucesivo la &quot;Din&aacute;mica&rdquo;), misma que se regir&aacute; por las presentes bases y condiciones (en adelante las &quot;Bases&rdquo;).</p>
 
 <h2>I. Organizador:</h2>
 
@@ -280,7 +280,7 @@
 
 <h2>III. Premio:</h2>
 
-<p class="center">Una estad&iacute;a extendida en Los Cabos, Baja California Sur de 3 d&iacute;as y 2 noches del 1&ordm; al 3 de noviembre 2013 todo incluido para los 4 integrantes del equipo ganador, un paquete de regalos Volkswagen Collection, un certificado de Invaders Festival 2013.</p>
+<p class="center">Una estad&iacute;a extendida en Los Cabos, Baja California Sur de 3 d&iacute;as y 2 noches del 2&ordm; al 4 de noviembre 2013 todo incluido para los 4 integrantes del equipo ganador, un paquete de regalos Volkswagen Collection, un certificado de Invaders Festival 2013.</p>
 
 <p class="center">El Organizador se reserva el derecho de sustituir el premio con otro de un valor y calidad similar en cualquier momento sin necesidad de notificaci&oacute;n previa alguna en los casos en los que por causas ajenas al Organizador no se puedan entregar los premios originalmente ofrecidos. Este premio es no transferible, no reembolsable y no podr&aacute; intercambiarse por dinero en efectivo ni ning&uacute;n otro premio.</p>
 
@@ -358,7 +358,7 @@ del a&ntilde;o 2013 <br />(en adelante, &ldquo;Vigencia&rdquo;).</p>
 
 <ul>
 	<li>El equipo ganador del premio se dar&aacute; a conocer durante el Invader Festival el 1&ordm;. De noviembre 2013.</li>
-	<li>VWM cubrir&aacute; los gastos de traslado tanto de los equipos no ganadores a la Ciudad de M&eacute;xico v&iacute;a a&eacute;rea, el 1&ordm;. De noviembre 2013, como del equipo ganador, el 3 de noviembre 2013.</li>
+	<li>VWM cubrir&aacute; los gastos de traslado tanto de los equipos no ganadores a la Ciudad de M&eacute;xico v&iacute;a a&eacute;rea, el 1&ordm;. De noviembre 2013, como del equipo ganador, el 2 de noviembre 2013.</li>
 </ul>
 
 <h2>VIII. Responsabilidades: </h2>

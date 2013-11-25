@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="twit_feed.aspx.cs" Inherits="Vento.CMS.edit.twit_feed" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="twit_feed.aspx.cs" Inherits="Vento.CMS.edit.twit_feed" ValidateRequest="false" %>
 
 <!DOCTYPE html>
 

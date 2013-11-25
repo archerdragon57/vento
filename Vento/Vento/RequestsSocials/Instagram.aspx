@@ -3,7 +3,6 @@
 <script>
     if (window.location.href.indexOf("code=") > -1)
     {
-        
         //post with accesstoken
         alert(window.location.href);
         $.ajax({

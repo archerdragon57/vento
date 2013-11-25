@@ -23,7 +23,7 @@ namespace Vento.CMS.edit
                     string sConection11 = WebConfigurationManager.ConnectionStrings["ApplicationServices"].ConnectionString;
                     using (SqlConnection sqlCon11 = new SqlConnection(sConection11))
                     {
-                        SqlCommand sqlCom11 = new SqlCommand("SELECT title,objetivo,descripcion,imagen,video_dia from dias where id = '" + dia_id + "'", sqlCon11);
+                        SqlCommand sqlCom11 = new SqlCommand("SELECT title,objetivo,descripcion,video_dia,titulo_resumen,resumen_dia,titulo_dinamica from dias where id = '" + dia_id + "'", sqlCon11);
                         sqlCon11.Open();
                         SqlDataReader reader11 = sqlCom11.ExecuteReader();
                         while (reader11.Read())
@@ -31,8 +31,10 @@ namespace Vento.CMS.edit
                             txtTitle.Text = reader11[0].ToString();
                             txtObjetivo.Text = reader11[1].ToString();
                             txtDescripcion.Text = reader11[2].ToString();
-                            txtImagen.Text = reader11[3].ToString();
-                            txtvideo_dia.Text = reader11[4].ToString();
+                            txtvideo_dia.Text = reader11[3].ToString();
+                            txtTitle2.Text = reader11[4].ToString();
+                            txtResumen.Text = reader11[5].ToString();
+                            txtTitleRes.Text = reader11[6].ToString();
                         }
                         sqlCon11.Close();
                     }
@@ -45,7 +47,7 @@ namespace Vento.CMS.edit
         }
         public void LoginCheck()
         {
-            if (Convert.ToString(Session["Authenticated"]) != "True" || Convert.ToString(Session["Dia_ID"]) == "")
+            if (Convert.ToString(Session["Authenticated"]) != "True")
             {
                 Response.Redirect("../login.aspx", false);
             }
@@ -56,7 +58,8 @@ namespace Vento.CMS.edit
             Session["Authenticated"] = "";
             Session["uname"] = "";
             dia_id = "";
-            LoginCheck();
+            //LoginCheck();
+            Response.Redirect("../login.aspx", false);
         }
         protected void btnNext1_Click(object sender, EventArgs e)
         {
@@ -66,7 +69,7 @@ namespace Vento.CMS.edit
                 string sConectionsku16 = WebConfigurationManager.ConnectionStrings["ApplicationServices"].ConnectionString;
                 using (SqlConnection sqlConsku16 = new SqlConnection(sConectionsku16))
                 {
-                    SqlCommand sqlComsku16 = new SqlCommand("UPDATE dias SET title='"+txtTitle.Text+"',objetivo='"+txtObjetivo.Text+"',descripcion='"+txtDescripcion.Text+"',imagen='"+txtImagen+"','"+txtvideo_dia.Text+"' WHERE [id] = '" + dia_id + "'", sqlConsku16);
+                    SqlCommand sqlComsku16 = new SqlCommand("UPDATE dias SET title='" + txtTitle.Text + "',objetivo='" + txtObjetivo.Text + "',descripcion='" + txtDescripcion.Text + "',video_dia='" + txtvideo_dia.Text + "',titulo_resumen='" + txtTitle2.Text + "',resumen_dia='" + txtResumen.Text + "',titulo_dinamica='"+txtTitleRes.Text+"' WHERE [id] = " + dia_id + "", sqlConsku16);
                     sqlConsku16.Open();
                     sqlComsku16.ExecuteNonQuery();
                     sqlConsku16.Close();

@@ -1,0 +1,1880 @@
+@import "reset"
+@import "fonts"
+@import "colors"
+@import "mixins"
+
+// @-webkit-keyframes openmap
+// 	from
+// 		-webkit-clip-path: circle(90%, 90%, 43px)
+// 	to
+// 		-webkit-clip-path: circle(90%, 90%, 1800px)
+// @-webkit-keyframes closemap
+// 	from
+// 		-webkit-clip-path: circle(90%, 90%, 1800px)
+// 	to
+// 		-webkit-clip-path: circle(90%, 90%, 43px)
+
+
+body, html
+	margin: 0
+	padding: 0
+	width: 100%
+	height: 100%
+	overflow: hidden
+	background-color: $dblue
+
+	#preloader
+		// display: none
+
+.fancybox-lock
+	.fancybox-overlay
+		z-index: 20000
+
+
+
+#preloader
+	display: block
+	width: 100%
+	height: 100%
+	position: fixed
+	float: left
+	z-index: 1000000
+
+#preloader-content
+	position: absolute
+	z-index: 1000000000000
+	width: 100%
+	height: 100%
+	background: #152755
+
+#preloader .ui-spinner
+	margin-left: auto
+	margin-right: auto
+	position: relative
+	top: 40%
+	width: 100px
+
+#preloader .wheel
+	margin-left: auto
+	margin-right: auto
+	background: url(../img/vento_loader.gif) no-repeat scroll 0 0 transparent
+	width: 61px
+	height: 62px
+
+#preloader .preloader-text
+	color: #fff
+	font-family: "VWHeadlineOTBook"
+	font-size: 12px
+	margin-top: 10px
+	margin-left: auto
+	margin-right: auto
+	text-align: center
+	width: 100px
+	-webkit-font-smoothing: antialiased
+
+
+
+#overlay
+	position: absolute
+	// z-index: 100
+	width: 100%
+	height: 100%
+	top: 0
+	left: 0
+
+	a#mapBtn
+		width: 95px
+		height: 95px
+		position: absolute
+		bottom: 60px
+		right: 60px
+		z-index: 50
+		-webkit-perspective: 800px
+		-webkit-perspective-origin: 50% 50%
+		background: url("../img/btnMapa_bg2.png") 50% 50% no-repeat
+		&:hover
+			.paintBtnBack
+				@include transitionT(-webkit-transform, 0.1s, linear)
+				-webkit-transform: scale(1.121, 1.121)
+			// .paintBtnIcon
+			// 	-webkit-transform: rotateY(180deg)
+		&.flipped
+			.mapBtnIcon
+				-webkit-transform: rotateY(180deg)
+
+
+		.mapBtnBack
+			width: 95px
+			height: 95px
+			position: absolute
+			background: url("../img/btnMapa_bg.png") 50% 50% no-repeat
+			@include transitionT(-webkit-transform, 0.1s, linear)
+			-webkit-transform: scale(1, 1)
+		.mapBtnIcon
+			width: 95px
+			height: 95px
+			position: absolute
+			// background: url("../img/btnMapa_bg.png") 50% 50% no-repeat
+			-webkit-transform-style: preserve-3d
+			@include transitionT(-webkit-transform, 0.7s, linear)
+			.mapBtnIconBack
+				width: 95px
+				height: 95px
+				position: absolute
+				background: url("../img/btnMapa_back.png") 50% 50% no-repeat
+				-webkit-backface-visibility: hidden
+				-webkit-transform: rotateY(180deg)
+
+			.mapBtnIconFront
+				width: 95px
+				height: 95px
+				position: absolute
+				background: url("../img/btnMapa_toMap.png") 50% 50% no-repeat
+				-webkit-backface-visibility: hidden
+
+
+
+	a#paintBtn
+		position: fixed
+		bottom: 60px
+		left: 60px
+		width: 61px
+		height: 61px
+		display: block
+		z-index: 40
+		-webkit-perspective: 800px
+		-webkit-perspective-origin: 50% 50%
+		&:hover
+			.paintBtnBack
+				@include transitionT(-webkit-transform, 0.1s, linear)
+				-webkit-transform: scale(1.121, 1.121)
+			// .paintBtnIcon
+			// 	-webkit-transform: rotateY(180deg)
+		&.flipped
+			.paintBtnIcon
+				-webkit-transform: rotateY(180deg)
+		.paintBtnBack
+			width: 61px
+			height: 61px
+			position: absolute
+			background: url("../img/paint/Shape_cubeta.png") 50% 50% no-repeat
+			@include transitionT(-webkit-transform, 0.1s, linear)
+			-webkit-transform: scale(1, 1)
+		.paintBtnIcon
+			width: 61px
+			height: 61px
+			position: absolute
+			-webkit-transform-style: preserve-3d
+			@include transitionT(-webkit-transform, 0.7s, linear)
+			display: block
+
+
+
+
+			.paintBtnIconFront
+				width: 61px
+				height: 61px
+				position: absolute
+				background: url("../img/paint/cubeta_icon.png") 50% 50% no-repeat
+				-webkit-backface-visibility: hidden
+
+			.paintBtnIconBack
+				width: 61px
+				height: 61px
+				position: absolute
+				background: url("../img/paint/regresar_icon.png") 50% 50% no-repeat
+				-webkit-backface-visibility: hidden
+				// @include transitionT(-webkit-transform, 0.7s, linear)
+				-webkit-transform: rotateY(180deg)
+
+	#logoHeader
+		display: block
+		width: 100px
+		height: 100px
+		position: absolute
+		z-index: 40
+		top: 0
+		left: 60px
+		background-image: url("../img/logo_vw_100px.png")
+		background-color: $white
+
+	#socialHeader
+		position: absolute
+		top: 35px
+		right: 60px
+		width: 220px
+		height: 40px
+		z-index: 40
+		// background-color: #fff
+
+		.colorsLinkCont
+			width: 133px
+			height: 33px
+			position: relative
+			float: left
+			margin-right: 10px
+
+
+			.colorsLink
+				transform: scale(1,1)
+				visibility: visible
+				width: 133px
+				height: 33px
+				top: 0
+				left: 0
+				opacity: 0
+				position: absolute
+				background: url("../img/btn_shape_vento_color.png") 0 0 no-repeat
+			.colorscoche
+				position: absolute
+				width: 25px
+				height: 12px
+				top: 10px
+				left: 15px
+				opacity: 0
+				background: url("../img/icon_btn_vento_color.png") 0 0 no-repeat
+
+			.colorsText
+				opacity: 0
+				@include texto($fsemibold, 13px, $white)
+				text-align: center
+				padding: 9px
+				padding-left: 40px
+
+
+
+		.fbPageCont
+			width: 31px
+			height: 31px
+			position: relative
+			float: left
+			margin-right: 10px
+
+			.fbPageBack
+				width: 31px
+				height: 31px
+				top: 0
+				left: 0
+				position: absolute
+				opacity: 0
+				background: url("../img/btn_social_icons_shape.png") 0 0 no-repeat
+			.fbPageIcon
+				width: 31px
+				height: 31px
+				position: absolute
+				opacity: 0
+				background: url("../img/facebook_icon.png") 50% 50% no-repeat
+		.twPageCont
+			width: 31px
+			height: 31px
+			position: relative
+			float: left
+			// margin-right: 10px
+
+			.twPageBack
+				width: 31px
+				height: 31px
+				top: 0
+				left: 0
+				position: absolute
+				opacity: 0
+				background: url("../img/btn_social_icons_shape.png") 0 0 no-repeat
+			.twPageIcon
+				width: 31px
+				height: 31px
+
+				position: absolute
+				opacity: 0
+				background: url("../img/twitter_icon.png") 50% 50% no-repeat
+
+
+	#videoNav
+		position: absolute
+		bottom: 35px
+		width: 100%
+		height: 50px
+		.videoNavCont
+			width: 300px
+			height: 50px
+			margin-left: auto
+			margin-right: auto
+			position: relative
+			z-index: 10
+			.videoProgressCont
+				position: absolute
+				width: 100%
+				height: 5px
+				overflow: hidden
+				background: $white
+				top: 20px
+				left: 0
+				opacity: 0
+				.videoProgressbar
+					width: 30px
+					height: 5px
+					background: $cblue
+					position: absolute
+					left: 0
+					top: 0
+			.videoPoint
+				width: 17px
+				height: 17px
+				position: absolute
+				top: 50%
+				margin-top: -11px
+				left: -8px
+				opacity: 0
+				background: url("../img/timelinepoint_over.png") 0 0 no-repeat
+				&:hover
+					.videoFeature
+						// display: block
+						@include transitionT(-webkit-transform, 0.1s, linear)
+						-webkit-transform: scale(1, 1)
+						.videoFeatureBack
+							@include transitionT(-webkit-transform, 0.1s, linear)
+							-webkit-transform: scale(1, 1)
+
+				&.active
+
+					.videoFeature
+						@include transitionT(-webkit-transform, 0.1s, linear)
+						-webkit-transform: scale(0, 0)
+						.videoFeatureBack
+							background: url("../img/shape_rollover_azul_menu.png") 50% 50% no-repeat
+
+						.videoFeatureIcon
+
+							&.vequipamiento
+								background: url("../img/equipamiento_icon_menu.png") 50% 50% no-repeat
+							&.vcomodidad
+								background: url("../img/comodidad_icon_menu.png") 50% 50% no-repeat
+							&.vconsumo
+								background: url("../img/bajo_consumo_icon_menu.png") 50% 50% no-repeat
+							&.vseguridad
+								background: url("../img/seguridad_icon.png") 50% 50% no-repeat
+					&:hover
+						.videoFeature
+							// display: block
+							@include transitionT(-webkit-transform, 0.1s, linear)
+							-webkit-transform: scale(1, 1)
+							.videoFeatureBack
+								@include transitionT(-webkit-transform, 0.1s, linear)
+								-webkit-transform: scale(1, 1)
+				&.stop
+					.videoPointPlay
+						display: block
+					.videoFeature
+						display: none
+					&:hover
+						.videoFeature
+							display: none
+				.videoFeature
+					// display: none
+					width: 49px
+					height: 45px
+					position: absolute
+					top: 50%
+					left: 50%
+					margin-left: -25px
+					margin-top: -23px
+					@include transitionT(-webkit-transform, 0.1s, linear)
+					-webkit-transform: scale(0,0)
+					&:hover
+						.videoFeatureBack
+							@include transitionT(-webkit-transform, 0.1s, linear)
+							-webkit-transform: scale(1, 1)
+					.videoFeatureBack
+						position: absolute
+						width: 49px
+						height: 45px
+						top: 0
+						left: 0
+						background: url("../img/shape_rollover_blanco_menu.png") 50% 50% no-repeat
+					.videoFeatureText
+						@include texto($fsemibold, 11px, $white)
+						text-align: center
+						position: absolute
+						top: 60px
+						left: 50%
+						width: 68px
+						margin-left: -34px
+					.videoFeatureIcon
+						width: 49px
+						height: 45px
+						position: absolute
+						top: 0
+						left: 0
+						&.vequipamiento
+							background: url("../img/equipamiento_icon_azul_menu.png") 50% 50% no-repeat
+						&.vcomodidad
+							background: url("../img/comodidad_icon_azul_menu.png") 50% 50% no-repeat
+						&.vconsumo
+							background: url("../img/bajo_consumo_icon_azul_menu.png") 50% 50% no-repeat
+						&.vseguridad
+							background: url("../img/seguridad_icon_azul.png") 50% 50% no-repeat
+
+				.videoPointPlay
+					display: none
+					width: 39px
+					height: 39px
+					position: absolute
+					top: 50%
+					left: 50%
+					margin-left: -19px
+					margin-top: -19px
+
+					&:hover
+						.videoPlayBack
+							@include transitionT(-webkit-transform, 0.1s, linear)
+							-webkit-transform: scale(1.121, 1.121)
+					.videoPlayBack
+						width: 39px
+						height: 39px
+						position: absolute
+						top: 0
+						left: 0
+						background: url("../img/back_play_bg.png") 50% 50% no-repeat
+						@include transitionT(-webkit-transform, 0.1s, linear)
+						-webkit-transform: scale(1, 1)
+					.videoPlayIcon
+						width: 39px
+						height: 39px
+						position: absolute
+						top: 0
+						left: 0
+						background: url("../img/play_icon_menu.png") 50% 50% no-repeat
+
+
+
+				&#videouno
+					left: -11px
+				&#videodos
+					left: 19.4%
+					// right: -11px
+				&#videotres
+					left: 42%
+				&#videocuatro
+					left: 66%
+				&#videocinco
+					left: 88%
+				&#videoseis
+					left: auto
+					right: -11px
+
+				.videoPointActive
+					width: 17px
+					height: 17px
+					position: absolute
+					opacity: 0
+					top: 0
+					// margin-top: -11px
+					left: 0
+					background: url("../img/timelinepoint.png") 0 0 no-repeat
+
+
+
+
+
+
+
+	.noSelect
+		user-select: none
+		-o-user-select: none
+		-moz-user-select: none
+		-khtml-user-select: none
+		-webkit-user-select: none
+
+
+
+#mainCont
+	width: 100%
+	height: 100%
+	display: block
+	position: relative
+	overflow: hidden
+	.container
+		width: 100%
+		height: 100%
+		display: block
+		position: relative
+
+
+
+	#map
+
+		position: absolute
+		height: 0
+		left: 0
+		display: none
+		// -webkit-clip-path: circle(90%, 90%, 43px)
+		// background: red
+		// &.openmap
+		// 	-webkit-animation: openmap 0.73s cubic-bezier(0.550, 0.055, 0.675, 0.190)
+			// -webkit-animation-iteration-count: 0
+		background: transparent
+		z-index: 20
+		.mapCont
+			width: 100%
+			height: 100%
+			position: fixed
+
+			// background: #113569
+			.mapCont2
+				width: 100%
+				height: 100%
+				position: fixed
+				top: 0
+				overflow: hidden
+				.map
+					left: -1776px
+					top: -1450px
+					position: absolute
+					width: 4096px
+					height: 2400px
+					background: url("../img/map/mapa_back.jpg") 0 0 no-repeat
+
+
+
+					.hotspotMapCont
+						width: 58px
+						height: 58px
+						position: absolute
+						left: 270px
+						top: 270px
+						display: block
+						// opacity: 0
+						&#hotmap01
+							left: 609px
+							top: 298px
+
+						.hotspotIdle
+							width: 58px
+							height: 58px
+							position: absolute
+							opacity: 1
+							background: url("../img/hotspot.png") 50% 50% no-repeat
+						.hotspotOver
+							width: 58px
+							height: 58px
+							position: absolute
+							opacity: 0
+							background: url("../img/hotspot_rollover.png") 50% 50% no-repeat
+
+						.hotspotOpenContainer
+							width: 312px
+							height: 311px
+							position: absolute
+							visibility: hidden
+							top: 50%
+							left: 50%
+							margin-left: -156px
+							margin-top: -155.5px
+							.contentCont
+								width: 312px
+								height: 311px
+								position: relative
+								display: none
+
+							.contentInfo
+								p.titleInfo
+									@include texto($fblack, 19px, $dblue)
+									padding-top: 80px
+									margin-bottom: 15px
+									text-align: center
+								p.descriptionInfo
+									@include texto($fbook, 13px, $dblue)
+									text-align: center
+									padding-left: 20px
+									padding-right: 20px
+									line-height: 20px
+
+								p.compartir
+									@include texto($fbook, 13px, $cblue)
+									text-align: center
+									margin-top: 15px
+									margin-bottom: 10px
+
+								.shareCont
+									width: 72px
+									height: 31px
+									position: relative
+									margin-left: auto
+									margin-right: auto
+									.twShareCont
+										width: 31px
+										height: 31px
+										display: block
+										position: absolute
+										top: 0
+										left: 0
+										&:hover
+											.twShareBack
+												@include transitionT(-webkit-transform, 0.1s, linear)
+												-webkit-transform: scale(1.121, 1.121)
+										.twShareBack
+											width: 31px
+											height: 31px
+											position: absolute
+											background: url("../img/shape_share_ficha.png") 50% 50% no-repeat
+											@include transitionT(-webkit-transform, 0.1s, linear)
+											-webkit-transform: scale(1, 1)
+										.twShareIcon
+											width: 31px
+											height: 31px
+											position: absolute
+											background: url("../img/share_twitter_ficha_hotspot.png") 50% 50% no-repeat
+
+									.fbShareCont
+										width: 31px
+										height: 31px
+										display: block
+										position: absolute
+										top: 0
+										right: 0
+										&:hover
+											.fbShareBack
+												@include transitionT(-webkit-transform, 0.1s, linear)
+												-webkit-transform: scale(1.121, 1.121)
+
+
+										.fbShareBack
+											width: 31px
+											height: 31px
+											position: absolute
+											background: url("../img/shape_share_ficha.png") 50% 50% no-repeat
+											@include transitionT(-webkit-transform, 0.1s, linear)
+											-webkit-transform: scale(1, 1)
+										.fbShareIcon
+											width: 31px
+											height: 31px
+											position: absolute
+											background: url("../img/share_face_ficha_hotspot.png") 50% 50% no-repeat
+
+
+
+
+
+								&.active
+									display: block
+
+
+
+							.hotspotOpen
+								width: 312px
+								height: 311px
+								position: absolute
+								// opacity: 0
+								background: url("../img/hotspotOpenContainer.png") 50% 50% no-repeat
+								top: 0
+								left: 0
+
+							.hotspotbtn
+								width: 43px
+								height: 44px
+								position: absolute
+								right: 0
+								top: 0
+
+								.hotspotbtnBack
+									width: 43px
+									height: 44px
+									position: absolute
+									background: url("../img/icons_hotspots/back_icon_hotspot.png") 50% 50% no-repeat
+								.hotspotbtnIcon
+									width: 43px
+									height: 43px
+									position: absolute
+
+							.hotspotCloseCont
+								left: 267px
+								top: -8px
+								.hotspotCloseBack
+									background: url("../img/hotspotclosebg.png") 50% 50% no-repeat
+								.hotspotCloseIcon
+									background: url("../img/hotspotclosecross.png") 50% 50% no-repeat
+							.hotspotInfoCont
+								left: 309px
+								top: 38px
+								// .hotspotInfoBack
+								&.active
+									.hotspotInfoIcon
+										background: url("../img/icons_hotspots/info_icon_activo_hotspot.png") 50% 50% no-repeat
+								.hotspotInfoIcon
+									background: url("../img/icons_hotspots/info_icon_hotspot.png") 50% 50% no-repeat
+
+							.hotspotImageCont
+								left: 330px
+								top: 98px
+								// .hotspotImageBack
+								&.active
+									.hotspotImageIcon
+										background: url("../img/icons_hotspots/foto_icon_activo_hotspot.png") 50% 50% no-repeat
+								.hotspotImageIcon
+									background: url("../img/icons_hotspots/foto_icon_hotspot.png") 50% 50% no-repeat
+
+							.hotspotVideoCont
+								left: 331px
+								top: 161px
+								// .hotspotVideoBack
+								&.active
+									.hotspotVideoIcon
+										background: url("../img/icons_hotspots/foto_play_activo_hotspot.png") 50% 50% no-repeat
+
+								.hotspotVideoIcon
+									background: url("../img/icons_hotspots/foto_play_hotspot.png") 50% 50% no-repeat
+
+
+
+
+
+					.pinTwitter
+						position: absolute
+						// background: red
+						display: none
+						width: 34px
+						height: 42px
+						.pinPoint
+							width: 18px
+							height: 18px
+							position: absolute
+							bottom: -20px
+							left: 50%
+							margin-left: -9px
+							background: url("../img/map/shape_ruta.png")
+						.pinTwitBack
+
+							display: block
+							background: url("../img/map/marker_back_ruta.png") 50% 50% no-repeat
+
+							position: absolute
+							width: 34px
+							height: 42px
+							-webkit-transform-origin: 50% 100%
+							-moz-transform-origin: 50% 100%
+							-ms-transform-origin: 50% 100%
+							-o-transform-origin: 50% 100%
+							transform-origin: 50% 100%
+
+						.pinTwitIcon
+							background: url("../img/map/twitter_icon.png") 8px 7px no-repeat
+							position: absolute
+							width: 34px
+							height: 42px
+							cursor: pointer
+						.pinTwitCont
+							-webkit-transform-origin: 50% 100%
+							-moz-transform-origin: 50% 100%
+							-ms-transform-origin: 50% 100%
+							-o-transform-origin: 50% 100%
+							transform-origin: 50% 100%
+							-webkit-transform: scale(0, 0)
+							-moz-transform: scale(0, 0)
+							-ms-transform: scale(0, 0)
+							-o-transform: scale(0, 0)
+							transform: scale(0, 0)
+							position: absolute
+							overflow: auto
+							height: auto122.5
+							left: -106px
+							bottom: 8px
+							width: 225px
+							padding: 10px
+							// display: none
+							background: $white
+							-webkit-border-radius: 15px
+							-moz-border-radius: 15px
+							border-radius: 15px
+							.infobox
+								// width: 260px
+								// height: 205px
+								// margin: 0 auto
+								// padding: 10px
+								// position: relative
+								// z-index: 10
+
+								width: 225px
+								height: auto
+								// overflow: auto
+								position: relative
+								background-color: $white
+								// top: 50%
+								// left: 50%
+								background-color: $white
+								.twicoinfow
+									width: 24px
+									height: 20px
+									display: block
+									position: absolute
+									top: 10px
+									left: 10px
+									background: url("../img/map/twitter_icon.png") 50% 50% no-repeat
+								.closeTw
+									width: 23px
+									height: 23px
+									position: absolute
+									top: 10px
+									right: 10px
+									cursor: pointer
+
+									.closeBack
+										width: 23px
+										height: 23px
+										position: absolute
+
+										background: url("../img/map/shape_close_marker_ruta.png") 50% 50% no-repeat
+									.closeIcon
+										width: 23px
+										height: 23px
+										position: absolute
+										background: url("../img/map/close_icon_marker_ruta.png") 50% 50% no-repeat
+								.titleUsertwinfo
+									padding-top: 50px
+									text-align: center
+									@include texto($fblack, 21px, $dblue)
+									span
+										color: $lblue
+								.descriptiontwinfo
+									padding-top: 20px
+									text-align: center
+									@include texto($fbook, 14px, $dblue)
+									margin-bottom: 35px
+						&#pinTwit395034243501662208
+							display: block
+							top: 2018px
+							left: 2617px
+						&#pinTwit395058752040103936
+							display: block
+							top: 1922px
+							left: 2491px
+						&#pinTwit395065745903603713
+							display: block
+							top: 1807px
+							left: 1876px
+						&#pinTwit395190170171224064
+							display: block
+							top: 1956px
+							left: 2571px
+						&#pinTwit395208609929236481
+							display: block
+							top: 1907px
+							left: 2424px
+						&#pinTwit395212407422742528
+							display: block
+							top: 1871px
+							left: 2123px
+						&#pinTwit395322279795908608
+							display: block
+							top: 1763px
+							left: 1790px
+						&#pinTwit395337999421943808
+							display: block
+							top: 1706px
+							left: 1654px
+						&#pinTwit395560161487884288
+							display: block
+							top: 1657px
+							left: 1526px
+						&#pinTwit395582764218454017
+							display: block
+							top: 1584px
+							left: 1453px
+						&#pinTwit395578482681331712
+							display: block
+							top: 1437px
+							left: 1379px
+						&#pinTwit395643250297425920
+							display: block
+							top: 1227px
+							left: 1167px
+						&#pinTwit395737760658898944
+							display: block
+							top: 1137px
+							left: 1103px
+						&#pinTwit395785639641104384
+							display: block
+							top: 1067px
+							left: 1056px
+						&#pinTwit396003075468824576
+							display: block
+							top: 971px
+							left: 493px
+						&#pinTwit396007457178124288
+							display: block
+							top: 1075px
+							left: 514px
+						&#pinTwit396010543187623936
+							display: block
+							top: 1108px
+							left: 522px
+						&#pinTwit396062995828469760
+							display: block
+							top: 1221px
+							left: 542px
+
+
+
+
+
+
+
+
+
+
+					.pinInstagram
+						position: absolute
+						// background: red
+						width: 34px
+						height: 42px
+						display: none
+						&#pinIns196
+							display: block
+							left: 1134px
+							top: 1178px
+						&#pinIns89
+							display: block
+							left: 2599px
+							top: 1999px
+						&#pinIns20
+							display: block
+							left: 2058px
+							top: 1874px
+						&#pinIns120
+							display: block
+							left: 2622px
+							top: 2039px
+						&#pinIns176
+							display: block
+							left: 2586px
+							top: 1978px
+						&#pinIns124
+							display: block
+							left: 2548px
+							top: 1940px
+						&#pinIns125
+							display: block
+							left: 2459px
+							top: 1912px
+						&#pinIns126
+							display: block
+							left: 2372px
+							top: 1893px
+						&#pinIns136
+							display: block
+							left: 2165px
+							top: 1876px
+						&#pinIns153
+							display: block
+							left: 1819px
+							top: 1776px
+						&#pinIns170
+							display: block
+							left: 2336px
+							top: 1877px
+						&#pinIns188
+							display: block
+							left: 1616px
+							top: 1682px
+						&#pinIns191
+							display: block
+							left: 1192px
+							top: 1246px
+						&#pinIns206
+							display: block
+							left: 1009px
+							top: 996px
+						&#pinIns192
+							display: block
+							left: 1213px
+							top: 1258px
+						&#pinIns202
+							display: block
+							left: 1080px
+							top: 1102px
+						&#pinIns207
+							display: block
+							left: 688px
+							top: 800px
+						&#pinIns209
+							display: block
+							left: 493px
+							top: 915px
+						&#pinIns214
+							display: block
+							left: 492px
+							top: 1040px
+						&#pinIns210
+							display: block
+							left: 670px
+							top: 808px
+						&#pinIns222
+							display: block
+							left: 531px
+							top: 1162px
+						&#pinIns220
+							display: block
+							left: 550px
+							top: 1241px
+						&#pinIns229
+							display: block
+							left: 514px
+							top: 1288px
+						&#pinIns190
+							display: block
+							left: 915px
+							top: 873px
+						&#pinIns156
+							display: block
+							left: 1409px
+							top: 1498px
+
+						.pinPoint
+							width: 18px
+							height: 18px
+							position: absolute
+							bottom: -20px
+							left: 50%
+							margin-left: -9px
+							background: url("../img/map/shape_ruta.png")
+						.pinInstaBack
+
+							display: block
+							background: url("../img/map/marker_back_ruta.png") 50% 50% no-repeat
+
+							position: absolute
+							width: 34px
+							height: 42px
+							-webkit-transform-origin: 50% 100%
+							-moz-transform-origin: 50% 100%
+							-ms-transform-origin: 50% 100%
+							-o-transform-origin: 50% 100%
+							transform-origin: 50% 100%
+
+						.pinInstaIcon
+							background: url("../img/map/instagram_icon.png") 8px 7px no-repeat
+							position: absolute
+							width: 34px
+							height: 42px
+							cursor: pointer
+						.pinInstaCont
+							-webkit-transform-origin: 50% 100%
+							-moz-transform-origin: 50% 100%
+							-ms-transform-origin: 50% 100%
+							-o-transform-origin: 50% 100%
+							transform-origin: 50% 100%
+							-webkit-transform: scale(0, 0)
+							-moz-transform: scale(0, 0)
+							-ms-transform: scale(0, 0)
+							-o-transform: scale(0, 0)
+							transform: scale(0, 0)
+							position: absolute
+							overflow: auto
+							height: auto
+							left: -106px
+							bottom: 8px
+							width: 225px
+							padding: 10px
+							background: $white
+							-webkit-border-radius: 15px
+							-moz-border-radius: 15px
+							border-radius: 15px
+
+							.closeIns
+								width: 23px
+								height: 23px
+								position: absolute
+								top: 10px
+								right: 10px
+								cursor: pointer
+
+								.closeBack
+									width: 23px
+									height: 23px
+									position: absolute
+
+									background: url("../img/map/shape_close_marker_ruta.png") 50% 50% no-repeat
+								.closeIcon
+									width: 23px
+									height: 23px
+									position: absolute
+									background: url("../img/map/close_icon_marker_ruta.png") 50% 50% no-repeat
+
+
+							.instagraminfocont
+								width: 225px
+								height: auto
+								// overflow: auto
+								position: relative
+								background-color: $white
+								// z-index: 11
+								// top: 50%
+								// left: 50%
+
+								.userCont
+									position: relative
+									height: 25px
+									width: 100%
+									margin-bottom: 5px
+
+
+									img.userPhoto
+										width: 25px
+										height: 25px
+										float: left
+										margin-right: 7px
+
+									p.user
+										@include texto($fsemibold, 13px, $dblue)
+										text-align: left
+										padding-top: 6px
+
+								img.photo
+									width: 225px
+									height: 225px
+									background-color: $lblue
+
+								.likeandcaptionCont
+									width: 100%
+									height: auto
+									// overflow: auto
+									padding-top: 12px
+									p.caption
+										@include texto($fbook, 13px, $dblue)
+										width: 145px
+										float: right
+										height: auto
+										text-align: right
+										padding-top: 6px
+									.likesCont
+										width: 50px
+										height: 25px
+										float: left
+
+										.likeIcon
+											width: 25px
+											height: 25px
+											// background-color: $lblue
+											margin-right: 4px
+											float: left
+											background-image: url("../img/map/like_instagram.png")
+											background-position: 50% 50%
+											background-repeat: no-repeat
+										p.likesCount
+											float: left
+											@include texto($fblack, 13px, $dblue)
+											padding-top: 6px
+						// &#pinIns01
+						// 	left: 864px
+						// 	top: 540px
+
+					.animated
+						position: absolute
+					#sprt-carro1
+						width: 102px
+						height: 88px
+						left: 1934px
+						top: 1846px
+						background: url("../img/map/sprites/carro1.png") 0 0 no-repeat
+					#sprt-carro2
+						left: 555px
+						top: 1205px
+						width: 102px
+						height: 88px
+						background: url("../img/map/sprites/carro2.png") 0 0 no-repeat
+					#sprt-sombrilla
+						left: 716px
+						top: 650px
+						width: 117px
+						height: 71px
+						background: url("../img/map/sprites/sombrilla.png") 0 0 no-repeat
+					#sprt-maguey
+						left: 1562px
+						top: 1564px
+						width: 275px
+						height: 264px
+						background: url("../img/map/sprites/maguey.png") 0 0 no-repeat
+					#sprt-sombrero
+						width: 111px
+						height: 98px
+						left: 1673px
+						top: 1602px
+						background: url("../img/map/sprites/sombrero.png") 0 0 no-repeat
+					#sprt-pulpo
+						width: 362px
+						height: 285px
+						left: 164px
+						top: 1159px
+						background: url("../img/map/sprites/pulpo.png") 0 0 no-repeat
+					#sprt-pez
+						width: 177px
+						height: 147px
+						left: 889px
+						top: 1481px
+						background: url("../img/map/sprites/pez.png") 0 0 no-repeat
+					#sprt-palmera1
+						width: 89px
+						height: 96px
+						left: 1283px
+						top: 1446px
+						background: url("../img/map/sprites/palmera1.png") 0 0 no-repeat
+					#sprt-palmera2
+						width: 113px
+						height: 121px
+						left: 1309px
+						top: 1223px
+						background: url("../img/map/sprites/palmera2.png") 0 0 no-repeat
+					#sprt-ferry
+						width: 259px
+						height: 199px
+						left: 481px
+						top: 833px
+						background: url("../img/map/sprites/ferry.png") 0 0 no-repeat
+					#sprt-bailarina
+						width: 70px
+						height: 131px
+						left: 367px
+						top: 936px
+						background: url("../img/map/sprites/bailarina.png") 0 0 no-repeat
+					#sprt-fabrica
+						width: 176px
+						height: 209px
+						left: 2611px
+						top: 1892px
+						background: url("../img/map/sprites/fabrica.png") 0 0 no-repeat
+					#sprt-ancla
+						width: 94px
+						height: 123px
+						left: 1162px
+						top: 1088px
+						background: url("../img/map/sprites/ancla.png") 0 0 no-repeat
+					#sprt-agua3
+						width: 146px
+						height: 35px
+						left: 545px
+						top: 1607px
+						background: url("../img/map/sprites/agua3.png") 0 0 no-repeat
+					#sprt-agua2
+						left: 29px
+						top: 965px
+						width: 146px
+						height: 35px
+						background: url("../img/map/sprites/agua2.png") 0 0 no-repeat
+					#sprt-agua1
+						width: 146px
+						height: 35px
+						left: 2909px
+						top: 1786px
+						background: url("../img/map/sprites/agua1.png") 0 0 no-repeat
+					#sprt-volcan
+						width: 152px
+						height: 170px
+						left: 2439px
+						top: 2056px
+						background: url("../img/map/sprites/volcan.png") 0 0 no-repeat
+
+	.videoRecap
+		width: 400px
+		height: 520px
+		display: block
+		position: absolute
+		// background: red
+		left: 1705px
+		top: 565px
+
+	.videoPinMap
+		width: 86px
+		height: 86px
+		position: absolute
+		top: 700px
+		left: 700px
+		.vpBack
+			width: 86px
+			height: 86px
+			position: absolute
+			background: url("../img/map/ganador_shape_btn.png") 50% 50% no-repeat
+		.vpIcon
+			width: 86px
+			height: 86px
+			position: absolute
+			background: url("../img/map/play_icon.png") 50% 50% no-repeat
+	#videoMap01
+		left: 1699px
+		top: 1744px
+	#videoMap02
+		left: 713px
+		top: 774px
+	#videoMap03
+		left: 551px
+		top: 1293px
+	// #videoMap04
+	// 	left: 550px
+	// 	top: 1292px
+
+	#pictureGalleryCont
+		left: 0
+		top: 0
+		height: 0
+		overflow: hidden
+		display: none
+		z-index: 150
+		position: absolute
+		.pictureGalleryAll
+			position: fixed
+			width: 100%
+			height: 100%
+			.pictureGallery
+				position: fixed
+				width: 100%
+				height: auto
+				top: 0
+		.pictureGalleryClose
+			cursor: pointer
+			position: fixed
+			top: 40px
+			right: 40px
+			width: 44px
+			height: 44px
+			&:hover
+				.pictureGalleryCloseBack
+					@include transitionT(all, 0.1s, linear)
+					-webkit-transform: scale(1.121, 1.121)
+					-moz-transform: scale(1.121, 1.121)
+					-ms-transform: scale(1.121, 1.121)
+					-o-transform: scale(1.121, 1.121)
+					transform: scale(1.121, 1.121)
+			.pictureGalleryCloseBack
+				width: 44px
+				height: 44px
+				background: url("../img/shape_cerrar_foto_full.png") 50% 50% no-repeat
+				position: absolute
+				@include transitionT(all, 0.1s, linear)
+				-webkit-transform: scale(1, 1)
+				-moz-transform: scale(1, 1)
+				-ms-transform: scale(1, 1)
+				-o-transform: scale(1, 1)
+				transform: scale(1, 1)
+			.pictureGalleryCloseIcon
+				width: 44px
+				height: 44px
+				position: absolute
+				background: url("../img/cerrar_foto_full.png") 50% 50% no-repeat
+
+	#paint
+		position: absolute
+		// bottom: 0
+		left: 0
+		height: 0
+		display: none
+		// background: red
+		overflow: hidden
+		z-index: 30
+		.paintContAll
+			position: fixed
+			width: 100%
+			height: 100%
+
+			.bgCont
+				position: fixed
+				width: 100%
+				height: 100%
+				top: 0
+				background: url("../img/paint/back_auto.jpg") 50% 50% no-repeat
+			.titleVentoCont
+				position: fixed
+				width: 100%
+				height: 100%
+				top: 0
+				.titleVentoMask
+					position: absolute
+					width: 507px
+					height: 66px
+					top: 50%
+					left: 50%
+					margin-left: -253px
+					margin-top: -227px
+
+					.titleVento
+						width: 507px
+						height: 66px
+
+						position: absolute
+						overflow: hidden
+
+						.titleVentoImg
+							width: 507px
+							height: 66px
+							position: absolute
+							background: url("../img/paint/nuevo_vento_copy.png") 50% 50% no-repeat
+					.paintColorCont
+						position: absolute
+						bottom: -9px
+						right: -108px
+						width: 200px
+						p#paintColor
+							width: 200px
+							position: absolute
+							@include texto($fblack, 22px, $lblue)
+							text-align: left
+
+
+			.coche
+				position: fixed
+				width: 100%
+				height: 100%
+				top: 0
+
+				.cocheCont
+					width: 820px
+					height: 431px
+					position: absolute
+					top: 50%
+					left: 50%
+					margin-left: -410px
+					margin-top: -216px
+
+					.changePaint
+						cursor: pointer
+						position: absolute
+						top: 95px
+						right: 62px
+						width: 61px
+						height: 61px
+						&:hover
+							.changePaintBack
+								@include transitionT(-webkit-transform, 0.1s, linear)
+								-webkit-transform: scale(1.121, 1.121)
+
+						.changePaintBack
+							position: absolute
+							width: 61px
+							height: 61px
+							background: url("../img/paint/Shape_cubeta.png") 50% 50% no-repeat
+							@include transitionT(-webkit-transform, 0.1s, linear)
+							-webkit-transform: scale(1, 1)
+
+						.changePaintIcon
+							position: absolute
+							width: 61px
+							height: 61px
+							background: url("../img/paint/cubeta_icon.png") 50% 50% no-repeat
+						.changePaintText
+							@include texto($fsemibold, 16px, $white)
+							text-align: center
+							position: absolute
+							top: 61px
+							padding-top: 8px
+							width: 100%
+
+
+
+					.cochePaintCont
+						width: 820px
+						height: 431px
+						position: absolute
+						.cocheShadow
+							width: 820px
+							height: 431px
+							position: absolute
+							background: url("../img/paint/sombra.png") 50% 50% no-repeat
+						.cochePaint
+							width: 820px
+							height: 431px
+							position: absolute
+							opacity: 0
+							&.active
+								opacity: 1
+							&#paint-blanco
+								background: url("../img/paint/blanco_candy.png")
+							&#paint-negro
+								background: url("../img/paint/negro_profundo.png")
+							&#paint-gris
+								background: url("../img/paint/gris_pimienta.png")
+							&#paint-beige
+								background: url("../img/paint/beige_tierra.png")
+							&#paint-rojo
+								background: url("../img/paint/rojo_flash.png")
+							&#paint-plata
+								background: url("../img/paint/plata_reflex.png")
+							&#paint-azul
+								background: url("../img/paint/shadow_blue.png")
+
+
+
+#features
+	overflow: hidden
+	#video
+		background-color: $dblue !important
+	.pattern
+		width: 100%
+		height: 100%
+		position: absolute
+		top: 0
+		left: 0
+		z-index: 1
+		opacity: 1
+		background: url("../img/trama_pattern.png") 0 0
+	.pattern2
+		width: 100%
+		height: 100%
+		position: absolute
+		top: 0
+		left: 0
+		z-index: 1
+		opacity: 0
+		background: url("../img/trama_pattern2.png") 0 0
+	.feature
+		width: 100%
+		height: 100%
+		position: absolute
+		z-index: 3
+		.featureCont
+			width: 100%
+			height: 300px
+			position: absolute
+			top: 50%
+			left: 0
+			margin-top: -150px
+			.titleCont
+				width: 100%
+				height: 109px
+				position: relative
+				.titleMaskCont
+					width: 100%
+					height: 109px
+					position: absolute
+					overflow: hidden
+					.titleMask
+						width: 100%
+						position: absolute
+						height: 0px
+						overflow: hidden
+
+					.title
+						width: 100%
+						// opacity: 0
+						@include texto($fblack, 104px, $white)
+						text-align: center
+						position: absolute
+			.subtitleCont
+				width: 100%
+				margin-top: 10px
+				height: 22px
+				position: relative
+				.subtitle
+					position: absolute
+					height: 22px
+					width: 100%
+					opacity: 0
+					@include texto($fitalic, 25px, $lbtitle)
+					text-align: center
+
+			.descriptionCont
+				width: 25%
+				margin-top: 15px
+				margin-left: auto
+				margin-right: auto
+				position: relative
+				height: 30px
+				.description
+					position: absolute
+					width: 100%
+					opacity: 0
+					@include texto($fsemibold, 15px, $white)
+					text-align: center
+			a.knowMoreCont
+				display: block
+				width: 133px
+				height: 33px
+				margin-left: auto
+				margin-right: auto
+				margin-top: 20px
+				position: relative
+				.knowMore
+					position: absolute
+					top: 0
+					left: 0
+					width: 133px
+					height: 33px
+					opacity: 0
+					background: url("../img/btn_shape_vento_color.png") 0 0 no-repeat
+				p.knowMoreText
+
+					@include texto($fsemibold, 15px, $white)
+					text-align: center
+					padding: 8px
+					opacity: 0
+
+		.hotspotCont
+			width: 58px
+			height: 58px
+			position: absolute
+			left: 270px
+			top: 270px
+			display: none
+			// opacity: 0
+			&#hotuno
+				left: 609px
+				top: 298px
+			&#hotdos
+				left: 886px
+				top: 302px
+			&#hottres
+				left: 1193px
+				top: 257px
+			.hotspotIdle
+				width: 58px
+				height: 58px
+				position: absolute
+				opacity: 0
+				background: url("../img/hotspot.png") 50% 50% no-repeat
+			.hotspotOver
+				width: 58px
+				height: 58px
+				position: absolute
+				opacity: 0
+				background: url("../img/hotspot_rollover.png") 50% 50% no-repeat
+
+			.hotspotOpenContainer
+				width: 312px
+				height: 311px
+				position: absolute
+				visibility: hidden
+				top: 50%
+				left: 50%
+				margin-left: -156px
+				margin-top: -155.5px
+				.contentCont
+					width: 312px
+					height: 311px
+					position: relative
+					display: none
+
+				.contentImagen
+					position: relative
+					a.hotspotImage
+						width: 293px
+						height: 292px
+						position: absolute
+						top: 50%
+						left: 50%
+						margin-left: -147px
+						margin-top: -146px
+						display: block
+
+
+				.contentInfo
+					p.titleInfo
+						@include texto($fblack, 19px, $dblue)
+						padding-top: 80px
+						margin-bottom: 15px
+						text-align: center
+					p.descriptionInfo
+						@include texto($fbook, 13px, $dblue)
+						text-align: center
+						padding-left: 20px
+						padding-right: 20px
+						line-height: 20px
+
+					p.compartir
+						@include texto($fbook, 13px, $cblue)
+						text-align: center
+						margin-top: 15px
+						margin-bottom: 10px
+
+					.shareCont
+						width: 72px
+						height: 31px
+						position: relative
+						margin-left: auto
+						margin-right: auto
+						.twShareCont
+							width: 31px
+							height: 31px
+							display: block
+							position: absolute
+							top: 0
+							left: 0
+							&:hover
+								.twShareBack
+									@include transitionT(-webkit-transform, 0.1s, linear)
+									-webkit-transform: scale(1.121, 1.121)
+							.twShareBack
+								width: 31px
+								height: 31px
+								position: absolute
+								background: url("../img/shape_share_ficha.png") 50% 50% no-repeat
+								@include transitionT(-webkit-transform, 0.1s, linear)
+								-webkit-transform: scale(1, 1)
+							.twShareIcon
+								width: 31px
+								height: 31px
+								position: absolute
+								background: url("../img/share_twitter_ficha_hotspot.png") 50% 50% no-repeat
+
+						.fbShareCont
+							width: 31px
+							height: 31px
+							display: block
+							position: absolute
+							top: 0
+							right: 0
+							&:hover
+								.fbShareBack
+									@include transitionT(-webkit-transform, 0.1s, linear)
+									-webkit-transform: scale(1.121, 1.121)
+
+
+							.fbShareBack
+								width: 31px
+								height: 31px
+								position: absolute
+								background: url("../img/shape_share_ficha.png") 50% 50% no-repeat
+								@include transitionT(-webkit-transform, 0.1s, linear)
+								-webkit-transform: scale(1, 1)
+							.fbShareIcon
+								width: 31px
+								height: 31px
+								position: absolute
+								background: url("../img/share_face_ficha_hotspot.png") 50% 50% no-repeat
+
+
+
+
+
+					&.active
+						display: block
+
+
+
+				.hotspotOpen
+					width: 312px
+					height: 311px
+					position: absolute
+					// opacity: 0
+					background: url("../img/hotspotOpenContainer.png") 50% 50% no-repeat
+					top: 0
+					left: 0
+
+				.hotspotbtn
+					width: 43px
+					height: 44px
+					position: absolute
+					right: 0
+					top: 0
+
+					.hotspotbtnBack
+						width: 43px
+						height: 44px
+						position: absolute
+						background: url("../img/icons_hotspots/back_icon_hotspot.png") 50% 50% no-repeat
+					.hotspotbtnIcon
+						width: 43px
+						height: 43px
+						position: absolute
+
+				.hotspotCloseCont
+					left: 267px
+					top: -8px
+					.hotspotCloseBack
+						background: url("../img/hotspotclosebg.png") 50% 50% no-repeat
+					.hotspotCloseIcon
+						background: url("../img/hotspotclosecross.png") 50% 50% no-repeat
+				.hotspotInfoCont
+					left: 309px
+					top: 38px
+					// .hotspotInfoBack
+					&.active
+						.hotspotInfoIcon
+							background: url("../img/icons_hotspots/info_icon_activo_hotspot.png") 50% 50% no-repeat
+					.hotspotInfoIcon
+						background: url("../img/icons_hotspots/info_icon_hotspot.png") 50% 50% no-repeat
+
+				.hotspotImageCont
+					left: 330px
+					top: 98px
+					// .hotspotImageBack
+					&.active
+						.hotspotImageIcon
+							background: url("../img/icons_hotspots/foto_icon_activo_hotspot.png") 50% 50% no-repeat
+					.hotspotImageIcon
+						background: url("../img/icons_hotspots/foto_icon_hotspot.png") 50% 50% no-repeat
+
+				.hotspotVideoCont
+					left: 331px
+					top: 161px
+					// .hotspotVideoBack
+					&.active
+						.hotspotVideoIcon
+							background: url("../img/icons_hotspots/foto_play_activo_hotspot.png") 50% 50% no-repeat
+
+					.hotspotVideoIcon
+						background: url("../img/icons_hotspots/foto_play_hotspot.png") 50% 50% no-repeat
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer
+	position: fixed
+	z-index: 20
+	width: 100%
+	height: 25px
+	bottom: 0
+	left: 0
+	text-align: center
+	@include texto($fbook, 12px, $white)
+	.copyright
+		margin-right: 10px
+
+	background-color: $dblue
+
+	.footerCont
+		width: 670px
+		height: 45px
+		margin-left: auto
+		margin-right: auto
+		position: relative
+	p.footerCenter
+		padding-top: 17px
+		text-align: left
+
+	a
+		@include texto($fbook, 12px, $white)
+		margin-right: 15px
+		&:last-child
+			margin-right: 0
+
+	a.configurador
+		display: block
+		height: 29px
+		width: 177px
+		position: absolute
+		right: 0
+		top: 0px
+		float: right
+		background-color: $lblue
+		background-image: url("../img/confugurador_icon.png")
+		background-position: 15px 50%
+		background-repeat: no-repeat
+		text-indent: 25px
+		padding-top: 16px
+		@include texto($fblack, 14px, $dblue)
+		&:hover
+			background-color: $orange
+
+
+
+@import "mobile"

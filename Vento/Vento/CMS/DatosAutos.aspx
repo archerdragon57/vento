@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DatosAutos.aspx.cs" Inherits="Vento.CMS.DatosAutos" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DatosAutos.aspx.cs" Inherits="Vento.CMS.DatosAutos"  ValidateRequest="false"%>
 
 <!DOCTYPE html>
 
@@ -60,6 +60,30 @@
                     </FooterTemplate>
                     <HeaderStyle Font-Bold="True"></HeaderStyle>
                 </asp:TemplateColumn>
+                <asp:TemplateColumn HeaderText="Título" HeaderStyle-Font-Bold="true">
+                    <EditItemTemplate>
+                        <asp:TextBox ID="txtaddtitle_e" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.title") %>'></asp:TextBox>
+                    </EditItemTemplate>
+                    <ItemTemplate>
+                        <asp:Label ID="lbladdtitle" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.title") %>'></asp:Label>
+                    </ItemTemplate>
+                    <FooterTemplate>
+                        <asp:TextBox ID="txttitle_f" runat="server"></asp:TextBox>
+                    </FooterTemplate>
+                    <HeaderStyle Font-Bold="True"></HeaderStyle>
+                </asp:TemplateColumn>
+                <asp:TemplateColumn HeaderText="Título" HeaderStyle-Font-Bold="true">
+                    <EditItemTemplate>
+                        <asp:TextBox ID="txtaddpts_e" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.points") %>'></asp:TextBox>
+                    </EditItemTemplate>
+                    <ItemTemplate>
+                        <asp:Label ID="lbladdpts" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.points") %>'></asp:Label>
+                    </ItemTemplate>
+                    <FooterTemplate>
+                        <asp:TextBox ID="txtpts_f" runat="server"></asp:TextBox>
+                    </FooterTemplate>
+                    <HeaderStyle Font-Bold="True"></HeaderStyle>
+                </asp:TemplateColumn>
                 <asp:EditCommandColumn CancelText="Cancel" EditText="Edit" HeaderText="" UpdateText="Update"></asp:EditCommandColumn>
                 <asp:ButtonColumn Text="Delete" ButtonType="PushButton" CommandName="Delete"></asp:ButtonColumn>
             </Columns>
@@ -71,9 +95,11 @@
     <a href="add/new_car.aspx">Agregar nuevo auto</a>
     <br/>
     <a href="TwitterFeeds.aspx">Listados Twitter</a>
+    <a href="DiasDatos.aspx">Datos días</a>
     <a href="InstagramFeeds.aspx">Listados Instagram</a>
     <a href="DatosAutos.aspx">Datos de los autos</a>
     <a href="Usuarios.aspx">Datos de los usuarios</a>
+    <a href="UsuariosInstagram.aspx">Datos de los usuarios de instagram</a>
     <script>
         function ondeleteclick() {
             return confirm("Are you sure you want to delete this?")

@@ -67,6 +67,15 @@ namespace Vento.CMS.add {
         protected global::System.Web.UI.WebControls.TextBox txtInstagram;
         
         /// <summary>
+        /// txtBio control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtBio;
+        
+        /// <summary>
         /// txtAuto control.
         /// </summary>
         /// <remarks>

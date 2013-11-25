@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Usuarios.aspx.cs" Inherits="Vento.CMS.Usuarios" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Usuarios.aspx.cs" Inherits="Vento.CMS.Usuarios"  ValidateRequest="false"%>
 
 <!DOCTYPE html>
 
@@ -140,12 +140,14 @@
         <asp:Label ID="lblMessage" runat="server"></asp:Label>
         </div>
     </form>
-    <a href="add/new_user.aspx">Agregar nuevo usuario</a>
+    <a href="add/new_user.aspx">Nuevo Usuario</a>
     <br/>
     <a href="TwitterFeeds.aspx">Listados Twitter</a>
+    <a href="DiasDatos.aspx">Datos días</a>
     <a href="InstagramFeeds.aspx">Listados Instagram</a>
     <a href="DatosAutos.aspx">Datos de los autos</a>
     <a href="Usuarios.aspx">Datos de los usuarios</a>
+    <a href="UsuariosInstagram.aspx">Datos de los usuarios de instagram</a>
     <script>
         function ondeleteclick() {
             return confirm("Are you sure you want to delete this?")
