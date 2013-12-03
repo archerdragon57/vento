@@ -181,6 +181,51 @@ function twPageBtnOut(){
 	interface_twPageBtn_Out.play(0);
 }
 
+function instaPageBtnOver(){
+	var interface_instaPageBtn_In = new TimelineMax({paused: true});
+	var InsPageBack = $(".InsPageBack");
+	
+	interface_instaPageBtn_In.to(InsPageBack, .13, {scaleX:1.121, scaleY:1.121, ease:"Sine.easeOut"}, 0 );
+	interface_instaPageBtn_In.play(0);
+}
+function instaPageBtnOut(){
+	var interface_instaPageBtn_Out = new TimelineMax({paused: true});
+	var InsPageBack = $(".InsPageBack");
+	interface_instaPageBtn_Out.to(InsPageBack, .13, {scaleX:1, scaleY:1, ease:"Sine.easeOut"}, 0 );
+	interface_instaPageBtn_Out.play(0);
+}
+
+
+function paintPageBtnOver(){
+	var interface_instaPageBtn_In = new TimelineMax({paused: true});
+	var paintBtnBack = $(".paintBtnBack");
+	
+	interface_instaPageBtn_In.to(paintBtnBack, .13, {scaleX:1.07, scaleY:1.07, ease:"Sine.easeOut"}, 0 );
+	interface_instaPageBtn_In.play(0);
+}
+function paintPageBtnOut(){
+	var interface_instaPageBtn_Out = new TimelineMax({paused: true});
+	var paintBtnBack = $(".paintBtnBack");
+	interface_instaPageBtn_Out.to(paintBtnBack, .13, {scaleX:1, scaleY:1, ease:"Sine.easeOut"}, 0 );
+	interface_instaPageBtn_Out.play(0);
+}
+
+
+
+function mapPageBtnOver(){
+	var interface_instaPageBtn_In = new TimelineMax({paused: true});
+	var whiteback = $(".whiteback");
+	
+	interface_instaPageBtn_In.to(whiteback, .13, {scaleX:1.07, scaleY:1.07, ease:"Sine.easeOut"}, 0 );
+	interface_instaPageBtn_In.play(0);
+}
+function mapPageBtnOut(){
+	var interface_instaPageBtn_Out = new TimelineMax({paused: true});
+	var whiteback = $(".whiteback");
+	interface_instaPageBtn_Out.to(whiteback, .13, {scaleX:1, scaleY:1, ease:"Sine.easeOut"}, 0 );
+	interface_instaPageBtn_Out.play(0);
+}
+
 
 
 
@@ -200,6 +245,16 @@ function interfaceIn(){
 	var twPageBack = $(".twPageBack");
 	var twPageIcon = $(".twPageIcon");
 
+	var InsPageBack = $(".InsPageBack");
+	var InsPageIcon = $(".InsPageIcon");
+
+	var paintBtnIcon = $(".paintBtnIcon");
+	var paintBtnBack = $(".paintBtnBack");
+
+	var mapBtnIcon = $(".mapBtnIcon");
+	var whiteback = $(".whiteback");
+	var mapBtn = $("#mapBtn");
+
 	var videoProgressCont = $(".videoProgressCont");
 	var videouno = $("#videouno");
 	var videodos = $("#videodos");
@@ -211,13 +266,17 @@ function interfaceIn(){
 	interface_In.add("init", 0);
 	interface_In.add("fb", .18);
 	interface_In.add("tw", .36);
-	interface_In.add("timeline", .7);
-	interface_In.add("videouno", 1.05);
-	interface_In.add("videodos", .8);
-	interface_In.add("videotres", .7);
-	interface_In.add("videocuatro", .75);
-	interface_In.add("videocinco", .8);
-	interface_In.add("videoseis", 1.05);
+	interface_In.add("tw", .36);
+	interface_In.add("insta", .54);
+	interface_In.add("paintBtn", .8);
+	interface_In.add("timeline", 1);
+	interface_In.add("videouno", "timeline+=.35");
+	interface_In.add("videodos", "timeline+=.1");
+	interface_In.add("videotres", "timeline");
+	interface_In.add("videocuatro", "timeline+=.05");
+	interface_In.add("videocinco", "timeline+=.1");
+	interface_In.add("videoseis", "timeline+=.35");
+	interface_In.add("mapBtn", 1.6);
 
 	interface_In.fromTo(colorsText, .01, {opacity: 0}, {opacity: 1},  "init" );
 	interface_In.fromTo(colorscoche, .01, {opacity: 0}, {opacity: 1},  "init" );
@@ -235,9 +294,27 @@ function interfaceIn(){
 	interface_In.fromTo(twPageBack, .13, {scaleX:1, scaleY:1}, {scaleX:1.2, scaleY:1.2, ease:"Sine.easeOut"},  "tw" );
 	interface_In.fromTo(twPageBack, .1, {scaleX:1.2, scaleY:1.2}, {scaleX:1, scaleY:1, ease:"Sine.easeOut"},  "tw+=.13");
 
+	interface_In.fromTo(InsPageIcon, .01, {opacity: 0}, {opacity: 1},  "insta" );
+	interface_In.fromTo(InsPageBack, .01, {opacity: 0}, {opacity: 1},  "insta" );
+	interface_In.fromTo(InsPageBack, .13, {scaleX:1, scaleY:1}, {scaleX:1.2, scaleY:1.2, ease:"Sine.easeOut"},  "insta" );
+	interface_In.fromTo(InsPageBack, .1, {scaleX:1.2, scaleY:1.2}, {scaleX:1, scaleY:1, ease:"Sine.easeOut"},  "insta+=.13");
+
+	//PAINT BUTTON//
+	interface_In.fromTo(paintBtnIcon, .01, {opacity: 0}, {opacity: 1},  "paintBtn" );
+	interface_In.fromTo(paintBtnBack, .01, {opacity: 0}, {opacity: 1},  "paintBtn" );
+	interface_In.fromTo(paintBtnBack, .13, {scaleX:1, scaleY:1}, {scaleX:1.2, scaleY:1.2, ease:"Sine.easeOut"},  "paintBtn-=.0" );
+	interface_In.to(paintBtnBack, .1, {scaleX:1, scaleY:1, ease:"Sine.easeOut"},  "paintBtn+=.15");
+
+	//MAP BUTTON//
+	interface_In.fromTo(mapBtnIcon, .01, {opacity: 0}, {opacity: 1},  "mapBtn" );
+	interface_In.fromTo(mapBtn, .01, {opacity: 0}, {opacity: 1},  "mapBtn" );
+	interface_In.fromTo(mapBtn, .13, {scaleX:.8, scaleY:.8}, {scaleX:1, scaleY:1, ease:"Cubic.easeOut"},  "mapBtn" );
+	interface_In.fromTo(whiteback, .13, {scaleX:1, scaleY:1}, {scaleX:1.07, scaleY:1.07, ease:"Cubic.easeOut"},  "mapBtn-=.4" );
+	interface_In.to(whiteback, .1, {scaleX:1, scaleY:1, ease:"Sine.easeOut"},  "mapBtn");
+
 	//TIMELINE//
-	interface_In.fromTo(videoProgressCont, .01, {opacity: 0}, {opacity: 1}, "timeline+=.0");
-	interface_In.fromTo(videoProgressCont, .49, {scaleX:.09}, {scaleX:1, ease:"Cubic.easeOut"},  "timeline+=.0");
+	interface_In.fromTo(videoProgressCont, .01, {opacity: 0}, {opacity: 1}, "timeline");
+	interface_In.fromTo(videoProgressCont, .49, {scaleX:.09}, {scaleX:1, ease:"Cubic.easeOut"},  "timeline");
 	//btn1//
 	interface_In.fromTo(videouno, .01, {opacity: 0}, {opacity: 1}, "videouno");
 	interface_In.fromTo(videouno, .23, {scaleX:.4, scaleY:.4}, {scaleX:1, scaleY:1, ease:"cubic.easeOut"}, 'videouno');
@@ -275,18 +352,16 @@ function timelineVideoPointActiveIn(feature){
 //Over//
 function hotspotOpenedBtnOver(feature){
 	var hotspotBtn_In = new TimelineMax();
-
-	var hotspotbtnBack = $("#"+feature+" .hotspotbtnBack");
-
+	var hotspotbtnBack = $(feature+" .hotspotbtnBack");
 	hotspotBtn_In.fromTo(hotspotbtnBack, .13, {scaleX: 1, scaleY:1}, {scaleX: 1.121, scaleY:1.121, ease:"Cubic.easeOut"}, 0);
+	console.log(feature);
 }
 //Out//
 function hotspotOpenedBtnOut(feature){
 	var hotspotBtn_Out = new TimelineMax();
-
-	var hotspotbtnBack = $("#"+feature+" .hotspotbtnBack");
-
+	var hotspotbtnBack = $(feature+" .hotspotbtnBack");
 	hotspotBtn_Out.fromTo(hotspotbtnBack, .13, {scaleX:1.121, scaleY:1.121}, {scaleX:1, scaleY:1, ease:"Cubic.easeOut"}, 0);
+	console.log(feature);
 }
 
 
@@ -325,7 +400,7 @@ function hotspotInfoOpen(feature){
 
 //HOTSPOTS BTNS OPEN//
 function hotspotsBtnsOpen(feature){
-	$("#features .hotspotCont").css({display: "block"})
+	$("#"+feature+" .hotspotCont").css({display: "block"})
 	var hotspotsBtns_Open = new TimelineMax();
 	// var hotuno = $("#hotuno");
 	// var hotdos = $("#hotdos");

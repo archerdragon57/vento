@@ -1,0 +1,1090 @@
+@import url(css/fonts/VWHeabla/vwheabla.css);
+@import url(css/fonts/VWHeaboo/vwheaboo.css);
+@import url(css/fonts/VWUtopia/vwutobit.css);
+@import url(css/fonts/VWHeadlineOT-Black/vwheadlineot-black.css);
+@import url(css/fonts/VWHeadlineOT-Semibold/vwheadlineot-semibold.css);
+@import url(css/fonts/VWHeadlineOT-Book/vwheadlineot-book.css);
+/* http://meyerweb.com/eric/tools/css/reset/
+ * v2.0 | 20110126
+ * License: none (public domain) */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+a {
+  text-decoration: none; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%; }
+
+body {
+  min-width: 320px; }
+
+#rotate {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("img/turn.png") 50% 50% no-repeat;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+  z-index: 1000; }
+
+* {
+  font-family: "VWHeadlineOTBook";
+  font-size: 16px;
+  color: #001e4c;
+  margin: 0; }
+
+@media only screen and (min-width: 385px) {
+  #rotate {
+    display: block; } }
+#preloader {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  float: left;
+  z-index: 1000000; }
+
+#preloader-content {
+  position: absolute;
+  z-index: 1000000000000;
+  width: 100%;
+  height: 100%;
+  background: #152755; }
+
+#preloader .ui-spinner {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  top: 40%;
+  width: 100px; }
+
+#preloader .wheel {
+  margin-left: auto;
+  margin-right: auto;
+  background: url(img/vento_loader.gif) no-repeat scroll 0 0 transparent;
+  width: 61px;
+  height: 62px; }
+
+#preloader .preloader-text {
+  color: white;
+  font-family: "VWHeadlineOTBook";
+  font-size: 12px;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 100px;
+  -webkit-font-smoothing: antialiased; }
+
+.full {
+  width: 100%;
+  min-width: 320px; }
+
+header {
+  position: fixed;
+  width: 100%;
+  min-width: 320px;
+  height: 65px;
+  background: #001e4c;
+  top: 0;
+  left: 0;
+  z-index: 100; }
+  header a {
+    color: white; }
+  header .header-left {
+    float: left;
+    padding: 0 0 0 10px; }
+  header .header-right {
+    float: right;
+    padding: 10px 10px 0 0; }
+    header .header-right a {
+      float: left; }
+    header .header-right a.header-btnConfig {
+      font-family: "VWHeadlineOTSemibold";
+      font-size: 14px;
+      color: white;
+      margin: 0;
+      float: left;
+      border: 3px solid white;
+      padding: 8px 15px 8px 15px;
+      border-radius: 20px;
+      line-height: 1em; }
+    header .header-right #btSocial {
+      float: left;
+      display: block; }
+      header .header-right #btSocial .content {
+        background: url(img/sprite_diseno_mobile.png) no-repeat scroll -358px -5px transparent;
+        width: 42px;
+        height: 36px; }
+    header .header-right .socialPages {
+      width: 150px;
+      display: none;
+      height: 36px;
+      padding-top: 5px;
+      float: left; }
+      header .header-right .socialPages .InsPageCont {
+        width: 31px;
+        height: 31px;
+        position: relative;
+        float: left;
+        margin-right: 10px; }
+        header .header-right .socialPages .InsPageCont .InsPageBack {
+          width: 31px;
+          height: 31px;
+          top: 0;
+          left: 0;
+          position: absolute;
+          opacity: 1;
+          background: url("img/btn_social_icons_shape.png") 0 0 no-repeat; }
+        header .header-right .socialPages .InsPageCont .InsPageIcon {
+          width: 31px;
+          height: 31px;
+          position: absolute;
+          opacity: 1;
+          background: url("img/instagram_red_social_header.png") 50% 50% no-repeat; }
+      header .header-right .socialPages .fbPageCont {
+        width: 31px;
+        height: 31px;
+        position: relative;
+        float: left;
+        margin-right: 20px; }
+        header .header-right .socialPages .fbPageCont .fbPageBack {
+          width: 31px;
+          height: 31px;
+          top: 0;
+          left: 0;
+          position: absolute;
+          opacity: 1;
+          background: url("img/btn_social_icons_shape.png") 0 0 no-repeat; }
+        header .header-right .socialPages .fbPageCont .fbPageIcon {
+          width: 31px;
+          height: 31px;
+          position: absolute;
+          opacity: 1;
+          background: url("img/facebook_icon.png") 50% 50% no-repeat; }
+      header .header-right .socialPages .twPageCont {
+        width: 31px;
+        height: 31px;
+        position: relative;
+        float: left;
+        margin-right: 20px; }
+        header .header-right .socialPages .twPageCont .twPageBack {
+          width: 31px;
+          height: 31px;
+          top: 0;
+          left: 0;
+          position: absolute;
+          opacity: 1;
+          background: url("img/btn_social_icons_shape.png") 0 0 no-repeat; }
+        header .header-right .socialPages .twPageCont .twPageIcon {
+          width: 31px;
+          height: 31px;
+          position: absolute;
+          opacity: 1;
+          background: url("img/twitter_icon.png") 50% 50% no-repeat; }
+
+footer {
+  height: 70px;
+  position: fixed;
+  bottom: 0;
+  background: none no-repeat scroll 0 0 #001e4c; }
+  footer nav {
+    position: relative;
+    height: 50px; }
+    footer nav #square {
+      -webkit-transition-property: -webkit-transform;
+      -webkit-transition-duration: 0.5s;
+      -webkit-transition-timing-function: ease-out;
+      top: 0;
+      left: 0;
+      width: 16.6%;
+      height: 50px;
+      position: absolute;
+      z-index: 1;
+      background: #00b2ee; }
+    footer nav a.btnFooter {
+      width: 16.6%;
+      height: 50px;
+      display: block;
+      float: left;
+      position: relative;
+      z-index: 2;
+      background-image: url("img/sprite_diseno_mobile.png");
+      background-position: 0 0; }
+      footer nav a.btnFooter:last-child {
+        border-right: none; }
+      footer nav a.btnFooter#toPaint {
+        background-position: 0px 0px; }
+      footer nav a.btnFooter#toEquipamiento {
+        background-position: -239px 0px; }
+      footer nav a.btnFooter#toComodidad {
+        background-position: -119px 0px; }
+      footer nav a.btnFooter#toConsumo {
+        background-position: -178px 0px; }
+      footer nav a.btnFooter#toSeguridad {
+        background-position: -59px 0px; }
+      footer nav a.btnFooter#toMap {
+        background-position: -297px 0px; }
+  footer .footer-copyrightCont {
+    position: relative;
+    height: 11px;
+    background: white;
+    padding-top: 8px; }
+    footer .footer-copyrightCont .footer-copyrights {
+      height: auto;
+      width: 300px;
+      margin-left: auto;
+      margin-right: auto; }
+      footer .footer-copyrightCont .footer-copyrights a {
+        float: left;
+        display: block; }
+      footer .footer-copyrightCont .footer-copyrights p.copyright {
+        font-family: "VWHeadlineOTBook";
+        font-size: 7px;
+        color: #c6c6c6;
+        margin: 0;
+        margin-left: 10px;
+        padding-right: 5px;
+        border-right: #e8e8e8 solid 1px; }
+      footer .footer-copyrightCont .footer-copyrights p.politicas {
+        font-family: "VWHeadlineOTBook";
+        font-size: 7px;
+        color: #c6c6c6;
+        margin: 0;
+        padding-left: 5px;
+        padding-right: 5px;
+        border-right: #e8e8e8 solid 1px; }
+      footer .footer-copyrightCont .footer-copyrights p.fichatec {
+        font-family: "VWHeadlineOTBook";
+        font-size: 7px;
+        color: #c6c6c6;
+        margin: 0;
+        padding-left: 5px;
+        padding-right: 5px;
+        border-right: #e8e8e8 solid 1px; }
+      footer .footer-copyrightCont .footer-copyrights p.pruebamanejo {
+        font-family: "VWHeadlineOTBook";
+        font-size: 7px;
+        color: #c6c6c6;
+        margin: 0;
+        padding-left: 5px;
+        padding-right: 5px; }
+
+#mainCont {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden; }
+  #mainCont #sectionsCont {
+    overflow: hidden;
+    -webkit-transition-property: -webkit-transform;
+    -webkit-transition-duration: 0.5s;
+    -webkit-transition-timing-function: ease-out;
+    width: 600%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0; }
+    #mainCont #sectionsCont .section {
+      width: 16.66%;
+      height: 100%;
+      position: relative;
+      overflow: auto;
+      float: left;
+      margin-bottom: 70px; }
+      #mainCont #sectionsCont .section h1 {
+        font-family: "VWHeadlineOTBlack";
+        font-size: 45px;
+        color: white;
+        margin: 0;
+        text-align: center;
+        width: 100%;
+        height: auto;
+        padding-top: 80px; }
+      #mainCont #sectionsCont .section h2 {
+        font-family: "VWHeadlineOTBlack";
+        font-size: 22px;
+        color: white;
+        margin: 0;
+        text-align: center;
+        width: 100%;
+        height: auto;
+        padding-top: 10px; }
+        #mainCont #sectionsCont .section h2.hotspotSubtitle {
+          font-family: "vwutopia-bkittabmedium_italic";
+          font-size: 16px;
+          color: #00b2ee;
+          margin: 0;
+          width: 220px;
+          margin-left: auto;
+          margin-right: auto; }
+      #mainCont #sectionsCont .section .hotspotTitles {
+        width: 100%;
+        position: relative;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        background: white; }
+        #mainCont #sectionsCont .section .hotspotTitles:last-child {
+          padding-bottom: 80px; }
+        #mainCont #sectionsCont .section .hotspotTitles p.hsTitle {
+          font-family: "VWHeadlineOTBlack";
+          font-size: 22px;
+          color: #00d9ff;
+          margin: 0;
+          text-align: center;
+          width: 80%;
+          margin-left: auto;
+          margin-right: auto; }
+        #mainCont #sectionsCont .section .hotspotTitles p.hsDescription {
+          font-family: "VWHeadlineOTBook";
+          font-size: 16px;
+          color: #001e4c;
+          margin: 0;
+          padding-top: 20px;
+          text-align: center;
+          width: 70%;
+          margin-left: auto;
+          margin-right: auto; }
+        #mainCont #sectionsCont .section .hotspotTitles .hsImageCont {
+          width: 100%;
+          position: relative;
+          display: block;
+          padding-top: 30px;
+          padding-bottom: 30px;
+          background: white; }
+          #mainCont #sectionsCont .section .hotspotTitles .hsImageCont .imageCont {
+            width: 292px;
+            height: 293px;
+            margin-left: auto;
+            margin-right: auto; }
+      #mainCont #sectionsCont .section p.hotspotDescription {
+        font-family: "VWHeadlineOTSemibold";
+        font-size: 14px;
+        color: white;
+        margin: 0;
+        text-align: center;
+        width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px; }
+      #mainCont #sectionsCont .section .carSpace {
+        height: 203px;
+        width: 100%; }
+  #mainCont .bgCont {
+    background: url(img/bg.jpg) no-repeat scroll #001e52;
+    -webkit-background-size: cover;
+    background-size: cover;
+    position: fixed;
+    width: 100%;
+    height: 100%; }
+  #mainCont .carCont {
+    width: 100%;
+    height: 100%;
+    position: fixed; }
+    #mainCont .carCont .carPaints {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-left: -185px;
+      margin-top: -98px; }
+      #mainCont .carCont .carPaints .carPaint {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0; }
+        #mainCont .carCont .carPaints .carPaint.active {
+          display: block; }
+        #mainCont .carCont .carPaints .carPaint.carShadow {
+          display: block; }
+  #mainCont #sectionMap .mapCont {
+    width: 100%;
+    height: 100%;
+    position: absolute; }
+    #mainCont #sectionMap .mapCont .pinInstaCont {
+      display: none;
+      position: absolute;
+      overflow: auto;
+      height: auto;
+      left: 50%;
+      margin-top: -188px;
+      margin-left: -113px;
+      top: 50%;
+      z-index: 100;
+      width: 225px;
+      padding: 10px;
+      background: white;
+      -webkit-border-radius: 15px;
+      -moz-border-radius: 15px;
+      border-radius: 15px; }
+      #mainCont #sectionMap .mapCont .pinInstaCont .closeIns {
+        width: 23px;
+        height: 23px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer; }
+        #mainCont #sectionMap .mapCont .pinInstaCont .closeIns .closeBack {
+          width: 23px;
+          height: 23px;
+          position: absolute;
+          background: url("img/map/shape_close_marker_ruta.png") 50% 50% no-repeat; }
+        #mainCont #sectionMap .mapCont .pinInstaCont .closeIns .closeIcon {
+          width: 23px;
+          height: 23px;
+          position: absolute;
+          background: url("img/map/close_icon_marker_ruta.png") 50% 50% no-repeat; }
+      #mainCont #sectionMap .mapCont .pinInstaCont .instagraminfocont {
+        width: 225px;
+        height: auto;
+        position: relative;
+        background-color: white; }
+        #mainCont #sectionMap .mapCont .pinInstaCont .instagraminfocont .userCont {
+          position: relative;
+          height: 25px;
+          width: 100%;
+          margin-bottom: 5px; }
+          #mainCont #sectionMap .mapCont .pinInstaCont .instagraminfocont .userCont img.userPhoto {
+            width: 25px;
+            height: 25px;
+            float: left;
+            margin-right: 7px; }
+          #mainCont #sectionMap .mapCont .pinInstaCont .instagraminfocont .userCont p.user {
+            font-family: "VWHeadlineOTSemibold";
+            font-size: 13px;
+            color: #001e4c;
+            margin: 0;
+            text-align: left;
+            padding-top: 6px; }
+        #mainCont #sectionMap .mapCont .pinInstaCont .instagraminfocont img.photo {
+          width: 225px;
+          height: 225px;
+          background-color: #00b2ee; }
+        #mainCont #sectionMap .mapCont .pinInstaCont .instagraminfocont .likeandcaptionCont {
+          width: 100%;
+          height: auto;
+          padding-top: 12px; }
+          #mainCont #sectionMap .mapCont .pinInstaCont .instagraminfocont .likeandcaptionCont p.caption {
+            font-family: "VWHeadlineOTBook";
+            font-size: 13px;
+            color: #001e4c;
+            margin: 0;
+            width: 145px;
+            float: right;
+            height: auto;
+            text-align: right;
+            padding-top: 6px; }
+          #mainCont #sectionMap .mapCont .pinInstaCont .instagraminfocont .likeandcaptionCont .likesCont {
+            width: 50px;
+            height: 25px;
+            float: left; }
+            #mainCont #sectionMap .mapCont .pinInstaCont .instagraminfocont .likeandcaptionCont .likesCont .likeIcon {
+              width: 25px;
+              height: 25px;
+              margin-right: 4px;
+              float: left;
+              background-image: url("img/map/like_instagram.png");
+              background-position: 50% 50%;
+              background-repeat: no-repeat; }
+            #mainCont #sectionMap .mapCont .pinInstaCont .instagraminfocont .likeandcaptionCont .likesCont p.likesCount {
+              float: left;
+              font-family: "VWHeadlineOTBlack";
+              font-size: 13px;
+              color: #001e4c;
+              margin: 0;
+              padding-top: 6px; }
+    #mainCont #sectionMap .mapCont .pinTwitCont {
+      display: none;
+      position: absolute;
+      overflow: auto;
+      height: 210px;
+      top: 50%;
+      margin-top: -105px;
+      left: 50%;
+      margin-left: -113px;
+      width: 225px;
+      padding: 10px;
+      background: white;
+      -webkit-border-radius: 15px;
+      -moz-border-radius: 15px;
+      border-radius: 15px;
+      z-index: 100; }
+      #mainCont #sectionMap .mapCont .pinTwitCont .infobox {
+        width: 225px;
+        height: auto;
+        position: relative;
+        background-color: white;
+        background-color: white; }
+        #mainCont #sectionMap .mapCont .pinTwitCont .infobox .twicoinfow {
+          width: 24px;
+          height: 20px;
+          display: block;
+          position: absolute;
+          top: 10px;
+          left: 10px;
+          background: url("img/map/twitter_icon.png") 50% 50% no-repeat; }
+        #mainCont #sectionMap .mapCont .pinTwitCont .infobox .closeTw {
+          width: 23px;
+          height: 23px;
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          cursor: pointer; }
+          #mainCont #sectionMap .mapCont .pinTwitCont .infobox .closeTw .closeBack {
+            width: 23px;
+            height: 23px;
+            position: absolute;
+            background: url("img/map/shape_close_marker_ruta.png") 50% 50% no-repeat; }
+          #mainCont #sectionMap .mapCont .pinTwitCont .infobox .closeTw .closeIcon {
+            width: 23px;
+            height: 23px;
+            position: absolute;
+            background: url("img/map/close_icon_marker_ruta.png") 50% 50% no-repeat; }
+        #mainCont #sectionMap .mapCont .pinTwitCont .infobox .titleUsertwinfo {
+          padding-top: 50px;
+          text-align: center;
+          font-family: "VWHeadlineOTBlack";
+          font-size: 21px;
+          color: #001e4c;
+          margin: 0; }
+          #mainCont #sectionMap .mapCont .pinTwitCont .infobox .titleUsertwinfo span {
+            color: #00b2ee; }
+        #mainCont #sectionMap .mapCont .pinTwitCont .infobox .descriptiontwinfo {
+          padding-top: 20px;
+          text-align: center;
+          font-family: "VWHeadlineOTBook";
+          font-size: 14px;
+          color: #001e4c;
+          margin: 0;
+          margin-bottom: 35px; }
+    #mainCont #sectionMap .mapCont .mapCont2 {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      overflow: hidden;
+      background: #113569; }
+      #mainCont #sectionMap .mapCont .mapCont2 .map {
+        left: -2396px;
+        top: -1799px;
+        position: absolute;
+        width: 4096px;
+        height: 2400px;
+        background: url("img/map/mapa_back.jpg") 0 0 no-repeat;
+        -webkit-background-size: contain;
+        background-size: contain; }
+        #mainCont #sectionMap .mapCont .mapCont2 .map .videoRecap {
+          width: 400px;
+          height: 520px;
+          display: block;
+          position: absolute;
+          left: 1705px;
+          top: 565px; }
+        #mainCont #sectionMap .mapCont .mapCont2 .map .videoPinMap {
+          width: 86px;
+          height: 86px;
+          position: absolute;
+          top: 700px;
+          left: 700px; }
+          #mainCont #sectionMap .mapCont .mapCont2 .map .videoPinMap .vpBack {
+            width: 86px;
+            height: 86px;
+            position: absolute;
+            background: url("img/map/ganador_shape_btn.png") 50% 50% no-repeat; }
+          #mainCont #sectionMap .mapCont .mapCont2 .map .videoPinMap .vpIcon {
+            width: 86px;
+            height: 86px;
+            position: absolute;
+            background: url("img/map/play_icon.png") 50% 50% no-repeat; }
+        #mainCont #sectionMap .mapCont .mapCont2 .map #videoMap00 {
+          left: 2616px;
+          top: 2133px; }
+        #mainCont #sectionMap .mapCont .mapCont2 .map #videoMap01 {
+          left: 1699px;
+          top: 1744px; }
+        #mainCont #sectionMap .mapCont .mapCont2 .map #videoMap02 {
+          left: 713px;
+          top: 774px; }
+        #mainCont #sectionMap .mapCont .mapCont2 .map #videoMap03 {
+          left: 551px;
+          top: 1293px; }
+        #mainCont #sectionMap .mapCont .mapCont2 .map .animated {
+          position: absolute; }
+        #mainCont #sectionMap .mapCont .mapCont2 .map #sprt-carro1 {
+          width: 102px;
+          height: 88px;
+          left: 1934px;
+          top: 1846px;
+          background: url("img/map/sprites/carro1.png") 0 0 no-repeat; }
+        #mainCont #sectionMap .mapCont .mapCont2 .map #sprt-carro2 {
+          left: 555px;
+          top: 1205px;
+          width: 102px;
+          height: 88px;
+          background: url("img/map/sprites/carro2.png") 0 0 no-repeat; }
+        #mainCont #sectionMap .mapCont .mapCont2 .map #sprt-sombrilla {
+          left: 716px;
+          top: 650px;
+          width: 117px;
+          height: 71px;
+          background: url("img/map/sprites/sombrilla.png") 0 0 no-repeat; }
+        #mainCont #sectionMap .mapCont .mapCont2 .map #sprt-maguey {
+          left: 1562px;
+          top: 1564px;
+          width: 275px;
+          height: 264px;
+          background: url("img/map/sprites/maguey.png") 0 0 no-repeat; }
+        #mainCont #sectionMap .mapCont .mapCont2 .map #sprt-sombrero {
+          width: 111px;
+          height: 98px;
+          left: 1673px;
+          top: 1602px;
+          background: url("img/map/sprites/sombrero.png") 0 0 no-repeat; }
+        #mainCont #sectionMap .mapCont .mapCont2 .map #sprt-pulpo {
+          width: 362px;
+          height: 285px;
+          left: 164px;
+          top: 1159px;
+          background: url("img/map/sprites/pulpo.png") 0 0 no-repeat; }
+        #mainCont #sectionMap .mapCont .mapCont2 .map #sprt-pez {
+          width: 177px;
+          height: 147px;
+          left: 889px;
+          top: 1481px;
+          background: url("img/map/sprites/pez.png") 0 0 no-repeat; }
+        #mainCont #sectionMap .mapCont .mapCont2 .map #sprt-palmera1 {
+          width: 89px;
+          height: 96px;
+          left: 1283px;
+          top: 1446px;
+          background: url("img/map/sprites/palmera1.png") 0 0 no-repeat; }
+        #mainCont #sectionMap .mapCont .mapCont2 .map #sprt-palmera2 {
+          width: 113px;
+          height: 121px;
+          left: 1309px;
+          top: 1223px;
+          background: url("img/map/sprites/palmera2.png") 0 0 no-repeat; }
+        #mainCont #sectionMap .mapCont .mapCont2 .map #sprt-ferry {
+          width: 259px;
+          height: 199px;
+          left: 481px;
+          top: 833px;
+          background: url("img/map/sprites/ferry.png") 0 0 no-repeat; }
+        #mainCont #sectionMap .mapCont .mapCont2 .map #sprt-bailarina {
+          width: 70px;
+          height: 131px;
+          left: 367px;
+          top: 936px;
+          background: url("img/map/sprites/bailarina.png") 0 0 no-repeat; }
+        #mainCont #sectionMap .mapCont .mapCont2 .map #sprt-fabrica {
+          width: 176px;
+          height: 209px;
+          left: 2611px;
+          top: 1892px;
+          background: url("img/map/sprites/fabrica.png") 0 0 no-repeat; }
+        #mainCont #sectionMap .mapCont .mapCont2 .map #sprt-ancla {
+          width: 94px;
+          height: 123px;
+          left: 1162px;
+          top: 1088px;
+          background: url("img/map/sprites/ancla.png") 0 0 no-repeat; }
+        #mainCont #sectionMap .mapCont .mapCont2 .map #sprt-agua3 {
+          width: 146px;
+          height: 35px;
+          left: 545px;
+          top: 1607px;
+          background: url("img/map/sprites/agua3.png") 0 0 no-repeat; }
+        #mainCont #sectionMap .mapCont .mapCont2 .map #sprt-agua2 {
+          left: 29px;
+          top: 965px;
+          width: 146px;
+          height: 35px;
+          background: url("img/map/sprites/agua2.png") 0 0 no-repeat; }
+        #mainCont #sectionMap .mapCont .mapCont2 .map #sprt-agua1 {
+          width: 146px;
+          height: 35px;
+          left: 2909px;
+          top: 1786px;
+          background: url("img/map/sprites/agua1.png") 0 0 no-repeat; }
+        #mainCont #sectionMap .mapCont .mapCont2 .map #sprt-volcan {
+          width: 152px;
+          height: 170px;
+          left: 2439px;
+          top: 2056px;
+          background: url("img/map/sprites/volcan.png") 0 0 no-repeat; }
+        #mainCont #sectionMap .mapCont .mapCont2 .map .pinInstagram {
+          position: absolute;
+          width: 34px;
+          height: 42px;
+          display: none; }
+          #mainCont #sectionMap .mapCont .mapCont2 .map .pinInstagram#pinIns196 {
+            display: block;
+            left: 1134px;
+            top: 1178px; }
+          #mainCont #sectionMap .mapCont .mapCont2 .map .pinInstagram#pinIns89 {
+            display: block;
+            left: 2599px;
+            top: 1999px; }
+          #mainCont #sectionMap .mapCont .mapCont2 .map .pinInstagram#pinIns20 {
+            display: block;
+            left: 2058px;
+            top: 1874px; }
+          #mainCont #sectionMap .mapCont .mapCont2 .map .pinInstagram#pinIns120 {
+            display: block;
+            left: 2568px;
+            top: 2144px; }
+          #mainCont #sectionMap .mapCont .mapCont2 .map .pinInstagram#pinIns176 {
+            display: block;
+            left: 2586px;
+            top: 1978px; }
+          #mainCont #sectionMap .mapCont .mapCont2 .map .pinInstagram#pinIns124 {
+            display: block;
+            left: 2548px;
+            top: 1940px; }
+          #mainCont #sectionMap .mapCont .mapCont2 .map .pinInstagram#pinIns125 {
+            display: block;
+            left: 2459px;
+            top: 1912px; }
+          #mainCont #sectionMap .mapCont .mapCont2 .map .pinInstagram#pinIns126 {
+            display: block;
+            left: 2372px;
+            top: 1893px; }
+          #mainCont #sectionMap .mapCont .mapCont2 .map .pinInstagram#pinIns136 {
+            display: block;
+            left: 2165px;
+            top: 1876px; }
+          #mainCont #sectionMap .mapCont .mapCont2 .map .pinInstagram#pinIns153 {
+            display: block;
+            left: 1819px;
+            top: 1776px; }
+          #mainCont #sectionMap .mapCont .mapCont2 .map .pinInstagram#pinIns170 {
+            display: block;
+            left: 2336px;
+            top: 1877px; }
+          #mainCont #sectionMap .mapCont .mapCont2 .map .pinInstagram#pinIns188 {
+            display: block;
+            left: 1616px;
+            top: 1682px; }
+          #mainCont #sectionMap .mapCont .mapCont2 .map .pinInstagram#pinIns191 {
+            display: block;
+            left: 1192px;
+            top: 1246px; }
+          #mainCont #sectionMap .mapCont .mapCont2 .map .pinInstagram#pinIns206 {
+            display: block;
+            left: 1009px;
+            top: 996px; }
+          #mainCont #sectionMap .mapCont .mapCont2 .map .pinInstagram#pinIns192 {
+            display: block;
+            left: 1213px;
+            top: 1258px; }
+          #mainCont #sectionMap .mapCont .mapCont2 .map .pinInstagram#pinIns202 {
+            display: block;
+            left: 1080px;
+            top: 1102px; }
+          #mainCont #sectionMap .mapCont .mapCont2 .map .pinInstagram#pinIns207 {
+            display: block;
+            left: 688px;
+            top: 800px; }
+          #mainCont #sectionMap .mapCont .mapCont2 .map .pinInstagram#pinIns209 {
+            display: block;
+            left: 493px;
+            top: 915px; }
+          #mainCont #sectionMap .mapCont .mapCont2 .map .pinInstagram#pinIns214 {
+            display: block;
+            left: 492px;
+            top: 1040px; }
+          #mainCont #sectionMap .mapCont .mapCont2 .map .pinInstagram#pinIns210 {
+            display: block;
+            left: 670px;
+            top: 808px; }
+          #mainCont #sectionMap .mapCont .mapCont2 .map .pinInstagram#pinIns222 {
+            display: block;
+            left: 531px;
+            top: 1162px; }
+          #mainCont #sectionMap .mapCont .mapCont2 .map .pinInstagram#pinIns220 {
+            display: block;
+            left: 550px;
+            top: 1241px; }
+          #mainCont #sectionMap .mapCont .mapCont2 .map .pinInstagram#pinIns229 {
+            display: block;
+            left: 514px;
+            top: 1288px; }
+          #mainCont #sectionMap .mapCont .mapCont2 .map .pinInstagram#pinIns190 {
+            display: block;
+            left: 915px;
+            top: 873px; }
+          #mainCont #sectionMap .mapCont .mapCont2 .map .pinInstagram#pinIns156 {
+            display: block;
+            left: 1409px;
+            top: 1498px; }
+          #mainCont #sectionMap .mapCont .mapCont2 .map .pinInstagram .pinPoint {
+            width: 18px;
+            height: 18px;
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            margin-left: -9px;
+            background: url("img/map/shape_ruta.png"); }
+          #mainCont #sectionMap .mapCont .mapCont2 .map .pinInstagram .pinInstaBack {
+            display: block;
+            background: url("img/map/marker_back_ruta.png") 50% 50% no-repeat;
+            position: absolute;
+            width: 34px;
+            height: 42px;
+            -webkit-transform-origin: 50% 100%;
+            -moz-transform-origin: 50% 100%;
+            -ms-transform-origin: 50% 100%;
+            -o-transform-origin: 50% 100%;
+            transform-origin: 50% 100%; }
+          #mainCont #sectionMap .mapCont .mapCont2 .map .pinInstagram .pinInstaIcon {
+            background: url("img/map/instagram_icon.png") 8px 7px no-repeat;
+            position: absolute;
+            width: 34px;
+            height: 42px;
+            cursor: pointer; }
+        #mainCont #sectionMap .mapCont .mapCont2 .map .pinTwitter {
+          position: absolute;
+          width: 34px;
+          height: 42px;
+          z-index: 100; }
+          #mainCont #sectionMap .mapCont .mapCont2 .map .pinTwitter .pinPoint {
+            width: 18px;
+            height: 18px;
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            margin-left: -9px;
+            background: url("img/map/shape_ruta.png"); }
+          #mainCont #sectionMap .mapCont .mapCont2 .map .pinTwitter .pinTwitBack {
+            display: block;
+            background: url("img/map/marker_back_ruta.png") 50% 50% no-repeat;
+            position: absolute;
+            width: 34px;
+            height: 42px;
+            -webkit-transform-origin: 50% 100%;
+            -moz-transform-origin: 50% 100%;
+            -ms-transform-origin: 50% 100%;
+            -o-transform-origin: 50% 100%;
+            transform-origin: 50% 100%; }
+          #mainCont #sectionMap .mapCont .mapCont2 .map .pinTwitter .pinTwitIcon {
+            background: url("img/map/twitter_icon.png") 8px 7px no-repeat;
+            position: absolute;
+            width: 34px;
+            height: 42px;
+            cursor: pointer; }
+          #mainCont #sectionMap .mapCont .mapCont2 .map .pinTwitter#pinTwit395034243501662208 {
+            display: block;
+            top: 2018px;
+            left: 2617px; }
+          #mainCont #sectionMap .mapCont .mapCont2 .map .pinTwitter#pinTwit395058752040103936 {
+            display: block;
+            top: 1922px;
+            left: 2491px; }
+          #mainCont #sectionMap .mapCont .mapCont2 .map .pinTwitter#pinTwit395065745903603713 {
+            display: block;
+            top: 1807px;
+            left: 1876px; }
+          #mainCont #sectionMap .mapCont .mapCont2 .map .pinTwitter#pinTwit395190170171224064 {
+            display: block;
+            top: 1956px;
+            left: 2571px; }
+          #mainCont #sectionMap .mapCont .mapCont2 .map .pinTwitter#pinTwit395208609929236481 {
+            display: block;
+            top: 1907px;
+            left: 2424px; }
+          #mainCont #sectionMap .mapCont .mapCont2 .map .pinTwitter#pinTwit395212407422742528 {
+            display: block;
+            top: 1871px;
+            left: 2123px; }
+          #mainCont #sectionMap .mapCont .mapCont2 .map .pinTwitter#pinTwit395322279795908608 {
+            display: block;
+            top: 1763px;
+            left: 1790px; }
+          #mainCont #sectionMap .mapCont .mapCont2 .map .pinTwitter#pinTwit395337999421943808 {
+            display: block;
+            top: 1706px;
+            left: 1654px; }
+          #mainCont #sectionMap .mapCont .mapCont2 .map .pinTwitter#pinTwit395560161487884288 {
+            display: block;
+            top: 1657px;
+            left: 1526px; }
+          #mainCont #sectionMap .mapCont .mapCont2 .map .pinTwitter#pinTwit395582764218454017 {
+            display: block;
+            top: 1584px;
+            left: 1453px; }
+          #mainCont #sectionMap .mapCont .mapCont2 .map .pinTwitter#pinTwit395578482681331712 {
+            display: block;
+            top: 1437px;
+            left: 1379px; }
+          #mainCont #sectionMap .mapCont .mapCont2 .map .pinTwitter#pinTwit395643250297425920 {
+            display: block;
+            top: 1227px;
+            left: 1167px; }
+          #mainCont #sectionMap .mapCont .mapCont2 .map .pinTwitter#pinTwit395737760658898944 {
+            display: block;
+            top: 1137px;
+            left: 1103px; }
+          #mainCont #sectionMap .mapCont .mapCont2 .map .pinTwitter#pinTwit395785639641104384 {
+            display: block;
+            top: 1067px;
+            left: 1056px; }
+          #mainCont #sectionMap .mapCont .mapCont2 .map .pinTwitter#pinTwit396003075468824576 {
+            display: block;
+            top: 971px;
+            left: 493px; }
+          #mainCont #sectionMap .mapCont .mapCont2 .map .pinTwitter#pinTwit396007457178124288 {
+            display: block;
+            top: 1075px;
+            left: 514px; }
+          #mainCont #sectionMap .mapCont .mapCont2 .map .pinTwitter#pinTwit396010543187623936 {
+            display: block;
+            top: 1108px;
+            left: 522px; }
+          #mainCont #sectionMap .mapCont .mapCont2 .map .pinTwitter#pinTwit396062995828469760 {
+            display: block;
+            top: 1221px;
+            left: 542px; }
+  #mainCont #sectionPaint {
+    position: relative; }
+    #mainCont #sectionPaint #carPaintTitle {
+      width: 100%;
+      height: auto;
+      font-family: "VWHeadlineOTBlack";
+      font-size: 14px;
+      color: #00d9ff;
+      margin: 0;
+      text-align: center; }
+    #mainCont #sectionPaint a#btnChngPaint {
+      width: 50px;
+      height: 50px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 5px;
+      position: relative;
+      display: block; }
+      #mainCont #sectionPaint a#btnChngPaint .btnBack {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: url("img/paint/Shape_cubeta.png") 50% 50% no-repeat;
+        -webkit-background-size: cover;
+        background-size: cover; }
+      #mainCont #sectionPaint a#btnChngPaint .btnIcon {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: url("img/paint/cubeta_icon.png") 50% 50% no-repeat; }
+
+@media only screen and (max-width: 320px) {
+  #mainCont #sectionsCont .section h1 {
+    font-family: "VWHeadlineOTBlack";
+    font-size: 33px;
+    color: white;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    padding-top: 65px; }
+  #mainCont #sectionsCont .section h2 {
+    font-family: "VWHeadlineOTBlack";
+    font-size: 18px;
+    color: white;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    padding-top: 5px; }
+    #mainCont #sectionsCont .section h2.hotspotSubtitle {
+      font-family: "vwutopia-bkittabmedium_italic";
+      font-size: 14px;
+      color: #00b2ee;
+      margin: 0;
+      margin-left: auto;
+      margin-right: auto; }
+  #mainCont #sectionsCont .section #carPaintTitle {
+    font-family: "VWHeadlineOTSemibold";
+    font-size: 12px;
+    color: #00d9ff;
+    margin: 0; }
+  #mainCont #sectionsCont .section .carSpace {
+    height: 160px; }
+  #mainCont #sectionPaint a#btnChngPaint {
+    width: 30px;
+    height: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    position: relative;
+    display: block; }
+    #mainCont #sectionPaint a#btnChngPaint .btnBack {
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      background: url("img/paint/Shape_cubeta.png") 50% 50% no-repeat;
+      -webkit-background-size: contain;
+      background-size: contain; }
+    #mainCont #sectionPaint a#btnChngPaint .btnIcon {
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-left: -10px;
+      margin-top: -10px;
+      background: url("img/paint/cubeta_icon.png") 50% 50% no-repeat;
+      -webkit-background-size: contain;
+      background-size: contain; }
+  #mainCont .carCont .carPaints {
+    margin-left: -150px;
+    margin-top: -80px; }
+    #mainCont .carCont .carPaints img {
+      width: 299px;
+      height: 159px; } }

@@ -141,6 +141,8 @@ function mapAnimatedIn(anim_id) {
 //HOTSPOTS//
 
 function hotspotMapOpen(feature){
+	$("#"+feature+" .hotspotOpenContainer").css({visibility: "visible"})
+	
 	var hotspot_Open = new TimelineMax();
 	hotspot_Open.add("init", 0);
 	hotspot_Open.add("button1", .29);
@@ -156,6 +158,8 @@ function hotspotMapOpen(feature){
 	var hotspotImageIcon = $("#"+feature+" .hotspotImageIcon");
 	var hotspotVideoBack = $("#"+feature+" .hotspotVideoBack");
 	var hotspotVideoIcon = $("#"+feature+" .hotspotVideoIcon");
+
+	console.log("hotspotMapOpen")
 
 	//Over
 	hotspot_Open.fromTo(hotspotOpen, .01, {opacity: 0}, {opacity: 1}, "init");
@@ -203,6 +207,7 @@ function hotspotMapClose(feature){
 	hotspot_Close.add("button2", .09);
 	hotspot_Close.add("button3", .18);
 	hotspot_Close.add("button4", .27);
+	hotspot_Close.add("idleBtn", "close+=.36");
 	var hotspotOpen = $("#"+feature+" .hotspotOpen");
 	var hotspotCloseBack = $("#"+feature+" .hotspotCloseBack");
 	var hotspotCloseIcon = $("#"+feature+" .hotspotCloseIcon");
@@ -212,6 +217,10 @@ function hotspotMapClose(feature){
 	var hotspotImageIcon = $("#"+feature+" .hotspotImageIcon");
 	var hotspotVideoBack = $("#"+feature+" .hotspotVideoBack");
 	var hotspotVideoIcon = $("#"+feature+" .hotspotVideoIcon");
+	
+	var hotspotIdle = $("#"+feature+" .hotspotIdle");
+
+	
 
 	//Over
 
@@ -237,6 +246,9 @@ function hotspotMapClose(feature){
 	hotspot_Close.fromTo(hotspotVideoIcon, .29, {scaleX:1, scaleY:1}, {scaleX:.455, scaleY:.455, ease:"Sine.easeOut"}, "button4");
 	hotspot_Close.fromTo(hotspotVideoBack, .01, {opacity: 1}, {opacity: 0}, "button4+=.29");
 	hotspot_Close.fromTo(hotspotVideoIcon, .01, {opacity: 1}, {opacity: 0}, "button4+=.29");
+
+	hotspot_Close.fromTo(hotspotIdle, .13, {scaleX:1.2, scaleY:1.2}, {scaleX:.95, scaleY:.95, ease:"Sine.easeOut"}, "idleBtn" );
+	hotspot_Close.fromTo(hotspotIdle, .1, {scaleX:.9, scaleY:.9}, {scaleX:1, scaleY:1, ease:"Sine.easeOut"}, "idleBtn+=.13" );
 }
 
 ///MAP IN/OUT////

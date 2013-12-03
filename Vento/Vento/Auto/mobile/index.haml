@@ -1,0 +1,77 @@
+!!!
+%html.no-js
+	%head
+		%meta{charset: "utf-8"}/
+		%meta{content: "IE=edge", "http-equiv" => "X-UA-Compatible"}/
+		%title
+		%meta{content: "", name: "description"}/
+		%meta{content: "width=device-width, initial-scale=1", name: "viewport"}/
+		/ Place favicon.ico and apple-touch-icon(s) in the root directory
+		%link{href: "css/normalize.css", rel: "stylesheet"}/
+		%link{href: "style.css", rel: "stylesheet"}/
+		%script{src: "js/vendor/modernizr-2.7.0.min.js"}
+	%body
+
+		%header
+			%header-left
+				%a{:href => "http://www.vw.com.mx", :target=>"_blank"}
+					%img{:src => "img/LOGO_VW.png", :alt => "Das auto.", :width=>"129", :height=>"118"}
+
+			%header-right
+				%a.header-btnConfig{:href => "http://www.configuratuvw.mx/Vento", :target=>"_blank"}
+					Configúralo
+
+			%a.socialPages{:href => "#"}
+				.fb
+				.tw
+				.ins
+
+		#mainCont
+			.bgCont
+			.carCont
+				.carPaints
+					.carShadow
+					.carPaint#paint-blanco.active
+					.carPaint#paint-negro
+					.carPaint#paint-gris
+					.carPaint#paint-rojo
+					.carPaint#paint-plata
+					.carPaint#paint-azul
+					.carPaint#paint-beige
+
+			%section.section#sectionPaint
+				%h1
+					NuevoVento.
+				%h2
+					Está de tu lado
+				%p
+					%strong#carPaintTitle
+						Blanco Candy
+
+				%a#btnChngPaint
+					.btnBack
+					.btnIcon
+
+
+
+
+
+
+
+		%footer
+			%nav
+				%a.btnFooter{:href => "#"}
+				%a.btnFooter{:href => "#"}
+				%a.btnFooter{:href => "#"}
+				%a.btnFooter{:href => "#"}
+				%a.btnFooter{:href => "#"}
+				%a.btnFooter{:href => "#"}
+
+
+
+		%script{src: "//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"}
+		:javascript
+			window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')
+		%script{src: "js/plugins.js"}
+		%script{src: "js/main.js"}
+

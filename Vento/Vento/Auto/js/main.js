@@ -1,18 +1,24 @@
-var copysComodidad, copysConsumo, copysEquipamiento, copysSeguridad, currentFeature, currentPaint, featureIn, featureTitle, init, introVideo, openMap, openTwits, patternOff, patternOn, preloadimages, startSprites, video;
+var $currentHotSpot, copysComodidad, copysConsumo, copysEquipamiento, copysSeguridad, currentFeature, currentPaint, featureIn, featureTitle, init, introVideo, openMap, openTwits, patternOff, patternOn, preloadimages, resize, startSprites, video;
 
-window.wH = $(window).height();
+window.wH = void 0;
 
-window.wW = $(window).width();
+window.wW = void 0;
 
 openTwits = false;
 
 currentPaint = 1;
+
+$currentHotSpot = void 0;
 
 video = Popcorn("#video");
 
 featureTitle = ["equipamiento"];
 
 currentFeature = 0;
+
+if (navigator.userAgent.match(/iPhone/i)) {
+  $('#viewport').attr('content', 'width=device-width,minimum-scale=0.8,maximum-scale=0.8,initial-scale=0.8');
+}
 
 openMap = function() {
   $("#map").addClass("openmap");
@@ -182,71 +188,71 @@ copysConsumo = function() {
 
 startSprites = function() {
   $("#sprt-carro1").sprite({
-    fps: 12,
+    fps: 8,
     no_of_frames: 3
   });
   $("#sprt-carro2").sprite({
-    fps: 12,
+    fps: 8,
     no_of_frames: 3
   });
   $("#sprt-sombrilla").sprite({
-    fps: 12,
+    fps: 8,
     no_of_frames: 3
   });
   $("#sprt-maguey").sprite({
-    fps: 12,
+    fps: 8,
     no_of_frames: 3
   });
   $("#sprt-sombrero").sprite({
-    fps: 12,
+    fps: 8,
     no_of_frames: 3
   });
   $("#sprt-pulpo").sprite({
-    fps: 12,
+    fps: 8,
     no_of_frames: 16
   });
   $("#sprt-pez").sprite({
-    fps: 12,
+    fps: 8,
     no_of_frames: 6
   });
   $("#sprt-palmera1").sprite({
-    fps: 12,
+    fps: 8,
     no_of_frames: 8
   });
   $("#sprt-palmera2").sprite({
-    fps: 12,
+    fps: 8,
     no_of_frames: 8
   });
   $("#sprt-ferry").sprite({
-    fps: 12,
+    fps: 8,
     no_of_frames: 6
   });
   $("#sprt-bailarina").sprite({
-    fps: 12,
+    fps: 8,
     no_of_frames: 3
   });
   $("#sprt-fabrica").sprite({
-    fps: 12,
+    fps: 8,
     no_of_frames: 3
   });
   $("#sprt-ancla").sprite({
-    fps: 12,
+    fps: 8,
     no_of_frames: 3
   });
   $("#sprt-agua3").sprite({
-    fps: 12,
+    fps: 8,
     no_of_frames: 8
   });
   $("#sprt-agua2").sprite({
-    fps: 12,
+    fps: 8,
     no_of_frames: 10
   });
   $("#sprt-agua1").sprite({
-    fps: 12,
+    fps: 8,
     no_of_frames: 7
   });
   return $("#sprt-volcan").sprite({
-    fps: 12,
+    fps: 8,
     no_of_frames: 9
   });
 };
@@ -323,31 +329,47 @@ preloadimages(imageFiles).done(function(images) {
   });
 });
 
-if (wW > wH) {
-  $("#features #video").width(wH * 1.777);
-  $("#features #video").height(wH);
-  $("#features #video").css({
-    position: "absolute",
-    top: "50%",
-    left: "50%",
-    marginLeft: ((wH * 1.777) / 2) * -1 + "px",
-    marginTop: (wH / 2) * -1 + "px"
-  });
-} else {
-  if (navigator.userAgent.match(/iPhone/i)) {
-    window.wH = window.wH * 1.25;
-    window.wW = window.wW * 1.25;
+resize = function() {
+  var ratio, wH, wW;
+  wH = $(window).height();
+  wW = $(window).width();
+  ratio = wW / wH;
+  if (wW > wH) {
+    if (ratio > 1.777) {
+      $("#features #video").width(wW);
+      $("#features #video").height("auto");
+      return $("#features #video").css({
+        position: "absolute",
+        top: "50%",
+        left: "50%",
+        marginLeft: (wW / 2) * -1 + "px",
+        marginTop: ($("#features #video").height() / 2) * -1 + "px"
+      });
+    } else {
+      $("#features #video").width(wH * 1.777);
+      $("#features #video").height(wH);
+      return $("#features #video").css({
+        position: "absolute",
+        top: "50%",
+        left: "50%",
+        marginLeft: ((wH * 1.777) / 2) * -1 + "px",
+        marginTop: (wH / 2) * -1 + "px"
+      });
+    }
+  } else {
+    $("#features #video").height(wH);
+    $("#features #video").width(wH * 1.777);
+    return $("#features #video").css({
+      position: "absolute",
+      top: "50%",
+      left: "50%",
+      marginLeft: ((wH * 1.777) / 2) * -1 + "px",
+      marginTop: (wH / 2) * -1 + "px"
+    });
   }
-  $("#features #video").width(wW);
-  $("#features #video").height(wW / 1.777);
-  $("#features #video").css({
-    position: "absolute",
-    top: "50%",
-    left: "50%",
-    marginLeft: (wW / 2) * -1 + "px",
-    marginTop: ((wW / 1.777) / 2) * -1 + "px"
-  });
-}
+};
+
+resize();
 
 featureIn = function(feature) {
   var title, titleMask, titleMaskCont;
@@ -410,7 +432,8 @@ $(function() {
       timelineVideoPointActiveIn("videodos");
       $(".videoPoint#videodos").addClass("active");
       $(".videoPoint").removeClass("stop");
-      return $(".videoPoint#videodos").addClass("stop");
+      $(".videoPoint#videodos").addClass("stop");
+      return click_equipamiento();
     }
   });
   video.code({
@@ -423,7 +446,8 @@ $(function() {
       timelineVideoPointActiveIn("videotres");
       $(".videoPoint#videotres").addClass("active");
       $(".videoPoint").removeClass("stop");
-      return $(".videoPoint#videotres").addClass("stop");
+      $(".videoPoint#videotres").addClass("stop");
+      return click_comodidad();
     }
   });
   video.code({
@@ -436,7 +460,8 @@ $(function() {
       timelineVideoPointActiveIn("videocuatro");
       $(".videoPoint#videocuatro").addClass("active");
       $(".videoPoint").removeClass("stop");
-      return $(".videoPoint#videocuatro").addClass("stop");
+      $(".videoPoint#videocuatro").addClass("stop");
+      return click_consumo();
     }
   });
   video.code({
@@ -449,7 +474,8 @@ $(function() {
       timelineVideoPointActiveIn("videocinco");
       $(".videoPoint#videocinco").addClass("active");
       $(".videoPoint").removeClass("stop");
-      return $(".videoPoint#videocinco").addClass("stop");
+      $(".videoPoint#videocinco").addClass("stop");
+      return click_seguridad();
     }
   });
   video.on("timeupdate", function() {
@@ -464,6 +490,27 @@ $(function() {
     return colorsLinkBtnIn();
   }, function() {
     return colorsLinkBtnOut();
+  });
+  $("#features .hotspotbtn").hover(function() {
+    $currentHotSpot = $(this);
+    return hotspotOpenedBtnOver($currentHotSpot);
+  }, function() {
+    return hotspotOpenedBtnOut($currentHotSpot);
+  });
+  $("#paintBtn").hover(function() {
+    return paintPageBtnOver();
+  }, function() {
+    return paintPageBtnOut();
+  });
+  $("#mapBtn").hover(function() {
+    return mapPageBtnOver();
+  }, function() {
+    return mapPageBtnOut();
+  });
+  $(".InsPageCont").hover(function() {
+    return instaPageBtnOver();
+  }, function() {
+    return instaPageBtnOut();
   });
   $(".fbPageCont").hover(function() {
     return fbPageBtnIn();
@@ -480,7 +527,7 @@ $(function() {
   }, function() {
     return knowMoreTextBtnOut("features");
   });
-  $(".hotspotCloseCont").on("click", function(ee) {
+  $("#features .hotspotCloseCont").on("click", function(ee) {
     var currentHS;
     ee.preventDefault();
     currentHS = $(this).attr("hotspot");
@@ -490,7 +537,7 @@ $(function() {
     });
     return hotspotsBtnsOpen();
   });
-  $(".hotspotOver").on("click", function(e) {
+  $("#features .hotspotOver").on("click", function(e) {
     var currentHS;
     e.preventDefault();
     currentHS = $(this).attr("hotspot");
@@ -503,6 +550,18 @@ $(function() {
     return $(".hotspotIdle, .hotspotOver").css({
       visibility: "hidden"
     });
+  });
+  $(".hotmapOver").on("click", function() {
+    var currentId;
+    currentId = $(this).parent().attr("id");
+    console.log(currentId);
+    return hotspotMapOpen(currentId);
+  });
+  $(".map .hotspotCloseCont").on("click", function() {
+    var currentId;
+    currentId = $(this).parent().parent().attr("id");
+    console.log(currentId);
+    return hotspotMapClose(currentId);
   });
   $(".hotspotCont").hover(function() {
     var currentHS;
@@ -545,7 +604,6 @@ $(function() {
     var colors, paints;
     paints = ["paint-blanco", "paint-negro", "paint-gris", "paint-rojo", "paint-plata", "paint-azul", "paint-beige"];
     colors = ["Blanco Candy", "Negro Profundo", "Gris Pimienta", "Rojo Flash", "Plata Reflex", "Shadow Blue", "Beige Tierra"];
-    console.log(paints.length);
     if (currentPaint === paints.length - 1) {
       currentPaint = 0;
     }
@@ -555,7 +613,7 @@ $(function() {
     console.log(currentPaint);
     return currentPaint++;
   });
-  $(".hotspotbtn").on("click", function() {
+  $("#features .hotspotbtn").on("click", function() {
     var cont, hotspot;
     $(".hotspotbtn").removeClass("active");
     $(this).addClass("active");
@@ -566,6 +624,16 @@ $(function() {
     $(this).parent().parent().find(".contentCont").hide();
     $("#" + cont).show();
     return hotspotInfoOpen(hotspot);
+  });
+  $(".map .hotspotbtn").on("click", function() {
+    var currentCont, currentHotSpot;
+    $(".map .hotspotbtn").removeClass("active");
+    $(this).addClass("active");
+    currentCont = $(this).attr("hscont");
+    currentHotSpot = $(this).parent().parent().attr("id");
+    $("#" + currentHotSpot + " .contentCont").hide();
+    $("#" + currentCont).show();
+    return hotspotInfoOpen(currentHotSpot);
   });
   $("#pictureGalleryCont .pictureGalleryClose").on("click", function() {
     return fullScreenPhotoOut();
@@ -579,12 +647,17 @@ $(function() {
   if (window.location.hash === "#consumo") {
     $("#videocinco").trigger("click");
   }
+  if (window.location.hash === "#colores") {
+    $("#paintBtn").trigger("click");
+  }
+  if (window.location.hash === "#ruta") {
+    $("#mapBtn").trigger("click");
+  }
+  startSprites();
   _ref = apis.twits;
   for (_i = 0, _len = _ref.length; _i < _len; _i++) {
     i = _ref[_i];
     if (i.dia_id = "1") {
-      console.log(_i);
-      console.log("dia: " + i.dia_id);
       twString = "<div class='pinTwitter'  id='pinTwit" + i.id + "'> <div class='pinPoint'></div> <div class='pinTwitBack'></div> <div class='pinTwitIcon'></div> <div class='pinTwitCont'> <div class='infobox'> <div class='twicoinfow'></div><div class='closeTw'><div class='closeBack'></div><div class='closeIcon'></div></div> <div class='titleUsertwinfo'> <span>@</span>" + i.screen_name + "</div> <div class='descriptiontwinfo'>" + i.content + " </div> </div> </div> </div>";
       $("#map .map").append(twString);
     }
@@ -595,7 +668,9 @@ $(function() {
     insString = " <div class='pinInstagram'  id='pinIns" + j.id + "'> <div class='pinPoint'></div> <div class='pinInstaBack'></div> <div class='pinInstaIcon'></div> <div class='pinInstaCont'> <div class='instagraminfocont'> <div class='userCont'> <img alt='' class='userPhoto' src=''> <p class='user'>" + j.username + "</p> </div> <img alt='' class='photo' src='" + j.lowres + "'> <div class='likeandcaptionCont'> <p class='caption'>" + j.captiontext + "</p> <div class='likesCont'> <div class='likeIcon'></div> <p class='likesCount'> " + j.like_count + "</p> </div> </div> </div> <div class='closeIns'> <div class='closeBack'></div> <div class='closeIcon'></div> </div> </div> </div>";
     $("#map .map").append(insString);
   }
-  $(".drag").draggable();
+  $(".drag").draggable({
+    containment: [$(window).width() - 4096, $(window).height() - 2400, 0, 0]
+  });
   $(".pinTwitIcon").on("click", function() {
     var currentTw;
     currentTw = $(this).parent().attr("id");
@@ -616,4 +691,21 @@ $(function() {
     currentIns = $(this).parent().parent().parent().attr("id");
     return pinInstaContOut(currentIns);
   });
+});
+
+if (navigator.userAgent.match(/iPad/i)) {
+  $("#map .map").css({
+    backgroundSize: "cover"
+  });
+  $("#features .videoPinFeatures").css({
+    display: "block"
+  });
+  $("#features .videoPinFeatures, #mapBtn, #paintBtn").on("click", function() {
+    $("#features .videoPinFeatures").hide();
+    return $("#video").get(0).play();
+  });
+}
+
+$(window).resize(function() {
+  return resize();
 });

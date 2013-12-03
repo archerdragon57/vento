@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html class='no-js'>
+  <head>
+    <meta charset='utf-8'>
+    <meta content='IE=edge' http-equiv='X-UA-Compatible'>
+    <title></title>
+    <meta content='' name='description'>
+    <meta content='width=device-width, initial-scale=1.0' id='viewport' name='viewport'>
+    <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
+    <link href='css/normalize.css' rel='stylesheet'>
+    <link href='style.css' rel='stylesheet'>
+    <script src='js/vendor/modernizr-2.7.0.min.js'></script>
+  </head>
+  <body>
+    <div id='rotate'></div>
+    <div id='preloader'>
+      <div class='preloading' id='preloader-content'>
+        <div class='ui-spinner'>
+          <div class='wheel'></div>
+          <div class='preloader-text'>
+            Cargando...
+          </div>
+        </div>
+      </div>
+    </div>
+    <header class='full'>
+      <div class='header-left'>
+        <a href='http://www.vw.com.mx' target='_blank'>
+          <img alt='Das auto.' height='59' src='img/LOGO_VW.png' width='64'>
+        </a>
+      </div>
+      <div class='header-right'>
+        <a class='header-btnConfig' href='http://www.configuratuvw.mx/Vento' target='_blank'>
+          Configúralo
+        </a>
+        <div class='socialPages' href='#'>
+          <a class='fbPageCont' href='http://www.facebook.com/VolkswagenMexico' target='_blank'>
+            <div class='fbPageBack'></div>
+            <div class='fbPageIcon'></div>
+          </a>
+          <a class='twPageCont' href='https://twitter.com/Volkswagen_MX' target='_blank'>
+            <div class='twPageBack'></div>
+            <div class='twPageIcon'></div>
+          </a>
+          <a class='InsPageCont' href='http://instagram.com/volkswagenmexico' target='_blank'>
+            <div class='InsPageBack'></div>
+            <div class='InsPageIcon'></div>
+          </a>
+        </div>
+        <div id='btSocial'>
+          <div class='content'></div>
+        </div>
+      </div>
+    </header>
+    <div id='mainCont'>
+      <div class='bgCont'></div>
+      <div class='carCont'>
+        <div class='carPaints'>
+          <div class='carShadow carPaint'>
+            <img alt='' height='195' src='img/paint/sombra.png' width='369'>
+          </div>
+          <div class='carPaint active' id='paint-blanco'>
+            <img alt='' height='195' src='img/paint/blanco_candy.png' width='369'>
+          </div>
+          <div class='carPaint' id='paint-negro'>
+            <img alt='' height='195' src='img/paint/negro_profundo.png' width='369'>
+          </div>
+          <div class='carPaint' id='paint-gris'>
+            <img alt='' height='195' src='img/paint/gris_pimienta.png' width='369'>
+          </div>
+          <div class='carPaint' id='paint-rojo'>
+            <img alt='' height='195' src='img/paint/rojo_flash.png' width='369'>
+          </div>
+          <div class='carPaint' id='paint-plata'>
+            <img alt='' height='195' src='img/paint/plata_reflex.png' width='369'>
+          </div>
+          <div class='carPaint' id='paint-azul'>
+            <img alt='' height='195' src='img/paint/shadow_blue.png' width='369'>
+          </div>
+          <div class='carPaint' id='paint-beige'>
+            <img alt='' height='195' src='img/paint/beige_tierra.png' width='369'>
+          </div>
+        </div>
+      </div>
+      <div id='sectionsCont'>
+        <section class='section' id='sectionPaint'>
+          <h1>
+            NuevoVento.
+          </h1>
+          <h2>
+            Está de tu lado
+          </h2>
+          <div class='carSpace'></div>
+          <p id='carPaintTitle'>
+            Blanco Candy
+          </p>
+          <a id='btnChngPaint'>
+            <div class='btnBack'></div>
+            <div class='btnIcon'></div>
+          </a>
+        </section>
+        <section class='section' id='sectionEquipamiento'>
+          <h1>
+            Equipamiento
+          </h1>
+          <h2 class='hotspotSubtitle'>
+            Sí: el destino y el camino son igual de importantes.
+          </h2>
+          <div class='carSpace'></div>
+          <p class='hotspotDescription'>
+            Disfruta el viaje. Nuevo Vento. Está de tu lado.
+          </p>
+          <div class='hotspotTitles'>
+            <p class='hsTitle'>
+              Escucha
+            </p>
+            <p class='hsDescription'>
+              El mundo está hablando y tiene algo que decirte a través del Radio AM/FM, lector de CD/MP3, conexión telefónica manos libres, Aux-in, USB con control para iPod, SD Card.
+            </p>
+            <div class='hsImageCont'>
+              <div class='imageCont'>
+                <img alt='' class='hsImage' src='img/hotspots_images/foto_escucha_hotspot.png'>
+              </div>
+            </div>
+          </div>
+          <div class='hotspotTitles'>
+            <p class='hsTitle'>
+              Buen tiempo
+            </p>
+            <p class='hsDescription'>
+              En nuevo Vento siempre hay clima perfecto gracias a su aire acondicionado de ajuste automático: Climatronic. Además, disfruta del ambiente exterior con sus elevadores eléctricos en cristales.
+            </p>
+            <div class='hsImageCont'>
+              <div class='imageCont'>
+                <img alt='' class='hsImage' src='img/hotspots_images/foto_tiempo_hotspot.png'>
+              </div>
+            </div>
+          </div>
+          <div class='hotspotTitles'>
+            <p class='hsTitle'>
+              Tú dices a dónde
+            </p>
+            <p class='hsDescription'>
+              Guía tu proyecto por buen camino con la computadora de viaje, disponible en la versión Tiptronic, que registra consumo, kilometraje, combustible y desempeño del auto.
+            </p>
+            <div class='hsImageCont'>
+              <div class='imageCont'>
+                <img alt='' class='hsImage' src='img/hotspots_images/foto_computadora_hotspot.png'>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class='section' id='sectionComodidad'>
+          <h1>
+            Comodidad
+          </h1>
+          <h2 class='hotspotSubtitle'>
+            Sí, yo los llevo, hay espacio para todos.
+          </h2>
+          <div class='carSpace'></div>
+          <p class='hotspotDescription'>
+            Una buena razón para continuar lo que empezaste. Nuevo Vento. Está de tu lado.
+          </p>
+          <div class='hotspotTitles'>
+            <p class='hsTitle'>
+              En el espacio
+            </p>
+            <p class='hsDescription'>
+              Cinco pasajeros, más temas de conversación. Distancias al interior realmente amplias para que el viaje sea más ligero: 1.69 m de ancho y 1.46 m de alto.
+            </p>
+            <div class='hsImageCont'>
+              <div class='imageCont'>
+                <img alt='' class='hsImage' src='img/hotspots_images/foto_espacio_hotspot.png'>
+              </div>
+            </div>
+          </div>
+          <div class='hotspotTitles'>
+            <p class='hsTitle'>
+              Atmósfera interior
+            </p>
+            <p class='hsDescription'>
+              Controla tu camino desde el volante, la palanca de velocidades y el freno de mano, que están forrados en piel; ajusta los asientos a tu medida y déjate llevar con sus insertos de cromo en el tablero.
+            </p>
+            <div class='hsImageCont'>
+              <div class='imageCont'>
+                <img alt='' class='hsImage' src='img/hotspots_images/foto_atmosfera_hotspot.png'>
+              </div>
+            </div>
+          </div>
+          <div class='hotspotTitles'>
+            <p class='hsTitle'>
+              Aquí cabe todo
+            </p>
+            <p class='hsDescription'>
+              Planes, sueños y grandes expectativas, todo cabe en su amplia cajuela alfombrada.
+            </p>
+            <div class='hsImageCont'>
+              <div class='imageCont'>
+                <img alt='' class='hsImage' src='img/hotspots_images/foto_aqui_cabe_todo_hotspot.png'>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class='section' id='sectionConsumo'>
+          <h1>
+            Bajo Consumo
+          </h1>
+          <h2 class='hotspotSubtitle'>
+            Sí, sí llegamos.
+          </h2>
+          <div class='carSpace'></div>
+          <p class='hotspotDescription'>
+            Potencia sin una gota de desperdicio. Nuevo Vento. Está de tu lado.
+          </p>
+          <div class='hotspotTitles'>
+            <p class='hsTitle'>
+              Ideas que funcionan
+            </p>
+            <p class='hsDescription'>
+              Eficiente motor 1.6 que cuida al medio ambiente y con inyección electrónica que optimiza el consumo y reduce la emisión de contaminantes. Bueno para todos.
+            </p>
+            <div class='hsImageCont'>
+              <div class='imageCont'>
+                <img alt='' class='hsImage' src='img/hotspots_images/foto_ideas_que_funcionan_hotspot.png'>
+              </div>
+            </div>
+          </div>
+          <div class='hotspotTitles'>
+            <p class='hsTitle'>
+              Inteligente
+            </p>
+            <p class='hsDescription'>
+              Elige la transmisión que prefieras: Manual, que te permite controlar la velocidad del auto y sacarle provecho al terreno; o Tiptronic, que integra los dos modos de conducción, automática y estándar.
+            </p>
+            <div class='hsImageCont'>
+              <div class='imageCont'>
+                <img alt='' class='hsImage' src='img/hotspots_images/foto_inteligente_hotspot.png'>
+              </div>
+            </div>
+          </div>
+          <div class='hotspotTitles'>
+            <p class='hsTitle'>
+              Poder en 4 cilindros
+            </p>
+            <p class='hsDescription'>
+              Si tienes prisa por llegar aprovecha la potencia Hp – rpm de 105 @ 5250, y descubre que la velocidad no tiene porqué acabar con tu combustible.
+            </p>
+            <div class='hsImageCont'>
+              <div class='imageCont'>
+                <img alt='' class='hsImage' src='img/hotspots_images/foto_potencia_hotspot.png'>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class='section' id='sectionSeguridad'>
+          <h1>
+            Seguridad
+          </h1>
+          <h2 class='hotspotSubtitle'>
+            Sí, confía en tu instinto.
+          </h2>
+          <div class='carSpace'></div>
+          <p class='hotspotDescription'>
+            Seguro de que todo saldrá bien. Nuevo Vento. Está de tu lado.
+          </p>
+          <div class='hotspotTitles'>
+            <p class='hsTitle'>
+              No Patines
+            </p>
+            <p class='hsDescription'>
+              Sistema Antibloqueo de Frenos ABS, frenos delanteros de disco ventilado y frenos traseros de tambor, para que llegues seguro a cualquier lugar.
+            </p>
+            <div class='hsImageCont'>
+              <div class='imageCont'>
+                <img alt='' class='hsImage' src='img/hotspots_images/foto_no_patines_hotspot.png'>
+              </div>
+            </div>
+          </div>
+          <div class='hotspotTitles'>
+            <p class='hsTitle'>
+              Sujétate
+            </p>
+            <p class='hsDescription'>
+              Las ideas te conducen a lugares que no imaginabas: conoce la Dirección Electromecánica sensible a la velocidad, que hace mantener la estabilidad del auto incluso a alta velocidad.
+            </p>
+            <div class='hsImageCont'>
+              <div class='imageCont'>
+                <img alt='' class='hsImage' src='img/hotspots_images/foto_sujetate_hotspot.png'>
+              </div>
+            </div>
+          </div>
+          <div class='hotspotTitles'>
+            <p class='hsTitle'>
+              Piensa en todo
+            </p>
+            <p class='hsDescription'>
+              Doble bolsa de aire frontal, Sistema ISOFIX para sujetar asientos infantiles y seguro para niños oculto en puertas traseras. Así, todo permanece en su sitio.
+            </p>
+            <div class='hsImageCont'>
+              <div class='imageCont'>
+                <img alt='' class='hsImage' src='img/hotspots_images/foto_piensa_en_todo_hotspot.png'>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class='section' id='sectionMap'>
+          <div class='mapCont'>
+            <div class='mapCont2'>
+              <div class='map drag'>
+                <div class='animated' id='sprt-carro1'></div>
+                <div class='animated' id='sprt-carro2'></div>
+                <div class='animated' id='sprt-sombrilla'></div>
+                <div class='animated' id='sprt-maguey'></div>
+                <div class='animated' id='sprt-sombrero'></div>
+                <div class='animated' id='sprt-pulpo'></div>
+                <div class='animated' id='sprt-pez'></div>
+                <div class='animated' id='sprt-palmera1'></div>
+                <div class='animated' id='sprt-palmera2'></div>
+                <div class='animated' id='sprt-ferry'></div>
+                <div class='animated' id='sprt-bailarina'></div>
+                <div class='animated' id='sprt-fabrica'></div>
+                <div class='animated' id='sprt-ancla'></div>
+                <div class='animated' id='sprt-agua3'></div>
+                <div class='animated' id='sprt-agua2'></div>
+                <div class='animated' id='sprt-agua1'></div>
+                <div class='animated' id='sprt-volcan'></div>
+                <div class='equipo01'>
+                  <div class='back'></div>
+                  <div class='icon'></div>
+                </div>
+                <a class='videoRecap fancybox' data-fancybox-type='iframe' href='http://www.youtube.com/embed/FVVd_nFiOtA?autoplay=1&amp;amp;vq=hd1080&amp;amp;controls=0&amp;amp;rel=0&amp;amp;showinfo=0'></a>
+                <a class='videoPinMap fancybox' data-fancybox-type='iframe' href='http://www.youtube.com/embed/Fsw5Cfsasd4?autoplay=1&amp;amp;vq=hd1080&amp;amp;controls=0&amp;amp;rel=0&amp;amp;showinfo=0' id='videoMap01'>
+                  <div class='vpBack'></div>
+                  <div class='vpIcon'></div>
+                </a>
+                <a class='videoPinMap fancybox' data-fancybox-type='iframe' href='http://www.youtube.com/embed/P4sYsWzpN_k?autoplay=1&amp;amp;vq=hd1080&amp;amp;controls=0&amp;amp;rel=0&amp;amp;showinfo=0' id='videoMap02'>
+                  <div class='vpBack'></div>
+                  <div class='vpIcon'></div>
+                </a>
+                <a class='videoPinMap fancybox' data-fancybox-type='iframe' href='http://www.youtube.com/embed/tdVw-9U_4bY?autoplay=1&amp;amp;vq=hd1080&amp;amp;controls=0&amp;amp;rel=0&amp;amp;showinfo=0' id='videoMap03'>
+                  <div class='vpBack'></div>
+                  <div class='vpIcon'></div>
+                </a>
+                <!-- %a.videoPinMap#videoMap04.fancybox{:href => "http://www.youtube.com/embed/AUWcaJ7tsys?autoplay=1&amp;vq=hd1080&amp;controls=0&amp;rel=0&amp;showinfo=0", :data=>{:fancybox_type=>"iframe"}} -->
+                <!-- .vpBack -->
+                <!-- .vpIcon -->
+                <a class='videoPinMap fancybox' data-fancybox-type='iframe' href='http://www.youtube.com/embed/xH-pAdgegvc?autoplay=1&amp;amp;vq=hd1080&amp;amp;controls=0&amp;amp;rel=0&amp;amp;showinfo=0' id='videoMap00'>
+                  <div class='vpBack'></div>
+                  <div class='vpIcon'></div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <footer class='full'>
+      <nav class='full'>
+        <div id='square'></div>
+        <a class='btnFooter active' href='#colores' id='toPaint' section='0'></a>
+        <a class='btnFooter' href='#equipamiento' id='toEquipamiento' section='1'></a>
+        <a class='btnFooter' href='#comodidad' id='toComodidad' section='2'></a>
+        <a class='btnFooter' href='#consumo' id='toConsumo' section='3'></a>
+        <a class='btnFooter' href='#seguridad' id='toSeguridad' section='4'></a>
+        <a class='btnFooter' href='#map' id='toMap' section='5'></a>
+      </nav>
+      <div class='footer-copyrightCont full'>
+        <div class='footer-copyrights'>
+          <a class='btncopyright' href='http://www.volkswagen.mx/es/models/nuevo-vento/galeria.html?tc=oa-vento-mx-minisite-footer' target='_blank'>
+            <p class='copyright'>
+              © Volkswagen México 2013
+            </p>
+          </a>
+          <a class='btnpoliticas' href='http://www.vw.com.mx/es/tools/navigation/footer/aspectos_legalesyavisodeprivacidad.html' target='_blank'>
+            <p class='politicas'>
+              Políticas de Privacidad
+            </p>
+          </a>
+          <a class='btnficha' href='http://www.vw.com.mx/es/models/nuevo-vento/versiones.html?tc=oa-vento-mx-minisite-footer' target='_blank'>
+            <p class='fichatec'>
+              Ficha Técnica
+            </p>
+          </a>
+          <a class='btnprueba' href='http://www.volkswagen.mx/es/models/nuevo-vento/atencion-personalizada.html?tc=oa-vento-mx-minisite-footer' target='_blank'>
+            <p class='pruebamanejo'>
+              Prueba de Manejo
+            </p>
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
+    <script src='http://labs.skinkers.com/content/touchSwipe/jquery.touchSwipe.min.js'></script>
+    <script src='//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js'></script>
+    <script>
+      window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')
+    </script>
+    <script src='js/jquery.spritely.js'></script>
+    <script src='js/easing.js'></script>
+    <script src='js/plugins.js'></script>
+    <script src='js/swipe.js'></script>
+    <script src='js/drag.js'></script>
+    <script src='js/copys.js'></script>
+    <script src='js/fastclick.js'></script>
+    <script src='js/imageFiles.js'></script>
+    <script src='js/main.js'></script>
+  </body>
+</html>

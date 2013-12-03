@@ -31,6 +31,48 @@
 		/ %script{:src=>"js/click_tags.js"}
 
 
+		#splash
+			%a.btnConfigurador{:href => "http://www.configuratuvw.mx/Vento", :target=>"_blank"}
+				Configúralo
+			.headerSplash
+				%a.logoSplash{:href=>"http://www.vw.com.mx", :target=>"_blank"}
+				.socialSplash
+					%a.fbPageCont{:href => "http://www.facebook.com/VolkswagenMexico", :target=>"_blank"}
+						.fbPageBack
+						.fbPageIcon
+					%a.twPageCont{:href => "https://twitter.com/Volkswagen_MX", :target=>"_blank"}
+						.twPageBack
+						.twPageIcon
+					%a.InsPageCont{:href => "http://instagram.com/volkswagenmexico", :target=>"_blank"}
+						.InsPageBack
+						.InsPageIcon
+
+			.contentSplash
+				.titleVentoCont
+					.titleVentoMask
+						.titleVento
+							.titleVentoImg
+				.coche
+					.cocheCont
+
+						.cochePaintCont
+							.cocheShadow
+							.cochePaint#paint-white.active
+			.footerSplash
+				.footerSplashContainer
+					%a.btncopyright{:href => "http://www.volkswagen.mx/es/models/nuevo-vento/galeria.html?tc=oa-vento-mx-minisite-footer", :target=>"_blank"}
+						%p.copyright
+							© Volkswagen México 2013
+					%a.btnpoliticas{:href => "http://www.vw.com.mx/es/tools/navigation/footer/aspectos_legalesyavisodeprivacidad.html", :target=>"_blank"}
+						%p.politicas
+							Políticas de Privacidad
+					%a.btnficha{:href => "http://www.vw.com.mx/es/models/nuevo-vento/versiones.html?tc=oa-vento-mx-minisite-footer", :target=>"_blank"}
+						%p.fichatec
+							Ficha Técnica
+					%a.btnprueba{:href => "http://www.volkswagen.mx/es/models/nuevo-vento/atencion-personalizada.html?tc=oa-vento-mx-minisite-footer", :target=>"_blank"}
+						%p.pruebamanejo
+							Prueba de Manejo
+
 
 
 
@@ -57,12 +99,16 @@
 				%a.twPageCont{:href => "https://twitter.com/Volkswagen_MX", :target=>"_blank"}
 					.twPageBack
 					.twPageIcon
+				%a.InsPageCont{:href => "http://instagram.com/volkswagenmexico", :target=>"_blank"}
+					.InsPageBack
+					.InsPageIcon
 			%a#paintBtn{:href => "#colores"}
 				.paintBtnBack
 				.paintBtnIcon
 					.paintBtnIconBack
 					.paintBtnIconFront
 			%a#mapBtn{:href => "#ruta"}
+				.whiteback
 				.mapBtnBack
 				.mapBtnIcon
 					.mapBtnIconBack
@@ -128,7 +174,10 @@
 
 			.container#features
 
-				%video#video{:src => "img/hotspots/hotspots.mp4", :autplay=>"", :preload=>"auto"}
+				%video#video{:autplay=>"", :preload=>"auto"}
+					%source{:src => "img/hotspots/hotspots.mp4", :type=>"video/mp4"}
+					%source{:src => "img/hotspots/hotspots.ogv", :type=>"video/ogg"}
+					%source{:src => "img/hotspots/hotspots.webm", :type=>"video/webm"}
 				.pattern
 
 				.pattern2
@@ -152,7 +201,7 @@
 							%p.knowMoreText
 								Conoce más
 
-					.hotspotCont#hotuno{:href => "#", :hotspot=>"hotuno"}
+					.hotspotCont#hotuno.drag{:href => "#", :hotspot=>"hotuno"}
 						.hotspotIdle
 						.hotspotOver{:hotspot=>"hotuno"}
 						.hotspotOpenContainer
@@ -197,7 +246,7 @@
 
 
 
-					.hotspotCont#hotdos{:href => "#", :hotspot=>"hotdos"}
+					.hotspotCont#hotdos.drag{:href => "#", :hotspot=>"hotdos"}
 						.hotspotIdle
 						.hotspotOver{:hotspot=>"hotdos"}
 						.hotspotOpenContainer
@@ -219,7 +268,7 @@
 													.fbShareBack
 													.fbShareIcon
 										.contentImagen.contentCont
-											%a.hotspotImage{:href => "img/fotos_full/tiempo.png"}
+											%a.hotspotImage.fancybox{:href => "img/fotos_full/tiempo.png"}
 												%img{:src => "img/hotspots_images/foto_tiempo_hotspot.png", :alt => ""}/
 
 										.contentVideo.contentCont
@@ -241,7 +290,7 @@
 								.hotspotVideoIcon.hotspotbtnIcon
 
 
-					.hotspotCont#hottres{:href => "#", :hotspot=>"hottres"}
+					.hotspotCont#hottres.drag{:href => "#", :hotspot=>"hottres"}
 						.hotspotIdle
 						.hotspotOver{:hotspot=>"hottres"}
 						.hotspotOpenContainer
@@ -263,7 +312,7 @@
 													.fbShareBack
 													.fbShareIcon
 										.contentImagen.contentCont
-											%a.hotspotImage{:href => "img/fotos_full/computadora.png"}
+											%a.hotspotImage.fancybox{:href => "img/fotos_full/computadora.png"}
 												%img{:src => "img/hotspots_images/foto_computadora_hotspot.png", :alt => ""}/
 
 										.contentVideo.contentCont
@@ -382,18 +431,17 @@
 											Desde Navoleto vengo dicen que nací en el norte.... Nuevo Vento #LaRutaDeLasIdeas http://t.co/LdwzsSpNFy
 
 
-							.hotspotMapCont#hotmap01{:href => "#", :hotspot=>"hotmap01"}
+							.hotspotMapCont#hotmap01.drag{:href => "#", :hotspot=>"hotmap01"}
 								.hotspotIdle
-								.hotspotOver{:hotspot=>"hotmap01"}
+								.hotspotOver.hotmapOver{:hotspot=>"hotmap01"}
 								.hotspotOpenContainer
 									.hotspotOpen
 										.hotspotMask
 											.hotspotContent
 												.contentInfo.contentCont.active
-													%p.titleInfo
-														Gran espacio
+													<p class="titleInfo">#xperiVento</p>
 													%p.descriptionInfo
-														Cinco pasajeros, más temas de conversación. Distancias al interior realmente amplias para que el viaje sea más ligero: casi 1.70 metros de ancho y 1.46 de alto.
+														Una filósofa, una apasionada de las redes sociales, un emprendedor y un fotógrafo, perfiles diversos con un simple objetivo: cambiar el mundo con una idea generada a bordo de nuevo Vento.
 													%p.compartir
 														compartir
 													.shareCont
@@ -405,22 +453,108 @@
 															.fbShareIcon
 												.contentImagen.contentCont
 													%a.hotspotImage{:href => "#"}
-														%img{:src => "img/hotspots_images/foto_aqui_cabe_todo_hotspot.png", :alt => ""}/
+														%img{:src => "img/map/equipo_1_ganador.png", :alt => ""}/
 
 												.contentVideo.contentCont
 													.playBtnCont
 														.playBtnBack
 														.playBtnIcon
-									%a.hotspotCloseCont.hotspotbtn{:href => "#", :hscont=>"contentInfo", :hotspot=>"hotmap01"}
+									%a.hotspotCloseCont.hotspotbtn{:href => "#", :hscont=>"hotmap01 .contentInfo", :hotspot=>"hotmap01"}
 										.hotspotCloseBack.hotspotbtnBack
 										.hotspotCloseIcon.hotspotbtnIcon
-									%a.hotspotInfoCont.hotspotbtn.active{:href => "#", :hscont=>"contentInfo"}
+									%a.hotspotInfoCont.hotspotbtn.active{:href => "#", :hscont=>"hotmap01 .contentInfo"}
 										.hotspotInfoBack.hotspotbtnBack
 										.hotspotInfoIcon.hotspotbtnIcon
-									%a.hotspotImageCont.hotspotbtn{:href => "#", :hscont=>"contentImage"}
+									%a.hotspotImageCont.hotspotbtn{:href => "#", :hscont=>"hotmap01 .contentImagen"}
 										.hotspotImageBack.hotspotbtnBack
 										.hotspotImageIcon.hotspotbtnIcon
-									%a.hotspotVideoCont.fancybox.hotspotbtn{:href => "#", :hscont=>"contentInfo"}
+									%a.hotspotVideoCont.fancybox.hotspotbtn{:href => "https://dl.dropboxusercontent.com/u/72722605/vento/xperiVento.mp4", :hscont=>"hotmap01 .contentInfo", :data=>{:fancybox_type=>"iframe"}}
+										.hotspotVideoBack.hotspotbtnBack
+										.hotspotVideoIcon.hotspotbtnIcon
+
+
+
+
+
+							.hotspotMapCont#hotmap02.drag{:href => "#", :hotspot=>"hotmap02"}
+								.hotspotIdle
+								.hotspotOver.hotmapOver{:hotspot=>"hotmap02"}
+								.hotspotOpenContainer
+									.hotspotOpen
+										.hotspotMask
+											.hotspotContent
+												.contentInfo.contentCont.active
+													<p class="titleInfo">#vamonosdeaVenton</p>
+													%p.descriptionInfo
+														Procedentes de ciudades diferentes y de carreras totalmente distintas, un biólogo, una diseñadora, un comunicólogo y un ingeniero en electrónica, demostrarán que la brecha generacional que existe entre ellos no es impedimento para generar una gran idea.
+													%p.compartir
+														compartir
+													.shareCont
+														%a.twShareCont{:href => "#"}
+															.twShareBack
+															.twShareIcon
+														%a.fbShareCont{:href => "#"}
+															.fbShareBack
+															.fbShareIcon
+												.contentImagen.contentCont
+													%a.hotspotImage{:href => "#"}
+														%img{:src => "img/map/equipo2.png", :alt => ""}/
+
+												.contentVideo.contentCont
+													.playBtnCont
+														.playBtnBack
+														.playBtnIcon
+									%a.hotspotCloseCont.hotspotbtn{:href => "#", :hscont=>"hotmap02 .contentInfo", :hotspot=>"hotmap02"}
+										.hotspotCloseBack.hotspotbtnBack
+										.hotspotCloseIcon.hotspotbtnIcon
+									%a.hotspotInfoCont.hotspotbtn.active{:href => "#", :hscont=>"hotmap02 .contentInfo"}
+										.hotspotInfoBack.hotspotbtnBack
+										.hotspotInfoIcon.hotspotbtnIcon
+									%a.hotspotImageCont.hotspotbtn{:href => "#", :hscont=>"hotmap02 .contentImagen"}
+										.hotspotImageBack.hotspotbtnBack
+										.hotspotImageIcon.hotspotbtnIcon
+									%a.hotspotVideoCont.fancybox.hotspotbtn{:href => "#", :hscont=>"hotmap02 .contentInfo"}
+										.hotspotVideoBack.hotspotbtnBack
+										.hotspotVideoIcon.hotspotbtnIcon
+
+							.hotspotMapCont#hotmap03.drag{:href => "#", :hotspot=>"hotmap03"}
+								.hotspotIdle
+								.hotspotOver.hotmapOver{:hotspot=>"hotmap03"}
+								.hotspotOpenContainer
+									.hotspotOpen
+										.hotspotMask
+											.hotspotContent
+												.contentInfo.contentCont.active
+													<p class="titleInfo">#greenVentors</p>
+													%p.descriptionInfo
+														Ensenada, Estado de México, Distrito Federal y Michoacán. Aventureros, exploradores y, ¿porqué no? también creativos caben en este equipo. Diferentes personalidades, grandes experiencias y mucha expectativa serán las constantes de los participantes de nuevo Vento.
+													%p.compartir
+														compartir
+													.shareCont
+														%a.twShareCont{:href => "#"}
+															.twShareBack
+															.twShareIcon
+														%a.fbShareCont{:href => "#"}
+															.fbShareBack
+															.fbShareIcon
+												.contentImagen.contentCont
+													%a.hotspotImage{:href => "#"}
+														%img{:src => "img/map/equipo3img.png", :alt => ""}/
+
+												.contentVideo.contentCont
+													.playBtnCont
+														.playBtnBack
+														.playBtnIcon
+									%a.hotspotCloseCont.hotspotbtn{:href => "#", :hscont=>"hotmap03 .contentInfo", :hotspot=>"hotmap03"}
+										.hotspotCloseBack.hotspotbtnBack
+										.hotspotCloseIcon.hotspotbtnIcon
+									%a.hotspotInfoCont.hotspotbtn.active{:href => "#", :hscont=>"hotmap03 .contentInfo"}
+										.hotspotInfoBack.hotspotbtnBack
+										.hotspotInfoIcon.hotspotbtnIcon
+									%a.hotspotImageCont.hotspotbtn{:href => "#", :hscont=>"hotmap03 .contentImagen"}
+										.hotspotImageBack.hotspotbtnBack
+										.hotspotImageIcon.hotspotbtnIcon
+									%a.hotspotVideoCont.fancybox.hotspotbtn{:href => "#", :hscont=>"hotmap03 .contentInfo"}
 										.hotspotVideoBack.hotspotbtnBack
 										.hotspotVideoIcon.hotspotbtnIcon
 
@@ -479,6 +613,20 @@
 
 
 
+		#footer
+			#footerContainer
+				%a.btncopyright{:href => "http://www.volkswagen.mx/es/models/nuevo-vento/galeria.html?tc=oa-vento-mx-minisite-footer", :target=>"_blank"}
+					%p.copyright
+						© Volkswagen México 2013
+				%a.btnpoliticas{:href => "http://www.vw.com.mx/es/tools/navigation/footer/aspectos_legalesyavisodeprivacidad.html", :target=>"_blank"}
+					%p.politicas
+						Políticas de Privacidad
+				%a.btnficha{:href => "http://www.vw.com.mx/es/models/nuevo-vento/versiones.html?tc=oa-vento-mx-minisite-footer", :target=>"_blank"}
+					%p.fichatec
+						Ficha Técnica
+				%a.btnprueba{:href => "http://www.volkswagen.mx/es/models/nuevo-vento/atencion-personalizada.html?tc=oa-vento-mx-minisite-footer", :target=>"_blank"}
+					%p.pruebamanejo
+						Prueba de Manejo
 
 
 

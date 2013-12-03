@@ -1,10 +1,16 @@
-window.wH = $(window).height()
-window.wW = $(window).width()
+window.wH = undefined
+window.wW = undefined
 openTwits = false
 currentPaint = 1
+$currentHotSpot = undefined
 video = Popcorn "#video"
 featureTitle = ["equipamiento"]
 currentFeature = 0
+
+if navigator.userAgent.match(/iPhone/i)
+	$('#viewport').attr('content','width=device-width,minimum-scale=0.8,maximum-scale=0.8,initial-scale=0.8')
+
+
 openMap = ->
 	$("#map").addClass "openmap"
 	setTimeout ->
@@ -153,23 +159,23 @@ copysConsumo = ->
 
 startSprites = ->
 
-	$("#sprt-carro1").sprite({fps:12, no_of_frames: 3})
-	$("#sprt-carro2").sprite({fps:12, no_of_frames: 3})
-	$("#sprt-sombrilla").sprite({fps:12, no_of_frames: 3})
-	$("#sprt-maguey").sprite({fps:12, no_of_frames: 3})
-	$("#sprt-sombrero").sprite({fps:12, no_of_frames: 3})
-	$("#sprt-pulpo").sprite({fps:12, no_of_frames: 16})
-	$("#sprt-pez").sprite({fps:12, no_of_frames: 6})
-	$("#sprt-palmera1").sprite({fps:12, no_of_frames: 8})
-	$("#sprt-palmera2").sprite({fps:12, no_of_frames: 8})
-	$("#sprt-ferry").sprite({fps:12, no_of_frames: 6})
-	$("#sprt-bailarina").sprite({fps:12, no_of_frames: 3})
-	$("#sprt-fabrica").sprite({fps:12, no_of_frames: 3})
-	$("#sprt-ancla").sprite({fps:12, no_of_frames: 3})
-	$("#sprt-agua3").sprite({fps:12, no_of_frames: 8})
-	$("#sprt-agua2").sprite({fps:12, no_of_frames: 10})
-	$("#sprt-agua1").sprite({fps:12, no_of_frames: 7})
-	$("#sprt-volcan").sprite({fps:12, no_of_frames: 9})
+	$("#sprt-carro1").sprite({fps:8, no_of_frames: 3})
+	$("#sprt-carro2").sprite({fps:8, no_of_frames: 3})
+	$("#sprt-sombrilla").sprite({fps:8, no_of_frames: 3})
+	$("#sprt-maguey").sprite({fps:8, no_of_frames: 3})
+	$("#sprt-sombrero").sprite({fps:8, no_of_frames: 3})
+	$("#sprt-pulpo").sprite({fps:8, no_of_frames: 16})
+	$("#sprt-pez").sprite({fps:8, no_of_frames: 6})
+	$("#sprt-palmera1").sprite({fps:8, no_of_frames: 8})
+	$("#sprt-palmera2").sprite({fps:8, no_of_frames: 8})
+	$("#sprt-ferry").sprite({fps:8, no_of_frames: 6})
+	$("#sprt-bailarina").sprite({fps:8, no_of_frames: 3})
+	$("#sprt-fabrica").sprite({fps:8, no_of_frames: 3})
+	$("#sprt-ancla").sprite({fps:8, no_of_frames: 3})
+	$("#sprt-agua3").sprite({fps:8, no_of_frames: 8})
+	$("#sprt-agua2").sprite({fps:8, no_of_frames: 10})
+	$("#sprt-agua1").sprite({fps:8, no_of_frames: 7})
+	$("#sprt-volcan").sprite({fps:8, no_of_frames: 9})
 
 
 patternOn = ->
@@ -222,56 +228,96 @@ preloadimages = (arr) ->
 		postaction = f or postaction
 
 
+
+
+
+if navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/iPhone/i)
+	$('#mainCont').html("")
+
+else
+	preloadimages(imageFiles).done((images)->
+		$('#preloader .ui-spinner').fadeOut("fast", ->
+			$('#preloader').fadeOut(->
+				$(this).remove()
+				init()
+				# resizeWindow()
+				# if window.location.hash == "#winners"
+				# 	showIdea()
+
+
+			)
+		)
+	)
+
+
 # if isiOS
 # 	$('#preloader').hide()
 # 	init()
 # else
-preloadimages(imageFiles).done((images)->
-	$('#preloader .ui-spinner').fadeOut("fast", ->
-		$('#preloader').fadeOut(->
-			$(this).remove()
-			init()
-			# resizeWindow()
-			# if window.location.hash == "#winners"
-			# 	showIdea()
-
-
-		)
-	)
-)
 
 
 
 
-if wW > wH
-	# if navigator.userAgent.match(/iPhone/i)
-	# 	window.wH=window.wH*1.25
-	# 	window.wW=window.wW*1.25
-	$("#features #video").width(wH*1.777)
-	$("#features #video").height(wH)
-	$("#features #video").css
-		position: "absolute"
-		top: "50%"
-		left: "50%"
-		marginLeft: ((wH*1.777)/2)*-1+"px"
-		marginTop: (wH/2)*-1+"px"
-	# $("#winners .photo").height(wH)
-	# $("#winners .photo").width(wW)
-else
-	if navigator.userAgent.match(/iPhone/i)
-		window.wH=window.wH*1.25
-		window.wW=window.wW*1.25
-	$("#features #video").width(wW)
-	$("#features #video").height(wW/1.777)
-	$("#features #video").css
-		position: "absolute"
-		top: "50%"
-		left: "50%"
-		marginLeft: ((wW)/2)*-1+"px"
-		marginTop: ((wW/1.777)/2)*-1+"px"
-	# $("#winners .photo").height(wH)
-	# $("#winners .photo").width(wW)
 
+# if wW > wH
+
+# 	$("#features #video").width(wH*1.777)
+# 	$("#features #video").height(wH)
+# 	$("#features #video").css
+# 		position: "absolute"
+# 		top: "50%"
+# 		left: "50%"
+# 		marginLeft: ((wH*1.777)/2)*-1+"px"
+# 		marginTop: (wH/2)*-1+"px"
+
+# else
+
+# 	$("#features #video").width(wW)
+# 	$("#features #video").height(wW/1.777)
+# 	$("#features #video").css
+# 		position: "absolute"
+# 		top: "50%"
+# 		left: "50%"
+# 		marginLeft: ((wW)/2)*-1+"px"
+# 		marginTop: ((wW/1.777)/2)*-1+"px"
+resize = ->
+	wH = $(window).height()
+	wW = $(window).width()
+	ratio = wW/wH
+
+	if wW > wH
+
+		if ratio>1.777
+			$("#features #video").width(wW)
+			$("#features #video").height("auto")
+			$("#features #video").css
+				position: "absolute"
+				top: "50%"
+				left: "50%"
+				marginLeft: (wW/2)*-1+"px"
+				marginTop: ($("#features #video").height()/2)*-1+"px"
+		else
+			$("#features #video").width(wH*1.777)
+			$("#features #video").height(wH)
+			$("#features #video").css
+				position: "absolute"
+				top: "50%"
+				left: "50%"
+				marginLeft: ((wH*1.777)/2)*-1+"px"
+				marginTop: (wH/2)*-1+"px"
+
+	else
+
+		$("#features #video").height(wH)
+		$("#features #video").width(wH*1.777)
+		$("#features #video").css
+			position: "absolute"
+			top: "50%"
+			left: "50%"
+			marginLeft: ((wH*1.777)/2)*-1+"px"
+			marginTop: (wH/2)*-1+"px"
+
+resize()
 featureIn = (feature) ->
 	titleMaskCont = $("#"+feature+" .titleMaskCont")
 	titleMask = $("#"+feature+" .titleMask")
@@ -389,6 +435,28 @@ $ ->
 	, ->
 		colorsLinkBtnOut()
 
+	$("#features .hotspotbtn").hover ->
+		$currentHotSpot = $(this)
+		hotspotOpenedBtnOver($currentHotSpot)
+	, ->
+		hotspotOpenedBtnOut($currentHotSpot)
+
+
+	$("#paintBtn").hover ->
+		paintPageBtnOver()
+	, ->
+		paintPageBtnOut()
+
+	$("#mapBtn").hover ->
+		mapPageBtnOver()
+	, ->
+		mapPageBtnOut()
+	$(".InsPageCont").hover ->
+		instaPageBtnOver()
+	, ->
+		instaPageBtnOut()
+
+
 	$(".fbPageCont").hover ->
 		fbPageBtnIn()
 	, ->
@@ -404,14 +472,14 @@ $ ->
 	, ->
 		knowMoreTextBtnOut("features")
 
-	$(".hotspotCloseCont").on "click", (ee)->
+	$("#features .hotspotCloseCont").on "click", (ee)->
 		ee.preventDefault()
 		currentHS = $(this).attr "hotspot"
 		hotspotClose(currentHS)
 		$(".hotspotIdle, .hotspotOver").css
 			visibility: "visible"
 		hotspotsBtnsOpen()
-	$(".hotspotOver").on "click", (e)->
+	$("#features .hotspotOver").on "click", (e)->
 		e.preventDefault()
 		currentHS = $(this).attr "hotspot"
 		console.log currentHS
@@ -422,6 +490,14 @@ $ ->
 		$(".hotspotIdle, .hotspotOver").css
 			visibility: "hidden"
 
+	$(".hotmapOver").on "click", ->
+		currentId = $(this).parent().attr "id"
+		console.log currentId
+		hotspotMapOpen(currentId)
+	$(".map .hotspotCloseCont").on "click", ->
+		currentId = $(this).parent().parent().attr "id"
+		console.log currentId
+		hotspotMapClose(currentId)
 
 	$(".hotspotCont").hover ->
 		currentHS = $(this).attr "hotspot"
@@ -468,11 +544,9 @@ $ ->
 		$("#"+paints[currentPaint]).addClass "active"
 		$("#paintColor").html colors[currentPaint]
 		console.log currentPaint
-
-
 		currentPaint++
 
-	$(".hotspotbtn").on "click", ->
+	$("#features .hotspotbtn").on "click", ->
 		$(".hotspotbtn").removeClass "active"
 		$(this).addClass "active"
 		cont = $(this).attr "hscont"
@@ -482,6 +556,18 @@ $ ->
 		$(this).parent().parent().find(".contentCont").hide()
 		$("#"+cont).show()
 		hotspotInfoOpen(hotspot)
+	$(".map .hotspotbtn").on "click", ->
+		$(".map .hotspotbtn").removeClass "active"
+		$(this).addClass "active"
+		currentCont = $(this).attr "hscont"
+		currentHotSpot = $(this).parent().parent().attr "id"
+		$("#"+currentHotSpot+" .contentCont").hide()
+		$("#"+currentCont).show()
+		hotspotInfoOpen(currentHotSpot)
+
+
+
+
 	#hotspotInfoOpen("hotuno")
 
 	# pinInstaContIn(pin_id)
@@ -511,7 +597,7 @@ $ ->
 	if window.location.hash == "#consumo"
 		$("#videocinco").trigger "click"
 
-	# startSprites()
+	startSprites()
 
 
 	for i in apis.twits
@@ -556,3 +642,7 @@ $ ->
 	# 	if ct is 7
 	# 		$("#features #video").get(0).pause()
 	# 		console.log "pause"
+
+
+$(window).resize ->
+	resize()

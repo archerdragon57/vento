@@ -1,5 +1,5 @@
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Vento.aspx.cs" Inherits="Vento.Auto.Vento" %>
-<!DOCTYPE html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
   <head runat='server'>
     <meta charset='iso-8859-1'>
@@ -10,6 +10,21 @@
     <meta keywords='volkswagen, vento, carros, ideas, creatividad, invaders fest, publicidad, marketing, ruta vento, roadtrip, mejor carro para roadtrip, contaminacion, ecologia, cuidar el planeta'>
     <%: Scripts.Render("~/bundles/modernizr") %>
     <link href='css/style.css' rel='stylesheet'>
+    <script type="text/javascript">
+    if (navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/iPhone/i)) {window.location.href = "http://nuevovento.mx/auto/mobile"; }
+    <!-- * <![CDATA[ */ -->
+    var google_conversion_id = 979931181;
+    var google_custom_params = window.google_tag_params;
+    var google_remarketing_only = true;
+    <!-- * ]]> */ -->
+    </script>
+    <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+    </script>
+    <noscript>
+    <div style="display:inline; display: none;">
+    <img height="1" width="1" style="border-style:none; display: none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/979931181/?value=0&amp;guid=ON&amp;script=0"/>
+    </div>
+    </noscript>
   </head>
   <body>
     <div id='fb-root'></div>
@@ -25,6 +40,69 @@
       </asp:ScriptManager>
     </form>
     <!-- %script{:src=>"js/click_tags.js"} -->
+    <div id='splash'>
+      <a class='btnConfigurador' href='http://www.configuratuvw.mx/Vento' target='_blank'>
+        Configúralo
+      </a>
+      <div class='headerSplash'>
+        <a class='logoSplash' href='http://www.vw.com.mx' target='_blank'></a>
+        <div class='socialSplash'>
+          <a class='fbPageCont' href='http://www.facebook.com/VolkswagenMexico' target='_blank'>
+            <div class='fbPageBack'></div>
+            <div class='fbPageIcon'></div>
+          </a>
+          <a class='twPageCont' href='https://twitter.com/Volkswagen_MX' target='_blank'>
+            <div class='twPageBack'></div>
+            <div class='twPageIcon'></div>
+          </a>
+          <a class='InsPageCont' href='http://instagram.com/volkswagenmexico' target='_blank'>
+            <div class='InsPageBack'></div>
+            <div class='InsPageIcon'></div>
+          </a>
+        </div>
+      </div>
+      <div class='contentSplash'>
+        <div class='titleVentoCont'>
+          <div class='titleVentoMask'>
+            <div class='titleVento'>
+              <div class='titleVentoImg'></div>
+            </div>
+          </div>
+        </div>
+        <div class='coche'>
+          <div class='cocheCont'>
+            <div class='cochePaintCont'>
+              <div class='cocheShadow'></div>
+              <div class='cochePaint active' id='paint-white'></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class='footerSplash'>
+        <div class='footerSplashContainer'>
+          <a class='btncopyright' href='http://www.volkswagen.mx/es/models/nuevo-vento/galeria.html?tc=oa-vento-mx-minisite-footer' target='_blank'>
+            <p class='copyright'>
+              © Volkswagen México 2013
+            </p>
+          </a>
+          <a class='btnpoliticas' href='http://www.vw.com.mx/es/tools/navigation/footer/aspectos_legalesyavisodeprivacidad.html' target='_blank'>
+            <p class='politicas'>
+              Políticas de Privacidad
+            </p>
+          </a>
+          <a class='btnficha' href='http://www.vw.com.mx/es/models/nuevo-vento/versiones.html?tc=oa-vento-mx-minisite-footer' target='_blank'>
+            <p class='fichatec'>
+              Ficha Técnica
+            </p>
+          </a>
+          <a class='btnprueba' href='http://www.volkswagen.mx/es/models/nuevo-vento/atencion-personalizada.html?tc=oa-vento-mx-minisite-footer' target='_blank'>
+            <p class='pruebamanejo'>
+              Prueba de Manejo
+            </p>
+          </a>
+        </div>
+      </div>
+    </div>
     <div id='preloader'>
       <div class='preloading' id='preloader-content'>
         <div class='ui-spinner'>
@@ -53,6 +131,10 @@
           <div class='twPageBack'></div>
           <div class='twPageIcon'></div>
         </a>
+        <a class='InsPageCont' href='http://instagram.com/volkswagenmexico' target='_blank'>
+          <div class='InsPageBack'></div>
+          <div class='InsPageIcon'></div>
+        </a>
       </div>
       <a href='#colores' id='paintBtn'>
         <div class='paintBtnBack'></div>
@@ -62,6 +144,7 @@
         </div>
       </a>
       <a href='#ruta' id='mapBtn'>
+        <div class='whiteback'></div>
         <div class='mapBtnBack'></div>
         <div class='mapBtnIcon'>
           <div class='mapBtnIconBack'></div>
@@ -142,7 +225,15 @@
     </div>
     <div id='mainCont'>
       <div class='container' id='features'>
-        <video autplay='' id='video' preload='auto' src='img/hotspots/hotspots.mp4'></video>
+        <div class='videoPinFeatures'>
+          <div class='vpBack'></div>
+          <div class='vpIcon'></div>
+        </div>
+        <video autplay='' id='video' preload='auto'>
+          <source src='img/hotspots/hotspots.mp4' type='video/mp4'></source>
+          <source src='img/hotspots/hotspots.ogv' type='video/ogg'></source>
+          <source src='img/hotspots/hotspots.webm' type='video/webm'></source>
+        </video>
         <div class='pattern'></div>
         <div class='pattern2'></div>
         <div class='feature' id='equipamiento'>
@@ -174,7 +265,7 @@
               </p>
             </a>
           </div>
-          <div class='hotspotCont' hotspot='hotuno' href='#' id='hotuno'>
+          <div class='hotspotCont drag' hotspot='hotuno' href='#' id='hotuno'>
             <div class='hotspotIdle'></div>
             <div class='hotspotOver' hotspot='hotuno'></div>
             <div class='hotspotOpenContainer'>
@@ -234,7 +325,7 @@
               </a>
             </div>
           </div>
-          <div class='hotspotCont' hotspot='hotdos' href='#' id='hotdos'>
+          <div class='hotspotCont drag' hotspot='hotdos' href='#' id='hotdos'>
             <div class='hotspotIdle'></div>
             <div class='hotspotOver' hotspot='hotdos'></div>
             <div class='hotspotOpenContainer'>
@@ -263,7 +354,7 @@
                       </div>
                     </div>
                     <div class='contentImagen contentCont'>
-                      <a class='hotspotImage' href='img/fotos_full/tiempo.png'>
+                      <a class='hotspotImage fancybox' href='img/fotos_full/tiempo.png'>
                         <img alt='' src='img/hotspots_images/foto_tiempo_hotspot.png'>
                       </a>
                     </div>
@@ -294,7 +385,7 @@
               </a>
             </div>
           </div>
-          <div class='hotspotCont' hotspot='hottres' href='#' id='hottres'>
+          <div class='hotspotCont drag' hotspot='hottres' href='#' id='hottres'>
             <div class='hotspotIdle'></div>
             <div class='hotspotOver' hotspot='hottres'></div>
             <div class='hotspotOpenContainer'>
@@ -323,7 +414,7 @@
                       </div>
                     </div>
                     <div class='contentImagen contentCont'>
-                      <a class='hotspotImage' href='img/fotos_full/computadora.png'>
+                      <a class='hotspotImage fancybox' href='img/fotos_full/computadora.png'>
                         <img alt='' src='img/hotspots_images/foto_computadora_hotspot.png'>
                       </a>
                     </div>
@@ -397,6 +488,10 @@
               <!-- %a.videoPinMap#videoMap04.fancybox{:href => "http://www.youtube.com/embed/AUWcaJ7tsys?autoplay=1&amp;vq=hd1080&amp;controls=0&amp;rel=0&amp;showinfo=0", :data=>{:fancybox_type=>"iframe"}} -->
               <!-- .vpBack -->
               <!-- .vpIcon -->
+              <a class='videoPinMap fancybox' data-fancybox-type='iframe' href='http://www.youtube.com/embed/xH-pAdgegvc?autoplay=1&amp;amp;vq=hd1080&amp;amp;controls=0&amp;amp;rel=0&amp;amp;showinfo=0' id='videoMap00'>
+                <div class='vpBack'></div>
+                <div class='vpIcon'></div>
+              </a>
               <div class='pinInstagram' id='pinIns01'>
                 <div class='pinPoint'></div>
                 <div class='pinInstaBack'></div>
@@ -471,19 +566,17 @@
                   </div>
                 </div>
               </div>
-              <div class='hotspotMapCont' hotspot='hotmap01' href='#' id='hotmap01'>
+              <div class='hotspotMapCont drag' hotspot='hotmap01' href='#' id='hotmap01'>
                 <div class='hotspotIdle'></div>
-                <div class='hotspotOver' hotspot='hotmap01'></div>
+                <div class='hotspotOver hotmapOver' hotspot='hotmap01'></div>
                 <div class='hotspotOpenContainer'>
                   <div class='hotspotOpen'>
                     <div class='hotspotMask'>
                       <div class='hotspotContent'>
                         <div class='contentInfo contentCont active'>
-                          <p class='titleInfo'>
-                            Gran espacio
-                          </p>
+                          <p class="titleInfo">#xperiVento</p>
                           <p class='descriptionInfo'>
-                            Cinco pasajeros, más temas de conversación. Distancias al interior realmente amplias para que el viaje sea más ligero: casi 1.70 metros de ancho y 1.46 de alto.
+                            Una filósofa, una apasionada de las redes sociales, un emprendedor y un fotógrafo, perfiles diversos con un simple objetivo: cambiar el mundo con una idea generada a bordo de nuevo Vento.
                           </p>
                           <p class='compartir'>
                             compartir
@@ -501,7 +594,7 @@
                         </div>
                         <div class='contentImagen contentCont'>
                           <a class='hotspotImage' href='#'>
-                            <img alt='' src='img/hotspots_images/foto_aqui_cabe_todo_hotspot.png'>
+                            <img alt='' src='img/map/equipo_1_ganador.png'>
                           </a>
                         </div>
                         <div class='contentVideo contentCont'>
@@ -513,19 +606,135 @@
                       </div>
                     </div>
                   </div>
-                  <a class='hotspotCloseCont hotspotbtn' hotspot='hotmap01' href='#' hscont='contentInfo'>
+                  <a class='hotspotCloseCont hotspotbtn' hotspot='hotmap01' href='#' hscont='hotmap01 .contentInfo'>
                     <div class='hotspotCloseBack hotspotbtnBack'></div>
                     <div class='hotspotCloseIcon hotspotbtnIcon'></div>
                   </a>
-                  <a class='hotspotInfoCont hotspotbtn active' href='#' hscont='contentInfo'>
+                  <a class='hotspotInfoCont hotspotbtn active' href='#' hscont='hotmap01 .contentInfo'>
                     <div class='hotspotInfoBack hotspotbtnBack'></div>
                     <div class='hotspotInfoIcon hotspotbtnIcon'></div>
                   </a>
-                  <a class='hotspotImageCont hotspotbtn' href='#' hscont='contentImage'>
+                  <a class='hotspotImageCont hotspotbtn' href='#' hscont='hotmap01 .contentImagen'>
                     <div class='hotspotImageBack hotspotbtnBack'></div>
                     <div class='hotspotImageIcon hotspotbtnIcon'></div>
                   </a>
-                  <a class='hotspotVideoCont fancybox hotspotbtn' href='#' hscont='contentInfo'>
+                  <a class='hotspotVideoCont fancybox hotspotbtn' data-fancybox-type='iframe' href='https://dl.dropboxusercontent.com/u/72722605/vento/xperiVento.mp4' hscont='hotmap01 .contentInfo'>
+                    <div class='hotspotVideoBack hotspotbtnBack'></div>
+                    <div class='hotspotVideoIcon hotspotbtnIcon'></div>
+                  </a>
+                </div>
+              </div>
+              <div class='hotspotMapCont drag' hotspot='hotmap02' href='#' id='hotmap02'>
+                <div class='hotspotIdle'></div>
+                <div class='hotspotOver hotmapOver' hotspot='hotmap02'></div>
+                <div class='hotspotOpenContainer'>
+                  <div class='hotspotOpen'>
+                    <div class='hotspotMask'>
+                      <div class='hotspotContent'>
+                        <div class='contentInfo contentCont active'>
+                          <p class="titleInfo">#vamonosdeaVenton</p>
+                          <p class='descriptionInfo'>
+                            Procedentes de ciudades diferentes y de carreras totalmente distintas, un biólogo, una diseñadora, un comunicólogo y un ingeniero en electrónica, demostrarán que la brecha generacional que existe entre ellos no es impedimento para generar una gran idea.
+                          </p>
+                          <p class='compartir'>
+                            compartir
+                          </p>
+                          <div class='shareCont'>
+                            <a class='twShareCont' href='#'>
+                              <div class='twShareBack'></div>
+                              <div class='twShareIcon'></div>
+                            </a>
+                            <a class='fbShareCont' href='#'>
+                              <div class='fbShareBack'></div>
+                              <div class='fbShareIcon'></div>
+                            </a>
+                          </div>
+                        </div>
+                        <div class='contentImagen contentCont'>
+                          <a class='hotspotImage' href='#'>
+                            <img alt='' src='img/map/equipo2.png'>
+                          </a>
+                        </div>
+                        <div class='contentVideo contentCont'>
+                          <div class='playBtnCont'>
+                            <div class='playBtnBack'></div>
+                            <div class='playBtnIcon'></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <a class='hotspotCloseCont hotspotbtn' hotspot='hotmap02' href='#' hscont='hotmap02 .contentInfo'>
+                    <div class='hotspotCloseBack hotspotbtnBack'></div>
+                    <div class='hotspotCloseIcon hotspotbtnIcon'></div>
+                  </a>
+                  <a class='hotspotInfoCont hotspotbtn active' href='#' hscont='hotmap02 .contentInfo'>
+                    <div class='hotspotInfoBack hotspotbtnBack'></div>
+                    <div class='hotspotInfoIcon hotspotbtnIcon'></div>
+                  </a>
+                  <a class='hotspotImageCont hotspotbtn' href='#' hscont='hotmap02 .contentImagen'>
+                    <div class='hotspotImageBack hotspotbtnBack'></div>
+                    <div class='hotspotImageIcon hotspotbtnIcon'></div>
+                  </a>
+                  <a class='hotspotVideoCont fancybox hotspotbtn' href='#' hscont='hotmap02 .contentInfo'>
+                    <div class='hotspotVideoBack hotspotbtnBack'></div>
+                    <div class='hotspotVideoIcon hotspotbtnIcon'></div>
+                  </a>
+                </div>
+              </div>
+              <div class='hotspotMapCont drag' hotspot='hotmap03' href='#' id='hotmap03'>
+                <div class='hotspotIdle'></div>
+                <div class='hotspotOver hotmapOver' hotspot='hotmap03'></div>
+                <div class='hotspotOpenContainer'>
+                  <div class='hotspotOpen'>
+                    <div class='hotspotMask'>
+                      <div class='hotspotContent'>
+                        <div class='contentInfo contentCont active'>
+                          <p class="titleInfo">#greenVentors</p>
+                          <p class='descriptionInfo'>
+                            Ensenada, Estado de México, Distrito Federal y Michoacán. Aventureros, exploradores y, ¿porqué no? también creativos caben en este equipo. Diferentes personalidades, grandes experiencias y mucha expectativa serán las constantes de los participantes de nuevo Vento.
+                          </p>
+                          <p class='compartir'>
+                            compartir
+                          </p>
+                          <div class='shareCont'>
+                            <a class='twShareCont' href='#'>
+                              <div class='twShareBack'></div>
+                              <div class='twShareIcon'></div>
+                            </a>
+                            <a class='fbShareCont' href='#'>
+                              <div class='fbShareBack'></div>
+                              <div class='fbShareIcon'></div>
+                            </a>
+                          </div>
+                        </div>
+                        <div class='contentImagen contentCont'>
+                          <a class='hotspotImage' href='#'>
+                            <img alt='' src='img/map/equipo3img.png'>
+                          </a>
+                        </div>
+                        <div class='contentVideo contentCont'>
+                          <div class='playBtnCont'>
+                            <div class='playBtnBack'></div>
+                            <div class='playBtnIcon'></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <a class='hotspotCloseCont hotspotbtn' hotspot='hotmap03' href='#' hscont='hotmap03 .contentInfo'>
+                    <div class='hotspotCloseBack hotspotbtnBack'></div>
+                    <div class='hotspotCloseIcon hotspotbtnIcon'></div>
+                  </a>
+                  <a class='hotspotInfoCont hotspotbtn active' href='#' hscont='hotmap03 .contentInfo'>
+                    <div class='hotspotInfoBack hotspotbtnBack'></div>
+                    <div class='hotspotInfoIcon hotspotbtnIcon'></div>
+                  </a>
+                  <a class='hotspotImageCont hotspotbtn' href='#' hscont='hotmap03 .contentImagen'>
+                    <div class='hotspotImageBack hotspotbtnBack'></div>
+                    <div class='hotspotImageIcon hotspotbtnIcon'></div>
+                  </a>
+                  <a class='hotspotVideoCont fancybox hotspotbtn' href='#' hscont='hotmap03 .contentInfo'>
                     <div class='hotspotVideoBack hotspotbtnBack'></div>
                     <div class='hotspotVideoIcon hotspotbtnIcon'></div>
                   </a>
@@ -583,6 +792,30 @@
         </div>
       </div>
     </div>
+    <div id='footer'>
+      <div id='footerContainer'>
+        <a class='btncopyright' href='http://www.volkswagen.mx/es/models/nuevo-vento/galeria.html?tc=oa-vento-mx-minisite-footer' target='_blank'>
+          <p class='copyright'>
+            © Volkswagen México 2013
+          </p>
+        </a>
+        <a class='btnpoliticas' href='http://www.vw.com.mx/es/tools/navigation/footer/aspectos_legalesyavisodeprivacidad.html' target='_blank'>
+          <p class='politicas'>
+            Políticas de Privacidad
+          </p>
+        </a>
+        <a class='btnficha' href='http://www.vw.com.mx/es/models/nuevo-vento/versiones.html?tc=oa-vento-mx-minisite-footer' target='_blank'>
+          <p class='fichatec'>
+            Ficha Técnica
+          </p>
+        </a>
+        <a class='btnprueba' href='http://www.volkswagen.mx/es/models/nuevo-vento/atencion-personalizada.html?tc=oa-vento-mx-minisite-footer' target='_blank'>
+          <p class='pruebamanejo'>
+            Prueba de Manejo
+          </p>
+        </a>
+      </div>
+    </div>
     <link href='js/fancybox/source/jquery.fancybox.css' rel='stylesheet'>
     <script src='js/TweenMax.min.js'></script>
     <script src='js/TimelineMax.min.js'></script>
@@ -600,6 +833,8 @@
     <script src='js/cuepoints.js'></script>
     <script src='js/imageFiles.js'></script>
     <script src='js/copys.js'></script>
+    <script src='js/drag.js'></script>
+    <script src='js/clicktags.js'></script>
     <script src='js/main.js'></script>
   </body>
 </html>

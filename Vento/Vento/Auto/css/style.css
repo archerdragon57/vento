@@ -60,9 +60,64 @@ body, html {
   height: 100%;
   overflow: hidden;
   background-color: #001e4c; }
+  body iframe, html iframe {
+    display: none; }
 
 .fancybox-lock .fancybox-overlay {
   z-index: 20000; }
+
+#splash {
+  display: none; }
+
+#footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  z-index: 100;
+  height: 14px;
+  background: white;
+  padding-top: 9px;
+  padding-bottom: 8px; }
+  #footer #footerContainer {
+    width: 610px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto; }
+    #footer #footerContainer a {
+      float: left;
+      display: block; }
+    #footer #footerContainer p.copyright {
+      font-family: "VWHeadlineOTBook";
+      font-size: 13px;
+      color: #c6c6c6;
+      margin: 0;
+      margin-left: 35px;
+      padding-right: 15px;
+      border-right: #e8e8e8 solid 1px; }
+    #footer #footerContainer p.politicas {
+      font-family: "VWHeadlineOTBook";
+      font-size: 13px;
+      color: #c6c6c6;
+      margin: 0;
+      padding-left: 15px;
+      padding-right: 15px;
+      border-right: #e8e8e8 solid 1px; }
+    #footer #footerContainer p.fichatec {
+      font-family: "VWHeadlineOTBook";
+      font-size: 13px;
+      color: #c6c6c6;
+      margin: 0;
+      padding-left: 15px;
+      padding-right: 15px;
+      border-right: #e8e8e8 solid 1px; }
+    #footer #footerContainer p.pruebamanejo {
+      font-family: "VWHeadlineOTBook";
+      font-size: 13px;
+      color: #c6c6c6;
+      margin: 0;
+      padding-left: 15px;
+      padding-right: 15px;
+      border-right: #e8e8e8 solid 1px; }
 
 #preloader {
   display: block;
@@ -117,42 +172,78 @@ body, html {
     bottom: 60px;
     right: 60px;
     z-index: 50;
+    opacity: 0;
     -webkit-perspective: 800px;
+    -moz-perspective: 800px;
+    -ms-perspective: 800px;
+    -o-perspective: 800px;
+    perspective: 800px;
     -webkit-perspective-origin: 50% 50%;
-    background: url("../img/btnMapa_bg2.png") 50% 50% no-repeat; }
-    #overlay a#mapBtn:hover .paintBtnBack {
-      -moz-transition: -webkit-transform 0.1s;
-      -webkit-transition: -webkit-transform 0.1s;
-      -o-transition: -webkit-transform 0.1s;
-      transition: -webkit-transform 0.1s;
-      -webkit-backface-visibility: hidden;
-      transition-timing-function: linear;
-      -webkit-transition-timing-function: linear;
-      -webkit-transform: scale(1.121, 1.121); }
-    #overlay a#mapBtn.flipped .mapBtnIcon {
-      -webkit-transform: rotateY(180deg); }
+    -moz-perspective-origin: 50% 50%;
+    -ms-perspective-origin: 50% 50%;
+    -o-perspective-origin: 50% 50%;
+    perspective-origin: 50% 50%; }
+    #overlay a#mapBtn.flipped .mapBtnIcon .mapBtnIconFront {
+      display: none;
+      -webkit-backface-visibility: visible;
+      -moz-backface-visibility: visible;
+      -ms-backface-visibility: visible;
+      -o-backface-visibility: visible;
+      backface-visibility: visible;
+      -webkit-transform: rotateY(180deg);
+      -moz-transform: rotateY(180deg);
+      -ms-transform: rotateY(180deg);
+      -o-transform: rotateY(180deg);
+      transform: rotateY(180deg); }
+    #overlay a#mapBtn.flipped .mapBtnIcon .mapBtnIconBack {
+      z-index: 50;
+      display: block;
+      -webkit-transform: rotateY(0deg);
+      -moz-transform: rotateY(0deg);
+      -ms-transform: rotateY(0deg);
+      -o-transform: rotateY(0deg);
+      transform: rotateY(0deg);
+      -webkit-backface-visibility: visible;
+      -moz-backface-visibility: visible;
+      -ms-backface-visibility: visible;
+      -o-backface-visibility: visible;
+      backface-visibility: visible; }
+    #overlay a#mapBtn .whiteback {
+      width: 95px;
+      height: 95px;
+      position: absolute;
+      background: url("../img/btnMapa_bg2.png") 50% 50% no-repeat; }
     #overlay a#mapBtn .mapBtnBack {
       width: 95px;
       height: 95px;
       position: absolute;
       background: url("../img/btnMapa_bg.png") 50% 50% no-repeat;
-      -moz-transition: -webkit-transform 0.1s;
-      -webkit-transition: -webkit-transform 0.1s;
-      -o-transition: -webkit-transform 0.1s;
-      transition: -webkit-transform 0.1s;
+      -moz-transition: all 0.1s;
+      -webkit-transition: all 0.1s;
+      -o-transition: all 0.1s;
+      transition: all 0.1s;
       -webkit-backface-visibility: hidden;
       transition-timing-function: linear;
       -webkit-transition-timing-function: linear;
-      -webkit-transform: scale(1, 1); }
+      -webkit-transform: scale(1, 1);
+      -moz-transform: scale(1, 1);
+      -ms-transform: scale(1, 1);
+      -o-transform: scale(1, 1);
+      transform: scale(1, 1); }
     #overlay a#mapBtn .mapBtnIcon {
       width: 95px;
       height: 95px;
+      opacity: 0;
       position: absolute;
       -webkit-transform-style: preserve-3d;
-      -moz-transition: -webkit-transform 0.7s;
-      -webkit-transition: -webkit-transform 0.7s;
-      -o-transition: -webkit-transform 0.7s;
-      transition: -webkit-transform 0.7s;
+      -moz-transform-style: preserve-3d;
+      -ms-transform-style: preserve-3d;
+      -o-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+      -moz-transition: all 0.7s;
+      -webkit-transition: all 0.7s;
+      -o-transition: all 0.7s;
+      transition: all 0.7s;
       -webkit-backface-visibility: hidden;
       transition-timing-function: linear;
       -webkit-transition-timing-function: linear; }
@@ -162,13 +253,27 @@ body, html {
         position: absolute;
         background: url("../img/btnMapa_back.png") 50% 50% no-repeat;
         -webkit-backface-visibility: hidden;
-        -webkit-transform: rotateY(180deg); }
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        -ms-backface-visibility: hidden;
+        -o-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -webkit-transform: rotateY(180deg);
+        -moz-transform: rotateY(180deg);
+        -ms-transform: rotateY(180deg);
+        -o-transform: rotateY(180deg);
+        transform: rotateY(180deg);
+        z-index: 10; }
       #overlay a#mapBtn .mapBtnIcon .mapBtnIconFront {
         width: 95px;
         height: 95px;
         position: absolute;
         background: url("../img/btnMapa_toMap.png") 50% 50% no-repeat;
-        -webkit-backface-visibility: hidden; }
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        -ms-backface-visibility: hidden;
+        -o-backface-visibility: hidden;
+        backface-visibility: hidden; }
   #overlay a#paintBtn {
     position: fixed;
     bottom: 60px;
@@ -178,40 +283,54 @@ body, html {
     display: block;
     z-index: 40;
     -webkit-perspective: 800px;
-    -webkit-perspective-origin: 50% 50%; }
-    #overlay a#paintBtn:hover .paintBtnBack {
-      -moz-transition: -webkit-transform 0.1s;
-      -webkit-transition: -webkit-transform 0.1s;
-      -o-transition: -webkit-transform 0.1s;
-      transition: -webkit-transform 0.1s;
-      -webkit-backface-visibility: hidden;
-      transition-timing-function: linear;
-      -webkit-transition-timing-function: linear;
-      -webkit-transform: scale(1.121, 1.121); }
+    -moz-perspective: 800px;
+    -ms-perspective: 800px;
+    -o-perspective: 800px;
+    perspective: 800px;
+    -webkit-perspective-origin: 50% 50%;
+    -moz-perspective-origin: 50% 50%;
+    -ms-perspective-origin: 50% 50%;
+    -o-perspective-origin: 50% 50%;
+    perspective-origin: 50% 50%; }
     #overlay a#paintBtn.flipped .paintBtnIcon {
-      -webkit-transform: rotateY(180deg); }
+      -webkit-transform: rotateY(180deg);
+      -moz-transform: rotateY(180deg);
+      -ms-transform: rotateY(180deg);
+      -o-transform: rotateY(180deg);
+      transform: rotateY(180deg); }
     #overlay a#paintBtn .paintBtnBack {
       width: 61px;
       height: 61px;
+      opacity: 0;
       position: absolute;
       background: url("../img/paint/Shape_cubeta.png") 50% 50% no-repeat;
-      -moz-transition: -webkit-transform 0.1s;
-      -webkit-transition: -webkit-transform 0.1s;
-      -o-transition: -webkit-transform 0.1s;
-      transition: -webkit-transform 0.1s;
+      -moz-transition: all 0.1s;
+      -webkit-transition: all 0.1s;
+      -o-transition: all 0.1s;
+      transition: all 0.1s;
       -webkit-backface-visibility: hidden;
       transition-timing-function: linear;
       -webkit-transition-timing-function: linear;
-      -webkit-transform: scale(1, 1); }
+      -webkit-transform: scale(1, 1);
+      -webkit-transform: scale(1, 1);
+      -moz-transform: scale(1, 1);
+      -ms-transform: scale(1, 1);
+      -o-transform: scale(1, 1);
+      transform: scale(1, 1); }
     #overlay a#paintBtn .paintBtnIcon {
       width: 61px;
       height: 61px;
+      opacity: 0;
       position: absolute;
       -webkit-transform-style: preserve-3d;
-      -moz-transition: -webkit-transform 0.7s;
-      -webkit-transition: -webkit-transform 0.7s;
-      -o-transition: -webkit-transform 0.7s;
-      transition: -webkit-transform 0.7s;
+      -moz-transform-style: preserve-3d;
+      -ms-transform-style: preserve-3d;
+      -o-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+      -moz-transition: all 0.7s;
+      -webkit-transition: all 0.7s;
+      -o-transition: all 0.7s;
+      transition: all 0.7s;
       -webkit-backface-visibility: hidden;
       transition-timing-function: linear;
       -webkit-transition-timing-function: linear;
@@ -221,14 +340,26 @@ body, html {
         height: 61px;
         position: absolute;
         background: url("../img/paint/cubeta_icon.png") 50% 50% no-repeat;
-        -webkit-backface-visibility: hidden; }
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        -ms-backface-visibility: hidden;
+        -o-backface-visibility: hidden;
+        backface-visibility: hidden; }
       #overlay a#paintBtn .paintBtnIcon .paintBtnIconBack {
         width: 61px;
         height: 61px;
         position: absolute;
         background: url("../img/paint/regresar_icon.png") 50% 50% no-repeat;
         -webkit-backface-visibility: hidden;
-        -webkit-transform: rotateY(180deg); }
+        -moz-backface-visibility: hidden;
+        -ms-backface-visibility: hidden;
+        -o-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -webkit-transform: rotateY(180deg);
+        -moz-transform: rotateY(180deg);
+        -ms-transform: rotateY(180deg);
+        -o-transform: rotateY(180deg);
+        transform: rotateY(180deg); }
   #overlay #logoHeader {
     display: block;
     width: 100px;
@@ -243,7 +374,7 @@ body, html {
     position: absolute;
     top: 35px;
     right: 60px;
-    width: 220px;
+    width: 270px;
     height: 40px;
     z-index: 40; }
     #overlay #socialHeader .colorsLinkCont {
@@ -253,6 +384,10 @@ body, html {
       float: left;
       margin-right: 10px; }
       #overlay #socialHeader .colorsLinkCont .colorsLink {
+        -webkit-transform: scale(1, 1);
+        -moz-transform: scale(1, 1);
+        -ms-transform: scale(1, 1);
+        -o-transform: scale(1, 1);
         transform: scale(1, 1);
         visibility: visible;
         width: 133px;
@@ -279,6 +414,26 @@ body, html {
         text-align: center;
         padding: 9px;
         padding-left: 40px; }
+    #overlay #socialHeader .InsPageCont {
+      width: 31px;
+      height: 31px;
+      position: relative;
+      float: left;
+      margin-right: 10px; }
+      #overlay #socialHeader .InsPageCont .InsPageBack {
+        width: 31px;
+        height: 31px;
+        top: 0;
+        left: 0;
+        position: absolute;
+        opacity: 0;
+        background: url("../img/btn_social_icons_shape.png") 0 0 no-repeat; }
+      #overlay #socialHeader .InsPageCont .InsPageIcon {
+        width: 31px;
+        height: 31px;
+        position: absolute;
+        opacity: 0;
+        background: url("../img/instagram_red_social_header.png") 50% 50% no-repeat; }
     #overlay #socialHeader .fbPageCont {
       width: 31px;
       height: 31px;
@@ -303,7 +458,8 @@ body, html {
       width: 31px;
       height: 31px;
       position: relative;
-      float: left; }
+      float: left;
+      margin-right: 10px; }
       #overlay #socialHeader .twPageCont .twPageBack {
         width: 31px;
         height: 31px;
@@ -320,7 +476,7 @@ body, html {
         background: url("../img/twitter_icon.png") 50% 50% no-repeat; }
   #overlay #videoNav {
     position: absolute;
-    bottom: 35px;
+    bottom: 62px;
     width: 100%;
     height: 50px; }
     #overlay #videoNav .videoNavCont {
@@ -356,32 +512,44 @@ body, html {
         opacity: 0;
         background: url("../img/timelinepoint_over.png") 0 0 no-repeat; }
         #overlay #videoNav .videoNavCont .videoPoint:hover .videoFeature {
-          -moz-transition: -webkit-transform 0.1s;
-          -webkit-transition: -webkit-transform 0.1s;
-          -o-transition: -webkit-transform 0.1s;
-          transition: -webkit-transform 0.1s;
+          -moz-transition: all 0.1s;
+          -webkit-transition: all 0.1s;
+          -o-transition: all 0.1s;
+          transition: all 0.1s;
           -webkit-backface-visibility: hidden;
           transition-timing-function: linear;
           -webkit-transition-timing-function: linear;
-          -webkit-transform: scale(1, 1); }
+          -webkit-transform: scale(1, 1);
+          -moz-transform: scale(1, 1);
+          -ms-transform: scale(1, 1);
+          -o-transform: scale(1, 1);
+          transform: scale(1, 1); }
           #overlay #videoNav .videoNavCont .videoPoint:hover .videoFeature .videoFeatureBack {
-            -moz-transition: -webkit-transform 0.1s;
-            -webkit-transition: -webkit-transform 0.1s;
-            -o-transition: -webkit-transform 0.1s;
-            transition: -webkit-transform 0.1s;
+            -moz-transition: all 0.1s;
+            -webkit-transition: all 0.1s;
+            -o-transition: all 0.1s;
+            transition: all 0.1s;
             -webkit-backface-visibility: hidden;
             transition-timing-function: linear;
             -webkit-transition-timing-function: linear;
-            -webkit-transform: scale(1, 1); }
+            -webkit-transform: scale(1, 1);
+            -moz-transform: scale(1, 1);
+            -ms-transform: scale(1, 1);
+            -o-transform: scale(1, 1);
+            transform: scale(1, 1); }
         #overlay #videoNav .videoNavCont .videoPoint.active .videoFeature {
-          -moz-transition: -webkit-transform 0.1s;
-          -webkit-transition: -webkit-transform 0.1s;
-          -o-transition: -webkit-transform 0.1s;
-          transition: -webkit-transform 0.1s;
+          -moz-transition: all 0.1s;
+          -webkit-transition: all 0.1s;
+          -o-transition: all 0.1s;
+          transition: all 0.1s;
           -webkit-backface-visibility: hidden;
           transition-timing-function: linear;
           -webkit-transition-timing-function: linear;
-          -webkit-transform: scale(0, 0); }
+          -webkit-transform: scale(0, 0);
+          -moz-transform: scale(0, 0);
+          -ms-transform: scale(0, 0);
+          -o-transform: scale(0, 0);
+          transform: scale(0, 0); }
           #overlay #videoNav .videoNavCont .videoPoint.active .videoFeature .videoFeatureBack {
             background: url("../img/shape_rollover_azul_menu.png") 50% 50% no-repeat; }
           #overlay #videoNav .videoNavCont .videoPoint.active .videoFeature .videoFeatureIcon.vequipamiento {
@@ -393,23 +561,31 @@ body, html {
           #overlay #videoNav .videoNavCont .videoPoint.active .videoFeature .videoFeatureIcon.vseguridad {
             background: url("../img/seguridad_icon.png") 50% 50% no-repeat; }
         #overlay #videoNav .videoNavCont .videoPoint.active:hover .videoFeature {
-          -moz-transition: -webkit-transform 0.1s;
-          -webkit-transition: -webkit-transform 0.1s;
-          -o-transition: -webkit-transform 0.1s;
-          transition: -webkit-transform 0.1s;
+          -moz-transition: all 0.1s;
+          -webkit-transition: all 0.1s;
+          -o-transition: all 0.1s;
+          transition: all 0.1s;
           -webkit-backface-visibility: hidden;
           transition-timing-function: linear;
           -webkit-transition-timing-function: linear;
-          -webkit-transform: scale(1, 1); }
+          -webkit-transform: scale(1, 1);
+          -moz-transform: scale(1, 1);
+          -ms-transform: scale(1, 1);
+          -o-transform: scale(1, 1);
+          transform: scale(1, 1); }
           #overlay #videoNav .videoNavCont .videoPoint.active:hover .videoFeature .videoFeatureBack {
-            -moz-transition: -webkit-transform 0.1s;
-            -webkit-transition: -webkit-transform 0.1s;
-            -o-transition: -webkit-transform 0.1s;
-            transition: -webkit-transform 0.1s;
+            -moz-transition: all 0.1s;
+            -webkit-transition: all 0.1s;
+            -o-transition: all 0.1s;
+            transition: all 0.1s;
             -webkit-backface-visibility: hidden;
             transition-timing-function: linear;
             -webkit-transition-timing-function: linear;
-            -webkit-transform: scale(1, 1); }
+            -webkit-transform: scale(1, 1);
+            -moz-transform: scale(1, 1);
+            -ms-transform: scale(1, 1);
+            -o-transform: scale(1, 1);
+            transform: scale(1, 1); }
         #overlay #videoNav .videoNavCont .videoPoint.stop .videoPointPlay {
           display: block; }
         #overlay #videoNav .videoNavCont .videoPoint.stop .videoFeature {
@@ -424,23 +600,31 @@ body, html {
           left: 50%;
           margin-left: -25px;
           margin-top: -23px;
-          -moz-transition: -webkit-transform 0.1s;
-          -webkit-transition: -webkit-transform 0.1s;
-          -o-transition: -webkit-transform 0.1s;
-          transition: -webkit-transform 0.1s;
+          -moz-transition: all 0.1s;
+          -webkit-transition: all 0.1s;
+          -o-transition: all 0.1s;
+          transition: all 0.1s;
           -webkit-backface-visibility: hidden;
           transition-timing-function: linear;
           -webkit-transition-timing-function: linear;
-          -webkit-transform: scale(0, 0); }
+          -webkit-transform: scale(0, 0);
+          -moz-transform: scale(0, 0);
+          -ms-transform: scale(0, 0);
+          -o-transform: scale(0, 0);
+          transform: scale(0, 0); }
           #overlay #videoNav .videoNavCont .videoPoint .videoFeature:hover .videoFeatureBack {
-            -moz-transition: -webkit-transform 0.1s;
-            -webkit-transition: -webkit-transform 0.1s;
-            -o-transition: -webkit-transform 0.1s;
-            transition: -webkit-transform 0.1s;
+            -moz-transition: all 0.1s;
+            -webkit-transition: all 0.1s;
+            -o-transition: all 0.1s;
+            transition: all 0.1s;
             -webkit-backface-visibility: hidden;
             transition-timing-function: linear;
             -webkit-transition-timing-function: linear;
-            -webkit-transform: scale(1, 1); }
+            -webkit-transform: scale(1, 1);
+            -moz-transform: scale(1, 1);
+            -ms-transform: scale(1, 1);
+            -o-transform: scale(1, 1);
+            transform: scale(1, 1); }
           #overlay #videoNav .videoNavCont .videoPoint .videoFeature .videoFeatureBack {
             position: absolute;
             width: 49px;
@@ -483,14 +667,18 @@ body, html {
           margin-left: -19px;
           margin-top: -19px; }
           #overlay #videoNav .videoNavCont .videoPoint .videoPointPlay:hover .videoPlayBack {
-            -moz-transition: -webkit-transform 0.1s;
-            -webkit-transition: -webkit-transform 0.1s;
-            -o-transition: -webkit-transform 0.1s;
-            transition: -webkit-transform 0.1s;
+            -moz-transition: all 0.1s;
+            -webkit-transition: all 0.1s;
+            -o-transition: all 0.1s;
+            transition: all 0.1s;
             -webkit-backface-visibility: hidden;
             transition-timing-function: linear;
             -webkit-transition-timing-function: linear;
-            -webkit-transform: scale(1.121, 1.121); }
+            -webkit-transform: scale(1.121, 1.121);
+            -moz-transform: scale(1.121, 1.121);
+            -ms-transform: scale(1.121, 1.121);
+            -o-transform: scale(1.121, 1.121);
+            transform: scale(1.121, 1.121); }
           #overlay #videoNav .videoNavCont .videoPoint .videoPointPlay .videoPlayBack {
             width: 39px;
             height: 39px;
@@ -498,14 +686,18 @@ body, html {
             top: 0;
             left: 0;
             background: url("../img/back_play_bg.png") 50% 50% no-repeat;
-            -moz-transition: -webkit-transform 0.1s;
-            -webkit-transition: -webkit-transform 0.1s;
-            -o-transition: -webkit-transform 0.1s;
-            transition: -webkit-transform 0.1s;
+            -moz-transition: all 0.1s;
+            -webkit-transition: all 0.1s;
+            -o-transition: all 0.1s;
+            transition: all 0.1s;
             -webkit-backface-visibility: hidden;
             transition-timing-function: linear;
             -webkit-transition-timing-function: linear;
-            -webkit-transform: scale(1, 1); }
+            -webkit-transform: scale(1, 1);
+            -moz-transform: scale(1, 1);
+            -ms-transform: scale(1, 1);
+            -o-transform: scale(1, 1);
+            transform: scale(1, 1); }
           #overlay #videoNav .videoNavCont .videoPoint .videoPointPlay .videoPlayIcon {
             width: 39px;
             height: 39px;
@@ -568,7 +760,8 @@ body, html {
         height: 100%;
         position: fixed;
         top: 0;
-        overflow: hidden; }
+        overflow: hidden;
+        background: #113569; }
         #mainCont #map .mapCont .mapCont2 .map {
           left: -1776px;
           top: -1450px;
@@ -577,27 +770,40 @@ body, html {
           height: 2400px;
           background: url("../img/map/mapa_back.jpg") 0 0 no-repeat; }
           #mainCont #map .mapCont .mapCont2 .map .hotspotMapCont {
-            width: 58px;
-            height: 58px;
+            width: 86px;
+            height: 86px;
             position: absolute;
             left: 270px;
             top: 270px;
             display: block; }
             #mainCont #map .mapCont .mapCont2 .map .hotspotMapCont#hotmap01 {
-              left: 609px;
-              top: 298px; }
+              left: 727px;
+              top: 1133px; }
+              #mainCont #map .mapCont .mapCont2 .map .hotspotMapCont#hotmap01 .hotspotVideoCont {
+                display: block; }
+            #mainCont #map .mapCont .mapCont2 .map .hotspotMapCont#hotmap03 {
+              cursor: pointer;
+              left: 1991px;
+              top: 1645px; }
+              #mainCont #map .mapCont .mapCont2 .map .hotspotMapCont#hotmap03 .hotspotOver {
+                background: url(../img/map/equipo3.png) 50% 50% no-repeat; }
+            #mainCont #map .mapCont .mapCont2 .map .hotspotMapCont#hotmap02 {
+              cursor: pointer;
+              left: 504px;
+              top: 648px; }
+              #mainCont #map .mapCont .mapCont2 .map .hotspotMapCont#hotmap02 .hotspotOver {
+                background: url(../img/map/numerodos.png) 50% 50% no-repeat; }
             #mainCont #map .mapCont .mapCont2 .map .hotspotMapCont .hotspotIdle {
-              width: 58px;
-              height: 58px;
+              width: 86px;
+              height: 86px;
               position: absolute;
               opacity: 1;
-              background: url("../img/hotspot.png") 50% 50% no-repeat; }
+              background: url("../img/map/ganador_shape_btn.png") 50% 50% no-repeat; }
             #mainCont #map .mapCont .mapCont2 .map .hotspotMapCont .hotspotOver {
-              width: 58px;
-              height: 58px;
+              width: 86px;
+              height: 86px;
               position: absolute;
-              opacity: 0;
-              background: url("../img/hotspot_rollover.png") 50% 50% no-repeat; }
+              background: url("../img/map/ganador_btn.png") 50% 50% no-repeat; }
             #mainCont #map .mapCont .mapCont2 .map .hotspotMapCont .hotspotOpenContainer {
               width: 312px;
               height: 311px;
@@ -612,12 +818,14 @@ body, html {
                 height: 311px;
                 position: relative;
                 display: none; }
+                #mainCont #map .mapCont .mapCont2 .map .hotspotMapCont .hotspotOpenContainer .contentCont.active {
+                  display: block; }
               #mainCont #map .mapCont .mapCont2 .map .hotspotMapCont .hotspotOpenContainer .contentInfo p.titleInfo {
                 font-family: "VWHeadlineOTBlack";
                 font-size: 19px;
                 color: #001e4c;
                 margin: 0;
-                padding-top: 80px;
+                padding-top: 67px;
                 margin-bottom: 15px;
                 text-align: center; }
               #mainCont #map .mapCont .mapCont2 .map .hotspotMapCont .hotspotOpenContainer .contentInfo p.descriptionInfo {
@@ -651,27 +859,35 @@ body, html {
                   top: 0;
                   left: 0; }
                   #mainCont #map .mapCont .mapCont2 .map .hotspotMapCont .hotspotOpenContainer .contentInfo .shareCont .twShareCont:hover .twShareBack {
-                    -moz-transition: -webkit-transform 0.1s;
-                    -webkit-transition: -webkit-transform 0.1s;
-                    -o-transition: -webkit-transform 0.1s;
-                    transition: -webkit-transform 0.1s;
+                    -moz-transition: all 0.1s;
+                    -webkit-transition: all 0.1s;
+                    -o-transition: all 0.1s;
+                    transition: all 0.1s;
                     -webkit-backface-visibility: hidden;
                     transition-timing-function: linear;
                     -webkit-transition-timing-function: linear;
-                    -webkit-transform: scale(1.121, 1.121); }
+                    -webkit-transform: scale(1.121, 1.121);
+                    -moz-transform: scale(1.121, 1.121);
+                    -ms-transform: scale(1.121, 1.121);
+                    -o-transform: scale(1.121, 1.121);
+                    transform: scale(1.121, 1.121); }
                   #mainCont #map .mapCont .mapCont2 .map .hotspotMapCont .hotspotOpenContainer .contentInfo .shareCont .twShareCont .twShareBack {
                     width: 31px;
                     height: 31px;
                     position: absolute;
                     background: url("../img/shape_share_ficha.png") 50% 50% no-repeat;
-                    -moz-transition: -webkit-transform 0.1s;
-                    -webkit-transition: -webkit-transform 0.1s;
-                    -o-transition: -webkit-transform 0.1s;
-                    transition: -webkit-transform 0.1s;
+                    -moz-transition: all 0.1s;
+                    -webkit-transition: all 0.1s;
+                    -o-transition: all 0.1s;
+                    transition: all 0.1s;
                     -webkit-backface-visibility: hidden;
                     transition-timing-function: linear;
                     -webkit-transition-timing-function: linear;
-                    -webkit-transform: scale(1, 1); }
+                    -webkit-transform: scale(1, 1);
+                    -moz-transform: scale(1, 1);
+                    -ms-transform: scale(1, 1);
+                    -o-transform: scale(1, 1);
+                    transform: scale(1, 1); }
                   #mainCont #map .mapCont .mapCont2 .map .hotspotMapCont .hotspotOpenContainer .contentInfo .shareCont .twShareCont .twShareIcon {
                     width: 31px;
                     height: 31px;
@@ -685,34 +901,53 @@ body, html {
                   top: 0;
                   right: 0; }
                   #mainCont #map .mapCont .mapCont2 .map .hotspotMapCont .hotspotOpenContainer .contentInfo .shareCont .fbShareCont:hover .fbShareBack {
-                    -moz-transition: -webkit-transform 0.1s;
-                    -webkit-transition: -webkit-transform 0.1s;
-                    -o-transition: -webkit-transform 0.1s;
-                    transition: -webkit-transform 0.1s;
+                    -moz-transition: all 0.1s;
+                    -webkit-transition: all 0.1s;
+                    -o-transition: all 0.1s;
+                    transition: all 0.1s;
                     -webkit-backface-visibility: hidden;
                     transition-timing-function: linear;
                     -webkit-transition-timing-function: linear;
-                    -webkit-transform: scale(1.121, 1.121); }
+                    -webkit-transform: scale(1.121, 1.121);
+                    -moz-transform: scale(1.121, 1.121);
+                    -ms-transform: scale(1.121, 1.121);
+                    -o-transform: scale(1.121, 1.121);
+                    transform: scale(1.121, 1.121); }
                   #mainCont #map .mapCont .mapCont2 .map .hotspotMapCont .hotspotOpenContainer .contentInfo .shareCont .fbShareCont .fbShareBack {
                     width: 31px;
                     height: 31px;
                     position: absolute;
                     background: url("../img/shape_share_ficha.png") 50% 50% no-repeat;
-                    -moz-transition: -webkit-transform 0.1s;
-                    -webkit-transition: -webkit-transform 0.1s;
-                    -o-transition: -webkit-transform 0.1s;
-                    transition: -webkit-transform 0.1s;
+                    -moz-transition: all 0.1s;
+                    -webkit-transition: all 0.1s;
+                    -o-transition: all 0.1s;
+                    transition: all 0.1s;
                     -webkit-backface-visibility: hidden;
                     transition-timing-function: linear;
                     -webkit-transition-timing-function: linear;
-                    -webkit-transform: scale(1, 1); }
+                    -webkit-transform: scale(1, 1);
+                    -moz-transform: scale(1, 1);
+                    -ms-transform: scale(1, 1);
+                    -o-transform: scale(1, 1);
+                    transform: scale(1, 1); }
                   #mainCont #map .mapCont .mapCont2 .map .hotspotMapCont .hotspotOpenContainer .contentInfo .shareCont .fbShareCont .fbShareIcon {
                     width: 31px;
                     height: 31px;
                     position: absolute;
                     background: url("../img/share_face_ficha_hotspot.png") 50% 50% no-repeat; }
-              #mainCont #map .mapCont .mapCont2 .map .hotspotMapCont .hotspotOpenContainer .contentInfo.active {
-                display: block; }
+              #mainCont #map .mapCont .mapCont2 .map .hotspotMapCont .hotspotOpenContainer .contentImagen {
+                position: relative; }
+                #mainCont #map .mapCont .mapCont2 .map .hotspotMapCont .hotspotOpenContainer .contentImagen a.hotspotImage {
+                  width: 293px;
+                  height: 292px;
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  margin-left: -147px;
+                  margin-top: -146px;
+                  display: block; }
+                #mainCont #map .mapCont .mapCont2 .map .hotspotMapCont .hotspotOpenContainer .contentImagen.active {
+                  display: block; }
               #mainCont #map .mapCont .mapCont2 .map .hotspotMapCont .hotspotOpenContainer .hotspotOpen {
                 width: 312px;
                 height: 311px;
@@ -758,7 +993,8 @@ body, html {
                   background: url("../img/icons_hotspots/foto_icon_hotspot.png") 50% 50% no-repeat; }
               #mainCont #map .mapCont .mapCont2 .map .hotspotMapCont .hotspotOpenContainer .hotspotVideoCont {
                 left: 331px;
-                top: 161px; }
+                top: 161px;
+                display: none; }
                 #mainCont #map .mapCont .mapCont2 .map .hotspotMapCont .hotspotOpenContainer .hotspotVideoCont.active .hotspotVideoIcon {
                   background: url("../img/icons_hotspots/foto_play_activo_hotspot.png") 50% 50% no-repeat; }
                 #mainCont #map .mapCont .mapCont2 .map .hotspotMapCont .hotspotOpenContainer .hotspotVideoCont .hotspotVideoIcon {
@@ -954,8 +1190,8 @@ body, html {
               top: 1874px; }
             #mainCont #map .mapCont .mapCont2 .map .pinInstagram#pinIns120 {
               display: block;
-              left: 2622px;
-              top: 2039px; }
+              left: 2568px;
+              top: 2144px; }
             #mainCont #map .mapCont .mapCont2 .map .pinInstagram#pinIns176 {
               display: block;
               left: 2586px;
@@ -1290,6 +1526,9 @@ body, html {
       height: 86px;
       position: absolute;
       background: url("../img/map/play_icon.png") 50% 50% no-repeat; }
+  #mainCont #videoMap00 {
+    left: 2616px;
+    top: 2133px; }
   #mainCont #videoMap01 {
     left: 1699px;
     top: 1744px; }
@@ -1432,27 +1671,35 @@ body, html {
             width: 61px;
             height: 61px; }
             #mainCont #paint .paintContAll .coche .cocheCont .changePaint:hover .changePaintBack {
-              -moz-transition: -webkit-transform 0.1s;
-              -webkit-transition: -webkit-transform 0.1s;
-              -o-transition: -webkit-transform 0.1s;
-              transition: -webkit-transform 0.1s;
+              -moz-transition: all 0.1s;
+              -webkit-transition: all 0.1s;
+              -o-transition: all 0.1s;
+              transition: all 0.1s;
               -webkit-backface-visibility: hidden;
               transition-timing-function: linear;
               -webkit-transition-timing-function: linear;
-              -webkit-transform: scale(1.121, 1.121); }
+              -webkit-transform: scale(1.121, 1.121);
+              -moz-transform: scale(1.121, 1.121);
+              -ms-transform: scale(1.121, 1.121);
+              -o-transform: scale(1.121, 1.121);
+              transform: scale(1.121, 1.121); }
             #mainCont #paint .paintContAll .coche .cocheCont .changePaint .changePaintBack {
               position: absolute;
               width: 61px;
               height: 61px;
               background: url("../img/paint/Shape_cubeta.png") 50% 50% no-repeat;
-              -moz-transition: -webkit-transform 0.1s;
-              -webkit-transition: -webkit-transform 0.1s;
-              -o-transition: -webkit-transform 0.1s;
-              transition: -webkit-transform 0.1s;
+              -moz-transition: all 0.1s;
+              -webkit-transition: all 0.1s;
+              -o-transition: all 0.1s;
+              transition: all 0.1s;
               -webkit-backface-visibility: hidden;
               transition-timing-function: linear;
               -webkit-transition-timing-function: linear;
-              -webkit-transform: scale(1, 1); }
+              -webkit-transform: scale(1, 1);
+              -moz-transform: scale(1, 1);
+              -ms-transform: scale(1, 1);
+              -o-transform: scale(1, 1);
+              transform: scale(1, 1); }
             #mainCont #paint .paintContAll .coche .cocheCont .changePaint .changePaintIcon {
               position: absolute;
               width: 61px;
@@ -1501,6 +1748,26 @@ body, html {
 
 #features {
   overflow: hidden; }
+  #features .videoPinFeatures {
+    width: 86px;
+    height: 86px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -43px;
+    margin-top: -43px;
+    z-index: 100;
+    display: none; }
+    #features .videoPinFeatures .vpBack {
+      width: 86px;
+      height: 86px;
+      position: absolute;
+      background: url("../img/map/ganador_shape_btn.png") 50% 50% no-repeat; }
+    #features .videoPinFeatures .vpIcon {
+      width: 86px;
+      height: 86px;
+      position: absolute;
+      background: url("../img/map/play_icon.png") 50% 50% no-repeat; }
   #features #video {
     background-color: #001e4c !important; }
   #features .pattern {
@@ -1618,14 +1885,14 @@ body, html {
       top: 270px;
       display: none; }
       #features .feature .hotspotCont#hotuno {
-        left: 609px;
-        top: 298px; }
+        left: 20%;
+        top: 37%; }
       #features .feature .hotspotCont#hotdos {
-        left: 886px;
-        top: 302px; }
+        left: 50%;
+        top: 33%; }
       #features .feature .hotspotCont#hottres {
-        left: 1193px;
-        top: 257px; }
+        left: 70%;
+        top: 37%; }
       #features .feature .hotspotCont .hotspotIdle {
         width: 58px;
         height: 58px;
@@ -1702,27 +1969,35 @@ body, html {
             top: 0;
             left: 0; }
             #features .feature .hotspotCont .hotspotOpenContainer .contentInfo .shareCont .twShareCont:hover .twShareBack {
-              -moz-transition: -webkit-transform 0.1s;
-              -webkit-transition: -webkit-transform 0.1s;
-              -o-transition: -webkit-transform 0.1s;
-              transition: -webkit-transform 0.1s;
+              -moz-transition: all 0.1s;
+              -webkit-transition: all 0.1s;
+              -o-transition: all 0.1s;
+              transition: all 0.1s;
               -webkit-backface-visibility: hidden;
               transition-timing-function: linear;
               -webkit-transition-timing-function: linear;
-              -webkit-transform: scale(1.121, 1.121); }
+              -webkit-transform: scale(1.121, 1.121);
+              -moz-transform: scale(1.121, 1.121);
+              -ms-transform: scale(1.121, 1.121);
+              -o-transform: scale(1.121, 1.121);
+              transform: scale(1.121, 1.121); }
             #features .feature .hotspotCont .hotspotOpenContainer .contentInfo .shareCont .twShareCont .twShareBack {
               width: 31px;
               height: 31px;
               position: absolute;
               background: url("../img/shape_share_ficha.png") 50% 50% no-repeat;
-              -moz-transition: -webkit-transform 0.1s;
-              -webkit-transition: -webkit-transform 0.1s;
-              -o-transition: -webkit-transform 0.1s;
-              transition: -webkit-transform 0.1s;
+              -moz-transition: all 0.1s;
+              -webkit-transition: all 0.1s;
+              -o-transition: all 0.1s;
+              transition: all 0.1s;
               -webkit-backface-visibility: hidden;
               transition-timing-function: linear;
               -webkit-transition-timing-function: linear;
-              -webkit-transform: scale(1, 1); }
+              -webkit-transform: scale(1, 1);
+              -moz-transform: scale(1, 1);
+              -ms-transform: scale(1, 1);
+              -o-transform: scale(1, 1);
+              transform: scale(1, 1); }
             #features .feature .hotspotCont .hotspotOpenContainer .contentInfo .shareCont .twShareCont .twShareIcon {
               width: 31px;
               height: 31px;
@@ -1736,27 +2011,35 @@ body, html {
             top: 0;
             right: 0; }
             #features .feature .hotspotCont .hotspotOpenContainer .contentInfo .shareCont .fbShareCont:hover .fbShareBack {
-              -moz-transition: -webkit-transform 0.1s;
-              -webkit-transition: -webkit-transform 0.1s;
-              -o-transition: -webkit-transform 0.1s;
-              transition: -webkit-transform 0.1s;
+              -moz-transition: all 0.1s;
+              -webkit-transition: all 0.1s;
+              -o-transition: all 0.1s;
+              transition: all 0.1s;
               -webkit-backface-visibility: hidden;
               transition-timing-function: linear;
               -webkit-transition-timing-function: linear;
-              -webkit-transform: scale(1.121, 1.121); }
+              -webkit-transform: scale(1.121, 1.121);
+              -moz-transform: scale(1.121, 1.121);
+              -ms-transform: scale(1.121, 1.121);
+              -o-transform: scale(1.121, 1.121);
+              transform: scale(1.121, 1.121); }
             #features .feature .hotspotCont .hotspotOpenContainer .contentInfo .shareCont .fbShareCont .fbShareBack {
               width: 31px;
               height: 31px;
               position: absolute;
               background: url("../img/shape_share_ficha.png") 50% 50% no-repeat;
-              -moz-transition: -webkit-transform 0.1s;
-              -webkit-transition: -webkit-transform 0.1s;
-              -o-transition: -webkit-transform 0.1s;
-              transition: -webkit-transform 0.1s;
+              -moz-transition: all 0.1s;
+              -webkit-transition: all 0.1s;
+              -o-transition: all 0.1s;
+              transition: all 0.1s;
               -webkit-backface-visibility: hidden;
               transition-timing-function: linear;
               -webkit-transition-timing-function: linear;
-              -webkit-transform: scale(1, 1); }
+              -webkit-transform: scale(1, 1);
+              -moz-transform: scale(1, 1);
+              -ms-transform: scale(1, 1);
+              -o-transform: scale(1, 1);
+              transform: scale(1, 1); }
             #features .feature .hotspotCont .hotspotOpenContainer .contentInfo .shareCont .fbShareCont .fbShareIcon {
               width: 31px;
               height: 31px;
@@ -1822,6 +2105,7 @@ body, html {
   height: 25px;
   bottom: 0;
   left: 0;
+  z-index: 100;
   text-align: center;
   font-family: "VWHeadlineOTBook";
   font-size: 12px;
@@ -1832,7 +2116,7 @@ body, html {
     margin-right: 10px; }
   .footer .footerCont {
     width: 670px;
-    height: 45px;
+    height: 13px;
     margin-left: auto;
     margin-right: auto;
     position: relative; }
@@ -1867,3 +2151,244 @@ body, html {
     margin: 0; }
     .footer a.configurador:hover {
       background-color: #ff8b00; }
+
+@media only screen and (max-width: 640px) {
+  #mainCont {
+    display: none;
+    visibility: hidden; }
+
+  #footer {
+    display: none;
+    visibility: hidden; }
+
+  #overlay {
+    display: none;
+    visibility: hidden; }
+
+  #splash {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url("../img/paint/back_auto.jpg") 50% 50% no-repeat; }
+    #splash .btnConfigurador {
+      position: absolute;
+      bottom: 68px;
+      left: 50%;
+      z-index: 40;
+      width: 150px;
+      height: 18px;
+      -webkit-border-radius: 30px;
+      -moz-border-radius: 30px;
+      -ms-border-radius: 30px;
+      -o-border-radius: 30px;
+      border-radius: 30px;
+      border: 4px solid white;
+      padding: 10px;
+      text-align: center;
+      -webkit-transform: translate(-85px, 0px);
+      -moz-transform: translate(-85px, 0px);
+      -ms-transform: translate(-85px, 0px);
+      -o-transform: translate(-85px, 0px);
+      transform: translate(-85px, 0px);
+      font-family: "VWHeadlineOTSemibold";
+      font-size: 22px;
+      color: white;
+      margin: 0; }
+    #splash .headerSplash {
+      position: absolute;
+      width: 100%; }
+      #splash .headerSplash .logoSplash {
+        display: block;
+        width: 70px;
+        height: 70px;
+        position: absolute;
+        z-index: 40;
+        top: 0;
+        left: 10px;
+        background-image: url("../img/logo_vw_100px.png");
+        background-color: white;
+        -webkit-background-size: cover;
+        background-size: cover; }
+      #splash .headerSplash .socialSplash {
+        position: absolute;
+        top: 35px;
+        right: 10px;
+        width: 150px;
+        height: 40px;
+        z-index: 40; }
+        #splash .headerSplash .socialSplash .InsPageCont {
+          width: 31px;
+          height: 31px;
+          position: relative;
+          float: left;
+          margin-right: 10px; }
+          #splash .headerSplash .socialSplash .InsPageCont .InsPageBack {
+            width: 31px;
+            height: 31px;
+            top: 0;
+            left: 0;
+            position: absolute;
+            opacity: 1;
+            background: url("../img/btn_social_icons_shape.png") 0 0 no-repeat; }
+          #splash .headerSplash .socialSplash .InsPageCont .InsPageIcon {
+            width: 31px;
+            height: 31px;
+            position: absolute;
+            opacity: 1;
+            background: url("../img/instagram_red_social_header.png") 50% 50% no-repeat; }
+        #splash .headerSplash .socialSplash .fbPageCont {
+          width: 31px;
+          height: 31px;
+          position: relative;
+          float: left;
+          margin-right: 20px; }
+          #splash .headerSplash .socialSplash .fbPageCont .fbPageBack {
+            width: 31px;
+            height: 31px;
+            top: 0;
+            left: 0;
+            position: absolute;
+            opacity: 1;
+            background: url("../img/btn_social_icons_shape.png") 0 0 no-repeat; }
+          #splash .headerSplash .socialSplash .fbPageCont .fbPageIcon {
+            width: 31px;
+            height: 31px;
+            position: absolute;
+            opacity: 1;
+            background: url("../img/facebook_icon.png") 50% 50% no-repeat; }
+        #splash .headerSplash .socialSplash .twPageCont {
+          width: 31px;
+          height: 31px;
+          position: relative;
+          float: left;
+          margin-right: 20px; }
+          #splash .headerSplash .socialSplash .twPageCont .twPageBack {
+            width: 31px;
+            height: 31px;
+            top: 0;
+            left: 0;
+            position: absolute;
+            opacity: 1;
+            background: url("../img/btn_social_icons_shape.png") 0 0 no-repeat; }
+          #splash .headerSplash .socialSplash .twPageCont .twPageIcon {
+            width: 31px;
+            height: 31px;
+            position: absolute;
+            opacity: 1;
+            background: url("../img/twitter_icon.png") 50% 50% no-repeat; }
+    #splash .contentSplash {
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0; }
+      #splash .contentSplash .coche {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0; }
+        #splash .contentSplash .coche .cocheCont {
+          width: 410px;
+          height: 215px;
+          position: absolute;
+          top: 63%;
+          left: 47%;
+          margin-left: -52%;
+          margin-top: -50%; }
+          #splash .contentSplash .coche .cocheCont .cochePaintCont {
+            width: 410px;
+            height: 215px;
+            position: absolute; }
+            #splash .contentSplash .coche .cocheCont .cochePaintCont .cocheShadow {
+              width: 410px;
+              height: 215px;
+              position: absolute;
+              background: url("../img/paint/sombra.png") 50% 50% no-repeat;
+              -webkit-background-size: cover;
+              background-size: cover; }
+            #splash .contentSplash .coche .cocheCont .cochePaintCont .cochePaint {
+              width: 410px;
+              height: 215px;
+              position: absolute;
+              opacity: 0; }
+              #splash .contentSplash .coche .cocheCont .cochePaintCont .cochePaint.active {
+                opacity: 1; }
+              #splash .contentSplash .coche .cocheCont .cochePaintCont .cochePaint#paint-white {
+                background: url("../img/paint/blanco_candy.png") 50% 50% no-repeat;
+                -webkit-background-size: cover;
+                background-size: cover; }
+      #splash .contentSplash .titleVentoCont {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0; }
+        #splash .contentSplash .titleVentoCont .titleVentoMask {
+          position: absolute;
+          width: 507px;
+          height: 66px;
+          top: 64%;
+          left: 50%;
+          margin-left: -253px;
+          margin-top: -227px; }
+          #splash .contentSplash .titleVentoCont .titleVentoMask .titleVento {
+            width: 507px;
+            height: 66px;
+            position: absolute;
+            overflow: hidden; }
+            #splash .contentSplash .titleVentoCont .titleVentoMask .titleVento .titleVentoImg {
+              width: 507px;
+              height: 66px;
+              position: absolute;
+              background: url("../img/paint/nuevo_vento_copy.png") 50% 50% no-repeat;
+              -webkit-background-size: 50% 50%;
+              background-size: 50% 50%; }
+    #splash .footerSplash {
+      width: 100%;
+      position: fixed;
+      bottom: 0;
+      z-index: 100;
+      height: 14px;
+      background: white;
+      padding-top: 9px;
+      padding-bottom: 8px; }
+      #splash .footerSplash .footerSplashContainer {
+        width: 610px;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto; }
+        #splash .footerSplash .footerSplashContainer a {
+          float: left;
+          display: block; }
+        #splash .footerSplash .footerSplashContainer p.copyright {
+          font-family: "VWHeadlineOTBook";
+          font-size: 9px;
+          color: #c6c6c6;
+          margin: 0;
+          margin-left: 10px;
+          padding-right: 15px;
+          border-right: #e8e8e8 solid 1px; }
+        #splash .footerSplash .footerSplashContainer p.politicas {
+          font-family: "VWHeadlineOTBook";
+          font-size: 9px;
+          color: #c6c6c6;
+          margin: 0;
+          padding-left: 5px;
+          padding-right: 5px;
+          border-right: #e8e8e8 solid 1px; }
+        #splash .footerSplash .footerSplashContainer p.fichatec {
+          font-family: "VWHeadlineOTBook";
+          font-size: 9px;
+          color: #c6c6c6;
+          margin: 0;
+          padding-left: 5px;
+          padding-right: 5px;
+          border-right: #e8e8e8 solid 1px; }
+        #splash .footerSplash .footerSplashContainer p.pruebamanejo {
+          font-family: "VWHeadlineOTBook";
+          font-size: 9px;
+          color: #c6c6c6;
+          margin: 0;
+          padding-left: 5px;
+          padding-right: 5px;
+          border-right: #e8e8e8 solid 1px; } }
